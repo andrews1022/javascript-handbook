@@ -1,0 +1,20 @@
+// NOT EQUAL
+!==
+
+// COMPARING SOMETHING
+===
+
+// GREATER THAN OR EQUAL TO
+>=
+
+// LESS THAN OR EQUAL TO
+<=
+
+// GREATER THAN
+>
+
+// LESS THAN
+<
+
+// ASSIGN A VALUE
+=
