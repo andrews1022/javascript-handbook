@@ -1,0 +1,212 @@
+// BLACK & WHITE
+// Basic black and white colors
+$color-white: #fff;
+$color-black: #000;
+
+
+// GREYS
+// Various shades of greys; update/add more if you like!
+$color-extra-light-grey-1: #f7f7f7;
+$color-extra-light-grey-2: #eee;
+$color-extra-light-grey-3: #ddd;
+
+$color-light-grey-1: #ccc;
+$color-light-grey-2: #bbb;
+$color-light-grey-3: #aaa;
+
+$color-medium-grey-1: #999;
+$color-medium-grey-2: #888;
+$color-medium-grey-3: #777;
+
+$color-dark-grey-1: #666;
+$color-dark-grey-2: #555;
+
+$color-extra-dark-grey-1: #444;
+$color-extra-dark-grey-2: #333;
+$color-extra-dark-grey-3: #222;
+$color-extra-dark-grey-4: #111;
+
+
+// IMPORTANT COLORS
+// Update as per your project
+$color-primary-light: #c1e1e7;
+$color-primary: #8AC6D1;
+$color-primary-dark: #53abbb;
+
+$color-secondary-light: #eff7f5;
+$color-secondary: #BBDED6;
+$color-secondary-dark: #87c5b7;
+
+$color-tertiary-light: #fff8f5;
+$color-tertiary: #FAE3D9;
+$color-tertiary-dark: #f1b195;
+
+$color-quaternary-light: #fff6f6;
+$color-quaternary: #FFB6B9;
+$color-quaternary-dark: #ff6a70;
+
+
+// BORDER-RADIUS
+// Intended to be applied to an element on all corners, giving it nice rounded edges
+$border-radius-small: 3px;
+$border-radius-medium: 5px;
+$border-radius-large: 7px;
+
+
+// TEXT DECORATION
+// Basic text-decoration values
+$text-center: center;
+$text-uppercase: uppercase;
+$text-lowercase: lowercase;
+$text-no-decoration: none;
+
+
+// LINE HEIGHT
+// Set to 145% by default
+// Best to use anywhere from 125% - 150%
+$line-height-default: 1.45;
+
+$line-height-tiny: 1.2;
+$line-height-small: 1.25;
+$line-height-medium: 1.3;
+$line-height-large: 1.35;
+$line-height-huge: 1.4;
+$line-height-massive: 1.5;
+
+
+// FONT FAMILY
+// Change as per your project
+$text-main: 'Roboto', sans-serif; // use this for the overall site
+
+
+// LIST DECORATION
+// Removes those annoying bullets from lists
+$list-style-no-decoration: none;
+
+
+// WRAPPER
+// Various wrapper sizes (used for width)
+$wrapper-tiny: 75%;
+$wrapper-small: 80%;
+$wrapper-medium: 85%;
+$wrapper-large: 90%;
+
+
+// MARGIN CENTER
+// Center a block element inside parent block element
+$margin-center: 0 auto;
+
+
+// FONT WEIGHT
+// Variable names based off of Google Fonts naming style
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-light: 800;
+$font-weight-black: 900;
+
+
+// FONT SIZE
+// Quick and easy font-size increase based on screen size
+// Furthermore, precise styling will be needed, but this helps a lot/covers a lot of ground
+$default-font-size: 62.5%;
+$default-tab-port-font-size: 68.75%;
+$default-tab-land-font-size: 75%;
+$default-laptop-font-size: 81.25%;
+$default-desktop-font-size: 87.5%;
+$default-desktop-lg-font-size: 100%;
+$default-desktop-4k-font-size: 112.5%;
+
+
+// REM SIZES
+// Use these for font-size, margin (overall), padding (overall), etc.)
+// The values are based on the default font-size declared in the _base.scss file
+// Default font size of browsers is 16px, but, we changed that to 10px (62.5%)
+// Now all rems are much easier to calculate
+// For body text, best to not go above 2rem
+// And for line length, try not to go over 90 characters
+$size-tiny-1: 1rem;
+$size-tiny-2: 1.25rem;
+$size-tiny-3: 1.5rem;
+$size-tiny-4: 1.75rem;
+
+$size-x-small-1: 2rem;
+$size-x-small-2: 2.25rem;
+$size-x-small-3: 2.5rem;
+$size-x-small-4: 2.75rem;
+
+$size-small-1: 3rem;
+$size-small-2: 3.25rem;
+$size-small-3: 3.5rem;
+$size-small-4: 3.75rem;
+
+$size-medium-1: 4rem;
+$size-medium-2: 4.25rem;
+$size-medium-3: 4.5rem;
+$size-medium-4: 4.75rem;
+
+$size-large-1: 4rem;
+$size-large-2: 4.25rem;
+$size-large-3: 4.5rem;
+$size-large-4: 4.75rem;
+
+$size-x-large-1: 5rem;
+$size-x-large-2: 5.25rem;
+$size-x-large-3: 5.5rem;
+$size-x-large-4: 5.75rem;
+
+$size-xx-large-1: 6rem;
+$size-xx-large-2: 6.25rem;
+$size-xx-large-3: 6.5rem;
+$size-xx-large-4: 6.75rem;
+
+$size-huge-1: 7rem;
+$size-huge-2: 7.25rem;
+$size-huge-3: 7.5rem;
+$size-huge-4: 7.75rem;
+
+$size-x-huge-1: 8rem;
+$size-x-huge-2: 8.25rem;
+$size-x-huge-3: 8.5rem;
+$size-x-huge-4: 8.75rem;
+
+$size-massive-1: 9rem;
+$size-massive-2: 9.25rem;
+$size-massive-3: 9.5rem;
+$size-massive-4: 9.75rem;
+
+$size-x-massive-1: 10rem;
+
+// TRANSITIONS
+// Add/remove for your project if desired - this is just a nice fade-in/out effect
+$standard-transition: all 250ms; // default timing, nice ease-in-out effect
+
+$quick-transition-1: all 200ms;
+$quick-transition-2: all 300ms;
+
+$medium-transition-1: all 350ms;
+$medium-transition-2: all 400ms;
+
+$slow-transition-1: all 450ms;
+$slow-transition-2: all 500ms;
+
+
+// BOX SHADOW
+// Feel free to change the rem values
+// For a nice subtle box-shadow, I would not recommend going higher than .25 opacity
+$box-shadow-extra-light-1: 0 1rem 3rem rgba($color-black, .10);
+$box-shadow-extra-light-2: 0 1rem 3rem rgba($color-black, .15);
+
+$box-shadow-light-1: 0 1rem 3rem rgba($color-black, .20);
+$box-shadow-light-2: 0 1rem 3rem rgba($color-black, .25);
+
+$box-shadow-medium-1: 0 1rem 3rem rgba($color-black, .30);
+$box-shadow-medium-2: 0 1rem 3rem rgba($color-black, .35);
+$box-shadow-medium-3: 0 1rem 3rem rgba($color-black, .40);
+
+$box-shadow-heavy-1: 0 1rem 3rem rgba($color-black, .45);
+$box-shadow-heavy-2: 0 1rem 3rem rgba($color-black, .50);

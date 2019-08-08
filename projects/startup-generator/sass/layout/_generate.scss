@@ -1,0 +1,69 @@
+.generate {
+    background-color: darken($color-secondary, 7.5);
+    border-radius: $border-radius-medium;
+    box-shadow: $box-shadow-light-1;
+    margin: $size-small-1 auto $size-x-large-1 auto;
+    padding: $size-x-small-2 $size-huge-1;
+    text-align: $text-center;
+    width: $wrapper-tiny;
+
+    @include respond(tab-port) {
+        height: 36rem;
+        padding: $size-x-large-1 $size-huge-1;
+    }
+
+    &-quote,
+    &-output {
+        font-size: $size-x-small-1;
+        margin: 0 auto $size-small-1 auto;
+    }
+
+    &-btn {
+        background: linear-gradient(to right bottom, $color-tertiary, $color-quaternary);
+        border: none;
+        border-radius: 50px;
+        box-shadow: $box-shadow-extra-light-1;
+        color: $color-white;
+        cursor: pointer;
+        font-size: $size-tiny-3;
+        margin: 0 auto $size-x-small-1 auto;
+        outline: none;
+        padding: $size-tiny-1 $size-x-small-3;
+        transition: $standard-transition;
+
+        display: flex;
+        flex-flow: row nowrap;
+
+        @include respond(tab-port) {
+            font-size: $size-x-small-1;
+            margin-bottom: $size-small-3;
+        }
+
+        @include respond(laptop) {
+            margin-bottom: $size-medium-2;
+        }
+
+        &:hover,
+        &:focus {
+            background: linear-gradient(to right bottom, $color-tertiary, $color-quaternary);
+            filter: saturate(2);
+            transform: translateY(-5px);
+        }
+
+        &:active {
+            transform: translateY(-3px);
+        }
+    }
+
+    &-icon {
+        fill: $color-white;
+        height: $size-tiny-3;
+        margin-right: $size-tiny-1;
+        width: $size-tiny-3;
+
+        @include respond(tab-port) {
+            height: $size-x-small-1;
+            width: $size-x-small-1;
+        }
+    }
+}
