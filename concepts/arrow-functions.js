@@ -1,5 +1,7 @@
 // ARROW FUNCTIONS
 // Very handy, clean things up a bit
+// With an arrow function, if you have a single return, you can just put it on one line and it assumes that you want to return something
+
 // So lets turn addNumsV3 into an arrow function
 function addNumsV3(num5 = 1, num6 = 1) {
     return num5 + num6;
@@ -25,3 +27,32 @@ console.log(addNumsV6(5, 5));
 // And if you have just one parameter:
 const addNumsV7 = num13 => num13 + 5;
 console.log(addNumsV7(5));
+
+
+// ADDITIONAL EXAMPLE 1
+// Arrow function with default values
+// Convert this function to arrow function with default age to 10;
+function isValidAge(age) {
+    return age;
+}
+// V V V
+const isValidAge = (age = 10) => age;
+
+
+// ADDITIONAL EXAMPLE 2
+// Convert this function with an if/else statement to arrow function:
+function whereAmI(username, location) {
+    if (username && location) {
+        return "I am not lost";
+    } else {
+        return "I am totally lost!";
+    }
+}
+// V V V
+const whereAmI = (username, location) => {
+    if (username && location) {
+        return "I am not lost";
+    } else {
+        return "I am totally lost!";
+    }
+}
