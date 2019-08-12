@@ -1,4 +1,3 @@
-// ----**** COMPOSE **** ----
 // 'Compose' is the act of putting two functions together to form a third function where the output of one function is the input of the other
 // Example:
 const compose = (f, g) => (a) => f(g(a));
@@ -16,10 +15,9 @@ compose(sum, sum)(5);
 const compose = (f, g) => (a) => f(g(a));
 const sum = (num) => num + 1;
 compose(sum, sum)(5);
-
 // We get 7
 
-// BREAKDOWN
+// ----------------------------------- BREAKDOWN -----------------------------------
 // If both 'f' and 'g' are 'sum', and 'a' is 5, we look at what the function returns: f(g(a));
 // And because again we have two brackets (sum, sum)(5) which returns us another function (a) => f(g(a));, 
 // And within it we give the 'a', 5.

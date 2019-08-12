@@ -1,23 +1,7 @@
-// SWITCH STATEMENTS
 // Inside the ( ), we evaluate that, in this case what the color is
 // To evaluate it, we use 'cases'
-// Default statement - if it does not match any of the above
+// Default statement - if it does not match any of the above+
 
-const color = blue;
-
-switch (color) {
-    case 'red':
-        console.log('color is red');
-        break;
-    case 'blue':
-        console.log('color is blue');
-        break;
-    default:
-        console.log('color is not red or blue');
-}
-
-
-// ANOTHER EXAMPLE
 // Copy and paste into console
 function moveCommand(direction) {
     var whatHappens;
@@ -59,7 +43,7 @@ moveCommand('sky');
 // That's what switch statements are really good for when you have a lot of conditions.
 // Instead of using an 'if else', 'if else', 'if else', 'if else', 'if else' statement, you can use a 'switch' statemen and you can see, it reads nicely.
 
-// BREAKDOWN OF moveCommand() FUNCTION:
+// ----------------------------------- BREAKDOWN -----------------------------------
 // Create a variable 'whatHappens' then use 'switch'.
 // Check whatever the condition is, in this case it's the direction.
 // So the code says if the direction equals 'forward' do this, if the direction is 'back' do this. If it's 'right' do this, if it's 'left' do this.

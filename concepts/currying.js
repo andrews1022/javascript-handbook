@@ -1,4 +1,4 @@
-//  ----**** CURRYING **** ----
+//  ----------------------------------- CURRYING -----------------------------------
 // 'Currying' is the process of converting a function that takes multiple arguments into a function that takes them one at a time.
 const multiply = (a, b) => a * b;
 const curriedMultiply = (a) => (b) => a * b;
@@ -16,7 +16,8 @@ const curriedMultiply = (3) => (b) => 3 * b;
 curriedMultiply(3)(4);
 // Which gives us 12
 
-// BREAKDOWN:
+
+// ----------------------------------- BREAKDOWN -----------------------------------
 // We created a variable curriedMultiply that accepts a parameter, a function that accepts 'a'.
 // In this case it's '3' and once you call that function
 // And once you call that function, once you run it, it returns another function, that accepts 'b' and that function multiplies 'a' and 'b'.

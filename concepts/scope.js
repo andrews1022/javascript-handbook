@@ -2,9 +2,7 @@
 function aa() {
     console.log('Testing');
 }
-
 aa();
-
 // Can be run with the window object
 window.aa();
 
@@ -13,12 +11,10 @@ function bb() {
     let a = 'Hello!';
 }
 console.log(a); // this will not work, as a's scope is only inside the function. You must the console.log to the inside of the function:
-
 function bb() {
     let a = 'Hello!';
     console.log(a);
 }
-
 
 // Now if we create this variable
 let b = 'Can I access this variable?';

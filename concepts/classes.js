@@ -3,8 +3,10 @@
 // Does same thing under the hood as above, however, is done with 'syntactic sugar'
 
 // Class creation:
-class HumanBeing { //use the class keyword, give it a name
-    constructor(firstName, lastName, dateOfBirth) { // create method called constructor, and assign properties just like before)
+// use the class keyword, and then give it a name
+class HumanBeing { 
+    // create a method called a constructor, and assign properties just like before)
+    constructor(firstName, lastName, dateOfBirth) { 
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = new Date(dateOfBirth);

@@ -1,5 +1,3 @@
-// ----**** CLOSURES **** ----
-
 function first() {
     var greet = 'Hi';
 

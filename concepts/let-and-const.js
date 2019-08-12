@@ -1,4 +1,4 @@
-// **** LET & CONST ****
+// ----------------------------------- LET & CONST -----------------------------------
 // let and const are the new ways of declaring variables
 const player = 'Bobby'; // const stands for constant
 let experience = 100;
@@ -17,7 +17,7 @@ if (experience > 90) {
 
 console.log(wizardLevel); // false
 
-// ---- Note about const: ----
+// ----------------------------------- NOTE -----------------------------------
 // With const, you're not able to reassign to the variable. So it cannot be updated.
 // Now, why would that be useful?
 // It's really, really useful because a lot of bugs happen when you're working in a team of people.

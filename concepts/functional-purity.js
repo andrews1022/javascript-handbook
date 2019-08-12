@@ -1,4 +1,4 @@
-// ----**** FUNCTIONAL PURITY **** ----
+// ----------------------------------- FUNCTIONAL PURITY -----------------------------------
 // Functional purity is a concept where we say, in order for us to write really, really good programs, we want to avoid side effects and we always want a return
 // And what's the power in this? 
 // By avoiding side effects and always returning, we create something that we call 'Deterministic' 

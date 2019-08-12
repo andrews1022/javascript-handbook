@@ -1,5 +1,4 @@
-// ----**** RECAP ****----
-
+// ----------------------------------- RECAP -----------------------------------
 // We said arrays look something like this:
 const array = [1, 2, 10, 16];
 // And we said we can do for loops, forEach loops, and more
@@ -22,7 +21,8 @@ console.log('forEach/double.push', double);
 // These 3 are the most important in day to day use of JavaScript
 
 
-// *** MAP ***
+
+// ----------------------------------- MAP -----------------------------------
 // With map, you always need to return something
 // Below, we loop over each element each number and return a new array.
 const mappedArray = array.map((num) => {
@@ -55,7 +55,9 @@ console.log('map', mappedArray);
 const mappedArrayShort = array.map(num => num * 2);
 console.log('map short', mappedArrayShort);
 
-// *** FILTER ***
+
+
+// ----------------------------------- FILTER -----------------------------------
 // And as the name suggests, we can filter our array based on a condition
 // For our demo, let's return all the elements in the array 'array' that are greater than five
 const filteredArray = array.filter(num => {
@@ -71,7 +73,8 @@ console.log('filter short', filteredArrayShort);
 // If it returns true, it will
 
 
-// *** REDUCE ***
+
+// ----------------------------------- REDUCE -----------------------------------
 // You can actually do filtering and mapping with reduce, so it's a really powerful method.
 
 // Reduce takes something called an accumulator and the number.

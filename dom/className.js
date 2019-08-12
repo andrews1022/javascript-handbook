@@ -3,6 +3,7 @@
 // Consider this heading:
 <h1>Shopping List</h1>
 
+
 // PART 1
 // Use querySelector to select the heading
 // Cache it in a variable called h1

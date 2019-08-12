@@ -1,4 +1,4 @@
-// **** SYMBOL ****
+// ----------------------------------- SYMBOLS -----------------------------------
 let symbolOne = Symbol();
 let symbolTwo = Symbol('Foo');
 let symbolThree = Symbol('Foo');
