@@ -15,7 +15,7 @@ function Person(firstName, lastName, dateOfBirth) { // When you pass these in, w
 
 // From here, we can do what's called 'instantiate an object'
 // Here we are creating a custom Person object, which takes in the parameters mentioned above
-const person1 = new Person('Andrew', 'Shearer', '10-22-1992'); 
+const person1 = new Person('Andrew', 'Shearer', '10-22-1992');
 console.log(person1);
 
 // We can create as many custom objects as we like
@@ -35,7 +35,7 @@ const human1 = new Human('Kevin', 'Shearer', '3-27-1995');
 console.log(human1.dateOfBirth); // Now we see this printed as March 27, 1995
 
 // The date object has a bunch of methods you can use. One example
-console.log(human1.dateOfBirth.getFullYear()); 
+console.log(human1.dateOfBirth.getFullYear());
 
 // Adding methods to the Human Object
 function HumanV2(firstName, lastName, dateOfBirth) {
@@ -44,12 +44,12 @@ function HumanV2(firstName, lastName, dateOfBirth) {
     this.dateOfBirth = new Date(dateOfBirth);
 
     // We can add methods, which are essentially functions to this person object
-    this.getBirthYear = function(){
+    this.getBirthYear = function () {
         return this.dateOfBirth.getFullYear(); // We can still access the objects properties using 'this'
     }
 
     // Another examaple:
-    this.getFullName = function() {
+    this.getFullName = function () {
         return `${this.firstName} ${this.lastName}`;
     }
 }

@@ -5,17 +5,17 @@
 let button = document.querySelector('.btn');
 
 // Adding the event listener based on click the button
-button.addEventListener('click', function(){
+button.addEventListener('click', function () {
     console.log('Clicked!');
 });
 
 // Adding the event listener based on mouse enter (hovering over the button)
-button.addEventListener('mouseenter', function(){
+button.addEventListener('mouseenter', function () {
     console.log('Clicked!');
 });
 
 // Adding the event listener based on mouse enter (hovering over the button)
-button.addEventListener('mouseleave', function(){
+button.addEventListener('mouseleave', function () {
     console.log('Clicked!');
 });
 
@@ -29,7 +29,7 @@ const btn = document.querySelector('.btn');
 // The second is going to be a function that you want to run when this event happens
 // Let's use an arrow function
 // We need to include an event parameter, which is just 'e'
-btn.addEventListener('click', (e) => { 
+btn.addEventListener('click', (e) => {
 
     // Since this a submit button for a form, we need to remove the default behavior:
     e.preventDefault();
@@ -43,5 +43,3 @@ btn.addEventListener('click', (e) => {
     // Get the class name:
     console.log(e.target.className);
 });
-
-

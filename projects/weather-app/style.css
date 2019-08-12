@@ -1,0 +1,52 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 115%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+    color: white;
+    background: linear-gradient(to bottom, #447dc8, #22569b) no-repeat;
+    height: 100vh;
+}
+
+.location,
+.temperature {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 30vh;
+    width: 50%;
+}
+
+.temperature {
+    flex-direction: column;
+}
+
+.degree-section {
+    display: flex;
+    align-items: center;
+    
+    cursor: pointer;
+}
+
+.degree-section span {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.degree-section h2 {
+    font-size: 45px;
+}

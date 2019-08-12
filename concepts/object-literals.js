@@ -20,20 +20,27 @@ console.log(person);
 console.log(person.firstName);
 
 // Access multiple values:
-console.log(person.firstName, person.lastName);     // use the comma as a separator
+console.log(person.firstName, person.lastName); // use the comma as a separator
 
 // Access a single value from the array:
-console.log(person.hobbies[1]);     // select the array, then select the index location
+console.log(person.hobbies[1]); // select the array, then select the index location
 
 // Access a value within the nested object
-console.log(person.address.city);   // use the dot(.) selector multiple times
+console.log(person.address.city); // use the dot(.) selector multiple times
 
 // Destructuring (create variables from the object literal)
-const { firstName, lastName } = person;
+const {
+    firstName,
+    lastName
+} = person;
 console.log(firstName);
 
 // Create a destructured variable from the nested object:
-const { address: { city } } = person;
+const {
+    address: {
+        city
+    }
+} = person;
 console.log(city);
 
 // Add a property to the object:

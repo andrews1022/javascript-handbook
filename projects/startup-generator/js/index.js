@@ -135,6 +135,7 @@ const optionArray = [
     'financial advisors',
     'firefighters',
     'flight attendants',
+    'florists',
     'food',
     'football players',
     'front end developers',
@@ -264,9 +265,7 @@ const optionArray = [
 ];
 
 // Generate 
-btn.addEventListener('click', e => {
-    e.preventDefault();
-
+btn.addEventListener('click', () => {
     // Generate random startup/tech company value
     const randomComp = startupArray[Math.floor(Math.random() * startupArray.length)];
 
@@ -274,5 +273,5 @@ btn.addEventListener('click', e => {
     const randomOption = optionArray[Math.floor(Math.random() * optionArray.length)];
 
     // Inject a response into the empty paragraph
-    document.querySelector('#generated-text').innerHTML = `"Well, it's like ${randomComp}, but for ${randomOption}."`;
+    document.querySelector('#generated-text').textContent = `"Well, it's like ${randomComp}, but for ${randomOption}."`;
 });

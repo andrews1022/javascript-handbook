@@ -1,6 +1,7 @@
 // ----**** SIDE EFFECT **** ----
 var a = 1;
-function b(){
+
+function b() {
     a = 2;
 }
 // We have a variable one, 'a' equals one

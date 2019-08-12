@@ -1,8 +1,9 @@
 // ----**** CLOSURES **** ----
 
-function first (){
+function first() {
     var greet = 'Hi';
-    function second(){
+
+    function second() {
         alert(greet);
     }
     return second();

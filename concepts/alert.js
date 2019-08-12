@@ -1,2 +1,2 @@
-// Display alert
+// Display an alert
 alert('Hello World!');

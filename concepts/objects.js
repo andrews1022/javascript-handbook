@@ -36,7 +36,7 @@ var wizard = {
     spells: ['fire', 'water', 'electricity', 'corrosion', 'explosion'],
 
     // You can even have functions as a property inside an object
-    shout: function(){
+    shout: function () {
         console.log('FUS ROH DAH!');
     }
     // Call the function using: wizard.shout();
@@ -49,8 +49,7 @@ var wizard = {
 wizard.spells[1];
 
 // You can also have an array objects
-var users = [
-    {
+var users = [{
         username: 'andrew',
         password: 'secret'
     },

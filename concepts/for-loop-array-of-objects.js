@@ -1,24 +1,20 @@
 // The array:
 const toDoLoop = [
-
     {
         id: 1,
         text: 'Take out the trash',
         isCompleted: true
     },
-
     {
         id: 2,
         text: 'Meeting wit the boss',
         isCompleted: true
     },
-
     {
         id: 3,
         text: 'Dentist appointment',
         isCompleted: false
     }
-
 ];
 
 // LOOPING THROUGH AN ARRAY - OLD WAY

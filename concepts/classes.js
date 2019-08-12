@@ -11,12 +11,12 @@ class HumanBeing { //use the class keyword, give it a name
     }
 
     // Any method we want to add, we can simply add it here:
-    getBirthYear(){
+    getBirthYear() {
         return this.dateOfBirth.getFullYear();
     }
 
     // And here:
-    getFullName(){
+    getFullName() {
         return `${this.firstName} ${this.lastName}`;
     }
 }

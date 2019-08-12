@@ -1,6 +1,6 @@
 // Root/Parent Scope:
-function aa(){
-	console.log('Testing');
+function aa() {
+    console.log('Testing');
 }
 
 aa();
@@ -9,12 +9,12 @@ aa();
 window.aa();
 
 // Limited Scope
-function bb (){
+function bb() {
     let a = 'Hello!';
 }
 console.log(a); // this will not work, as a's scope is only inside the function. You must the console.log to the inside of the function:
 
-function bb (){
+function bb() {
     let a = 'Hello!';
     console.log(a);
 }
@@ -25,7 +25,7 @@ let b = 'Can I access this variable?';
 
 // The answer is yes, as it was created in the root scope
 // Any variables defined in the root scope can be accessed from anywhere
-function bb (){
+function bb() {
     let a = 'Hello!';
     console.log(a);
     console.log(b);
@@ -35,7 +35,7 @@ function bb (){
 // EXAMPLE 3
 let c = 'Can I access this?';
 
-function cc(){
+function cc() {
     c = 'Hello!';
 }
 // This example works because c is the same variable, and was defined in the root scope
@@ -49,21 +49,21 @@ let sweet = 5; // Root scope
 // We created three functions and each of these functions create their own scope and each of these functions 'console.log(sweet)'.
 // But what sweet means in each one of them is different based on their scope.
 // Function 1
-function sweetFunc(){
+function sweetFunc() {
     // child scope
     let sweet = "Hello!";
     console.log(sweet);
 }
 
 // Function 2
-function sweeterFunc(){
+function sweeterFunc() {
     // child scope
     let sweet = "Bye";
     console.log(sweet);
 }
 
 // Function 3
-function sweetestFunc(){
+function sweetestFunc() {
     // child scope
     sweet = "AHHHH!!!!";
     console.log(sweet);
@@ -73,9 +73,9 @@ console.log(sweet); // this will log 5
 
 // Now if we run all of this
 console.log(sweet); // will log 5
-sweetFunc();        // will log Hello!
-sweeterFunc();      // will log Bye
-sweetestFunc();     // will log AHHHH!!!!
+sweetFunc(); // will log Hello!
+sweeterFunc(); // will log Bye
+sweetestFunc(); // will log AHHHH!!!!
 
 // BREAKDOWN OF ABOVE:
 // First we 5 again
@@ -88,18 +88,18 @@ sweetestFunc();     // will log AHHHH!!!!
 // RECAP WITH SIMPLER FUNCTION
 let dope = 5;
 
-function dopestFunc(){
+function dopestFunc() {
     // child scope
     console.log(dope);
 }
 
 // When somebody runs this function:
-    // JavaScript reads console.log(dope);
-    // It then asks, do we know dope?
-    // The function will say no, but you should ask my parent
-    // So now we go into outside of the function, and in this case the roots scope.
-    // Now ask again, do you know dope?
-    // They will say yeah we do! We have  variable named dope which is assigned the value of 5
-    // So now 'console.log' can log 5. 
-        // NOTE:
-        // But if 'dope' doesn't exist, we asked the parent and the parent says, Sorry I have no idea what 'dope' is. Then we get, well we get an error. So, the last check is always the root scope.
+// JavaScript reads console.log(dope);
+// It then asks, do we know dope?
+// The function will say no, but you should ask my parent
+// So now we go into outside of the function, and in this case the roots scope.
+// Now ask again, do you know dope?
+// They will say yeah we do! We have  variable named dope which is assigned the value of 5
+// So now 'console.log' can log 5. 
+// NOTE:
+// But if 'dope' doesn't exist, we asked the parent and the parent says, Sorry I have no idea what 'dope' is. Then we get, well we get an error. So, the last check is always the root scope.

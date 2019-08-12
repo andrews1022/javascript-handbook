@@ -3,6 +3,10 @@ A handbook containing all the basic, intermediate, and advanced, concepts I lear
 
 ## Sources (where I learned from):
 - My own projects
-- Andrei Neagoie's [The Complete Web Developer in 2019: Zero to Mastery Udemy Course](https://www.udemy.com/the-complete-web-developer-zero-to-mastery/)
-- Brad Traversey's [JavaScript Crash Course For Beginners YouTube Video](https://www.youtube.com/watch?v=hdI2bqOjy3c&list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX&index=2&t=4806s)
-- Brad Traversey's [Vanilla JavaScript YouTube Playlist](https://www.youtube.com/playlist?list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX)
+
+### Udemy
+- Andrei Neagoie's Course[The Complete Web Developer in 2019: Zero to Mastery](https://www.udemy.com/the-complete-web-developer-zero-to-mastery/)
+
+### YouTube
+- [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA)
+- [Dev Ed](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)

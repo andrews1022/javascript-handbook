@@ -4,7 +4,7 @@ const player = 'Bobby'; // const stands for constant
 let experience = 100;
 let wizardLevel = false;
 
-if(experience > 90) {
+if (experience > 90) {
     let wizardLevel = true;
     console.log(wizardLevel); // true
 

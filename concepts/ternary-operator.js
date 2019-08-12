@@ -30,8 +30,8 @@ let answer = isUserValid(true) ? "You may enter!" : "Access denied!";
 // Now if we changed this to say 'false', well in that case we'll get 'Access denied'
 
 // EXAMPLE 2 - USING isUserValid ABOVE
-let automatedAnswer = 
-    'Your account # is ' + ( isUserValid(false) ? 12345 : 'not available');
+let automatedAnswer =
+    'Your account # is ' + (isUserValid(false) ? 12345 : 'not available');
 // If we run 'automatedAnswer' we get "Your account # is not available" because isUserValid is false
 // If we set it to true, we get "Your account # is 12345"
 

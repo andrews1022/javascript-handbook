@@ -12,6 +12,6 @@ for (var i = 0; i < todos.length; i++) {
 
     // Add on exclamation point:
     todos[i] = todos[i] + "!";
-    
+
     console.log(i);
 }

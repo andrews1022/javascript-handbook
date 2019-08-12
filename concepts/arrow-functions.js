@@ -62,13 +62,13 @@ const whereAmI = (username, location) => {
 
 // -------------------------------------- FUNCTION #1 --------------------------------------
 // A named function with multiple parameters, in this case 'a' & 'b'
-function sum (a, b) {
+function sum(a, b) {
     return a + b;
 }
 // Convert Function #1 to an Arrow Function:
 // The first step is to completely remove the function keyword
 // Because with an arrow function, the function keyword is assumed
-sum (a, b) {
+sum(a, b) {
     return a + b;
 }
 // Now weed need to assign this function to a variable fpr what we have leftover
@@ -89,14 +89,14 @@ let sumArrow = (a, b) => a + b;
 // So this:
 let sumArrow = (a, b) => a + b;
 // Is the same as this:
-function sum (a, b) {
+function sum(a, b) {
     return a + b;
 }
 
 
 // -------------------------------------- FUNCTION #2 --------------------------------------
 // A named function with one parameter
-function isPositive(number){
+function isPositive(number) {
     return number >= 0;
 }
 // Convert Function #2 to an Arrow Function:
@@ -108,7 +108,7 @@ let isPositiveArrow = number => number >= 0;
 
 // -------------------------------------- Function #3 --------------------------------------
 // A named function with no parameters
-function randomNumber(){
+function randomNumber() {
     return Math.random;
 }
 // Convert Function #3 to an Arrow Function:
@@ -121,7 +121,7 @@ let randomNumberArrow = () => Math.random;
 // -------------------------------------- Function #4 --------------------------------------
 // An anonymous function, a function with no name
 // Where arrow functions really shine, are anonymous functions like this one
-document.addEventListener('click', function(){
+document.addEventListener('click', function () {
     console.log('Clicked!');
 })
 // Convert Function #4 to an Arrow Function:

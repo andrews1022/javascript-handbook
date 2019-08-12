@@ -19,9 +19,9 @@ switch (color) {
 
 // ANOTHER EXAMPLE
 // Copy and paste into console
-function moveCommand(direction){
+function moveCommand(direction) {
     var whatHappens;
-    switch(direction){
+    switch (direction) {
         case 'forward':
             whatHappens = 'You encountered a monster!';
             break;
@@ -75,7 +75,7 @@ moveCommand('sky');
 // ANOTHER EXAMPLE for fun:
 function yourCar(car) {
     var judgement;
-    switch(car){
+    switch (car) {
         case 'Bugatti':
             judgement = 'Wow! Your car is the king!!!';
             break;

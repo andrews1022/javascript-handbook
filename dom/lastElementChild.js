@@ -6,4 +6,4 @@
 </ul>
 
 // Add HTML to the last child
-ul.lastElementChild.innerHTML = '<h1>Hi!</h1>'
+ul.lastElementChild.innerHTML = '<h1>Hi!</h1>';

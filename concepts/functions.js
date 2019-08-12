@@ -3,10 +3,10 @@
 // Function Declaration
 
 // Function Expression:
-var a = function name() {} 
+var a = function name() {}
 
 // Function Declaration:
-function name () {} 
+function name() {}
 
 
 // FUNCTION DECLARATION EXAMPLE
@@ -41,7 +41,7 @@ sing("heeelllooooooo");
 // Example 2
 function addNums(num1, num2) {
     console.log(num1 + num2);
-} 
+}
 // Let's call it here:
 addNums(5, 4); // We are passing in 5 as num1, and 4 as num2
 

@@ -8,8 +8,8 @@
     <li>Candles</li>
 </ul> */
 
-document.querySelectorAll('li'[1]).parentElement;
+document.querySelectorAll('li' [1]).parentElement;
 // <ul>
 
-document.querySelectorAll('li'[1]).parentElement.parentElement;
+document.querySelectorAll('li' [1]).parentElement.parentElement;
 // <body>

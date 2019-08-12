@@ -8,4 +8,4 @@
 */
 
 // Edit content on item 2 (a bit tricker, since it is not the first or last)
-ul.children[1].innerText = 'Andrew'
+ul.children[1].innerText = 'Andrew';
