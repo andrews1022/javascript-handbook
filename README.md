@@ -1,5 +1,5 @@
 # JavaScript Handbook
-A handbook containing all the basic, intermediate, and advanced, concepts I learn about vanilla JavaScript. Feel free to download and use as a reference for yourself!
+A handbook containing all notes I've taken on basic, intermediate, and advanced, JavaScript concepts from various sources (listed below). Feel free to download and use as a reference for yourself!
 
 ## Sources (where I learned from):
 ### My own projects

@@ -6,8 +6,9 @@
 // For parameters, you want to pass in the properties you want to be ablet to set
 
 // Constructor function
-function Person(firstName, lastName, dateOfBirth) { // When you pass these in, we want to set them to properties of THIS object. We do that by using the 'this' keyword
-
+function Person(firstName, lastName, dateOfBirth) { 
+    // When you pass the above parameters in, we want to set them to properties of THIS object. 
+    // We do that by using the 'this' keyword
     this.firstName = firstName;
     this.lastName = lastName;
     this.dateOfBirth = dateOfBirth;
