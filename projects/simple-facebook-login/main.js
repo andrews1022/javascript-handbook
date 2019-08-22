@@ -1,11 +1,13 @@
 // Creating the database
-var database = [{
+var database = [
+    {
     username: "andrew",
     password: "password1234"
 }];
 
 // Creating the newsfeed
-var newsFeed = [{
+var newsFeed = [
+    {
         username: 'aryn',
         timeline: 'So tired from all that learning!'
     },

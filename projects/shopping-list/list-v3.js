@@ -1,6 +1,6 @@
-let button = document.getElementById('enter'); 
-let input = document.getElementById('user-input'); 
-let ul = document.getElementById('item-list'); 
+let button = document.getElementById('enter');
+let input = document.getElementById('user-input');
+let ul = document.getElementById('item-list');
 
 function inputLength() {
     return input.value.length;
@@ -13,13 +13,13 @@ function createListElement() {
     input.value = '';
 }
 
-function addListAfterClick(){
+function addListAfterClick() {
     if (inputLength() > 0) {
         createListElement();
     }
 }
 
-function addListAfterKeypress(event){
+function addListAfterKeypress(event) {
     if (inputLength() > 0 && event.keyCode === 13) {
         createListElement();
     }

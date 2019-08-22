@@ -146,7 +146,7 @@ thirdListItem.style.fontWeight = 100;
 // Let's grab all the h2s
 const h2 = document.querySelectorAll('h2');
 console.log(h2);
-h2.forEach(function (heading){
+h2.forEach(function (heading) {
     heading.style.background = 'silver';
     heading.textContent = 'JavaScript Heading!';
 })

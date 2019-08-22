@@ -1,7 +1,8 @@
 /* font-family: 'Montserrat', sans-serif; */
 
 body {
-    background: linear-gradient(to right, rgb(0, 255, 0) , rgb(255, 0, 0)); /* Standard syntax */
+    /* Standard syntax */
+    background: linear-gradient(to right, rgb(0, 255, 0), rgb(255, 0, 0));
 
     color: #222;
     text-align: center;
@@ -44,7 +45,7 @@ h3 {
     outline: none;
     padding: .5rem 1rem;
     text-align: center;
-    transition: ease-in-out 200ms; 
+    transition: ease-in-out 200ms;
 }
 
 .random:hover {
@@ -56,4 +57,3 @@ h3 {
     background-color: #222;
     border: none;
 }
-

@@ -10,8 +10,8 @@ const tempSpan = document.querySelector('.temperature-span');
 
 // First we need to get our lat and long coordinates
 window.addEventListener('load', () => {
-	
-	// Dynamically load icons
+
+  // Dynamically load icons
   // Define a function and add the icon and iconID
   function setIcons(icon, iconID) {
     const skycons = new Skycons({
@@ -26,8 +26,8 @@ window.addEventListener('load', () => {
     skycons.play();
 
     return skycons.set(iconID, Skycons[currentIcon]);
-	}
-	
+  }
+
   // Obtain location of user
   // User must click OK on allow location
   if (navigator.geolocation.getCurrentPosition) {
@@ -54,7 +54,11 @@ window.addEventListener('load', () => {
           return response.json();
         })
         .then(data => {
-          const { temperature, summary, icon } = data.currently;
+          const {
+            temperature,
+            summary,
+            icon
+          } = data.currently;
 
           // Set DOM Elements from the API
           tempDegree.textContent = temperature;

@@ -26,7 +26,7 @@ window.onload = (event) => {
 
 // Function to generate random colors and set background gradient to them
 function setRandomColors() {
-    
+
     // From Stack Overflow: https://bit.ly/2YNpVgB
     let randomColorOne = '#' + Math.floor(Math.random() * 16777216).toString(16);
     let randomColorTwo = '#' + Math.floor(Math.random() * 16777216).toString(16);

@@ -11,15 +11,15 @@ let output = document.querySelector('#output');
 output.style.visibility = 'hidden';
 
 // Listen for event type input
-input.addEventListener('input', function(){
+input.addEventListener('input', function () {
 
-    // Set visibility of the card/output container back to visible
-    output.style.visibility = 'visible';
+	// Set visibility of the card/output container back to visible
+	output.style.visibility = 'visible';
 
-    // Conversion
-    grams.innerHTML = Number(input.value * 453.592);
-    kilo.innerHTML = Number(input.value / 2.205);
-    ounce.innerHTML = Number(input.value * 16);
+	// Conversion
+	grams.innerHTML = Number(input.value * 453.592);
+	kilo.innerHTML = Number(input.value / 2.205);
+	ounce.innerHTML = Number(input.value * 16);
 })
 
 

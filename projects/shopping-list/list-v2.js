@@ -27,7 +27,7 @@ function createListElement() {
 
 // Event Listener for clicking on the Enter button
 button.addEventListener('click', function () {
-    
+
     // Conditional if the length of the string is greater than 0
     if (inputLength() > 0) {
         createListElement(); // Calling the function to create the list item

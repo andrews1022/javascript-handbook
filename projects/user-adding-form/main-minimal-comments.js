@@ -17,7 +17,7 @@ function onSubmit(e) {
     e.preventDefault();
 
     // Making sure both fields are filled out
-    if (nameInput.value === '' || emailInput === '') { 
+    if (nameInput.value === '' || emailInput === '') {
 
         message.classList.add('error'); // Adding the css stylings of class 'error'
         message.innerHTML = 'Please enter all fields!'; // Displaying the error message

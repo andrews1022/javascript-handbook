@@ -26,7 +26,7 @@ function checkDriverAge() {
 }
 
 // Create another function that does the same thing, assign it to checkDriverAge2 variable using Function Expression.
-var checkDriverAge2 = function() {
+var checkDriverAge2 = function () {
 	var age = prompt("What is your age?");
 	if (Number(age) < 18) {
 		alert("Sorry, you are too yound to drive this car. Powering off");
