@@ -1,5 +1,5 @@
 // Let's use this object as reference:
-const obj2 = {
+const obj = {
     player: 'Andrew',
     xpPoints: 100,
     isWizardLevel: false
@@ -7,7 +7,7 @@ const obj2 = {
 
 const player = obj.player;
 const experience = obj.xpPoints;
-let isWizardLevel = obj.isWizardLevel;
+const isWizardLevel = obj.isWizardLevel;
 
 // Destructured version
 const { player, experience } = obj;
