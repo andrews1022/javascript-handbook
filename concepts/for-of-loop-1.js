@@ -3,7 +3,7 @@ const basket = ['apples, oranges, grapes'];
 
 // The for of loop:
 for (item of basket) {
-    console.log('for of loop:', item);
+  console.log('for of loop:', item);
 }
 
 // What we're doing here is ITERATING over this array
@@ -11,6 +11,6 @@ for (item of basket) {
 // You can iterate over arrays and strings, so they are considered iterable
 
 // Iterating over a string:
-for (item of 'basket'){
-    console.log('for of loop iterating over a string:', item);
+for (item of 'basket') {
+  console.log('for of loop iterating over a string:', item);
 }

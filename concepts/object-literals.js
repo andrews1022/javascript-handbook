@@ -2,17 +2,17 @@
 
 // For example:
 const person = {
-    firstName: 'Andrew',
-    lastName: 'Shearer',
-    age: 30,
-    hobbies: ['metal music', 'movies', 'web development'],
+	firstName: 'Andrew',
+	lastName: 'Shearer',
+	age: 30,
+	hobbies: ['metal music', 'movies', 'web development'],
 
-    // You can have embedded/nested objects (object within an object):
-    address: {
-        street: '124 Main Street',
-        city: 'Vancouver',
-        province: 'BC'
-    }
+	// You can have embedded/nested objects (object within an object):
+	address: {
+		street: '124 Main Street',
+		city: 'Vancouver',
+		province: 'BC'
+	}
 }
 console.log(person);
 
@@ -30,16 +30,16 @@ console.log(person.address.city); // use the dot(.) selector multiple times
 
 // Destructuring (create variables from the object literal)
 const {
-    firstName,
-    lastName
+	firstName,
+	lastName
 } = person;
 console.log(firstName);
 
 // Create a destructured variable from the nested object:
 const {
-    address: {
-        city
-    }
+	address: {
+		city
+	}
 } = person;
 console.log(city);
 

@@ -30,7 +30,7 @@ const betterGreeting = `Hello ${newName} you seem to be ${age-10}. Your ${pet} i
 
 // Using default arguments
 function greet(newerName = 'Andrew', newAge = '28', newPet = 'corgi') {
-    return `Hello ${newerName} you seem to be ${newAge-10}. Your ${newPet} is awesome!`;
+	return `Hello ${newerName} you seem to be ${newAge-10}. Your ${newPet} is awesome!`;
 }
 
 // When we call greet(); in the console, we get:

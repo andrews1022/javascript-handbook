@@ -8,7 +8,6 @@ const input = document.querySelector('.text-input');
 input.style.border = '4px solid black';
 
 
-
 // HTML for submit button:
 <input type="submit" class="btn btn-dark" value="Submit"></input>
 

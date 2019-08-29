@@ -23,7 +23,7 @@ condition ? expression 1 : expression 2;
 
 // ----------------------------------- EXAMPLE 1 -----------------------------------
 function isUserValid(bool) {
-    return bool;
+	return bool;
 }
 
 let answer = isUserValid(true) ? "You may enter!" : "Access denied!";
@@ -34,7 +34,7 @@ let answer = isUserValid(true) ? "You may enter!" : "Access denied!";
 // ----------------------------------- EXAMPLE 2 -----------------------------------
 // USING isUserValid ABOVE
 let automatedAnswer =
-    'Your account # is ' + (isUserValid(false) ? 12345 : 'not available');
+	'Your account # is ' + (isUserValid(false) ? 12345 : 'not available');
 // If we run 'automatedAnswer' we get "Your account # is not available" because isUserValid is false
 // If we set it to true, we get "Your account # is 12345"
 
@@ -44,11 +44,11 @@ let automatedAnswer =
 // ----------------------------------- CHALLENGE -----------------------------------
 // Turn this function into a ternary operator expression
 function experiencePoints() {
-    if (winBattle()) {
-        return 10;
-    } else {
-        return 1;
-    }
+	if (winBattle()) {
+		return 10;
+	} else {
+		return 1;
+	}
 }
 //  ||
 //  V

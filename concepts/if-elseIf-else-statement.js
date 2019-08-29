@@ -2,11 +2,11 @@
 const a = 5;
 
 if (a === 10) {
-    console.log('a is 10');
+	console.log('a is 10');
 } else if (a > 10) {
-    console.log('a is greater than 10')
+	console.log('a is greater than 10')
 } else {
-    console.log('a is less than 10');
+	console.log('a is less than 10');
 }
 
 // Using == will not match the data types, just the value. Even if we change a = '10', this will still be true

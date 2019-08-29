@@ -5,7 +5,7 @@ const array = [1, 2, 10, 16];
 // Below, we loop over each element, each number, multiply it by 2, and return a new array.
 // And again, since our arrow function has a single parameter, it can be written in shorthand like this:
 const mappedArray = array.map((num) => {
-    return num * 2;
+	return num * 2;
 })
 // Even further shorthanded
 const mappedArrayShort = array.map(num => num * 2);

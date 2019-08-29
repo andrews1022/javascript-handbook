@@ -1,8 +1,8 @@
 const name = 'John Snow';
 
 const obj3 = {
-    [name]: 'Hello!',
-    ['Ray' + 'Smith']: 'Hihi'
+	[name]: 'Hello!',
+	['Ray' + 'Smith']: 'Hihi'
 }
 
 // Now, in ES6 you can have instead of the old way of having just 'player' or 'experience' or 'wizardLevel', we can have something dynamic that we can assign like 'john snow' to [name]
@@ -16,4 +16,4 @@ const c = {}; // Empty objet
 
 // Adding above variables to object
 // If the property and the value are the same, we can just do this:
-const obj4 = {a, b, c}
+const obj4 = { a, b, c }

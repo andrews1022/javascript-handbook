@@ -1,14 +1,14 @@
 // Our Array of Objects
 const companies = [
-    {name: "RBC", category: "Finance", start: 1981, end: 2004},
-    {name: "Winners", category: "Retail", start: 1992, end: 2008},
-    {name: "Ford", category: "Auto", start: 1999, end: 2007},
-    {name: "Urban Barn", category: "Retail", start: 1989, end: 2010},
-    {name: "Microsoft", category: "Technology", start: 2009, end: 2014},
-    {name: "H&R Block", category: "Finance", start: 1987, end: 2010},
-    {name: "BMW", category: "Auto", start: 1986, end: 1996},
-    {name: "Apple", category: "Technology", start: 2011, end: 2016},
-    {name: "Walmart", category: "Retail", start: 1981, end: 1989}
+	{ name: "RBC", category: "Finance", start: 1981, end: 2004 },
+	{ name: "Winners", category: "Retail", start: 1992, end: 2008 },
+	{ name: "Ford", category: "Auto", start: 1999, end: 2007 },
+	{name: "Urban Barn", category: "Retail", start: 1989, end: 2010 },
+	{name: "Microsoft", category: "Technology", start: 2009, end: 2014 },
+	{name: "H&R Block", category: "Finance", start: 1987, end: 2010 },
+	{name: "BMW", category: "Auto", start: 1986, end: 1996 },
+	{name: "Apple", category: "Technology", start: 2011, end: 2016 },
+	{name: "Walmart", category: "Retail", start: 1981, end: 1989 }
 ];
 
 // Array of Ages
@@ -49,12 +49,12 @@ let canDrink = [];
 
 // Next, our for loop
 for (let i = 0; i < ages.length; i++) {
-    // If ages, current iteration, is greater than or equal to 21
-    if (ages[i] >= 21) {
+	// If ages, current iteration, is greater than or equal to 21
+	if (ages[i] >= 21) {
 
-        // Push on to it/add onto canDrink array
-        canDrink.push(ages[i]);
-    }
+		// Push on to it/add onto canDrink array
+		canDrink.push(ages[i]);
+	}
 }
 // Console log the canDrink array
 console.log('for loop canDrink', canDrink);
@@ -63,11 +63,11 @@ console.log('for loop canDrink', canDrink);
 // First define a variable
 // Then it takes in a function
 const canDrinkTwo = ages.filter(function (age) {
-    // Test the age parameter
-    if (age >= 21) {
-        // All you have to do is return true
-        return true;
-    }
+	// Test the age parameter
+	if (age >= 21) {
+		// All you have to do is return true
+		return true;
+	}
 });
 console.log('filter canDrink', canDrinkTwo);
 
@@ -81,9 +81,9 @@ console.log('filter canDrink arrow ES6', canDrinkArrow);
 // EXAMPLE 1 - FILTERING COMPANIES THAT ARE RETAIL
 // First, the ES5 way with standard function
 const retailCompanies = companies.filter(function (company) {
-    if (company.category === 'Retail') {
-        return true;
-    }
+	if (company.category === 'Retail') {
+		return true;
+	}
 });
 console.log('retailCompanies ES5', retailCompanies);
 
@@ -137,11 +137,11 @@ console.log('array with 2 maps', doubleMap);
 // At each iteration, it will take two companies and compare them
 // We then return 1 or -1 to move them up and down inside the array
 const sortedCompanies = companies.sort(function (comp1, comp2) {
-    if (comp1.start > comp2.start) {
-        return 1;
-    } else {
-        return -1;
-    }
+	if (comp1.start > comp2.start) {
+		return 1;
+	} else {
+		return -1;
+	}
 });
 console.log('sort companies by start date: old way', sortedCompanies);
 // Shorthand form of above using ES6, ternary operator
@@ -172,13 +172,13 @@ const sortedCompaniesStandard = companies.sort((a, b) => (a.start > b.start ? 1 
 // First using a for loop
 let ageSum = 0;
 for (let i = 0; i < ages.length; i++) {
-    ageSum += ages[i];
+	ageSum += ages[i];
 }
 console.log('ages array sum', ageSum);
 
 // Now lets use reduce to do the same thing
 const ageSumReduce = ages.reduce(function (total, age) {
-    return total + age;
+	return total + age;
 }, 0);
 console.log('ages array sum using reduce', ageSumReduce);
 // To shorten this up
@@ -186,8 +186,8 @@ const ageSumReduceShort = ages.reduce((total, age) => total + age, 0);
 console.log('ages array sum using reduce shorthand', ageSumReduceShort);
 
 // Get total years for all companies
-const totalYears = companies.reduce(function(total, company){
-    return total + (company.end - company.start);
+const totalYears = companies.reduce(function (total, company) {
+	return total + (company.end - company.start);
 }, 0);
 console.log('companies array total number of years', totalYears);
 
@@ -202,9 +202,9 @@ console.log('companies array total number of years shorthand', totalYearsShort);
 // Next, sort lowest to highest
 // Finally, use reduce to add them all together
 const combined = ages
-                 .map(age => age * 2)
-                 .filter(age => age >= 40)
-                 .sort((a, b) => a - b)
-                 .reduce((a, b) => a + b, 0);
-                 
+	.map(age => age * 2)
+	.filter(age => age >= 40)
+	.sort((a, b) => a - b)
+	.reduce((a, b) => a + b, 0);
+
 console.log('combined array methods', combined);

@@ -1,11 +1,11 @@
 // Consider this ul:
 <ul>
-    <li>Notebook</li>
-    <li>Jello</li>
-    <li>Spinach</li>
-    <li>Rice</li>
-    <li>Birthday Cake</li>
-    <li>Candles</li>
+	<li>Notebook</li>
+	<li>Jello</li>
+	<li>Spinach</li>
+	<li>Rice</li>
+	<li>Birthday Cake</li>
+	<li>Candles</li>
 </ul>
 
 // Use querySelectorAll to select all the li

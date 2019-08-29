@@ -11,7 +11,7 @@ function name() {}
 
 // FUNCTION DECLARATION EXAMPLE
 function sayHello() {
-    console.log('Hello dere ehh boy!');
+	console.log('Hello dere ehh boy!');
 } // at this point nothing happens because we have not CALLED the functions
 
 sayHello(); // calling the function
@@ -19,7 +19,7 @@ sayHello(); // calling the function
 
 // FUNCTION EXPRESSION EXAMPLE
 var sayBye = function () {
-    console.log('Bye :(');
+	console.log('Bye :(');
 }
 sayBye();
 // Technically, this function has no name
@@ -32,7 +32,7 @@ sayBye();
 
 // Example 1
 function sing(song) {
-    console.log(song);
+	console.log(song);
 }
 sing("Laaa dee daahh");
 sing("heeelllooooooo");
