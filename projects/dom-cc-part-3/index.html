@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+	<title>Item Lister</title>
+</head>
+
+<body>
+	<header id="main-header" class="bg-info text-white p-4 mb-3">
+		<div class="container">
+			<h1 id="header-title">Item Lister <span style="display:none">123</span></h1>
+		</div>
+	</header>
+	<div class="container">
+		<div id="main" class="card card-body">
+			<h2 class="title">Add Items</h2>
+			<form class="form-inline mb-3" id="form">
+				<input type="text" class="form-control mr-2 text-input" id="text-input">
+				<select class="form-control mr-2" id="select">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+				<input type="submit" class="btn btn-dark" value="Submit" id="btn-submit">
+			</form>
+			<h2 class="title">Items</h2>
+			<ul id="items" class="list-group">
+				<li class="list-group-item">Item 1</li>
+				<li class="list-group-item">Item 2</li>
+				<li class="list-group-item">Item 3</li>
+				<li class="list-group-item">Item 4</li>
+			</ul>
+			<div class="output"></div>
+			<button class="btn btn-dark" id="button">Click Here!</button>
+			<h2 class="title">Open up the console too!</h2>
+			<div class="grey-box" style='width:400px; height:200px; background:#f4f4f4;'></div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+
+</html>

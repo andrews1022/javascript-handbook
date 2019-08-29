@@ -3,26 +3,26 @@ let input = document.getElementById('user-input');
 let ul = document.getElementById('item-list');
 
 function inputLength() {
-    return input.value.length;
+	return input.value.length;
 }
 
 function createListElement() {
-    let listItem = document.createElement('li');
-    listItem.appendChild(document.createTextNode(input.value));
-    ul.appendChild(listItem);
-    input.value = '';
+	let listItem = document.createElement('li');
+	listItem.appendChild(document.createTextNode(input.value));
+	ul.appendChild(listItem);
+	input.value = '';
 }
 
 function addListAfterClick() {
-    if (inputLength() > 0) {
-        createListElement();
-    }
+	if (inputLength() > 0) {
+		createListElement();
+	}
 }
 
 function addListAfterKeypress(event) {
-    if (inputLength() > 0 && event.keyCode === 13) {
-        createListElement();
-    }
+	if (inputLength() > 0 && event.keyCode === 13) {
+		createListElement();
+	}
 }
 
 button.addEventListener('click', addListAfterClick);

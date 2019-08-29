@@ -109,7 +109,8 @@ p {
   font-size: 1.5rem;
   white-space: wrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   max-width: 45ch;
   /* These character lengths are based on recommended line length for maximum clarity, readability and proportion in print
 
@@ -154,6 +155,7 @@ ul, ol {
   margin-left: .5rem;
   text-decoration: none;
   -webkit-transition: color 300ms;
+  -o-transition: color 300ms;
   transition: color 300ms;
 }
 
@@ -186,6 +188,8 @@ ul, ol {
 
 .generate-btn {
   background: -webkit-gradient(linear, left top, right bottom, from(#FAE3D9), to(#FFB6B9));
+  background: -webkit-linear-gradient(left top, #FAE3D9, #FFB6B9);
+  background: -o-linear-gradient(left top, #FAE3D9, #FFB6B9);
   background: linear-gradient(to right bottom, #FAE3D9, #FFB6B9);
   border: none;
   border-radius: 50px;
@@ -198,6 +202,7 @@ ul, ol {
   outline: none;
   padding: 1rem 2.5rem;
   -webkit-transition: all 250ms;
+  -o-transition: all 250ms;
   transition: all 250ms;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,15 +228,19 @@ ul, ol {
 
 .generate-btn:hover, .generate-btn:focus {
   background: -webkit-gradient(linear, left top, right bottom, from(#FAE3D9), to(#FFB6B9));
+  background: -webkit-linear-gradient(left top, #FAE3D9, #FFB6B9);
+  background: -o-linear-gradient(left top, #FAE3D9, #FFB6B9);
   background: linear-gradient(to right bottom, #FAE3D9, #FFB6B9);
   -webkit-filter: saturate(2);
           filter: saturate(2);
   -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
           transform: translateY(-5px);
 }
 
 .generate-btn:active {
   -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
           transform: translateY(-3px);
 }
 
@@ -305,3 +314,4 @@ ul, ol {
     font-size: 2rem;
   }
 }
+/*# sourceMappingURL=main.css.map */

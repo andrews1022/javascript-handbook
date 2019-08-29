@@ -6,10 +6,10 @@ let random = document.querySelector('.random');
 
 // Function to call when selecting colors from picker
 function setGradient() {
-    body.style.background = 'linear-gradient(to right, ' + colorOne.value + ', ' + colorTwo.value + ')';
+	body.style.background = 'linear-gradient(to right, ' + colorOne.value + ', ' + colorTwo.value + ')';
 
-    // Inject background color
-    header.textContent = body.style.background + ";";
+	// Inject background color
+	header.textContent = body.style.background + ";";
 }
 
 // Add event listener for first colour picker
@@ -21,20 +21,20 @@ colorTwo.addEventListener('input', setGradient);
 // On page load, display gradient info
 // From MDN: https://mzl.la/2KtmeYt
 window.onload = (event) => {
-    setGradient();
+	setGradient();
 };
 
 // Function to generate random colors and set background gradient to them
 function setRandomColors() {
 
-    // From Stack Overflow: https://bit.ly/2YNpVgB
-    let randomColorOne = '#' + Math.floor(Math.random() * 16777216).toString(16);
-    let randomColorTwo = '#' + Math.floor(Math.random() * 16777216).toString(16);
+	// From Stack Overflow: https://bit.ly/2YNpVgB
+	let randomColorOne = '#' + Math.floor(Math.random() * 16777216).toString(16);
+	let randomColorTwo = '#' + Math.floor(Math.random() * 16777216).toString(16);
 
-    colorOne.value = randomColorOne;
-    colorTwo.value = randomColorTwo;
+	colorOne.value = randomColorOne;
+	colorTwo.value = randomColorTwo;
 
-    setGradient();
+	setGradient();
 }
 
 // Call the function when the random colors button is clicked
