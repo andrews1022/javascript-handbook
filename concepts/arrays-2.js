@@ -11,19 +11,19 @@ var booleans = [true, false, true];
 
 // You can even have an array of functions
 var functionsList = [function apple() {
-    console.log('apple');
+  console.log('apple');
 }]
 
 // You can also have arrays hold different types of data at the same time
 // But this not advised, as it can lead to performance issues
 var mixedList = ['apples', 3, undefined, true, function orange() {
-    console.log('orange');
+  console.log('orange');
 }]
 
 // You can have arrays inside of an array
 var animalList = [
-    ['tiger', 'cat', 'bear', 'bird'],
-    ['dog', 'mouse', 'elephant', 'zebra']
+  ['tiger', 'cat', 'bear', 'bird'],
+  ['dog', 'mouse', 'elephant', 'zebra']
 ];
 
 // Log both arrays

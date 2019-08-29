@@ -4,14 +4,14 @@
 
 // So lets turn addNumsV3 into an arrow function
 function addNumsV3(num5 = 1, num6 = 1) {
-    return num5 + num6;
+	return num5 + num6;
 }
 
 // First step is to define it as a variable instead of using the function keyword
 // Next, place an = operator inbetween the variable name and (
 // Then, place a 'fat arrow' between ) and {
 const addNumsV4 = (num7 = 1, num8 = 1) => {
-    return num7 + num8;
+	return num7 + num8;
 }
 console.log(addNumsV4(5, 5));
 

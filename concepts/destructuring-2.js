@@ -8,9 +8,9 @@
 // ---------- Assign variables from objects ---------- 
 // OLD WAY:
 var numbers = {
-    x: 3.6,
-    y: 7.4,
-    z: 6.5
+	x: 3.6,
+	y: 7.4,
+	z: 6.5
 }
 var x = numbers.x; // x = 3.6
 var y = numbers.y; // y = 7.4
@@ -34,8 +34,8 @@ console.log(b); // b = 7.4
 // ---------- Assign variables from nested objects ----------
 // Example:
 var nestObj = {
-    start: {x: 5, y: 6},
-    end: {x: 6, y: -9}
+	start: {x: 5, y: 6},
+	end: {x: 6, y: -9}
 }
 var { start : { x: startX, y: startY}} = nestObj;
 console.log(startX);
@@ -63,12 +63,12 @@ console.log(rest); // will log: [3, 4, 5]
 
 // ---------- Pass an Object as a Function's Parameters ----------
 const profileUpdate = (profileData) => {
-    const { name, age, nationality, location } = profileData;
-    // Do something with these variables
+	const { name, age, nationality, location } = profileData;
+	// Do something with these variables
 }
 
 // But that can be written like this:
 const profileUpdate = ({ name, age, nationality, location }) => {
-    // Do something with these variables
+	// Do something with these variables
 }
 // Here, we are still passing in a profileData object, but right in the parameter we're destructuring that object into the different variables

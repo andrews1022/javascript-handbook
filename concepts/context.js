@@ -2,7 +2,7 @@
 // Context vs Scope (lots of confusion between the two)
 // Reminder of scope
 function b() {
-    let a = 4;
+	let a = 4;
 }
 // Doing console.log(a); will not work, because the variable only lives inside the universe of the function b()
 
@@ -18,15 +18,15 @@ console.log(this);
 
 // Another example
 function a() {
-    console.log(this);
+	console.log(this);
 }
 // We still get window, we're still in the window environment
 
 // Let's use it like this:
 const object4 = {
-    a: function () {
-        console.log(this);
-    }
+	a: function () {
+		console.log(this);
+	}
 }
 // So in the console we run:
 object4.a();

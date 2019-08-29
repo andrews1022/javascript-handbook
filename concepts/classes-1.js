@@ -1,26 +1,25 @@
-// CLASSES
-// Added in ES6
+// Classes were added in ES6
 // Does same thing under the hood as above, however, is done with 'syntactic sugar'
 
 // Class creation:
 // use the class keyword, and then give it a name
-class HumanBeing { 
-    // create a method called a constructor, and assign properties just like before)
-    constructor(firstName, lastName, dateOfBirth) { 
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.dateOfBirth = new Date(dateOfBirth);
-    }
+class HumanBeing {
+	// create a method called a constructor, and assign properties just like before)
+	constructor(firstName, lastName, dateOfBirth) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dateOfBirth = new Date(dateOfBirth);
+	}
 
-    // Any method we want to add, we can simply add it here:
-    getBirthYear() {
-        return this.dateOfBirth.getFullYear();
-    }
+	// Any method we want to add, we can simply add it here:
+	getBirthYear() {
+		return this.dateOfBirth.getFullYear();
+	}
 
-    // And here:
-    getFullName() {
-        return `${this.firstName} ${this.lastName}`;
-    }
+	// And here:
+	getFullName() {
+		return `${this.firstName} ${this.lastName}`;
+	}
 }
 
 // Instantiate the object

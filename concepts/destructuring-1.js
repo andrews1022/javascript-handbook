@@ -1,8 +1,8 @@
 // Let's use this object as reference:
 const obj = {
-    player: 'Andrew',
-    xpPoints: 100,
-    isWizardLevel: false
+	player: 'Andrew',
+	xpPoints: 100,
+	isWizardLevel: false
 }
 
 const player = obj.player;
@@ -24,9 +24,9 @@ let { isWizardLevel } = obj;
 
 // ANOTHER EXAMPLE:
 const person = {
-    firstName : "John",
-    lastName  : "Doe",
-    age       : 50,
-    eyeColor  : "blue"
+	firstName : "John",
+	lastName  : "Doe",
+	age       : 50,
+	eyeColor  : "blue"
 };
 const { firstName, lastName, age, eyeColor } = person;

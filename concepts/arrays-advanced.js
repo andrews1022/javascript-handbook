@@ -7,13 +7,13 @@ const array = [1, 2, 10, 16];
 // Let's remember how forEach loop works agin
 // Let's say we want to multiply every single number in the array.
 const newArray = array.forEach((num) => {
-    num * 2;
+	num * 2;
 })
 
 // We're just randomly multiplying the numbers by two but we're not really storing it anywhere.
 const double = [];
 const newArray2 = array.forEach((num) => {
-    double.push(num * 2);
+	double.push(num * 2);
 })
 console.log('forEach/double.push', double);
 
@@ -26,7 +26,7 @@ console.log('forEach/double.push', double);
 // With map, you always need to return something
 // Below, we loop over each element each number and return a new array.
 const mappedArray = array.map((num) => {
-    return num * 2;
+	return num * 2;
 })
 console.log('map', mappedArray);
 // BREAKDOWN:
@@ -61,8 +61,8 @@ console.log('map short', mappedArrayShort);
 // And as the name suggests, we can filter our array based on a condition
 // For our demo, let's return all the elements in the array 'array' that are greater than five
 const filteredArray = array.filter(num => {
-    // As with map, we must return something
-    return num > 5;
+	// As with map, we must return something
+	return num > 5;
 })
 console.log('filter', filteredArray);
 // Again, since this is a single return value, we can use shorthand version
@@ -82,12 +82,12 @@ console.log('filter short', filteredArrayShort);
 // What is accumulator?
 // Accumulator is something where we can store the information that happens in the body of the function.
 const reducedArray = array.reduce((accumulator, num) => {
-    return accumulator + num;
+	return accumulator + num;
 
-    // This line below: }, 0) 
-    // Is a second parameter
-    // We can specify what we want our accumulator to start with the default value.
-    // In our case let's say zero.
+	// This line below: }, 0) 
+	// Is a second parameter
+	// We can specify what we want our accumulator to start with the default value.
+	// In our case let's say zero.
 }, 0)
 console.log('reduce', reducedArray);
 // We get 29 because 10 + 16 = 26, then plus 1 & 2 = 29

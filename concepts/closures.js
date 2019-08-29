@@ -1,10 +1,10 @@
 function first() {
-    var greet = 'Hi';
+	var greet = 'Hi';
 
-    function second() {
-        alert(greet);
-    }
-    return second();
+	function second() {
+		alert(greet);
+	}
+	return second();
 }
 
 var newFunc = first();
@@ -12,11 +12,11 @@ newFunc();
 
 // First, convert it to 2018 Standards
 const first = () => {
-    const greet = 'Hi';
-    const second = () => {
-        alert(greet);
-    }
-    return second();
+	const greet = 'Hi';
+	const second = () => {
+		alert(greet);
+	}
+	return second();
 }
 
 const newFunc = first();

@@ -1,14 +1,14 @@
 // Our Array of Objects
 const companies = [
-    {name: "RBC", category: "Finance", start: 1981, end: 2004},
-    {name: "Winners", category: "Retail", start: 1992, end: 2008},
-    {name: "Ford", category: "Auto", start: 1999, end: 2007},
-    {name: "Urban Barn", category: "Retail", start: 1989, end: 2010},
-    {name: "Microsoft", category: "Technology", start: 2009, end: 2014},
-    {name: "H&R Block", category: "Finance", start: 1987, end: 2010},
-    {name: "BMW", category: "Auto", start: 1986, end: 1996},
-    {name: "Apple", category: "Technology", start: 2011, end: 2016},
-    {name: "Walmart", category: "Retail", start: 1981, end: 1989}
+	{name: "RBC", category: "Finance", start: 1981, end: 2004},
+	{name: "Winners", category: "Retail", start: 1992, end: 2008},
+	{name: "Ford", category: "Auto", start: 1999, end: 2007},
+	{name: "Urban Barn", category: "Retail", start: 1989, end: 2010},
+	{name: "Microsoft", category: "Technology", start: 2009, end: 2014},
+	{name: "H&R Block", category: "Finance", start: 1987, end: 2010},
+	{name: "BMW", category: "Auto", start: 1986, end: 1996},
+	{name: "Apple", category: "Technology", start: 2011, end: 2016},
+	{name: "Walmart", category: "Retail", start: 1981, end: 1989}
 ];
 
 // Array of Ages
@@ -23,12 +23,13 @@ let canDrink = [];
 
 // Next, our for loop
 for (let i = 0; i < ages.length; i++) {
-    // If ages, current iteration, is greater than or equal to 21
-    if (ages[i] >= 21) {
 
-        // Push on to it/add onto canDrink array
-        canDrink.push(ages[i]);
-    }
+	// If ages, current iteration, is greater than or equal to 21
+	if (ages[i] >= 21) {
+
+		// Push on to it/add onto canDrink array
+		canDrink.push(ages[i]);
+	}
 }
 // Console log the canDrink array
 console.log('for loop canDrink', canDrink);
@@ -37,11 +38,11 @@ console.log('for loop canDrink', canDrink);
 // First define a variable
 // Then it takes in a function
 const canDrinkTwo = ages.filter(function (age) {
-    // Test the age parameter
-    if (age >= 21) {
-        // All you have to do is return true
-        return true;
-    }
+	// Test the age parameter
+	if (age >= 21) {
+		// All you have to do is return true
+		return true;
+	}
 });
 console.log('filter canDrink', canDrinkTwo);
 
@@ -55,9 +56,9 @@ console.log('filter canDrink arrow ES6', canDrinkArrow);
 // EXAMPLE 1 - FILTERING COMPANIES THAT ARE RETAIL
 // First, the ES5 way with standard function
 const retailCompanies = companies.filter(function (company) {
-    if (company.category === 'Retail') {
-        return true;
-    }
+	if (company.category === 'Retail') {
+		return true;
+	}
 });
 console.log('retailCompanies ES5', retailCompanies);
 

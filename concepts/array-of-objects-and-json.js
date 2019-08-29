@@ -1,19 +1,8 @@
+// {name: "RBC", category: "Finance", start: 1981, end: 2004},
 const toDo = [
-    {
-        id: 1,
-        text: 'Take out the trash',
-        isCompleted: true
-    },
-    {
-        id: 2,
-        text: 'Meeting wit the boss',
-        isCompleted: true
-    },
-    {
-        id: 3,
-        text: 'Dentist appointment',
-        isCompleted: false
-    }
+	{ id: 1, text: 'Take out the trash', isCompleted: true },
+	{ id: 2, text: 'Meeting wit the boss', isCompleted: true },
+	{ id: 3, text: 'Dentist appointment', isCompleted: false }
 ];
 
 // Selecting just the 'Meeting with boss'

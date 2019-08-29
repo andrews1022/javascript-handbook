@@ -6,15 +6,15 @@ let button = document.querySelector('.btn');
 
 // Adding the event listener based on click the button
 button.addEventListener('click', function () {
-    console.log('Clicked!');
+	console.log('Clicked!');
 });
 
 // Adding the event listener based on mouse enter (hovering over the button)
 button.addEventListener('mouseenter', function () {
-    console.log('Clicked!');
+	console.log('Clicked!');
 });
 
 // Adding the event listener based on mouse enter (hovering over the button)
 button.addEventListener('mouseleave', function () {
-    console.log('Clicked!');
+	console.log('Clicked!');
 });

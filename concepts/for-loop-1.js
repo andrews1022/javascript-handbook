@@ -5,10 +5,10 @@
 // 3) the increment (or decrement)
 // And whatever is placed inside the { } will run until true
 for (let i = 0; i <= 10; i++) {
-    console.log(i);
+  console.log(i);
 }
 
 // You can also use backticks
 for (let i = 0; i <= 10; i++) {
-    console.log(`The index location of this for loop is ${i}`);
+  console.log(`The index location of this for loop is ${i}`);
 }
