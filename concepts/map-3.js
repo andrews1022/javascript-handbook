@@ -26,7 +26,6 @@ const testMap = companies.map(company => `${company.name}: (${company.start} - $
 console.log('map array company info', testMap);
 
 // Another example, ages array and square each number
-// My attempt---WORKS!! 
 const agesSquared = ages.map(age => age * age);
 console.log('ages array squared', agesSquared);
 
