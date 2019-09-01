@@ -4,6 +4,7 @@ A handbook containing all notes I've taken on basic, intermediate, and advanced,
 ## Sources (where I learned from):
 ### My own projects
 - Startup Generator
+- Country Lookup
 
 ### Udemy
 - Andrei Neagoie's [The Complete Web Developer in 2019: Zero to Mastery](https://www.udemy.com/the-complete-web-developer-zero-to-mastery/)
