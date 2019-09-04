@@ -1,0 +1,45 @@
+.header {
+    margin-top: $size-x-small-1;
+
+    &-box {
+        margin: 0 auto $size-x-small-1 auto;
+        text-align: $text-center;
+
+        // Switch to flex starting a tablet-portrait size
+        @include respond(tab-port) {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+    }
+
+    &-icon {
+        fill: $color-white;
+        height: $size-x-large-1;
+        margin-right: $size-tiny-2;
+        width: $size-x-large-1;
+    }
+
+    &-heading {
+        font-size: $size-small-3;
+        font-weight: $font-weight-semi-bold;
+
+        @include respond(tab-port) {
+            font-size: $size-large-1; 
+        }
+    }
+
+    &-text {
+        font-size: $size-tiny-3;
+        font-weight: $font-weight-light;
+        margin: $margin-center;
+        text-align: $text-center;
+        width: $wrapper-large;
+
+        @include respond(tab-port) {
+            font-size: $size-x-small-1; 
+        }
+    }
+
+}
