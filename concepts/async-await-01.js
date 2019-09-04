@@ -1,14 +1,9 @@
 // ---------------------- Async/Await ----------------------
 // We're going to try and mimic blog posts on a server, getting them, and creating a blog post
 
-const posts = [{
-  title: 'Post One',
-  body: 'This is post one'
-},
-{
-  title: 'Post Two',
-  body: 'This is post two'
-}
+const posts = [
+  { title: 'Post One', body: 'This is post one' },
+  { title: 'Post Two', body: 'This is post two' }
 ];
 
 function getPosts() {
@@ -59,17 +54,16 @@ createPost({ title: 'Post Three', body: 'This is post three' })
   .then(getPosts)
   .catch(err => console.log(err)); // set const error to true to see .catch work
 
-
 // We need to use the keyword async if we want to use await
 // Await waits for an asynchronous action to be completed
 async function init() {
-  await createPost({ title: 'Post Three', body: 'This is post three' });
-
+  await createPost({
+    title: 'Post Three',
+    body: 'This is post three'
+  });
   getPosts();
-
   // So we're waiting for createPost() to be done before moving on to getPosts();
 }
-
 // Call the async function
 init();
 
@@ -77,9 +71,7 @@ init();
 async function fetchUsers() {
   // We need to put the fetch into a variable, and add await
   const response = await fetch('https://jsonplaceholder.typicode.com/users');
-
   const data = await response.json();
-
   console.log('Your users: ', data);
 }
 
