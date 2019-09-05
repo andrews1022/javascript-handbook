@@ -1,5 +1,5 @@
-// ARROW FUNCTIONS
-// Very handy, clean things up a bit
+// ------------------------------ ARROW FUNCTIONS ------------------------------
+// Very handy, they clean things up a bit
 // With an arrow function, if you have a single return, you can just put it on one line and it assumes that you want to return something
 
 // So lets turn addNumsV3 into an arrow function
@@ -29,7 +29,7 @@ const addNumsV7 = num13 => num13 + 5;
 console.log(addNumsV7(5));
 
 // Arrow function with default values
-// Convert this function to arrow function with default age to 10;
+// Convert this function to arrow function with a default age set to 10
 function isValidAge(age) {
 	return age;
 }
@@ -59,8 +59,8 @@ const whereAmI = (username, location) => {
 
 // ----------------------------------- FUNCTION #1 -----------------------------------
 // A named function with multiple parameters, in this case 'a' & 'b'
-function sum(a, b) {
-	return a + b;
+var sum = function sum(a, b) {
+  return a + b;
 }
 // Convert Function #1 to an Arrow Function:
 // The first step is to completely remove the function keyword
@@ -72,22 +72,22 @@ sum(a, b) {
 // This will be the beginning of the syntax of our arrow function
 // The reason for assigning it to a variable is because normal functions already create a variable of sum (in this case)
 // But since we no longer have the function keyword, we need to create our own variable to store this function
-let sumArrow = (a, b) {
+let sum = (a, b) {
 	return a + b;
 }
 // The remaining step is to add in the arrow that denotes these are our parameters
-let sumArrow = (a, b) => {
+let sum = (a, b) => {
 	return a + b;
 }
 // But we can reduce this code slightly more:
-let sumArrow = (a, b) => a + b;
+let sum = (a, b) => a + b;
 // This way, everything after the arrow is assumed to be returned
 
 // So this:
-let sumArrow = (a, b) => a + b;
+let sum = (a, b) => a + b;
 // Is the same as this:
-function sum(a, b) {
-	return a + b;
+var sum = function sum(a, b) {
+  return a + b;
 }
 
 

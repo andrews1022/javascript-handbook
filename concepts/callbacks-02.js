@@ -9,7 +9,7 @@ element.addEventListener('click', submitForm);
 movePlayer(100, 'Left', function () {
 	movePlayer(400, 'Left', function () {
 		movePlayer(10, 'Right', function () {
-			movePlayer(330, 'Left', function () {
+			movePlayer(330, 'Left', function () {				
 			})
 		})
 	})

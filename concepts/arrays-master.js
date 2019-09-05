@@ -1,8 +1,9 @@
+// ------------------------------ ARRAYS ------------------------------
 // Arrays are basically variables that hold multiple values
 // There a couple of different ways to create arrays
 
 // Old way
-const numbers = new Array(1, 2, 3, 4, 5); // when you see the 'new' keyword and something after it, this is called a constructor; think of it as we are constructing an array
+const numbers = new Array(1, 2, 3, 4, 5); // when you see the 'new' keyword and something after it, this is called a constructor - think of it as we are constructing an array
 console.log(numbers);
 
 // New/better way
@@ -84,14 +85,16 @@ console.log(animalList[1]);
 console.log(animalList[0][2]);
 
 // Arrays come with multiple methods:
-// Let's use the array var list = ['tiger', 'cat', 'bear', 'bird']; from earlier
-// list.shift() - to remove the first item in the array
-// list.pop() - to remove the last item in the array
-// list.unshift() - to add an item at the beginning of the array
-// list.push() - to add an item at the end of the array
-// list.concat() - to add multiple items to the array, such as list.concat(['bee', 'deer']);
-// list.sort() - sort items in the array
-// BE CAREFUL: There are some methods, that creates new lists: like 'concat'; and some methods: like 'push' or 'pop', that don't create a new list, just modify the current one.
+// Let's use this array from earlier
+var list = ['tiger', 'cat', 'bear', 'bird']; 
+list.shift() // - to remove the first item in the array
+list.pop() // - to remove the last item in the array
+list.unshift() // - to add an item at the beginning of the array
+list.push() // - to add an item at the end of the array
+list.concat() // - to add multiple items to the array, such as list.concat(['bee', 'deer']);
+list.sort() // - sort items in the array
+// ** BE CAREFUL** 
+// There are some methods, that creates new lists: like 'concat'; and some methods: like 'push' or 'pop', that don't create a new list, they just MODIFY the current one.
 
 // ----------------------------------- RECAP -----------------------------------
 // We said arrays look something like this:
@@ -111,10 +114,6 @@ const newArray2 = array.forEach((num) => {
 	double.push(num * 2);
 })
 console.log('forEach/double.push', double);
-
-// Covered here: map, filter, reduce
-// These 3 are the most important in day to day use of JavaScript
-
 
 
 // ----------------------------------- MAP -----------------------------------
