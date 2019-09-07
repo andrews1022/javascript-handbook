@@ -1,23 +1,13 @@
-// Consider this HTML:
-<ul id="items" class="list-group">
-	<li class="list-group-item">Item 1</li>
-	<li class="list-group-item">Item 2</li>
-	<li class="list-group-item">Item 3</li>
-	<li class="list-group-item">Item 4</li>
-</ul>
+// ------------------------------ PART 4 ------------------------------
 
-// Select all items using querySelectorAll
-const itemsList = document.querySelectorAll('.list-group-item');
+// A named function with one parameter
+function isPositive(number) {
+	return number >= 0;
+}
 
-// REGULAR FUNCTION SYNTAX
-itemsList.forEach(function (item) {
-	item.style.backgroundColor = 'SpringGreen';
-})
+// Convert Function #2 to an Arrow Function:
+let isPositiveArrow = (number) => number >= 0;
 
-// ARROW FUNCTION SYNTAX
-itemsList.forEach(item => {
-	item.style.backgroundColor = 'SpringGreen';
-})
-
-// CONDENSED ARROW FUNCTION
-itemsList.forEach(item => item.style.backgroundColor = 'PaleTurquoise');
+// But if we have just a single parameter, we can reduce it a tiny bit more:
+let isPositiveArrow = number => number >= 0;
+// We can remove the ( ) surrounding the parameter, in this case 'number'

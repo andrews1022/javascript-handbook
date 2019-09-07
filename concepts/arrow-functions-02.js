@@ -1,13 +1,15 @@
-// Arrow function with default values
+// ------------------------------ PART 2 ------------------------------
+
+// An arrow function with default values
 // Convert this function to arrow function with default age to 10;
 function isValidAge(age) {
 	return age;
 }
-// V V V
+
+// Answer:
 const isValidAge = (age = 10) => age;
 
 
-// ADDITIONAL EXAMPLE 2
 // Convert this function with an if/else statement to arrow function:
 function whereAmI(username, location) {
 	if (username && location) {
@@ -16,7 +18,8 @@ function whereAmI(username, location) {
 		return "I am totally lost!";
 	}
 }
-// V V V
+
+// Answer:
 const whereAmI = (username, location) => {
 	if (username && location) {
 		return "I am not lost";

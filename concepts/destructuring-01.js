@@ -1,3 +1,5 @@
+// ------------------------------ PART 1 ------------------------------
+
 // Let's use this object as reference:
 const obj = {
 	player: 'Andrew',

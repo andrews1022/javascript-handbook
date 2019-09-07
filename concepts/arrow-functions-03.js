@@ -1,6 +1,5 @@
-// Converting the 4 functions below to arrow functions
+// ------------------------------ PART 3 ------------------------------
 
-// ----------------------------------- FUNCTION #1 -----------------------------------
 // A named function with multiple parameters, in this case 'a' & 'b'
 var sum = function sum(a, b) {
   return a + b;
@@ -18,55 +17,20 @@ sum(a, b) {
 let sum = (a, b) {
 	return a + b;
 }
+
 // The remaining step is to add in the arrow that denotes these are our parameters
 let sum = (a, b) => {
 	return a + b;
 }
+
 // But we can reduce this code slightly more:
 let sum = (a, b) => a + b;
 // This way, everything after the arrow is assumed to be returned
 
 // So this:
 let sum = (a, b) => a + b;
+
 // Is the same as this:
 var sum = function sum(a, b) {
   return a + b;
 }
-
-
-// ----------------------------------- FUNCTION #2 -----------------------------------
-// A named function with one parameter
-function isPositive(number) {
-	return number >= 0;
-}
-// Convert Function #2 to an Arrow Function:
-let isPositiveArrow = (number) => number >= 0;
-// But if we have just a single parameter, we can reduce it a tiny bit more:
-let isPositiveArrow = number => number >= 0;
-// We can remove the ( ) surrounding the parameter, in this case 'number'
-
-
-// ----------------------------------- FUNCTION #3 -----------------------------------
-// A named function with no parameters
-function randomNumber() {
-	return Math.random;
-}
-// Convert Function #3 to an Arrow Function:
-let randomNumberArrow = () => {
-	return Math.random;
-}
-// But this can be condensed down to this:
-let randomNumberArrow = () => Math.random;
-
-// ----------------------------------- Function #4 -----------------------------------
-// An anonymous function, a function with no name
-// Where arrow functions really shine, are anonymous functions like this one
-document.addEventListener('click', function () {
-	console.log('Clicked!');
-})
-// Convert Function #4 to an Arrow Function:
-document.addEventListener('click', () => {
-	console.log('Clicked!');
-})
-// But the above can be condensed down to this:
-document.addEventListener('click', () => console.log('Clicked!'));

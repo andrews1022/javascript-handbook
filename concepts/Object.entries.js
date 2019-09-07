@@ -5,7 +5,7 @@ let obj = {
 	username2: 'Mr. Grinch'
 }
 
-// .entries example
+// Using .entries() example 
 Object.entries(obj).forEach(value => {
 	console.log(value);
 })

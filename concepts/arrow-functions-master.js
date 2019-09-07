@@ -1,43 +1,47 @@
-// ------------------------------ ARROW FUNCTIONS ------------------------------
-// Very handy, they clean things up a bit
+// ------------------------------ PART 1 ------------------------------
+
+// Arrow functions are very handy, and they help clean things up a bit
 // With an arrow function, if you have a single return, you can just put it on one line and it assumes that you want to return something
 
-// So lets turn addNumsV3 into an arrow function
-function addNumsV3(num5 = 1, num6 = 1) {
+// So lets turn this function below into an arrow function
+function addNums(num5 = 1, num6 = 1) {
 	return num5 + num6;
 }
 
-// First step is to define it as a variable instead of using the function keyword
+// The irst step is to define it as a variable instead of using the function keyword
 // Next, place an = operator inbetween the variable name and (
-// Then, place a 'fat arrow' between ) and {
-const addNumsV4 = (num7 = 1, num8 = 1) => {
+// Then, place a 'fat arrow' between the ) and {
+const addNumsArrow = (num7 = 1, num8 = 1) => {
 	return num7 + num8;
 }
-console.log(addNumsV4(5, 5));
+console.log(addNumsArrow(5, 5));
 
 // What's nice about this is if it's just one expression (no other variables being assigned, nothing else going on inside the { }), we don't even need the curly braces:
-const addNumsV5 = (num9 = 1, num10 = 1) => console.log(num9 + num10);
-addNumsV5(5, 5);
+const addNumsArrow = (num9 = 1, num10 = 1) => console.log(num9 + num10);
+addNumsArrow(5, 5);
 
 // But, we can trim it down EVEN FUTHER!
-const addNumsV6 = (num11 = 1, num12 = 1) => num11 + num12;
-console.log(addNumsV6(5, 5));
+const addNumsArrow = (num11 = 1, num12 = 1) => num11 + num12;
+console.log(addNumsArrow(5, 5));
 // If wish to use the return keyword, you would need to place it inside { } like in addNumsV4
 
 // And if you have just one parameter:
-const addNumsV7 = num13 => num13 + 5;
-console.log(addNumsV7(5));
+const addNumsArrow = num13 => num13 + 5;
+console.log(addNumsArrow(5));
 
-// Arrow function with default values
-// Convert this function to arrow function with a default age set to 10
+
+// ------------------------------ PART 2 ------------------------------
+
+// An arrow function with default values
+// Convert this function to arrow function with default age to 10;
 function isValidAge(age) {
 	return age;
 }
-// V V V
+
+// Answer:
 const isValidAge = (age = 10) => age;
 
 
-// ADDITIONAL EXAMPLE 2
 // Convert this function with an if/else statement to arrow function:
 function whereAmI(username, location) {
 	if (username && location) {
@@ -46,7 +50,8 @@ function whereAmI(username, location) {
 		return "I am totally lost!";
 	}
 }
-// V V V
+
+// Answer:
 const whereAmI = (username, location) => {
 	if (username && location) {
 		return "I am not lost";
@@ -55,9 +60,9 @@ const whereAmI = (username, location) => {
 	}
 }
 
-// Converting the 4 functions below to arrow functions
 
-// ----------------------------------- FUNCTION #1 -----------------------------------
+// ------------------------------ PART 3 ------------------------------
+
 // A named function with multiple parameters, in this case 'a' & 'b'
 var sum = function sum(a, b) {
   return a + b;
@@ -75,58 +80,74 @@ sum(a, b) {
 let sum = (a, b) {
 	return a + b;
 }
+
 // The remaining step is to add in the arrow that denotes these are our parameters
 let sum = (a, b) => {
 	return a + b;
 }
+
 // But we can reduce this code slightly more:
 let sum = (a, b) => a + b;
 // This way, everything after the arrow is assumed to be returned
 
 // So this:
 let sum = (a, b) => a + b;
+
 // Is the same as this:
 var sum = function sum(a, b) {
   return a + b;
 }
 
 
-// ----------------------------------- FUNCTION #2 -----------------------------------
+// ------------------------------ PART 4 ------------------------------
+
 // A named function with one parameter
 function isPositive(number) {
 	return number >= 0;
 }
+
 // Convert Function #2 to an Arrow Function:
 let isPositiveArrow = (number) => number >= 0;
+
 // But if we have just a single parameter, we can reduce it a tiny bit more:
 let isPositiveArrow = number => number >= 0;
 // We can remove the ( ) surrounding the parameter, in this case 'number'
 
 
-// ----------------------------------- Function #3 -----------------------------------
+// ------------------------------ PART 5 ------------------------------
+
 // A named function with no parameters
 function randomNumber() {
 	return Math.random;
 }
+
 // Convert Function #3 to an Arrow Function:
 let randomNumberArrow = () => {
 	return Math.random;
 }
+
 // But this can be condensed down to this:
 let randomNumberArrow = () => Math.random;
 
-// ----------------------------------- Function #4 -----------------------------------
+
+// ------------------------------ PART 6 ------------------------------
+
 // An anonymous function, a function with no name
 // Where arrow functions really shine, are anonymous functions like this one
 document.addEventListener('click', function () {
 	console.log('Clicked!');
 })
+
 // Convert Function #4 to an Arrow Function:
 document.addEventListener('click', () => {
 	console.log('Clicked!');
 })
+
 // But the above can be condensed down to this:
 document.addEventListener('click', () => console.log('Clicked!'));
+
+
+// ------------------------------ PART 7 ------------------------------
 
 // Consider this HTML:
 <ul id="items" class="list-group">
@@ -136,7 +157,7 @@ document.addEventListener('click', () => console.log('Clicked!'));
 	<li class="list-group-item">Item 4</li>
 </ul>
 
-// Select all items using querySelectorAll
+// Select all li elements using querySelectorAll
 const itemsList = document.querySelectorAll('.list-group-item');
 
 // REGULAR FUNCTION SYNTAX
