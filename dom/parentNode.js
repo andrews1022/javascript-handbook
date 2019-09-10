@@ -24,7 +24,7 @@ console.log(itemList.parentNode.parentNode.parentNode); // we get the body tag
 
 
 // What is the difference between a NodeList and HTMLCollection?
-// From https://bit.ly/2L097PU
+// See: https://bit.ly/2L097PU
 
 // The most simplest answer is that both a NodeList and HTMLCollection are collections of DOM nodes. The difference is that while a NodeList can contain any node type, the HTMLCollection is going to only to contain any node Element.
 // So what is the difference between a node element and a node type?
