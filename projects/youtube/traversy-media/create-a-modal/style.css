@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Button stylings */
+.button {
+  background-color: #ff7f50;
+  padding: 1em 2em;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  transition: ease-in-out 250ms;
+  cursor: pointer;
+  margin: 15rem;
+}
+
+.button:hover {
+  background-color: #fd7442;
+}
+
+/* Styling modal container/background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+/* Styling modal content box */
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 20% auto;
+  padding: 2em;
+  width: 50%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+
+  /* Add animation */
+  animation-name: modalOpen;
+  animation-duration: 500ms;
+}
+
+/* Styling the close button */
+.close-btn {
+  color: #ccc;
+  float: right;
+  font-size: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: ease-in-out 250ms;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #666;
+}
+
+/* Animation */
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
