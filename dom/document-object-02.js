@@ -1,4 +1,5 @@
-// -------------------- EXAMINING THE DOCUMENT OBJECT --------------------
+// ------------------------------ PART 2 ------------------------------
+
 // console.log(document);
 // Log all the different properties and methods attached to the document object:
 console.dir('The different properties and methods attached to the document object:');
@@ -14,7 +15,7 @@ console.log('Get current URL:', document.URL);
 console.log('Get the title of the page:', document.title);
 
 // Modify the title:
-// document.title = 123;
+document.title = 123;
 
 // Get the DOCTYPE:
 console.log('Get the DOCTYPE:', document.doctype);
@@ -35,7 +36,7 @@ console.log('Log everything in the DOM:', document.all);
 console.log('Log just h1 element:', document.all[10]);
 
 // Change the text content of the h1 (THIS WAY IS NOT RECOMMENDED)
-// document.all[10].textContent = `Hello, I've been changed by JavaScript!`;
+document.all[10].textContent = `Hello, I've been changed by JavaScript!`;
 // This is not recommened because if you add or remove anything from HTML DOC, the index locations all change
 
 // Get a collection of all the forms on the page

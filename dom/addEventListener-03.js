@@ -1,20 +1,19 @@
+// ------------------------------ PART 3 ------------------------------
+
 // HTML Button for reference:
-// <button class="btn btn-dark" id="button">Click Here!</button>
+<button class="btn btn-dark" id="button">Click Here!</button>
 
-// Grab the 'Click Here!' button
-
-// Method one:
+// Method 1:
 var button = document.querySelector('#button').addEventListener('click', function () {
 	console.log(123);
 });
 
-// Method two - using a named function (ideal way)
+// Method 2 - using a named function (ideal way)
 var button = document.querySelector('#button').addEventListener('click', buttonClick);
 
 function buttonClick(event) {
-	console.log(345);
-
-	// Add console log event here
+		// Add console log event, or whatever else here
+		console.log(345);
 }
 
 // Copy and paste these into the function to see their effect

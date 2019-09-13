@@ -1,6 +1,8 @@
+// ------------------------------ PART 1 ------------------------------
+
 // For a complete list of events, check out the MDN Docs: https://mzl.la/1JcBR22
 
-// SIMPLE BUTTON CLICK
+// EXAMPLE #1 - A Simple Button Click
 // Saving the button as a variable
 let button = document.querySelector('.btn');
 

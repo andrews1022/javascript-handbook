@@ -1,14 +1,16 @@
+// ------------------------------ PART 2 ------------------------------
+
 // FORM SUBMIT BUTTON
-const btn = document.querySelector('.btn');
+const button = document.querySelector('.btn');
 
 // Let's use addEventListener
 // This takes in two things: the event that we want. In this case 'click'
 // The second is going to be a function that you want to run when this event happens
 // Let's use an arrow function
 // We need to include an event parameter, which is just 'e'
-btn.addEventListener('click', (e) => {
+button.addEventListener('click', (event) => {
 	// Since this a submit button for a form, we need to remove the default behavior:
-	e.preventDefault();
+	event.preventDefault();
 
 	console.log('click'); // Notice it says 'click' in the console!
 
