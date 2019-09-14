@@ -1,3 +1,5 @@
+// ------------------------------ PART 4 ------------------------------
+
 // Our Array of Objects
 const companies = [
 	{name: "RBC", category: "Finance", start: 1981, end: 2004},

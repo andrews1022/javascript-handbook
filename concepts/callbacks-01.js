@@ -1,4 +1,5 @@
-// ---------------------- CALLBACKS ----------------------
+// ------------------------------ PART 1 ------------------------------
+
 // We're going to try and mimic blog posts on a server, getting them, and creating a blog post
 
 const posts = [
@@ -31,5 +32,5 @@ function createPost(post, callback) {
 }
 
 // Passing in getPosts as the call function
-// everything appears at once
+// Everything appears at once
 createPost({ title: 'Post Three', body: 'This is post 3' }, getPosts);

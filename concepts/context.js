@@ -31,5 +31,6 @@ const object4 = {
 // So in the console we run:
 object4.a();
 
-// We get {a: ƒ}
+// We get 
+{a: ƒ}
 // So now, 'this' refers to object4, which is the current environment

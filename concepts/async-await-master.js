@@ -1,4 +1,5 @@
-// ------------------------------ ASYNC / AWAIT ------------------------------
+// ------------------------------ PART 1 ------------------------------
+
 // We're going to try and mimic blog posts on a server, getting them, and creating a blog post
 
 const posts = [
@@ -67,7 +68,7 @@ async function init() {
 // Call the async function
 init();
 
-// ------------------------------ Async/Await w/ Fetch ------------------------------
+// --------------- Async/Await w/ Fetch ---------------
 async function fetchUsers() {
   // We need to put the fetch into a variable, and add await
   const response = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -78,7 +79,9 @@ async function fetchUsers() {
 // Call the function to log the 10 users from the API:
 fetchUsers();
 
-// ------------------------------ ASYNC/AWAIT ------------------------------
+
+// ------------------------------ PART 2 ------------------------------
+
 // Async/Await is part of ES8 and is built on top of promises.
 // Now underneath the hood an async function is a function that returns a promise.
 // But the benefit of async/await is that it makes code easier to read.
@@ -144,13 +147,17 @@ async function playerStart() {
 // So here we just have simple synchronous programming
 // You're just waiting for each line to happen
 
-// ------------------------------ ASYNC/AWAIT WITH FETCH ------------------------------
+
+// ------------------------------ PART 3 ------------------------------
+
+// ---------- ASYNC/AWAIT WITH FETCH ----------
 // Again, the fetch function, that's a promise
 // If you type fetch() into the console, you get:
 /*
 Promise {<rejected>: TypeError: Failed to execute 'fetch' on 'Window': 1 argument required, but only 0 present.
     at <…}
 */
+
 // So let's fetch from jsonplaceholder.com
 // Getting the users with fetch() the old way with promises
 fetch('https://jsonplaceholder.typicode.com/users')
@@ -165,7 +172,7 @@ async function fetchUsers() {
   console.log(data);
 }
 
-// ------------------------------ ANOTHER EXAMPLE ------------------------------
+// ----- ANOTHER EXAMPLE -----
 // An array of multiple links from jsonplaceholder API
 const urls = [
   'https://jsonplaceholder.typicode.com/users',
@@ -209,7 +216,9 @@ const getData = async function () {
   }
 }
 
-// ------------------------------ EXAMPLE #1 ------------------------------
+
+// ------------------------------ PART 4 ------------------------------
+
 // Convert the below promise into async/await
 fetch('https://swapi.co/api/starships/9/')
   .then(response => response.json())
@@ -222,7 +231,9 @@ async function fetchStarship() {
   console.log('Your starships: ', data);
 }
 
-// ------------------------------ EXAMPLE #2 ------------------------------
+
+// ------------------------------ PART 5 ------------------------------
+
 // Update the function below from the video to also have async/await for this line: 
 fetch(url).then(resp => resp.json())
 // So there shouldn't be any .then() calls anymore!
@@ -255,7 +266,9 @@ const getData = async function () {
   console.log('albums', albums);
 }
 
-// ------------------------------ EXAMPLE #3 ------------------------------
+
+// ------------------------------ PART 6 ------------------------------
+
 // Add a try catch block to the #2 solution in order to catch any errors.
 // Now change one of the urls so you console.log and error message
 const getData = async function () {
@@ -272,54 +285,10 @@ const getData = async function () {
   }
 }
 
-// ------------------------------ .FINALLY() ------------------------------
-// As the name suggests, it allows us to do something after a promise has 'finally' finished 
-// It is placed at the very bottom
 
-// Let's work with this data:
-const urls = [
-  'https://swapi.co/api/people/1/',
-  'https://swapi.co/api/people/2/',
-  'https://swapi.co/api/people/3/',
-  'https://swapi.co/api/people/4/',
-]
+// ------------------------------ PART 7 ------------------------------
 
-Promise.all(urls.map(url => {
-  return fetch(url).then(people => people.json())
-}))
-  .then(array => {
-    console.log('1', array[0])
-    console.log('2', array[1])
-    console.log('3', array[2])
-    console.log('4', array[3])
-  })
-  .catch(error => console.log('Fix it please!', error))
-  .finally(data => console.log('extra', data))
-// This finally block will be called regardless of whether or not .then works or the promises erros and catches into an error
-// So no matter what, after everything is done inside of a promise, .finally() will be called
-// And it'll be called whether it resolves or rejects
-// And .finally() does something that we tell it to do
-
-// Above, but with an error thrown:
-Promise.all(urls.map(url => {
-  return fetch(url).then(people => people.json())
-}))
-  .then(array => {
-    throw Error;
-    // When this line hit, it skips over everything below it, and hit the .catch() block
-
-    console.log('1', array[0])
-    console.log('2', array[1])
-    console.log('3', array[2])
-    console.log('4', array[3])
-  })
-  .catch(error => console.log('Fix it please!', error))
-  .finally(data => console.log('extra', data)) // will still appear even though an error was thrown and .catch() block as ran
-  
-// So .finally() is great for those times that you need to run a piece of code no matter what after a Promise
-
-
-// ------------------------------ FOR AWAIT OF LOOP ------------------------------
+// --------------- FOR AWAIT OF LOOP ---------------
 // Code for reference:
 const urls = [
   'https://jsonplaceholder.typicode.com/users',
@@ -375,3 +344,52 @@ const getData2 = async function () {
     console.log(data);
   }
 }
+
+
+// ------------------------------ PART 8 ------------------------------
+
+// --------------- .FINALLY() ---------------
+// As the name suggests, it allows us to do something after a promise has 'finally' finished 
+// It is placed at the very bottom
+
+// Let's work with this data:
+const urls = [
+  'https://swapi.co/api/people/1/',
+  'https://swapi.co/api/people/2/',
+  'https://swapi.co/api/people/3/',
+  'https://swapi.co/api/people/4/',
+]
+
+Promise.all(urls.map(url => {
+  return fetch(url).then(people => people.json())
+}))
+  .then(array => {
+    console.log('1', array[0])
+    console.log('2', array[1])
+    console.log('3', array[2])
+    console.log('4', array[3])
+  })
+  .catch(error => console.log('Fix it please!', error))
+  .finally(data => console.log('extra', data))
+// This finally block will be called regardless of whether or not .then works or the promises erros and catches into an error
+// So no matter what, after everything is done inside of a promise, .finally() will be called
+// And it'll be called whether it resolves or rejects
+// And .finally() does something that we tell it to do
+
+// Above, but with an error thrown:
+Promise.all(urls.map(url => {
+  return fetch(url).then(people => people.json())
+}))
+  .then(array => {
+    throw Error;
+    // When this line hit, it skips over everything below it, and hit the .catch() block
+
+    console.log('1', array[0])
+    console.log('2', array[1])
+    console.log('3', array[2])
+    console.log('4', array[3])
+  })
+  .catch(error => console.log('Fix it please!', error))
+  .finally(data => console.log('extra', data)) // will still appear even though an error was thrown and .catch() block as ran
+  
+// So .finally() is great for those times that you need to run a piece of code no matter what after a Promise

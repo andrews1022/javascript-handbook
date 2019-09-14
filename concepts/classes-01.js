@@ -1,3 +1,5 @@
+// ------------------------------ PART 1 ------------------------------
+
 // Classes were added in ES6
 // Does same thing under the hood as above, however, is done with 'syntactic sugar'
 

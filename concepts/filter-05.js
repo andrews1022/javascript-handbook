@@ -1,3 +1,5 @@
+// ------------------------------ PART 5 ------------------------------
+
 // Complete the below questions using this array:
 const array = [
 	{ username: "john", team: "red", score: 5, items: ["ball", "book", "pen"] },

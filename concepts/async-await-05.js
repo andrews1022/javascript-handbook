@@ -1,45 +1,33 @@
-// --------------- .FINALLY() ---------------
-// As the name suggests, it allows us to do something after a promise has 'finally' finished 
-// It is placed at the very bottom
+// ------------------------------ PART 5 ------------------------------
 
-// Let's work with this data:
+// Update the function below from the video to also have async/await for this line: 
+fetch(url).then(resp => resp.json())
+// So there shouldn't be any .then() calls anymore!
+
+// Data to be fetched:
 const urls = [
-  'https://swapi.co/api/people/1/',
-  'https://swapi.co/api/people/2/',
-  'https://swapi.co/api/people/3/',
-  'https://swapi.co/api/people/4/',
+  'https://jsonplaceholder.typicode.com/users',
+  'https://jsonplaceholder.typicode.com/posts',
+  'https://jsonplaceholder.typicode.com/albums'
 ]
 
-Promise.all(urls.map(url => {
-  return fetch(url).then(people => people.json())
-}))
-  .then(array => {
-    console.log('1', array[0])
-    console.log('2', array[1])
-    console.log('3', array[2])
-    console.log('4', array[3])
-  })
-  .catch(error => console.log('Fix it please!', error))
-  .finally(data => console.log('extra', data))
-// This finally block will be called regardless of whether or not .then works or the promises erros and catches into an error
-// So no matter what, after everything is done inside of a promise, .finally() will be called
-// And it'll be called whether it resolves or rejects
-// And .finally() does something that we tell it to do
+// Promise version
+const getData = async function () {
+  const [users, posts, albums] = await Promise.all(urls.map(url =>
+    fetch(url).then(resp => resp.json())
+  ));
+  console.log('users', users);
+  console.log('posta', posts);
+  console.log('albums', albums);
+}
 
-// Above, but with an error thrown:
-Promise.all(urls.map(url => {
-  return fetch(url).then(people => people.json())
-}))
-  .then(array => {
-    throw Error;
-    // When this line hit, it skips over everything below it, and hit the .catch() block
-
-    console.log('1', array[0])
-    console.log('2', array[1])
-    console.log('3', array[2])
-    console.log('4', array[3])
-  })
-  .catch(error => console.log('Fix it please!', error))
-  .finally(data => console.log('extra', data)) // will still appear even though an error was thrown and .catch() block as ran
-  
-// So .finally() is great for those times that you need to run a piece of code no matter what after a Promise
+// Answer:
+const getData = async function () {
+  const [users, posts, albums] = await Promise.all(urls.map(async function (url) {
+    const response = await fetch(url);
+    return response.json();
+  }));
+  console.log('users', users);
+  console.log('posta', posts);
+  console.log('albums', albums);
+}

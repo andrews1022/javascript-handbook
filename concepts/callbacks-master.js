@@ -1,4 +1,5 @@
-// ---------------------- CALLBACKS ----------------------
+// ------------------------------ PART 1 ------------------------------
+
 // We're going to try and mimic blog posts on a server, getting them, and creating a blog post
 
 const posts = [
@@ -31,10 +32,14 @@ function createPost(post, callback) {
 }
 
 // Passing in getPosts as the call function
-// everything appears at once
+// Everything appears at once
 createPost({ title: 'Post Three', body: 'This is post 3' }, getPosts);
 
+
+// ------------------------------ PART 2 ------------------------------
+
 // Before we dive into promises, let's take a look at callbacks
+
 // Example:
 element.addEventListener('click', submitForm);
 // We have an element that we're adding an event listener to.

@@ -1,3 +1,5 @@
+// ------------------------------ PART 2 ------------------------------
+
 // Create two classes: an Animal class and a Mammal class. 
 // Create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. 
 class Animal {

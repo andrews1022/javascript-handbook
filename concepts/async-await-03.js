@@ -1,10 +1,13 @@
-// ------------------ ASYNC/AWAIT WITH FETCH ------------------
+// ------------------------------ PART 3 ------------------------------
+
+// ---------- ASYNC/AWAIT WITH FETCH ----------
 // Again, the fetch function, that's a promise
 // If you type fetch() into the console, you get:
 /*
 Promise {<rejected>: TypeError: Failed to execute 'fetch' on 'Window': 1 argument required, but only 0 present.
     at <…}
 */
+
 // So let's fetch from jsonplaceholder.com
 // Getting the users with fetch() the old way with promises
 fetch('https://jsonplaceholder.typicode.com/users')

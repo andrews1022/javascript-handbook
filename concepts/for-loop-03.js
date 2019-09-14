@@ -1,3 +1,5 @@
+// ------------------------------ PART 3 ------------------------------
+
 // Create a list (array) of things to do
 var todos = [
   'clean room',

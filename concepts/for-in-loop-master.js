@@ -1,4 +1,7 @@
-// The for in loop works with objects
+// ------------------------------ PART 1 ------------------------------
+
+// The for in loop works with OBJECTS
+
 // The for in loop allows us to loop over and see a object's properties.
 const detailedBasket = {
 	apples: 5,
@@ -13,7 +16,7 @@ for (item in detailedBasket) {
 // Properties in an object in JavaScript are what's known as enumerables
 // And an object in JavaScript is enumerable if it allows us to see the properties
 
-// NOTE:
+// *** NOTE ***
 // Consider this array:
 const basket = ['apples, oranges, grapes'];
 
@@ -30,9 +33,30 @@ for (item in basket) {
 }
 // This works, and we get the index locations
 // This also works because underneath the hood you can think of JavaScript arrays like objects.
+
 // You can think of our basket array like this:
 basket = {
 	0: 'apples',
 	1: 'oranges',
 	2: 'grapes'
+}
+
+
+// ------------------------------ PART 2 ------------------------------
+
+// Write a function checkBasket() that lets you know if the item is in the basket or not
+amazonBasket = {
+	glasses: 1,
+	books: 2,
+	floss: 100
+}
+
+// The function:
+function checkBasket(basket, lookingFor) {
+	for (item in basket) {
+		if (item === lookingFor) {
+			return `${lookingFor} is in your basket.`
+		}
+	}
+	return `That items is not in your basket.`
 }

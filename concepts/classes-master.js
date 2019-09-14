@@ -1,3 +1,5 @@
+// ------------------------------ PART 1 ------------------------------
+
 // Classes were added in ES6
 // Does same thing under the hood as above, however, is done with 'syntactic sugar'
 
@@ -30,6 +32,9 @@ const humanBeing2 = new HumanBeing('Aryn', 'Ogilvie', '06-11-1990');
 console.log(humanBeing2.getFullName());
 console.log(humanBeing1);
 
+
+// ------------------------------ PART 2 ------------------------------
+
 // Create two classes: an Animal class and a Mammal class. 
 // Create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. 
 class Animal {
@@ -50,6 +55,9 @@ class Mammal extends Animal {
 }
 
 const cow = new Mammal('Shelly', 'cow', 'brown');
+
+
+// ------------------------------ PART 3 ------------------------------
 
 // Class (ES6), needs an uppercase
 class Book {

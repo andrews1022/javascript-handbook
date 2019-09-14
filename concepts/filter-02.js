@@ -1,3 +1,5 @@
+// ------------------------------ PART 2 ------------------------------
+
 // We said arrays look something like this:
 const array = [1, 2, 10, 16];
 

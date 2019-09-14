@@ -1,3 +1,5 @@
+// ------------------------------ PART 1 ------------------------------
+
 // The array
 const toDoLoop = [
 	{ id: 1, text: 'Take out the trash', isCompleted: true },

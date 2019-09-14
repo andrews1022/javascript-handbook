@@ -1,4 +1,5 @@
-// ------------------ ASYNC/AWAIT ------------------
+// ------------------------------ PART 2 ------------------------------
+
 // Async/Await is part of ES8 and is built on top of promises.
 // Now underneath the hood an async function is a function that returns a promise.
 // But the benefit of async/await is that it makes code easier to read.

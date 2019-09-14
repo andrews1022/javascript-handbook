@@ -1,13 +1,15 @@
 // -------------------- ASYNCHRONOUS --------------------
 // The JavaScript engine has a memory heap and a call stack.
-// JavaScript is single threaded, only one statement is executed at a time
-// But there is a problem with this?
+// JavaScript is single threaded, meaning only one statement is executed at a time
+// But there is a problem with this...
+
 // What if instead of this:
 console.log('1');
 console.log('2');
 console.log('3');
-// The second line was this MASSIVE function that looked through an array with thousands or over a million items?
+// The second line was this MASSIVE function that looked through an array with thousands or even millions of items?
 // Then console.log('3'); would just hang and the user would not be able to use the site
+
 // So with synchronous tasks, if we have one function that takes up a lot of time, it's going to hold up the line.
 // But remember we said JavaScript is non-blocking, so ideally we don't wait around for things that take time.
 // Well, asynchronous to the rescue.

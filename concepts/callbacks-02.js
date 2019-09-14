@@ -1,4 +1,7 @@
+// ------------------------------ PART 2 ------------------------------
+
 // Before we dive into promises, let's take a look at callbacks
+
 // Example:
 element.addEventListener('click', submitForm);
 // We have an element that we're adding an event listener to.

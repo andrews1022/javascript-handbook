@@ -1,3 +1,5 @@
+// ------------------------------ PART 3 ------------------------------
+
 // Class (ES6), needs an uppercase
 class Book {
   constructor(title, author, year) {
