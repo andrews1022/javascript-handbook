@@ -1,0 +1,18 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#map {
+  height: 400px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.left {
+  text-align: left;
+}
