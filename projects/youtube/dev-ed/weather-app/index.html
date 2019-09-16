@@ -2,30 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather App</title>
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <link type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<title>Weather App</title>
 </head>
 
 <body>
+	<div class="location">
+		<h1 class="location-timezone"></h1>
+		<canvas class="icon" width="128" height="128"></canvas>
+	</div>
+	<div class="temperature">
+		<div class="degree-section">
+			<h2 class="temperature-degree"></h2>
+			<span class="temperature-span">F</span>
+		</div>
+		<div class="temperature-description"></div>
+	</div>
 
-    <div class="location">
-        <h1 class="location-timezone"></h1>
-        <canvas class="icon" width="128" height="128"></canvas>
-    </div>
-    <div class="temperature">
-        <div class="degree-section">
-            <h2 class="temperature-degree"></h2>
-            <span class="temperature-span">F</span>
-        </div>
-        <div class="temperature-description"></div>
-    </div>
-
-    <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" src="skycons.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/skycons.js"></script>
 </body>
 
 </html>

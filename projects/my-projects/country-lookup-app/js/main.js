@@ -1,5 +1,5 @@
 // Grab DOM Elements
-const searchBox = document.querySelector("#search");
+const searchBox = document.querySelector('#search');
 const matchList = document.querySelector('#match-list');
 
 // Search the countries.json file and filter it
@@ -17,18 +17,20 @@ const searchCountries = async searchText => {
   });
 
   // If search Box is empty, display empty array
-  if(searchText.length === 0) {
+  if (searchText.length === 0) {
     matches = [];
     matchList.innerHTML = '';
   }
 
   outputHtml(matches);
-}
+};
 
 // Show Results in HTML
 const outputHtml = matches => {
-  if(matches.length > 0) {
-    const html = matches.map(match => `
+  if (matches.length > 0) {
+    const html = matches
+      .map(
+        match => `
       <div class="card mb-3">
         <div class="card-body">
           <h3 class="card-title mr-2">${match.country} <span class="abbr">${match.abbreviation}</span></h3>
@@ -46,11 +48,13 @@ const outputHtml = matches => {
           <p class="card-text"><i class="fas fa-glass-cheers mr-2 fa-fw js-icon"></i> Year of Independence: ${match.independence}</p>
         </div>
       </div>
-    `).join('')
+    `
+      )
+      .join('');
 
     matchList.innerHTML = html;
   }
-}
+};
 
 // Event listener
 searchBox.addEventListener('input', () => searchCountries(searchBox.value));
