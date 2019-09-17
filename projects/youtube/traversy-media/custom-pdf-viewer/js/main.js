@@ -4,15 +4,15 @@
 const url = '../docs/sample.pdf';
 
 // Other variables will be let because they will be reassigned later on
-let pdfDocument = null, // this will be document that we get with pdf.js
-  pageNum = 1, // start on the first page
-  pageIsRendering = false, // when we run our render page method, this will be set to true
-  pageNumIsPending = null; // if we're fetching other/multiple pages
+let pdfDocument = null; // this will be document that we get with pdf.js
+let pageNum = 1; // start on the first page
+let pageIsRendering = false; // when we run our render page method, this will be set to true
+let pageNumIsPending = null; // if we're fetching other/multiple pages
 
 // Essentially, we are fetching the pdf and put it in this canvas
 let scale = 1; // feel free to change this scale value
-let canvas = document.querySelector('#pdf-render'),
-  context = canvas.getContext('2d');
+const canvas = document.querySelector('#pdf-render');
+const context = canvas.getContext('2d');
 
 // Render the page function
 const renderPage = num => {
@@ -28,7 +28,7 @@ const renderPage = num => {
     const renderContext = {
       canvasContext: context,
       viewport
-    }
+    };
 
     page.render(renderContext).promise.then(() => {
       pageIsRendering = false;
@@ -37,12 +37,12 @@ const renderPage = num => {
         renderPage(pageNumIsPending);
         pageNumIsPending = null;
       }
-    })
+    });
 
     // Output current page
     document.querySelector('#page-num').textContent = num;
-  })
-}
+  });
+};
 
 // Check for pages rendering
 const queueRenderPage = num => {
@@ -58,7 +58,7 @@ const showPrevPage = () => {
   if (pageNum <= 1) {
     return;
   }
-  pageNum--;
+  pageNum -= 1;
   queueRenderPage(pageNum);
 };
 
@@ -67,19 +67,22 @@ const showNextPage = () => {
   if (pageNum >= pdfDocument.numPages) {
     return;
   }
-  pageNum++;
+  pageNum += 1;
   queueRenderPage(pageNum);
 };
 
 // Get Document
-pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
+pdfjsLib
+  .getDocument(url)
+  .promise.then(pdfDoc_ => {
     pdfDocument = pdfDoc_;
 
     document.querySelector('#page-count').textContent = pdfDocument.numPages;
 
     renderPage(pageNum);
   })
-  .catch(err => { // Display error
+  .catch(err => {
+    // Display error
     // Create the element and assign class name
     const div = document.createElement('div');
     div.className = 'error';
@@ -92,32 +95,31 @@ pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
 
 // Zoom in function
 const zoomIn = () => {
-  scale = scale + 0.25;
+  scale += 0.25;
   queueRenderPage(pageNum);
   // console.log(scale);
-}
+};
 
 // Zoom out function
 const zoomOut = () => {
-  if(scale <= 0.25) {
+  if (scale <= 0.25) {
     return;
-  } else {
-    scale = scale - 0.25;
-    queueRenderPage(pageNum);
   }
-}
+  scale -= 0.25;
+  queueRenderPage(pageNum);
+};
 
 // Zoom reset function
 const zoomReset = () => {
-  if(scale != 1) {
+  if (scale !== 1) {
     scale = 1;
     queueRenderPage(pageNum);
   }
-}
+};
 
 // Button events
 document.querySelector('#prev-page').addEventListener('click', showPrevPage);
 document.querySelector('#next-page').addEventListener('click', showNextPage);
 document.querySelector('#zoom-in').addEventListener('click', zoomIn);
 document.querySelector('#zoom-out').addEventListener('click', zoomOut);
-document.querySelector('#zoom-reset').addEventListener('click', zoomReset)
+document.querySelector('#zoom-reset').addEventListener('click', zoomReset);

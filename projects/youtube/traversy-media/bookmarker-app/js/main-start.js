@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 
 // Save bookmarks function
-function saveBookmark(e) {
+function saveBookmark(event) {
   // Get the values we type into the form
   const siteName = document.querySelector('#siteName').value;
   const siteUrl = document.querySelector('#siteUrl').value;
@@ -48,7 +48,7 @@ function saveBookmark(e) {
   fetchBookmarks();
 
   // Prevent form from submitting
-  e.preventDefault();
+  event.preventDefault();
 }
 
 // Delete Bookmark
@@ -84,8 +84,8 @@ function fetchBookmarks() {
 
   // Loop through the bookmarks that are in local storage and output them one by one into the div
   for (let i = 0; i < bookmarks.length; i++) {
-    const name = bookmarks[i].name;
-    const url = bookmarks[i].url;
+    const { name } = bookmarks[i];
+    const { url } = bookmarks[i];
 
     // Append results to div
     bookmarksResults.innerHTML +=
