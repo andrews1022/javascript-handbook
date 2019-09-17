@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Numbers Fact App</title>
+</head>
+
+<body class="bg-dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 mx-auto">
+				<div class="card bg-primary text-white mt-5 p-4">
+					<h1>Number Facts</h1>
+					<p>Choose which type of number fact you'd like:</p>
+					<div class="input-group mb-3">
+						<select class="custom-select" id="selector">
+							<option selected>Choose...</option>
+							<option value="1">Trivia</option>
+							<option value="2">Year</option>
+							<option value="3">Math</option>
+						</select>
+					</div>
+					<p>Enter a number and get a random fact:</p>
+					<input type="number" class="form-control form-control-lg" id="number-input" placeholder="Enter any number...">
+					<div id="fact" class="card-body">
+						<h4 class="card-title">Number Fact:</h4>
+						<p id="fact-text" class="card-text"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/index.js"></script>
+</body>
+
+</html>
