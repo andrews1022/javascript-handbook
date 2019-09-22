@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css' />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css' />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Location Finder</title>
+</head>
+
+<body>
+  <!-- Start of Input Section -->
+  <section class="hero hero-body is-dark container">
+    <h1 class="title">US Location Info</h1>
+    <h2 class="subtitle">Enter a zipcode to get information on that location!</h2>
+    <form id="zip-form">
+      <div class="field">
+        <div class="control has-icons-left has-icons-right">
+          <input id="zip-enter" class="input zip is-large" type="text" placeholder="Enter zipcode...">
+          <span class="icon is-small is-left">
+            <i class="fa fa-map-pin"></i>
+          </span>
+        </div>
+      </div>
+    </form>
+  </section> <!-- End of Input Section -->
+
+  <br>
+
+  <!-- Output area -->
+  <div class="container">
+    <div id="output"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

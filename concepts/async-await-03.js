@@ -17,7 +17,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 // How can we turn this into async/await?
 async function fetchUsers() {
   // So this function will pause until we get a response from fetch()
-  const response = await fetch('https://jsonplaceholder.typicode.com/users')
+  const response = await fetch('https://jsonplaceholder.typicode.com/users');
   const data = await response.json();
   console.log(data);
 }
@@ -60,7 +60,7 @@ const getData = async function () {
     console.log('users', users)
     console.log('posts', posts)
     console.log('albums', albums)
-  } catch (error){ // add the error parameter to see what type of error you get
+  } catch (error) { // add the error parameter to see what type of error you get
     // If anything fails inside the try {}
     console.log('OOPS!', error) // Misspell one of the urls to see this in action
   }

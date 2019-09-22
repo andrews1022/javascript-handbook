@@ -1,4 +1,4 @@
-// What exactly is the DOM?
+// What exactly is the DOM? 
 // The official definition is that it’s a programming API for documents.
 // It’s the bridge between your HTML and JavaScript
 

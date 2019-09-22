@@ -50,7 +50,7 @@ const getData2 = async function () {
 // Same funcion but without comments for better readability:
 const getData2 = async function () {
   const arrayOfPromises = urls.map(url => fetch(url));
-  
+
   for await (let request of arrayOfPromises) {
     const data = await request.json();
     console.log(data);

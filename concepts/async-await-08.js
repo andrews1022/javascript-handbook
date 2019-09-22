@@ -13,8 +13,8 @@ const urls = [
 ]
 
 Promise.all(urls.map(url => {
-  return fetch(url).then(people => people.json())
-}))
+    return fetch(url).then(people => people.json())
+  }))
   .then(array => {
     console.log('1', array[0])
     console.log('2', array[1])
@@ -30,8 +30,8 @@ Promise.all(urls.map(url => {
 
 // Above, but with an error thrown:
 Promise.all(urls.map(url => {
-  return fetch(url).then(people => people.json())
-}))
+    return fetch(url).then(people => people.json())
+  }))
   .then(array => {
     throw Error;
     // When this line hit, it skips over everything below it, and hit the .catch() block
@@ -43,5 +43,5 @@ Promise.all(urls.map(url => {
   })
   .catch(error => console.log('Fix it please!', error))
   .finally(data => console.log('extra', data)) // will still appear even though an error was thrown and .catch() block as ran
-  
+
 // So .finally() is great for those times that you need to run a piece of code no matter what after a Promise

@@ -1,3 +1,5 @@
+// ------------------------------ PART 2 ------------------------------
+
 // HTML for text input field:
 <input type="text" class="form-control mr-2 text-input"></input>
 
