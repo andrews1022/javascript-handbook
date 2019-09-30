@@ -5,7 +5,7 @@ document
 
 // A3: 
 document.querySelector(‘selected’);
-// This is because it’s not proper syntax. It should include a '.' before the word selected to indicate a class.
+// This is not proper syntax. It should include a '.' before the word selected to indicate a class.
 
 // A4: 
 addEventListener

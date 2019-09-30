@@ -1,11 +1,11 @@
 // -------------------- My solution --------------------
 // Grab button element
-var themeButton = document.querySelector('#theme');
+const themeButton = document.querySelector('#theme');
 
 // Add event listener
 themeButton.addEventListener('click', () => {
   // Grab all elements in the page
-  var allElements = document.getElementsByTagName('*');
+  const allElements = document.getElementsByTagName('*');
 
   // Loop through
   for (element of allElements) {
@@ -15,7 +15,7 @@ themeButton.addEventListener('click', () => {
 
 // -------------------- Cassidy's solution --------------------
 // Grab elements
-var themeButton = document.querySelector('#theme');
+const themeButton = document.querySelector('#theme');
 
 // Add event listener
 themeButton.addEventListener('click', () => {
@@ -28,9 +28,9 @@ themeButton.addEventListener('click', () => {
 
 
 // -------------------- Student in Q&A Solution --------------------
-var body = document.getElementsByTagName('body')[0];
-var button = document.getElementById('theme');
+const body = document.getElementsByTagName('body')[0];
+const button = document.getElementById('theme');
 
-button.addEventListener('click', function () {
+button.addEventListener('click', () => {
   body.classList.toggle('theme2');
 });

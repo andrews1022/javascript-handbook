@@ -4,6 +4,7 @@
 // Some callbacks are just events, called to give the user a chance to react when a certain state is triggered.
 
 
-
-// ---------- SOURCE ----------
-// 10 Common Javascript Questions and Answers 2018: https://www.codementor.io/sharadtricks/10-common-javascript-questions-and-answers-2018-o127peqet
+// ADDITIONAL ANSWER:
+// Callbacks are functions passed in as an argument to another function to be executed once an event has occurred or a certain task is completed
+// These are often used in asynchronous code
+// For example, event listeners are asynchronous callbacks that are executed once a specific event has occurred
