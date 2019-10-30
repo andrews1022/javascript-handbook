@@ -23,23 +23,27 @@ function batteryCharge() {
   // Grab the battery div
   const battery = document.querySelector('#battery');
 
-  // Set innerHTML
+  // Set innerHTML to empty battery
   battery.innerHTML = '&#xf244;';
 
   // Set timeout functions
   setTimeout(() => {
+    // Set innerHTML to 1/4 full battery
     battery.innerHTML = '&#xf243;';
   }, 1000);
 
   setTimeout(() => {
+    // Set innerHTML to 1/2 full battery
     battery.innerHTML = '&#xf242;';
   }, 2000);
 
   setTimeout(() => {
+    // Set innerHTML to 3/4 full battery
     battery.innerHTML = '&#xf241;';
   }, 3000);
 
   setTimeout(() => {
+    // Set innerHTML to full battery
     battery.innerHTML = '&#xf240;';
   }, 4000);
 }
@@ -55,15 +59,17 @@ function hourglassTip() {
   // Grab the hourglass div
   const hourglass = document.getElementById('hourglass');
 
-  // Set innerHTML
+  // Set innerHTML to empty bottom hourglass
   hourglass.innerHTML = '&#xf251;';
 
   // Set timeout functions
   setTimeout(() => {
+    // Set innerHTML to half empty hourglass
     hourglass.innerHTML = '&#xf252;';
   }, 1000);
 
   setTimeout(() => {
+    // Set innerHTML to full empty hourglass
     hourglass.innerHTML = '&#xf253;';
   }, 2000);
 }

@@ -19,14 +19,12 @@ colorOne.addEventListener('input', setGradient);
 colorTwo.addEventListener('input', setGradient);
 
 // On page load, display gradient info
-// From MDN: https://mzl.la/2KtmeYt
 window.onload = () => {
   setGradient();
 };
 
 // Function to generate random colors and set background gradient to them
 function setRandomColors() {
-  // From Stack Overflow: https://bit.ly/2YNpVgB
   // eslint-disable-next-line prettier/prettier
   const randomColorOne = `#${Math.floor(Math.random() * 16777216).toString(16)}`;
   // eslint-disable-next-line prettier/prettier

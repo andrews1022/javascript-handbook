@@ -4,6 +4,7 @@
 // For multiples of 5 print "Buzz". 
 // For numbers which are multiples of both 3 and 5, print "FizzBuzz".
 
+// ---------- METHOD 1 ----------
 function fizzBuzz() {
   // Use a for loop
   for (let i = 1; i <= 100; i++) {
@@ -26,4 +27,29 @@ function fizzBuzz() {
 }
 
 // Call the function
+fizzBuzz();
+
+
+// ---------- METHOD 2 ----------
+// Using the array method .push()
+function fizzBuzz() {
+  var output = [];
+  var count = 1;
+
+  while (count <= 100) {
+    if (count % 15 === 0) {
+      output.push('FizzBuzz');
+    } else if (count % 3 === 0) {
+      output.push('Fizz');
+    } else if (count % 5 === 0) {
+      output.push('Buzz');
+    } else {
+      output.push(count);
+    }
+    count++;
+  }
+
+  console.log(output);
+}
+
 fizzBuzz();

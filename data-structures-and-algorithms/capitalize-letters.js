@@ -12,8 +12,7 @@ function capitalizeLetters(str) {
     // Grab the first letter using substring (0, 1)
     // Then uppercase it
     // Add the rest starting at current string array index and substring(1)
-    strArray[i] = strArray[i].substring(0, 1).toUpperCase() +
-      strArray[i].substring(1);
+    strArray[i] = strArray[i].substring(0, 1).toUpperCase() + strArray[i].substring(1);
   }
   return strArray.join(' ');
 
