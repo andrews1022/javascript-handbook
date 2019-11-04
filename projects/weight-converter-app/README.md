@@ -3,6 +3,6 @@ A simple vanilla JavaScript pounds(lbs) converter I learned to make watching Bra
 
 Since I have been practicing basic JavaScript a lot lately, I am proud to say I was able to finish the JavaScript for this project before he did in the video! 
 
-### Things I learnt building this project
+### Things I learned building this project
 - More practice with querySelector
 - Hiding elements by default then having them appear based on an addEventListener 

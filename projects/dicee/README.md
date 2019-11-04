@@ -7,7 +7,7 @@ This was my first JavaScript project in quite a while, so while it is simple, I 
 
 I also further challenged myself to condense/refactor the code as much as possible, as shown by comments of METHOD 1, METHOD 2, etc.
 
-### Things I learnt building this project
+### Things I learned building this project
 - Generating a random number between 1-6
 - Basic DOM manipulation refresher
 - Converting my function to an IIFE and using ES6 syntax for the final result
