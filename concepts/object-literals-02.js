@@ -34,9 +34,9 @@ console.log(navigator.geolocation);
 // Let's create a book
 const book1 = {
   // Properties, which are just key value pairs
-  title: 'Book One',
-  author: 'Andrew Shearer',
-  year: '2014',
+  title: 'Adventures of Huckleberry Finn',
+  author: 'Mark Twain',
+  year: '1884',
 
   // You can also have functions (known as methods) inside of an object:
   getSummary: function() {

@@ -25,7 +25,7 @@ Book.prototype.revise = function (newYear) {
 
 // Instantiate an object
 // This allows us to make as many 'books' as we want, and much easier to do so this way
-const book1 = new Book('Heroes', 'Andrew Shearer', 2013);
+const book1 = new Book('The Catcher in the Rye', 'J.D. Salinger', 1951);
 console.log(book1); // noticed it's prefixed with the object that it is, Book
 console.log(book1.title);
 console.log(book1.getSummary());

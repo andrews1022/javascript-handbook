@@ -7,9 +7,9 @@ const urls = [
 
 // How can we grab all the data from each link in the above array?
 // Let's use promises!
-Promise.all(urls.map(url => {
-  return fetch(url).then(response => response.json())
-})).then(results => {
+Promise.all(urls.map((url) => {
+  return fetch(url).then((response) => response.json())
+})).then((results) => {
   console.log(results[0])
   console.log(results[1])
   console.log(results[2])

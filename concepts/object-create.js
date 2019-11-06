@@ -15,16 +15,16 @@ const bookProtos = {
 const book1 = Object.create(bookProtos);
 
 // Add properties
-book1.title = 'Book One';
-book1.author = 'Andrew Shearer';
-book1.year = '2013';
+book1.title = 'War and Peace';
+book1.author = 'Leo Tolstoy';
+book1.year = '1869';
 
 
 // Example #2
 const book2 = Object.create(bookProtos, {
-  title: { value: 'Book One' },
-  author: { value: 'Andrew Shearer' },
-  year: { value: '2013' }
+  title: { value: 'Hamlet' },
+  author: { value: 'William Shakespeare' },
+  year: { value: '1600' }
 });
 
 console.log(book1);

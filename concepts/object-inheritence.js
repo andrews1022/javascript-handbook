@@ -23,7 +23,7 @@ function Magazine(title, author, year, month) {
 Magazine.prototype = Object.create(Book.prototype);
 
 // Instantiate Magazine Object
-const mag1 = new Magazine('Times', 'Andrew Shearer', 2019, 'July');
+const mag1 = new Magazine('Time', 'Edward Felsenthal', 1923, 'March');
 
 // Set the constructor to Magazine instead of book
 Magazine.prototype.constructor = Magazine;

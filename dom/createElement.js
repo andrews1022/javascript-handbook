@@ -1,4 +1,6 @@
-// *** HTML FOR REFERENCE *** 
+// ------------------------------ PART 1 ------------------------------
+
+// HTML for reference:
 <body>
   <h1 id="header">The Dom is cool for many reasons</h1>
   <ul class="list">
@@ -7,7 +9,7 @@
   </ul>
 </body>
 
-// First, we create a p tag and store it in the variable 'para':
+// First, we create a <p> tag and store it in a variable called 'para':
 var para = document.createElement('p');
 
 // Then we can modify the element’s content:
@@ -18,14 +20,3 @@ document.body.appendChild(para);
 
 // *** NOTE ***
 // .appendChild() adds a child element to whatever is being selected. 
-
-
-// Now let’s say we want to create and add the 'id' attribute to our paragraph above
-// First, let’s create it and store it in a variable:
-var attr = document.createAttribute('id');
-
-// But right now, this attr variable has no value. So, let’s add one:
-attr.value = 'created';
-
-// Now we can set this attribute to the paragraph
-para.setAttributeNode(attr);

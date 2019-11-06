@@ -51,10 +51,10 @@ Promise.all(urls.map(url => {
 // And .finally() does something that we tell it to do
 
 // Above, but with an error thrown:
-Promise.all(urls.map(url => {
-  return fetch(url).then(people => people.json())
+Promise.all(urls.map((url) => {
+  return fetch(url).then((people) => people.json())
 }))
-  .then(array => {
+  .then((array) => {
     throw Error;
     // When this line hit, it skips over everything below it, and hit the .catch() block
 
@@ -63,8 +63,8 @@ Promise.all(urls.map(url => {
     console.log('3', array[2])
     console.log('4', array[3])
   })
-  .catch(error => console.log('Fix it please!', error))
-  .finally(data => console.log('extra', data)) // will still appear even though an error was thrown and .catch() block as ran
+  .catch((error) => console.log('Fix it please!', error))
+  .finally((data) => console.log('extra', data)) // will still appear even though an error was thrown and .catch() block as ran
   
 // So .finally() is great for those times that you need to run a piece of code no matter what after a Promise
 
@@ -96,7 +96,7 @@ const getData = async function () {
 // Let's create a new function with this in mind:
 
 // First, with the for of loop
-const loopThroughUrls = urls => {
+const loopThroughUrls = (urls) => {
   for (url of urls) {
     console.log(url);
   }
@@ -106,7 +106,7 @@ const loopThroughUrls = urls => {
 const getData2 = async function () {
   // In here we can have an array of promises
   // Because an array of promises is irritable and able to be looped by the 'for await of' keywords
-  const arrayOfPromises = urls.map(url => fetch(url));
+  const arrayOfPromises = urls.map((url) => fetch(url));
   // So here in the first line, all we're doing is creating an array of these fetch promises of each one of these requests (the urls)
 
   // Next, we can use the 'for await of' loop to loop through these promises
@@ -118,7 +118,7 @@ const getData2 = async function () {
 
 // Same funcion but without comments for better readability:
 const getData2 = async function () {
-  const arrayOfPromises = urls.map(url => fetch(url));
+  const arrayOfPromises = urls.map((url) => fetch(url));
   
   for await (let request of arrayOfPromises) {
     const data = await request.json();

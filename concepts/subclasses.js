@@ -22,7 +22,7 @@ class Magazine extends Book {
 }
 
 // Instantiate the Magazine subclass
-const mag1 = new Magazine('Times', 'Andrew Shearer', 2019, 'July');
+const mag1 = new Magazine('Time', 'Edward Felsenthal', 1923, 'March');
 console.log(mag1);
 
 // Use the getSummary() method on magazine

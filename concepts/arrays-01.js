@@ -45,7 +45,7 @@ console.log(fruits);
 
 // Verify if something is an array:
 console.log(Array.isArray(fruits)); // Returns true
-console.log(Array.isArray('Andrew')); // Returns false
+console.log(Array.isArray('Nick')); // Returns false
 
 // Retrieve the index location of a certain value:
 // Use indexOf

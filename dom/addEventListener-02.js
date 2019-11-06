@@ -1,9 +1,13 @@
 // ------------------------------ PART 2 ------------------------------
 
-// FORM SUBMIT BUTTON
+// ---------- FORM SUBMIT BUTTON ----------
+// HTML Button for reference:
+<button class="btn">Click Here!</button>
+
+// Store the element in a variable called 'button'
 const button = document.querySelector('.btn');
 
-// Let's use addEventListener
+// Let's use 'addEventListener'
 // This takes in two things: the event that we want. In this case 'click'
 // The second is going to be a function that you want to run when this event happens
 // Let's use an arrow function
@@ -16,8 +20,8 @@ button.addEventListener('click', (event) => {
 
 	// We can see which element that is being targeted
 	// It will give us the element that the event is on
-	console.log(e.target);
+	console.log(event.target);
 
 	// Get the class name:
-	console.log(e.target.className);
+	console.log(event.target.className);
 });

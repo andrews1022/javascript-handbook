@@ -1,4 +1,4 @@
-const name = 'John Snow';
+const name = 'Jon Snow';
 
 const obj3 = {
 	[name]: 'Hello!',

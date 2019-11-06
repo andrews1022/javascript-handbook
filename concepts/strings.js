@@ -1,6 +1,6 @@
 // Basic variables
-const theName = 'Andrew';
-const theAge = 26;
+const theName = 'Cameron Diaz';
+const theAge = 47;
 
 // Concatenation - older method
 console.log('My name is ' + theName + ' and I am ' + theAge);

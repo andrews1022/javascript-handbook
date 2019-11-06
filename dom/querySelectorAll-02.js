@@ -1,4 +1,4 @@
-// Consider this ul:
+// HTML for reference:
 <ul>
 	<li>Notebook</li>
 	<li>Jello</li>

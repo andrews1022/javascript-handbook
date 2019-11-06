@@ -4,7 +4,7 @@
 // Makes your code more robust/secure, and less prone to errors
 
 // var variable
-var firstName = 'Andrew';
+var firstName = 'Timmy';
 
 // let variable
 let myAge = 30;

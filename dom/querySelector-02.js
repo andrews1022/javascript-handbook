@@ -1,6 +1,6 @@
 // ------------------------------ PART 2 ------------------------------
 
-// HTML for text input field:
+// HTML for reference:
 <input type="text" class="form-control mr-2 text-input"></input>
 
 // Grab the text input box
@@ -10,7 +10,7 @@ const input = document.querySelector('.text-input');
 input.style.border = '4px solid black';
 
 
-// HTML for submit button:
+// HTML for reference:
 <input type="submit" class="btn btn-dark" value="Submit"></input>
 
 // Grab the submit button:

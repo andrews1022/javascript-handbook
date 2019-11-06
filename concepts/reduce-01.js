@@ -7,8 +7,8 @@ const array = [1, 2, 10, 16];
 // accumulator can be anything, sometimes written as acc
 // What is accumulator?
 // Accumulator is something where we can store the information that happens in the body of the function.
-const reducedArray = array.reduce((accumulator, num) => {
-	return accumulator + num;
+const reducedArray = array.reduce((accumulator, number) => {
+	return accumulator + number;
 
 	// This line below: }, 0) 
 	// Is a second parameter

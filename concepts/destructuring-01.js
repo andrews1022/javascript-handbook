@@ -2,7 +2,7 @@
 
 // Let's use this object as reference:
 const obj = {
-	player: 'Andrew',
+	player: 'Timmy',
 	xpPoints: 100,
 	isWizardLevel: false
 }

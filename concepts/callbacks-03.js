@@ -1,8 +1,8 @@
 // ------------------------------ PART 3 ------------------------------
 
-// HTML FOR REFERENCE:
+// HTML for reference:
 <div>
-  <h1 class="header">Events and callbacks are SO fun</h1>
+  <h1 class="header">Events and callbacks are so much fun!</h1>
   <button id="btn-one">Button 1</button>
   <button id="btn-two">Button 2</button>
 </div>
@@ -12,7 +12,7 @@ window.addEventListener('load', function(event){
   console.log('All resources have finished loading!');
 })
    
-// What this does is it adds an event listener to the window object
+// What this does is that it adds an event listener to the window object
 // The listener waits for the ‘load’ event, and then once that event has been triggered, it calls the function in the second parameter
 // And that function passes in an event object 
 // That function in the second parameter is a callback
@@ -28,7 +28,7 @@ window.addEventListener('load', function(event){
 
 // Event handler for Button 1
 document.querySelector('#btn-one').addEventListener('click', function (){
-  console.log('You have clicked da button!');
+  console.log('You have clicked the button!');
 });
 // ---------- BREAKDOWN ----------
 // First, grab/select the element

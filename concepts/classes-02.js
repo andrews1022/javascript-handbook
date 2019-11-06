@@ -15,7 +15,7 @@ class Mammal extends Animal {
 		super(name, type, color)
 	}
 	sound() {
-		console.log(`Moooo I'm ${this.name} and I'm a ${this.color} ${this.type}`);
+		console.log(`Moooo I'm ${this.name}, and I'm a ${this.color} ${this.type}!`);
 	}
 }
 

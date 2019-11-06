@@ -71,4 +71,4 @@ function reverseString(str) {
 // Call the function
 reverseString('hello');
 reverseString('canada');
-reverseString('andrew');
+reverseString('nick');

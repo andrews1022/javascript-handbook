@@ -2,16 +2,16 @@
 
 // Console logging various data types
 
-console.log('Hello'); // Strings
-console.log(123); // Numbers
-console.log(true); // Booleans
+console.log('Hello');           // Strings
+console.log(123);               // Numbers
+console.log(true);              // Booleans
 var greeting = 'Hi there';
-console.log(greeting); // Variables
-console.log(1,2,3,4); // Arrays
-console.log({a:1, b:2, c:3}) // Objects
+console.log(greeting);          // Variables
+console.log(1,2,3,4);           // Arrays
+console.log({a:1, b:2, c:3})    // Objects
 
 // Using console.table
-console.table({a:1, b:2, c:3}) // Objects
+console.table({a:1, b:2, c:3})  // Objects
 
 // Log all the different properties and methods attached to the document object:
 console.dir('The different properties and methods attached to the document object:');

@@ -33,7 +33,7 @@ class Book {
 }
 
 // Instantiate Object
-const book1 = new Book('Heroes', 'Andrew Shearer', 2013);
+const book1 = new Book('The Adventures of Tom Sawyer', 'Mark Twain', 1876);
 console.log(book1);
 console.log(book1.getSummary());
 

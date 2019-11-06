@@ -16,12 +16,12 @@ function Person(firstName, lastName, dateOfBirth) {
 
 // From here, we can do what's called 'instantiate an object'
 // Here we are creating a custom Person object, which takes in the parameters mentioned above
-const person1 = new Person('Andrew', 'Shearer', '10-22-1992');
+const person1 = new Person('Paul', 'Newman', '01-26-1925');
 console.log(person1);
 
 // We can create as many custom objects as we like
 // Here's another example:
-const person2 = new Person('Aryn', 'Ogilvie', '06-11-1990');
+const person2 = new Person('William', 'Shatner', '03-22-1931');
 console.log(person2);
 // You can of course fetch one of the parameters, for example the lastName
 console.log(person2.lastName);
@@ -32,7 +32,7 @@ function Human(firstName, lastName, dateOfBirth) {
 	this.lastName = lastName;
 	this.dateOfBirth = new Date(dateOfBirth); // Here we use the Date Constructor
 }
-const human1 = new Human('Kevin', 'Shearer', '3-27-1995');
+const human1 = new Human('Marlon', 'Brando', '04-03-1924');
 console.log(human1.dateOfBirth); // Now we see this printed as March 27, 1995
 
 // The date object has a bunch of methods you can use. One example
@@ -54,7 +54,7 @@ function HumanV2(firstName, lastName, dateOfBirth) {
 		return `${this.firstName} ${this.lastName}`;
 	}
 }
-const human2 = new HumanV2('Andrew', 'Shearer', '10-22-1992');
+const human2 = new HumanV2('Tom', 'Hanks', '07-09-1956');
 
 // We can call .getBirthYear :
 console.log(human2.getBirthYear());

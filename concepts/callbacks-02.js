@@ -25,11 +25,11 @@ movePlayer(100, 'Left', function () {
 
 
 // Realistic example - some kind of app using Twitter
-grabTweets('https://twitter.com/andrew_devsrc', (error, andrewTweets) => {
+grabTweets('https://twitter.com/BillGates', (error, billTweets) => {
 	if (error) {
 		throw Error;
 	}
-	displayTweets(andrewTweets)
+	displayTweets(billTweets)
 	grabTweets('https://twitter.com/elonmusk', (error, elonTweets) => {
 		if (error) {
 			throw Error;
@@ -44,10 +44,10 @@ grabTweets('https://twitter.com/andrew_devsrc', (error, andrewTweets) => {
 	})
 })
 // Here, we grabTweets function, and the first parameter has the URL
-// And then the callback function after you grab the tweets which has an 'error' And the tweets (andrewTweets).
+// And then the callback function after you grab the tweets which has an 'error' And the tweets (billTweets).
 // And if there's an error we throw an error. So that just creates an error in javascript.
 // Otherwise we're going to display the tweets.
-// But then if Andrew's tweets were successful, then we also want to grab the tweets again.
+// But then if Bill's tweets were successful, then we also want to grab the tweets again.
 // Let's do Elon Musk this time and again if error
 // We're going to throw error.
 // Otherwise we're going to display his tweets.

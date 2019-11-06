@@ -3,5 +3,5 @@ const
 // and 
 let
 
-const   // turns variables into constants
-let     // variables can be reassigned
+const   // Turns variables into constants
+let     // Variables can be reassigned

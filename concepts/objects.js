@@ -1,9 +1,9 @@
 // How to write a basic object
 var user = {
-	name: 'Andrew',
-	age: 26,
-	hobby: 'web development',
-	isMarried: false
+	name: 'Beyonce',
+	age: 38,
+	hobby: 'music',
+	isMarried: true
 };
 // Objects have properties and values
 // Above, name would be the property and 'Andrew' would be the value
@@ -31,7 +31,7 @@ user.isMarried = true;
 var wizard = {
 	name: 'Tim',
 	age: 300,
-	hobby: 'finding the holy grail',
+	hobby: 'Finding the Holy Grail',
 	isMarried: false,
 	spells: ['fire', 'water', 'electricity', 'corrosion', 'explosion'],
 
@@ -50,8 +50,8 @@ wizard.spells[1];
 
 // You can also have an array objects
 var users = [
-	{ username: 'andrew', password: 'secret' },
-	{ username: 'aryn', password: '123' }
+	{ username: 'Jason', password: 'secret' },
+	{ username: 'Richard', password: '123' }
 ];
 
 // Access andrew's password

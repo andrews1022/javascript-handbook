@@ -1,6 +1,6 @@
 // ------------------------------ PART 1 ------------------------------
 
-// querySelector for this heading
+// HTML for reference:
 <h1 class="heading" id='header'>Shopping List</h1>
 
 // querySelector by tag

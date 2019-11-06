@@ -1,4 +1,4 @@
-// HTML FOR REFERENCE:
+// HTML for reference:
 <body>
   <h1 id="header">The Dom is cool for many reasons</h1>
   <ul class="list">

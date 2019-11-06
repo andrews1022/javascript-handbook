@@ -1,4 +1,4 @@
-// Consider this ul:
+// HTML for reference:
 <ul class="items">
   <li class="item">Item 1</li>
   <li class="item">Item 2</li>
@@ -6,4 +6,4 @@
 </ul>
 
 // Add HTML to the last child
-ul.lastElementChild.innerHTML = '<h1>Hi!</h1>'
+ul.lastElementChild.innerHTML = '<h1>Hi!</h1>';

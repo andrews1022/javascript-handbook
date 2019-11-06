@@ -1,4 +1,4 @@
-// Consider this HTML:
+// HTML for reference:
 <h1 class="heading">Shopping List</h1>
 
 document.getElementsByClassName('heading');

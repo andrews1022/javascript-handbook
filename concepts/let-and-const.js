@@ -25,7 +25,7 @@ console.log(wizardLevel); // false
 
 // Const example
 const obj = {
-	player: 'Andrew',
+	player: 'Jack',
 	xpPoints: 100,
 	isWizardLevel: false
 }

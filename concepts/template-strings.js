@@ -1,6 +1,6 @@
 // Basic variables
-const theName = 'Andrew';
-const theAge = 26;
+const theName = 'Morgan Freeman';
+const theAge = 82;
 
 // Concatenation - older method
 console.log('My name is ' + theName + ' and I am ' + theAge);
@@ -29,7 +29,7 @@ const betterGreeting = `Hello ${newName} you seem to be ${age-10}. Your ${pet} i
 
 
 // Using default arguments
-function greet(newerName = 'Andrew', newAge = '28', newPet = 'corgi') {
+function greet(newerName = 'Megan Mullally', newAge = '60', newPet = 'corgi') {
 	return `Hello ${newerName} you seem to be ${newAge-10}. Your ${newPet} is awesome!`;
 }
 

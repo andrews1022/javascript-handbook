@@ -2,10 +2,10 @@
 
 // For example:
 const person = {
-	firstName: 'Andrew',
-	lastName: 'Shearer',
-	age: 30,
-	hobbies: ['metal music', 'movies', 'web development'],
+	firstName: 'Lindsay',
+	lastName: 'Lohan',
+	age: 33,
+	hobbies: ['acting', 'movies', 'web development'], // cause that makes sense
 
 	// You can have embedded/nested objects (object within an object):
 	address: {

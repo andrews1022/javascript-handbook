@@ -18,7 +18,7 @@ var y = numbers.y; // y = 7.4
 var z = numbers.z; // z = 6.5
 
 // DESTRUCTURING WAY:
-var {x,y,z} = numbers;
+var { x, y, z } = numbers;
 // This means we're going to create the 3 variables x, y, and z from numbers
 console.log(x); // x = 3.6
 console.log(y); // y = 7.4
@@ -35,10 +35,10 @@ console.log(b); // b = 7.4
 // ---------- Assign variables from nested objects ----------
 // Example:
 var nestObj = {
-	start: {x: 5, y: 6},
-	end: {x: 6, y: -9}
+	start: { x: 5, y: 6 },
+	end: { x: 6, y: -9 }
 }
-var { start : { x: startX, y: startY}} = nestObj;
+var { start : { x: startX, y: startY }} = nestObj;
 console.log(startX);
 
 
