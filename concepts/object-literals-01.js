@@ -29,18 +29,11 @@ console.log(person.hobbies[1]); // select the array, then select the index locat
 console.log(person.address.city); // use the dot(.) selector multiple times
 
 // Destructuring (create variables from the object literal)
-const {
-	firstName,
-	lastName
-} = person;
+const { firstName, lastName } = person;
 console.log(firstName);
 
 // Create a destructured variable from the nested object:
-const {
-	address: {
-		city
-	}
-} = person;
+const { address: { city }} = person;
 console.log(city);
 
 // Add a property to the object:

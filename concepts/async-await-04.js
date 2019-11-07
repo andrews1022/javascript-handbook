@@ -3,7 +3,7 @@
 // Convert the below promise into async/await
 fetch('https://swapi.co/api/starships/9/')
   .then(response => response.json())
-  .then(console.log)
+  .then(console.log(response))
 
 // Converted:
 async function fetchStarship() {

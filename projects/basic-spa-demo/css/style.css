@@ -1,0 +1,9 @@
+#nav {
+  display: flex;
+  list-style: none;
+}
+
+#nav li a {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
