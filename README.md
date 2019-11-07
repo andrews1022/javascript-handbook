@@ -4,7 +4,7 @@ A handbook containing all notes I've taken on basic, intermediate, and advanced,
 ## Sources (where I learned from):
 ### My own projects
 - [Startup Generator](https://github.com/andrews1022/javascript-handbook/tree/master/projects/my-projects/start-up-generator)
-- Basic SPA (Single Page Application) Demo
+- [Basic SPA (Single Page Application) Demo](https://github.com/andrews1022/javascript-handbook/tree/master/projects/basic-spa-demo)
 
 ### Udemy
 - Andrei Neagoie's [The Complete Web Developer in 2019: Zero to Mastery](https://www.udemy.com/the-complete-web-developer-zero-to-mastery/)
