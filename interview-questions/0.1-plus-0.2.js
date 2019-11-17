@@ -11,6 +11,6 @@ false
 // ...really equates to
 0.30000000000000004
 
-// A solution to this problem would be to use a function that determines if two numbers are approximately equal by defining an error margin (epsilon) value that the difference between two values should be less than.
-const approxEqual = (n1, n2, epsilon = 0.0001) => Math.abs(n1 - n2) < epsilon
-approxEqual(0.1 + 0.2, 0.3) // true
+// A solution to this problem would be to use a function that determines if two numbers are approximately equal by defining a margin of error (epsilon value) that the difference between two values should be less than
+const approxEqual = (n1, n2, epsilon = 0.0001) => Math.abs(n1 - n2) < epsilon;
+approxEqual(0.1 + 0.2, 0.3); // Returns true

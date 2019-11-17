@@ -1,6 +1,4 @@
-// APPLY THE STYLINGS OF A CLASS CALLED coolTitle
-
-// Consider this heading:
+// HTML for reference:
 <h1>Shopping List</h1>
 
 // ---------- PART 1 ----------
@@ -9,5 +7,5 @@
 let h1 = document.querySelector('h1');
 
 // ---------- PART 2 ----------
-// Assign class name
+// Assign class name of 'coolTitle'
 h1.className = 'coolTitle';
