@@ -1,0 +1,2 @@
+# Temperature Converter
+A small, quick and dirty app I put together while taking a break inside a Starbucks. Simple temperature conversion between Celsius and Fahrenheit. This was to test what I've learned recently in JavaScript, specifically in DOM manipulation and working with `<input>` values.
