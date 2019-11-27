@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>Book List App</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Add Book</h1>
+
+    <form id="book-form">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" class="u-full-width">
+      </div>
+      <div>
+        <label for="author">Author</label>
+        <input type="text" id="author" class="u-full-width">
+      </div>
+      <div>
+        <label for="isbn">ISBN#</label>
+        <input type="text" id="isbn" class="u-full-width">
+      </div>
+      <input type="submit" value="Submit" class="u-full-width">
+    </form>
+
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>ISBN</th>
+          <th>
+            <!-- Delete button here -->
+          </th>
+        </tr>
+      </thead>
+      <tbody id="book-list"></tbody>
+    </table>
+
+  </div> <!-- End of container -->
+
+  <!-- <script src="app.js"></script> -->
+  <script src="app-es6.js"></script>
+</body>
+
+</html>
