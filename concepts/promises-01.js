@@ -1,14 +1,9 @@
 // ---------------------- PROMISES ----------------------
 // We're going to try and mimic blog posts on a server, getting them, and creating a blog post
 
-const posts = [{
-    title: 'Post One',
-    body: 'This is post one'
-  },
-  {
-    title: 'Post Two',
-    body: 'This is post two'
-  }
+const posts = [
+  { title: 'Post One', body: 'This is post one' },
+  { title: 'Post Two', body: 'This is post two' }
 ];
 
 // Get the posts
@@ -17,7 +12,7 @@ function getPosts() {
     let output = '';
 
     // Loop through the posts
-    posts.forEach((post, index) => {
+    posts.forEach((post) => {
       output += `<li>${post.title}</li>`;
     });
     document.body.innerHTML = output;
@@ -44,7 +39,7 @@ function createPost(post) {
       if (!error) {
         resolve();
       } else {
-        reject('Error: Something went wrong! :(');
+        reject('Error: Something went wrong.');
       }
     }, 750)
   })
@@ -52,12 +47,9 @@ function createPost(post) {
 
 // Using the new .then syntax
 // No need to use use callback function
-createPost({
-    title: 'Post Three',
-    body: 'This is post three'
-  })
+createPost({ title: 'Post Three', body: 'This is post three' })
   .then(getPosts)
-  .catch(err => console.log(err)); // set const error to true to see .catch work
+  .catch(error => console.log(error)); // set const error to true to see .catch work
 
 
 // -------------- Promise.all --------------

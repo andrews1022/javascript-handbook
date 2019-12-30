@@ -4,7 +4,7 @@
 
 // -------------------------- BASIC PROMISE EXAMPLE --------------------------
 // Set the variable prom to a new Promise
-// This promise object is going to take one parameter, which is a function, which gets two variables of 'resolve' and 'reject'
+// This promise object is going to take one parameter, which is a function, which itself gets two parameters of 'resolve' and 'reject'
 // Next we need to create the definition of the function inside the { }
 let prom = new Promise((resolve, reject) => {
   // Inside here, we need to define what the actual promise is

@@ -10,7 +10,7 @@ const promise = new Promise((resolve, reject) => {
   } else {
     reject('Error, it broke!')
   }
-})
+});
 // Since we made if = true, it's going to run the resolve
 // If we made if = false, it's going to run the reject
 // And the resolve is going to send "Stuff Worked" into the result and we're going to console.log "Stuff Worked."

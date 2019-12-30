@@ -27,7 +27,7 @@ Promise.reject('failed')
   .catch(console.log('Ooops something went wrong'))
 
 // ------------------------------ QUESTION #5 ------------------------------
-// Use Promise.all to fetch all of these people from Star Wars (SWAPI) at the same time.
+// Use Promise.all to fetch all of these people from Star Wars API at the same time.
 // Console.log the output and make sure it has a catch block as well.
 const urls = [
   'https://swapi.co/api/people/1',
