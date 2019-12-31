@@ -5,7 +5,7 @@ function randomNumber() {
 	return Math.random;
 }
 
-// Convert Function #3 to an Arrow Function:
+// Convert to an Arrow Function:
 let randomNumberArrow = () => {
 	return Math.random;
 }

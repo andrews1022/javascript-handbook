@@ -5,7 +5,7 @@ function isPositive(number) {
 	return number >= 0;
 }
 
-// Convert Function #2 to an Arrow Function:
+// Convert to an Arrow Function:
 let isPositiveArrow = (number) => number >= 0;
 
 // But if we have just a single parameter, we can reduce it a tiny bit more:
