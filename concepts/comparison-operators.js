@@ -1,20 +1,64 @@
-// NOT EQUAL
-!==
+const id = 100; // Change to a string to get different results
 
-// COMPARING SOMETHING
-===
+// EQUAL TO (VALUE ONLY)
+if (id == 100) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
 
-// GREATER THAN OR EQUAL TO
->=
+// NOT EQUAL TO
+if (id != 105) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
 
-// LESS THAN OR EQUAL TO
-<=
+// EQUAL TO VALUE & TYPE
+if (id === 100) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
 
-// GREATER THAN
->
+// NOT EQUAL TO VALUE AND TYPE
+if (id !== 105) {
+  console.log('CORRECT');
+} else {
+  console.log('INCORRECT');
+}
 
-// LESS THAN
-<
+// Test if undefined 
+if (typeof id !== 'undefined') {
+  console.log(`The id is ${id}`);
+} else {
+  console.log('NO ID :(');
+}
 
-// ASSIGN A VALUE
-=
+// Greater than
+if (id > 200) {
+  console.log('CORRECT')
+} else {
+  console.log('INCORRECT')
+}
+
+// Less than
+if (id < 200) {
+  console.log('CORRECT')
+} else {
+  console.log('INCORRECT')
+}
+
+// Greater than or equal to
+if (id >= 200) {
+  console.log('CORRECT')
+} else {
+  console.log('INCORRECT')
+}
+
+// Less than or equal to
+if (id <= 200) {
+  console.log('CORRECT')
+} else {
+  console.log('INCORRECT')
+}

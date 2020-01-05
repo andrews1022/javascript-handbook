@@ -1,11 +1,10 @@
-// ------------------------------ ARRAYS ------------------------------
+// ---------- ARRAYS ----------
+// In simple terms, arrays are essentially variables that allow us to hold multiple values
 // For further explanation on arrays, check out the MDN page: 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-// In simple terms, arrays are essentially variables that allow us to hold multiple values
 
-
-// --------------- PART 1: CREATING AN ARRAY ---------------
+// ---------- PART 1: CREATING AN ARRAY ----------
 // There a couple of different ways to create arrays
 
 // The old way - NOT RECOMMENDED
@@ -17,7 +16,7 @@ const fruits = ['apples', 'oranges', 'pears', 'bananas']; // We can simply use [
 console.log(fruits);
 
 
-// --------------- PART 2: STORING DATA IN THE ARRAY ---------------
+// ---------- PART 2: STORING DATA IN THE ARRAY ----------
 // You can also have multiple data types in the same array, althought that is NOT RECOMMENDED, as it can lead to performance issues
 // And you also don't need to pre-define the length of your array
 const fruitsV2 = ['apples', 'oranges', 'pears', 'bananas', 10, true];
@@ -42,7 +41,7 @@ const animalList = [
 ];
 
 
-// --------------- PART 3: ACCESSING DATA IN THE ARRAY ---------------
+// ---------- PART 3: ACCESSING DATA IN THE ARRAY ----------
 // Access just one index in the fruits array above
 console.log(fruits[1]);
 // Notice that we get oranges, and not apples. 
@@ -61,7 +60,7 @@ console.log(fruits);
 console.log(animalList[0][2]);
 
 
-// --------------- PART 4: ARRAY METHODS ---------------
+// ---------- PART 4: ARRAY METHODS ----------
 fruits.push('mangos');          // Add an item to the end of an array
 fruits.pop();                   // Remove an item from the end of an Array
 fruits.unshift('blueberries');  // Add an item to the beginning of the array
@@ -69,7 +68,7 @@ fruits.shift()                  // Remove an item from the beginning of the arra
 fruits.concat()                 // Add multiple items to the array
 fruits.sort()                   // Sort items in the array
 fruits.reverse()                // Sort items in the array in reverse order
-fruits.splice(pos, 1)           // Remove an item from the array by index position
+fruits.splice(1, 4)           	// Splice out values from the array (you chose where you want to start and end)
 
 // Verify if something is an array:
 console.log(Array.isArray(fruits)); // Returns true
@@ -89,7 +88,7 @@ fruits.forEach(function(item, index) {
   console.log(item, index)
 })
 
-// --------------- PART 5: HIGHER ORDER ARRAY METHODS ---------------
+// ---------- PART 5: HIGHER ORDER ARRAY METHODS ----------
 // The 3 most common higher order array methods are .map(), .filter(), & .reduce()
 
 // We said arrays look like this:

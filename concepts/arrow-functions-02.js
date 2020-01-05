@@ -1,5 +1,4 @@
-// ------------------------------ PART 2 ------------------------------
-
+// ---------- PART 2 ----------
 // An arrow function with default values
 // Convert this function to arrow function with default age to 10;
 function isValidAge(age) {

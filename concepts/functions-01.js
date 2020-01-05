@@ -3,13 +3,17 @@
 // Function Declaration
 
 // Function Expression:
-var a = function name() {}
+var a = function name() {
+	// Code goes here
+}
 
 // Function Declaration:
-function name() {}
+function name() {
+	// Code goes here
+}
 
 
-// FUNCTION DECLARATION EXAMPLE
+// ---------- FUNCTION DECLARATION EXAMPLE ----------
 function sayHello() {
 	console.log('Hello dere ehh boy!');
 } // at this point nothing happens because we have not CALLED the functions
@@ -17,7 +21,7 @@ function sayHello() {
 sayHello(); // calling the function
 
 
-// FUNCTION EXPRESSION EXAMPLE
+// ---------- FUNCTION EXPRESSION EXAMPLE ----------
 var sayBye = function () {
 	console.log('Bye :(');
 }
@@ -27,7 +31,7 @@ sayBye();
 // This is also called an 'ANONYMOUS FUNCTION'.
 
 
-// FUNCTION USING ARGUMENTS
+// ---------- FUNCTION USING ARGUMENTS ----------
 // Arguments allow us to not repeat ourself
 
 // Example 1

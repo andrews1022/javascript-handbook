@@ -15,7 +15,7 @@ const companies = [
 const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 
-// ----------------------------------- SORT -----------------------------------
+// ---------- SORT ----------
 // Sort companies based on their start year (earliest - latest)
 // Inside the () after function keyword, it will take in two values
 // At each iteration, it will take two companies and compare them

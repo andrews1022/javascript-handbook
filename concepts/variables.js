@@ -2,7 +2,7 @@
 // 3 keywords to define a variable
 // var, let, or const
 
-// let and const and now the new standard, var isn't really used anymore
+// let and const and now the new standard, as var isn't really used anymore
 
 // Examples
 var name = 'John Doe';

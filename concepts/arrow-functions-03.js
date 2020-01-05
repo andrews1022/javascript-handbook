@@ -1,5 +1,4 @@
-// ------------------------------ PART 3 ------------------------------
-
+// ---------- PART 3 ----------
 // A named function with multiple parameters, in this case 'a' & 'b'
 var sum = function sum(a, b) {
   return a + b;

@@ -1,5 +1,4 @@
-// ------------------------------ PART 1 ------------------------------
-
+// ---------- PART 1 ----------
 // Arrow functions are very handy, and they help clean things up a bit
 // With an arrow function, if you have a single return, you can just put it on one line and it assumes that you want to return something
 
