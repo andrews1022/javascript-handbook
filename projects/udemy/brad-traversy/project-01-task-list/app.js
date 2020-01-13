@@ -69,8 +69,8 @@ function storeTaskInLocalStorage(task) {
 }
 
 // Add task function
-function addTask(event) {
-  event.preventDefault();
+function addTask(e) {
+  e.preventDefault();
 
   // Check if there is a value
   if (taskInput.value === '') {
@@ -134,13 +134,13 @@ function removeTaskFromLocalStorage(taskItem) {
 }
 
 // Remove task from page
-function removeTask(event) {
+function removeTask(e) {
   // Check to see if the parent element of the icon click contains class name 'delete-item'
-  if (event.target.parentElement.classList.contains('delete-item')) {
-    event.target.parentElement.parentElement.remove();
+  if (e.target.parentElement.classList.contains('delete-item')) {
+    e.target.parentElement.parentElement.remove();
 
     // Remove from Local Storage
-    removeTaskFromLocalStorage(event.target.parentElement.parentElement);
+    removeTaskFromLocalStorage(e.target.parentElement.parentElement);
   }
 }
 
@@ -160,10 +160,10 @@ function clearTasks() {
 }
 
 // Filter tasks
-function filterTasks(event) {
+function filterTasks(e) {
   // This gives us whatever is being typed in
   // Use toLowerCase for consistent filtering
-  const text = event.target.value.toLowerCase();
+  const text = e.target.value.toLowerCase();
 
   // Take all list items
   document.querySelectorAll('.collection-item').forEach(task => {

@@ -5,7 +5,7 @@ function updateATag(originalLink, newLink) {
   const links = document.querySelectorAll('a');
 
   // For each link in the array
-  links.forEach(item => {
+  links.forEach((item) => {
     const linkItem = item;
 
     // Grab the href value
