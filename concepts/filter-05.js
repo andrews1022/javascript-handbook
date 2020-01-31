@@ -9,7 +9,7 @@ const array = [
 ];
 
 // Filter the array to only include users who are on team: red
-const redTeamMembers = array.filter(function (user) {
+const redTeamMembers = array.filter((user) => {
 	if (user.team === 'red') {
 		return true;
 	}
@@ -17,7 +17,7 @@ const redTeamMembers = array.filter(function (user) {
 console.log('Filter array with red team members', redTeamMembers);
 
 // Arrow function of above
-const redTeamMembersArrow = array.filter(user => {
+const redTeamMembersArrow = array.filter((user) => {
 	if (user.team === 'red') {
 		return true;
 	}
@@ -25,5 +25,5 @@ const redTeamMembersArrow = array.filter(user => {
 console.log('Filter array with red team members using arrow function', redTeamMembersArrow);
 
 // Arrow function shorthand of above
-const redTeamMembersArrowShort = array.filter(user => (user.team === 'red'));
+const redTeamMembersArrowShort = array.filter((user) => (user.team === 'red'));
 console.log('Filter array with red team members using arrow function shorthand', redTeamMembersArrowShort);

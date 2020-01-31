@@ -6,6 +6,6 @@ let obj = {
 }
 
 // .values example
-Object.values(obj).forEach(value => {
+Object.values(obj).forEach((value) => {
 	console.log(value);
 })

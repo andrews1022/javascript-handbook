@@ -53,7 +53,7 @@ function createPost(post) {
 // No need to use use callback function
 createPost({ title: 'Post Three', body: 'This is post three' })
   .then(getPosts)
-  .catch(err => console.log(err)); // set const error to true to see .catch work
+  .catch((err) => console.log(err)); // set const error to true to see .catch work
 
 // We need to use the keyword async if we want to use await
 // Await waits for an asynchronous action to be completed

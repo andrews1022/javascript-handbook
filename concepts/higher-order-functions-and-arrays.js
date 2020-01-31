@@ -14,29 +14,20 @@ const companies = [
 // Array of Ages
 const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
-// Covered in this video:
-// forEach
-// filter
-// map
-// sort
-// reduce
-
 // ----------------------------------- FOR LOOP -----------------------------------
-// for(let i = 0; i < companies.length; i++){
-//     console.log('for loop', companies[i]);
-// }
+for(let i = 0; i < companies.length; i++){
+    console.log('for loop', companies[i]);
+}
 
 
 // ----------------------------------- FOR EACH LOOP -----------------------------------
 // Takes in a callback function, which is synchronous
-// Can takes in 3 things
+// Can takes in 3 things:
 // An iterator, in this case each company
-// Can also take in an index, and the entire array itself
-// But we will just use an iterator
-
-// companies.forEach(function(company) {
-//     console.log('forEach', company);
-// });
+// Can also take in an index, and the entire array itself, but we will just use an iterator
+companies.forEach((company) => {
+    console.log('forEach', company);
+});
 
 
 // ----------------------------------- FILTER -----------------------------------
@@ -62,7 +53,7 @@ console.log('for loop canDrink', canDrink);
 // Now, lets use filter instead
 // First define a variable
 // Then it takes in a function
-const canDrinkTwo = ages.filter(function (age) {
+const canDrinkTwo = ages.filter((age) => {
 	// Test the age parameter
 	if (age >= 21) {
 		// All you have to do is return true
@@ -73,14 +64,14 @@ console.log('filter canDrink', canDrinkTwo);
 
 // We can improve this, and put it all onto one line using ES6 Arrow Functions
 // Put in the parameter of age, and insert arrow function, and the condition of age is equal to or greater than 21
-const canDrinkArrow = ages.filter(age => age >= 21);
+const canDrinkArrow = ages.filter((age) => age >= 21);
 console.log('filter canDrink arrow ES6', canDrinkArrow);
 
 
 // ---------- Using filter() with the companies array ----------
 // EXAMPLE 1 - FILTERING COMPANIES THAT ARE RETAIL
 // First, the ES5 way with standard function
-const retailCompanies = companies.filter(function (company) {
+const retailCompanies = companies.filter((company) => {
 	if (company.category === 'Retail') {
 		return true;
 	}
@@ -91,17 +82,17 @@ console.log('retailCompanies ES5', retailCompanies);
 // And since we only have on parameter, company, we don't need the () around it
 // If were also using a parameter of index, then it should like like this:
 // const retailCompaniesArrow = companies.filter((company, index) => ...
-const retailCompaniesArrow = companies.filter(company => (company.category === 'Retail'));
+const retailCompaniesArrow = companies.filter((company) => (company.category === 'Retail'));
 console.log('retailCompanies Arrow Function ES6', retailCompaniesArrow);
 
 // EXAMPLE 2 - FILTERING COMPANIES THAT STARTED IN THE 1980s
 // My attempt---WORKS!! 
-const retailCompaniesEighty = companies.filter(company => (company.start >= 1980 && company.start <= 1989));
+const retailCompaniesEighty = companies.filter((company) => (company.start >= 1980 && company.start <= 1989));
 console.log('filter companies starting in the 80s', retailCompaniesEighty);
 
 // EXAMPLE 3 - FILTERING COMPANIES THAT HAVE LASTED 10 OR MORE YEARS
 // End date minus the  date is greater than or equal to 10
-const lastedTenYears = companies.filter(company => (company.end - company.start >= 10));
+const lastedTenYears = companies.filter((company) => (company.end - company.start >= 10));
 console.log('filter companies lasting more than 10yrs', lastedTenYears);
 
 
@@ -109,25 +100,24 @@ console.log('filter companies lasting more than 10yrs', lastedTenYears);
 // Map works differently than filter, as it creates a whole new array from a current array
 
 // Let's grab all of the company names and put them into their own array
-const mapCompanyArray = companies.map(company => company.name);
+const mapCompanyArray = companies.map((company) => company.name);
 console.log('map array company names only', mapCompanyArray);
 
 // Another example, map a new array of companies and their start to end date
-const testMap = companies.map(company => `${company.name}: (${company.start} - ${company.end})`);
+const testMap = companies.map((company) => `${company.name}: (${company.start} - ${company.end})`);
 console.log('map array company info', testMap);
 
 // Another example, ages array and square each number
-// My attempt---WORKS!! 
-const agesSquared = ages.map(age => age * age);
+const agesSquared = ages.map((age) => age * age);
 console.log('ages array squared', agesSquared);
 
 // Another example, ages array and add 2 to each number
-const agesPlusTwo = ages.map(age => age + 2);
+const agesPlusTwo = ages.map((age) => age + 2);
 console.log('ages array plus 2', agesPlusTwo);
 
 // Another example, using two maps at once
 // First squaring the number, then adding 2
-const doubleMap = ages.map(age => age * age).map(age => age + 2);
+const doubleMap = ages.map((age) => age * age).map(age => age + 2);
 console.log('array with 2 maps', doubleMap);
 
 

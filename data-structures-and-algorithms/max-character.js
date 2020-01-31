@@ -8,7 +8,7 @@ function maxCharacter(str) {
   let maxChar = '';         // actual number that has the most occurences
 
   // Loop through the string as an array
-  str.split('').forEach(function (character) {
+  str.split('').forEach((character) => {
     // Look each key value pair and count how many are inside
     // So j:1, a:2, etc.
     if (characterMap[character]) {

@@ -26,7 +26,7 @@ console.log('for loop canDrink', canDrink);
 // Now, lets use filter instead
 // First define a variable
 // Then it takes in a function
-const canDrinkTwo = ages.filter(function (age) {
+const canDrinkTwo = ages.filter((age) => {
 	// Test the age parameter
 	if (age >= 21) {
 		// All you have to do is return true
@@ -37,5 +37,5 @@ console.log('filter canDrink', canDrinkTwo);
 
 // We can improve this, and put it all onto one line using ES6 Arrow Functions
 // Put in the parameter of age, and insert arrow function, and the condition of age is equal to or greater than 21
-const canDrinkArrow = ages.filter(age => age >= 21);
+const canDrinkArrow = ages.filter((age) => age >= 21);
 console.log('filter canDrink arrow ES6', canDrinkArrow);

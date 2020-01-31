@@ -21,7 +21,7 @@ function capitalizeLetters(str) {
   return str
     .toLowerCase()
     .split(' ')
-    .map(function (word) {
+    .map((word) => {
       return word[0].toUpperCase() + word.substring(1);
     })
     .join(' ');
@@ -30,7 +30,7 @@ function capitalizeLetters(str) {
   return str
     .toLowerCase()
     .split(' ')
-    .map(word => word[0].toUpperCase() + word.substring(1))
+    .map((word) => word[0].toUpperCase() + word.substring(1))
     .join(' ');
 
   // ---------- METHOD 3 ----------
@@ -40,7 +40,7 @@ function capitalizeLetters(str) {
   // Then a range of lowercase a-z
   // Then put a g for global - if not it will only capitalize the first word
   // THen an i for case insensitive
-  return str.replace(/\b[a-z]/gi, function (character) {
+  return str.replace(/\b[a-z]/gi, (character) => {
     return character.toUpperCase();
   });
 }

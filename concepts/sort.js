@@ -20,7 +20,7 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 // Inside the () after function keyword, it will take in two values
 // At each iteration, it will take two companies and compare them
 // We then return 1 or -1 to move them up and down inside the array
-const sortedCompanies = companies.sort(function (comp1, comp2) {
+const sortedCompanies = companies.sort((comp1, comp2) => {
 	if (comp1.start > comp2.start) {
 		return 1;
 	} else {

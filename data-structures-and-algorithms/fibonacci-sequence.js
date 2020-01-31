@@ -2,10 +2,10 @@
 // The numbers are (0), 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, etc.
 // Each number is the sum of the two previous ones
 
-function fibonacciGenerator(n) {
+function fibonacciGenerator(num) {
   var fibArray = [];
 
-  for (var i = 0; i < n; i++) {
+  for (var i = 0; i < num; i++) {
     if (i <= 1) {
       fibArray.push(i);
     } else {

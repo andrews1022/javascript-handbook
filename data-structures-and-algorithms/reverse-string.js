@@ -14,7 +14,7 @@ function reverseString(str) {
   // ---------- METHOD 1 (CLEANED UP) ----------
   return str.split('').reverse().join('');
   // One one line:
-  const reverseString = str => str.split('').reverse().join('');
+  const reverseString = (str) => str.split('').reverse().join('');
 
   // ---------- METHOD 2 ----------
   // Use a for loop - decreasing array
@@ -43,14 +43,14 @@ function reverseString(str) {
   // ---------- METHOD 5 ----------
   // Use a forEach loop
   let revString = '';
-  str.split('').forEach(function (character) {
+  str.split('').forEach((character) => {
     revString = character + revString;
   })
   return revString;
 
   // ---------- METHOD 5 (CLEANED UP - USING ES6) ----------
   let revString = '';
-  str.split('').forEach(character => revString = character + revString);
+  str.split('').forEach((character) => revString = character + revString);
   return revString;
 
   // ---------- METHOD 6 ----------
@@ -60,7 +60,7 @@ function reverseString(str) {
   // Function takes in a revString and character paramter
   // Also takes a second paramter of what we want to start with
   // In this case, an empty string: }, ''); at the bottom
-  return str.split('').reduce(function (revString, character) {
+  return str.split('').reduce((revString, character) => {
     return character + revString;
   }, '');
 

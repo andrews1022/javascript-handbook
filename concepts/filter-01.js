@@ -8,7 +8,7 @@ const toDoLoop = [
 ];
 
 // .filter allows us to create a new array based on a condition
-const toDoCompleted = toDoLoop.filter(function (toDoItem) {
+const toDoCompleted = toDoLoop.filter((toDoItem) => {
 	return toDoItem.isCompleted === true;
 }).map(function (toDoThing) { // you can also add on additional methods
 	return toDoThing.text;

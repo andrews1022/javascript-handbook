@@ -19,7 +19,7 @@ const companies = [
 
 // -------------------- EXAMPLE 1 - FILTERING COMPANIES THAT ARE RETAIL --------------------
 // First, the ES5 way with standard function
-const retailCompanies = companies.filter(function (company) {
+const retailCompanies = companies.filter((company) => {
 	if (company.category === 'Retail') {
 		return true;
 	}
@@ -30,16 +30,16 @@ console.log('retailCompanies ES5', retailCompanies);
 // And since we only have on parameter, company, we don't need the () around it
 // If were also using a parameter of index, then it should like like this:
 // const retailCompaniesArrow = companies.filter((company, index) => ...
-const retailCompaniesArrow = companies.filter(company => (company.category === 'Retail'));
+const retailCompaniesArrow = companies.filter((company) => (company.category === 'Retail'));
 console.log('retailCompanies Arrow Function ES6', retailCompaniesArrow);
 
 
 // -------------------- EXAMPLE 2 - FILTERING COMPANIES THAT STARTED IN THE 1980s --------------------
-const retailCompaniesEighty = companies.filter(company => (company.start >= 1980 && company.start <= 1989));
+const retailCompaniesEighty = companies.filter((company) => (company.start >= 1980 && company.start <= 1989));
 console.log('filter companies starting in the 80s', retailCompaniesEighty);
 
 
 // -------------------- EXAMPLE 3 - FILTERING COMPANIES THAT HAVE LASTED 10 OR MORE YEARS --------------------
 // End date minus the  date is greater than or equal to 10
-const lastedTenYears = companies.filter(company => (company.end - company.start >= 10));
+const lastedTenYears = companies.filter((company) => (company.end - company.start >= 10));
 console.log('filter companies lasting more than 10yrs', lastedTenYears);
