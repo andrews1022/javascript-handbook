@@ -9,8 +9,8 @@ re = /hello/; // Set a regular expression literal. Place your expression inbetwe
 // This itself is actually a regular expression
 // Each one of these characters is a literl character - it's going to be taken at face value - an actualy H, E, etc.
 
-// console.log(re); // Logs /hello/
-// console.log(re.source); // Log the actual expression inside the //
+console.log(re); // Logs /hello/
+console.log(re.source); // Log the actual expression inside the //
 
 // ----- exec() function -----
 // Will return the result in an array if there is a match, or null if there is not
@@ -48,8 +48,7 @@ result = re.test('Hello');
 console.log(result); // Returns true
 
 // Global flag:
-// re = /hello/g; // Global search flag - will look at the entire paragraph for all instances of hello (as an example)
-
+re = /hello/g; // Global search flag - will look at the entire paragraph for all instances of hello (as an example)
 
 // ----- match() function -----
 // Will return result array or null (similar to exec() function)
@@ -73,21 +72,9 @@ const newString = string.replace(re, 'Hi');
 console.log(newString);
 
 
-
-
-
-
-
-
-
-// Initalize regular expression
-let re;
-
-
 // ---------- Literal characters ----------
 re = /hello/;
 re = /hello/i;
-
 
 // ---------- Metacharacter Symbols ----------
 // *** Set str variable below to Hello ***
@@ -100,7 +87,6 @@ re = /h*llo/i; // Asterik symbol: * - Matches any ONE character 0 or more times 
 re = /gre?a?y/i; // Question marl smybol: ? - Optional character - put the symbol AFTER The character which you wish to define as optional (as grey can be spelt both grey and gray)
 re = /gre?a?y\?/i; // Escaping characters symbol: \ - Matching for things that would otherwise cause errors (here we check for useage of ? mark)
 
-
 // ---------- Brackets [] - Character sets ----------
 // *** Set str variable below to Gray/Grey ***
 re = /gr[ae]y/i; // The character MUST be one of the characters inside the [] (better solution than using ?)
@@ -111,19 +97,16 @@ re = /[a-z]ray/; // Match for ANY LOWERCASE letter
 re = /[A-Za-z]ray/; // Match for any letter regardless of casing
 re = /[0-9][0-9]ray/; // You can include multiple sets
 
-
 // ---------- Bracers {} - Quantifiers ----------
 // *** Set str variable below to Hello ***
 re = /Hel{2}o/i; // Must occur exactly {number} of times at specified location (place character before the { })
 re = /Hel{2,4}o/i; // Set a range of times the character should occur
 re = /Hel{2,}o/i; // Leave a trailing comma means most occur AT LEAST {number} of times
 
-
 // ---------- Parentheses () - Grouping ----------
 // *** Set str variable below to 3x3x3x ***
 re = /([0-9]x){3}/; // We want a number between 0-9, followed by x, and we want that 3 times (3x3x3x)
 re = /^([0-9]x){3}$/; // Ensure that nothing comes after the third 3x
-
 
 // ---------- Shorthand Character Classes ----------
 re = /\w/; // Word character: \w - is alphanumeric (can be any letter or any number, or an underscore _ )
@@ -137,12 +120,10 @@ re = /\S/; // Match NON whitespace character
 re = /Hell/i; // Word boundary: without \b
 re = /Hell\b/i; // Word boundary: with \b - Look for just Hell, nothing else inside of it - see how index is higher here 
 
-
 // ---------- Assertions ----------
 // Assertions are kind of like conditionals
 re = /x(?=y)/; // Means it's going to match 'x' ONLY if it's FOLLOWED by 'y' (xy)
 re = /x(?!y)/; // Match 'x' ONLY if it's NOT FOLLOWED by 'y' (xy)
-
 
 // String to match - Change as per tests above
 const str = '';

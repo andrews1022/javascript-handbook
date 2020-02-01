@@ -21,13 +21,12 @@ console.log(typeof sym);
 
 
 // REFERENCE DATA TYPES - all return object when using typeof
-const hobbies = ['movies', 'music']; // Arrays
+// Arrays
+const hobbies = ['movies', 'music']; 
 console.log(typeof hobbies); // Returns object
 
-const address = { // Object literal
-  city: 'Vancouver',
-  province: 'BC'
-}
+// Object literal
+const address = { city: 'Vancouver', province: 'BC' }
 console.log(typeof address);
 
 const today = new Date(); // Date object

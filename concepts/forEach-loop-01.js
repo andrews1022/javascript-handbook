@@ -7,6 +7,6 @@ const toDoLoop = [
 
 // For Each loop:
 // forEach just loops through the array
-toDoLoop.forEach(function (toDoItem) { // place a variable inside the () beside 'function' as each item
+toDoLoop.forEach((toDoItem) => { // place a variable inside the () beside 'function' as each item
 	console.log(toDoItem.text); // use the same variable passed as the parameter before the .
 });

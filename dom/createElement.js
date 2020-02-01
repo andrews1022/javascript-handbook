@@ -1,5 +1,4 @@
-// ------------------------------ PART 1 ------------------------------
-
+// ---------- EXAMPLE #1 ----------
 // HTML for reference:
 <body>
   <h1 id="header">The Dom is cool for many reasons</h1>
@@ -20,3 +19,37 @@ document.body.appendChild(para);
 
 // *** NOTE ***
 // .appendChild() adds a child element to whatever is being selected. 
+
+
+// ---------- EXAMPLE #2 ----------
+// Create the element and place it in a variable, then inside the () place which element you want to create
+const li = document.createElement('li');
+
+// Add a class to li
+li.className = 'collection-item';
+
+// Add an id
+li.id = 'new-item';
+
+// Add an attribute
+li.setAttribute('title', 'New Item');
+
+// Create text node and append
+li.appendChild(document.createTextNode('Hello World'));
+
+// Create new link element
+const link = document.createElement('a');
+
+// Add a class to link
+link.className = 'delete-item secondary-content';
+
+// Add icon html
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+// Append the link into the li
+li.appendChild(link);
+
+// Append li as child to ul
+document.querySelector('ul').appendChild(li);
+
+console.log(li);

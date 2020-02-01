@@ -6,6 +6,7 @@ var var = 2;
 
 // Variables CAN have keywords as part of a word like this:
 var myVar = 2;
+
 // But it is best to use meaningful, more detailed/specific variable names
 var myFavouriteNumber = 2;
 

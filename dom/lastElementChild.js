@@ -1,9 +1,15 @@
-// HTML for reference:
-<ul class="items">
-  <li class="item">Item 1</li>
-  <li class="item">Item 2</li>
-  <li class="item">Item 3</li>
+// HTML for reference
+<ul class="collection">
+  <li class="collection-item">List Item</li>
+  <li class="collection-item">List Item</li>
+  <li class="collection-item">List Item</li>
+  <li class="collection-item">List Item</li>
+  <li class="collection-item">List Item</li>
 </ul>
 
-// Add HTML to the last child
-ul.lastElementChild.innerHTML = '<h1>Hi!</h1>';
+// Grab ul element
+const list = document.querySelector('ul.collection');
+
+// Gives us the first HTML element
+const last = list.lastElementChild;
+console.log(last);

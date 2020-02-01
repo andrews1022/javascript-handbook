@@ -1,33 +1,38 @@
-// HTML for reference:
-<div>
-  <button class="btn btn-dark" id="button">Click Here!</button>
+// Get clear button
+const button = document.querySelector('#myButton');
 
-  <div class="grey-box" style='width:400px; height:200px; background:#f4f4f4;'></div>
+// Click
+button.addEventListener('click', runEvent);
 
-  <div class="output"></div>
-</div>
+// Double click
+button.addEventListener('dblclick', runEvent);
 
-// Select the elements:
-var button = document.querySelector('#button');
-var greyBox = document.querySelector('.grey-box');
-var output = document.querySelector('.output');
+// Mouse down
+button.addEventListener('mousedown', runEvent);
+// Mouse up
+button.addEventListener('mouseup', runEvent);
 
-// function
-function runEvent(event) {
-  console.log('EVENT TYPE: ' + event.type); 
-}
+// Mouse enter
+button.addEventListener('mouseenter', runEvent);
+// Mouse leave
+button.addEventListener('mouseleave', runEvent);
 
-// ------- OTHER OPTIONS -------
-console.log(event.target.value);
+// Mouse over
+button.addEventListener('mouseover', runEvent);
+// Mouse out
+button.addEventListener('mouseout', runEvent);
 
-// Prevent default form behavior
-event.preventDefault();
+// *** NOTE ***
+// mouseover and mouseout will fire off when you go into another element that's inside of that element
+// mouseleave & mouseenter is only going to fire on the initial parent element.
 
-// Output the values into a DOM element
-output.innerHTML = event.target.value;
+// Mouse move
+button.addEventListener('mousemove', runEvent); // Useful for games or highly interactive websites
 
-// Track mouse movement
-output.innerHTML = '<h3>MouseX: ' + event.offsetX + ' </h3><h3>MouseY: ' + event.offsetY + ' </h3>';
+// HTML for reference
+<input type="text" class="form-control mr-2 text-input" id="text-input" />
 
-// Dynamically change background colour based on mouse movement
-greyBox.style.backgroundColor = 'rgb('+event.offsetX+', '+event.offsetY+', 20)';
+// Click inside text input
+itemInput.addEventListener('focus', runEvent);
+// Click outside text input  
+itemInput.addEventListener('blur', runEvent);  

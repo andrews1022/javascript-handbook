@@ -84,7 +84,7 @@ console.log(fruits.length);
 let lastFruit = fruits[fruits.length - 1];
 
 // Loop over an Array
-fruits.forEach(function(item, index) {
+fruits.forEach((item, index) => {
   console.log(item, index)
 })
 
@@ -96,14 +96,14 @@ const myNumbersArray = [1, 2, 10, 16];
 
 // First, let's remember how the forEach loop works again
 // Let's say we want to multiply every single number in myNumbersArray
-const newArray = myNumbersArray.forEach(num => {
+const newArray = myNumbersArray.forEach((num) => {
 	num * 2;
 });
 
 // We're just randomly multiplying the numbers by two but we're not really storing it anywhere.
 // So let's create an empty array and push on to it, using the .push() method
 const double = [];
-const newArray2 = myNumbersArray.forEach(num => {
+const newArray2 = myNumbersArray.forEach((num) => {
 	double.push(num * 2);
 });
 console.log('forEach/double.push', double);
@@ -112,7 +112,7 @@ console.log('forEach/double.push', double);
 // ------- .MAP() -------
 // With .map(), you always need to return something
 // Below, we loop over each element/each number, and return a NEW array.
-const mappedArray = myNumbersArray.map(num => {
+const mappedArray = myNumbersArray.map((num) => {
 	return num * 2;
 });
 console.log('map', mappedArray);
@@ -138,14 +138,14 @@ console.log('map', mappedArray);
 // ------- .FILTER() -------
 // And as the name suggests, we can FILTER an array based on a condition
 // For our demo, let's return all the elements in the array 'array' (near the top of this section) that are greater than 5
-const filteredArray = myNumbersArray.filter(num => {
+const filteredArray = myNumbersArray.filter((num) => {
 	// And as with .map, we must return something
 	return num > 5;
 })
 console.log('filter', filteredArray);
 
 // Again, since this is a single return value, we can use shorthand version
-const filteredArrayShort = myNumbersArray.filter(num => num > 5);
+const filteredArrayShort = myNumbersArray.filter((num) => num > 5);
 
 console.log('filter short', filteredArrayShort);
 // If it returns false, ut won't go into the array 

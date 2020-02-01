@@ -13,7 +13,7 @@ var itemList = document.querySelector('#items');
 console.log('NodeList of list items', itemList.childNodes);
 
 // Recommended way, using 'children'
-console.log('HTMLCollection of list items', itemList.children);
+console.log('HTMLCollection of list items: ', itemList.children);
 
 // Access 'Item 2'
 console.log('Item 2', itemList.children[1]);

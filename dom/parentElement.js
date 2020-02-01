@@ -1,15 +1,21 @@
-// HTML for reference:
-<ul>
-	<li>Notebook</li>
-	<li>Jello</li>
-	<li>Spinach</li>
-	<li>Rice</li>
-	<li>Birthday Cake</li>
-	<li>Candles</li>
+// HTML for reference
+<ul class="collection">
+  <li class="collection-item">List Item</li>
+  <li class="collection-item">List Item</li>
+  <li class="collection-item">List Item</li>
+  <li class="collection-item">List Item</li>
+  <li class="collection-item">List Item</li>
 </ul>
 
-document.querySelectorAll('li' [1]).parentElement;
-// <ul>
+// Grab ul element
+const list = document.querySelector('ul.collection');
 
-document.querySelectorAll('li' [1]).parentElement.parentElement;
-// <body>
+// Get parent element
+const parent = listItem.parentElement;
+
+// Get parent of parent
+const parentOfParent = listItem.parentElement.parentElement;
+
+console.log(list);
+console.log(parent);
+console.log(parentOfParent);

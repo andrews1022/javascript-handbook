@@ -13,7 +13,7 @@ var itemInput = document.querySelector('#text-input');
 var form = document.querySelector('#form');
 var select = document.querySelector('#select');
 
-// function
+// Show the event type
 function runEvent(event) {
   console.log('EVENT TYPE: ' + event.type); 
 
@@ -21,18 +21,13 @@ function runEvent(event) {
   event.preventDefault();
 }
 
-itemInput.addEventListener('keydown', runEvent);  // pressing the key/holding key down
+// List of events
+itemInput.addEventListener('keydown', runEvent);  // pressing the key or holding key down
 itemInput.addEventListener('keyup', runEvent);    // releasing the key
-
-itemInput.addEventListener('focus', runEvent);    // click inside text input
-itemInput.addEventListener('blur', runEvent);     // click outside text input
 
 itemInput.addEventListener('cut', runEvent);      // triggers when text is cut from input field
 itemInput.addEventListener('paste', runEvent);    // triggers when text is pasted from input field
 
-itemInput.addEventListener('input', runEvent);    // will run off anything done to an input
-
 select.addEventListener('change', runEvent);      // triggers when something is changed/picked
 select.addEventListener('input', runEvent);       // will run off anything done to an input
-
 form.addEventListener('submit', runEvent);        // will trigger once form is submitted

@@ -61,3 +61,48 @@ console.log(human2.getBirthYear());
 
 // Calling the getFullName function
 console.log(human2.getFullName());
+
+
+// ---------- EXAMPLE #2 ----------
+// A basic object literal
+const brad = {
+  name: 'Brad',
+  age: 30
+}
+console.log(brad)
+console.log(brad.age)
+
+// Creating multiple instances of this same object like this would be tedious and repetitive
+
+// So we create a constructor function
+// Note that the name of a constructor function typically starts with a capital letter
+function Person(name, dateOfBirth) {
+  this.name = name;
+  this.birthday = new Date(dateOfBirth);
+
+  // Calcuate age from a birthday
+  this.calculateAge = () => {
+    const difference = Date.now() - this.birthday.getTime();
+    const ageDate = new Date(difference);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+}
+
+let brad = new Person('Andrew', 'October 22, 1992');
+console.log(brad.calculateAge());
+
+// Instantiate an object (create new one)
+let brad = new Person('Brad', 35);
+console.log(brad);
+
+let john = new Person('John', 30);
+console.log(john);
+console.log(`John's age: `, john.age);
+
+// ---------- THIS KEYWORD ----------
+// The 'this' keyword is very important
+// It refers to the current instance of the object
+// It pertains to that function's scope, but also outside of it 
+
+// For example, get the window object
+console.log(this);

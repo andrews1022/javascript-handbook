@@ -1,8 +1,7 @@
 // Switch statements are another type of conditional check
 // We test what is placed inside the of ( ) after the switch keyword
 // To evaluate it, we use 'cases'
-// Then add a break at the end of each case
-// And at the end we add a default
+// Then add a break at the end of each case and at the end we add a default
 // The default statement is used if none of the cases are matched
 // Switches are better when you have A LOT of if / else if checks
 
@@ -87,4 +86,46 @@ function moveCommand(direction) {
 			whatHappens = 'Please enter a valid direction';
 	}
 	return whatHappens;
+}
+
+
+// ---------- EXAMPLE #4 ----------
+var firstName = 'John';
+var job = 'driver';
+
+switch (job) {
+  case 'teacher':
+  case 'instructor': // You can have multiple cases and execute the same block underneath. So if job is equal to teacher OR instructor, below will be executed
+    console.log(`${firstName} teaches kids how to code.`);
+    break; 
+
+  case 'driver':
+    console.log(`${firstName} drivers an Uber in Vancouver.`);
+    break;
+
+  case 'designer':
+    console.log(`${firstName} designs beautiful websites.`);
+    break;
+
+  default:
+    console.log(`${firstName} does something`);
+}
+
+
+// ---------- EXAMPLE #5 ----------
+var firstName = 'John';
+age = 52;
+
+switch (true) {
+  case age < 13:
+    console.log(`${firstName} is a boy`);
+    break;
+  case age >= 13 && age <= 19:
+    console.log(`${firstName} is a teenager`);
+    break;
+  case age >= 20 && age <= 30:
+    console.log(`${firstName} is a young man`);
+    break;
+  default:
+    console.log(`${firstName} is a man`);
 }

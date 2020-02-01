@@ -10,6 +10,9 @@
 // Grab ul element
 const list = document.querySelector('ul.collection');
 
-// Gives us the first HTML element
-const first = list.firstElementChild;
-console.log(first);
+let val;
+
+val = listItem.nextSibling; // Returns node
+val = listItem.nextElementSibling; // Returns HTML element
+val = listItem.previousSibling; // Returns node
+val = listItem.previousElementSibling; // Returns HTML element
