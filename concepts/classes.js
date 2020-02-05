@@ -2,24 +2,24 @@
 
 // ---------- EXAMPLE #1 ----------
 // Class creation:
-// Use the 'class' keyword, and then give it a name
+// Use the 'class' keyword, and then give it a name using uppercase (best practice)
 class HumanBeing {
-	// Create a method called a 'constructor', and assign properties just like before
-	constructor(firstName, lastName, dateOfBirth) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.dateOfBirth = new Date(dateOfBirth);
-	}
+  // Create a method called a 'constructor', and assign properties just like before
+  constructor(firstName, lastName, dateOfBirth) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dateOfBirth = new Date(dateOfBirth);
+  }
 
-	// Any method we want to add, we can simply add it here:
-	getBirthYear() {
-		return this.dateOfBirth.getFullYear();
-	}
+  // Any method we want to add, we can simply add it here:
+  getBirthYear() {
+    return this.dateOfBirth.getFullYear();
+  }
 
-	// And here:
-	getFullName() {
-		return `${this.firstName} ${this.lastName}`;
-	}
+  // And here:
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
 }
 
 // Instantiate the object
@@ -35,27 +35,26 @@ console.log(humanBeing1);
 // Create two classes: an Animal class and a Mammal class. 
 // Create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. 
 class Animal {
-	constructor(name, type, color) {
-		this.name = name;
-		this.color = color;
-		this.type = type;
-	}
+  constructor(name, type, color) {
+    this.name = name;
+    this.color = color;
+    this.type = type;
+  }
 }
 
 class Mammal extends Animal {
-	constructor(name, type, color) {
-		super(name, type, color)
-	}
-	sound() {
-		console.log(`Moooo I'm ${this.name}, and I'm a ${this.color} ${this.type}!`);
-	}
+  constructor(name, type, color) {
+    super(name, type, color);
+  }
+  sound() {
+    console.log(`Moooo I'm ${this.name}, and I'm a ${this.color} ${this.type}!`);
+  }
 }
 
 const cow = new Mammal('Shelly', 'cow', 'brown');
 
 
 // ---------- EXAMPLE #3 ----------
-// Class (ES6), needs an uppercase
 class Book {
   constructor(title, author, year) {
     this.title = title;
@@ -101,18 +100,18 @@ class Person {
   constructor(firstName, lastName, dateOfBirth) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.birthday = new Date(dateOfBirth)
+    this.birthday = new Date(dateOfBirth);
   }
 
   // Any method you add inside the class gets added to the prototype as well
   greeting() {
-    return `Hello there ${this.firstName} ${this.lastName}`
+    return `Hello there ${this.firstName} ${this.lastName}`;
   }
 
   calculateAge() {
     const difference = Date.now() - this.birthday.getTime();
-    const ageDate = new Date(difference)
-    return Math.abs(ageDate.getUTCFullYear() - 1970)
+    const ageDate = new Date(difference);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
   }
 
   getsMarried(newLastName) {
@@ -134,3 +133,112 @@ console.log(mary);
 console.log(mary.greeting());
 
 console.log(Person.addNumbers(1, 2));
+
+
+// ---------- EXAMPLE #5 ----------
+// Create Person class
+class Person {
+  constructor(passedInFullName, passedInMass, passedInHeight) {
+    this.fullName = passedInFullName;
+    this.mass = passedInMass;
+    this.height = passedInHeight;
+  }
+
+  calculateBMI() {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
+}
+
+console.log(amanda);
+console.log(claude);
+
+console.log(`Amanda's BMI is:`, amanda.calculateBMI());
+console.log(`Claude's BMI is:`, claude.calculateBMI());
+
+
+// Instantiate
+const amanda = new Person('Amanda Daniels', 64, 1.68);
+const claude = new Person('Claude McCoy', 90, 1.57);
+
+// Check
+if (amanda.calculateBMI() > claude.calculateBMI()) {
+  console.log(`${amanda.fullName}'s BMI of ${amanda.bmi} is higher than claude's BMI of ${claude.bmi}`);
+} else if (claude.bmi > amanda.bmi) {
+  console.log(`${claude.fullName}'s BMI of ${claude.bmi} is higher than amanda's BMI of ${amanda.bmi}`);
+} else if (claude.bmi === amanda.bmi) {
+  console.log(`Both ${amanda.fullName} and ${claude.fullName} have the same BMI, which is ${amanda.bmi}`);
+} else {
+  console.log('Something is not right here...');
+}
+
+
+// ---------- EXAMPLE #6 ----------
+// Create a person object - should have a name and array of bills paid at a restaurant
+// Create methods to calculate the tips, average tip, and total amount paid (bill + tip)
+// If the bill is less than $50, tip 20%
+// If the bill is between $50 and $200, tip 15%
+// If the bill is more than $200, tip 10%
+
+class Person {
+  // Constructor - passing in a name and array of bill amounts (numbers)
+  constructor(passedInFullName, passedInBills) {
+    this.fullName = passedInFullName;
+    this.bills = passedInBills;
+  }
+
+  // Calculate tips
+  calculateTips() {
+    // Create a new/mapped array based of passed in bills array
+    this.tips = this.bills.map((bill) => {
+      let tip; // Initialize tip variable
+
+      // Conditions checking current iteration (bill), and setting tip variable accordingly
+      if (bill <= 49) {
+        tip = 0.2;
+      } else if (bill >= 50 && bill <= 200) {
+        tip = 0.15;
+      } else if (bill >= 201) {
+        tip = 0.1;
+      }
+
+      // Finally, return each bill iteration amount multipled by the tip amount, then parsed and decimals rounded off
+      return parseFloat((bill * tip).toFixed(2), 10);
+    });
+  }
+
+  // Calculate average tips
+  calculateAverageTip() {
+    // Initialize some variables
+    this.averageTip = 0;
+    this.total = 0;
+
+    // Loop through the array, and for each iteration/value, add it on to total
+    for (let i = 0; i < this.tips.length; i++) {
+      this.total += this.tips[i];
+    }
+
+    // After looping, take the total and divide it by the array length, while parsing and rounding of decimals
+    this.averageTip = parseFloat((this.total / this.tips.length).toFixed(2), 10);
+    return this.averageTip;
+  }
+
+  // Calculate total
+  calculateTotal() {
+    // To calculate the total, map a new array based off the tips array, and then add each tip and each corresponding bill amount together
+    this.total = this.tips.map((tip, index) => {
+      return tip + this.bills[index];
+    });
+  }
+}
+
+// Instantiate John
+const john = new Person('John Doe', [124, 48, 268, 180, 42]);
+
+// Method calls and console logs
+john.calculateTips();
+console.log('What John tipped:', john.tips);
+john.calculateAverageTip();
+console.log('What John tipped on average:', john.averageTip);
+john.calculateTotal();
+console.log('What John paid in total:', john.total);

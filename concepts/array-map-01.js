@@ -7,7 +7,7 @@ const toDoLoop = [
 
 // Map (again, create a new array from an array)
 // .map allows us to create a new array from an array
-const toDoID = toDoLoop.map(function (toDoItem) {
+const toDoID = toDoLoop.map((toDoItem) => {
 	return toDoItem.text;
 });
 console.log(toDoID);

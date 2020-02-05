@@ -13,9 +13,11 @@ newFunc();
 // First, convert it to 2018 Standards
 const first = () => {
 	const greet = 'Hi';
+
 	const second = () => {
 		alert(greet);
 	}
+	
 	return second();
 }
 
