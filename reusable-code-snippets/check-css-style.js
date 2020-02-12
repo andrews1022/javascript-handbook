@@ -13,4 +13,4 @@ if (navStyles.getPropertyValue('display') === 'none') {
 }
 
 // Otherwise, we can simple use .style
-nav.style.display = 'block'
+nav.style.display = 'block';

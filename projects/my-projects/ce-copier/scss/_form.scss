@@ -1,0 +1,36 @@
+@import "variables";
+
+.form {
+  &__row {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem;
+  }
+
+  &__group {
+    &:first-child {
+      margin-right: 1.25rem;
+    }
+  }
+
+  &__input {
+    margin: 1.25rem auto 0 auto;
+    text-align: center;
+    width: 65%;
+
+    &__field {
+      border-top: none;
+      border-right: none;
+      border-bottom: 1px solid $color-primary;
+      border-left: none;
+      font-family: $font-montserrat;
+      margin: 0.75rem 0;
+      padding: 0.3rem;
+      width: 40%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

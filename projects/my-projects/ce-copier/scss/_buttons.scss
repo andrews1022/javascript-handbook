@@ -1,0 +1,53 @@
+@import "variables";
+
+button {
+  font-family: $font-montserrat;
+}
+
+.btn {
+  border: none;
+  color: $white;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  transition: $simple-transition;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &--generate {
+    background-color: $color-primary;
+    display: block;
+    font-weight: 600;
+    margin: 0 auto;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($color-primary, 10%);
+    }
+  }
+
+  &--copy {
+    background-color: $color-quaternary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($color-quaternary, 10%);
+    }
+  }
+
+  &--del {
+    background-color: $color-secondary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($color-secondary, 10%);
+    }
+  }
+}

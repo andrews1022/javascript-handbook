@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,600,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/main.min.css">
+  <title>Class & Element Copier</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <h1 class="heading">Copy HTML classes or full elements with ease!</h1>
+
+      <p class="text">I want to copy... (you can pick one, or both!)</p>
+
+      <form class="form">
+        <div class="form__row">
+          <!-- CLass Only Check -->
+          <div class="form__group">
+            <input type="checkbox" name="class_check" id="classCheck" class="initial-check">
+            <label class="label label--main" for="class_check">Class only</label>
+          </div>
+
+          <!-- Elements Only Check -->
+          <div class="form__group">
+            <input type="checkbox" name="element_check" id="elementCheck" class="initial-check">
+            <label class="label label--main" for="element_check">Element with a class</label>
+          </div>
+        </div>
+
+        <!-- Class Only Input -->
+        <div class="form__input" id="classInput">
+          <p class="form__instructions">
+            Enter at least one class name below, each separated by a comma and a space after the first (eg. <span class="example">class-one, class-two, class-three</span> or just simply <span
+              class="example">class-one</span>)
+          </p>
+
+          <div>
+            <label class="label label--input" for="class_entry">Classes:</label>
+            <input class="form__input__field" type="text" name="class_entry" id="classEntry">
+            <button class="btn btn--generate" id="classGenerator">Generate</button>
+          </div>
+        </div>
+
+        <!-- Element only input -->
+        <div class="form__input" id="elementInput">
+          <p class="form__instructions">
+            Enter at least one class name & element below, each separated by a comma and a space after the first (eg. <span class="example">class-one, class-two, class-three</span> and <span class="example">div, h1,
+              p</span>). 
+              <br /> <br />
+              <span class="example">*NOTE*</span> You will get an element for each class you enter.
+            </p>
+
+          <div>
+            <label class="label label--input" for="both_class_input">Class Name:</label>
+            <input class="form__input__field" type="text" name="both_class_input" id="bothClassEntry">
+          </div>
+
+          <div>
+            <label class="label label--input" for="both_element_input">Element:</label>
+            <input class="form__input__field" type="text" name="both_element_input" id="bothElementEntry">
+          </div>
+
+          <button class="btn btn--generate" id="elementGenerator">Generate</button>
+        </div>
+      </form>
+
+      <!-- OUTPUT FOR CLASS ONLY INPUT -->
+      <ul class='form__output' id="classOutput"> </ul>
+
+      <!-- OUTPUT FOR ELEMENTS AND CLASSES -->
+      <ul class='form__output' id="elementOutput"></ul>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

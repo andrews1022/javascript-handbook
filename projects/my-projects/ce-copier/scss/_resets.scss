@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-montserrat
+}
+
+ul {
+  list-style: none;
+  margin: 1rem 0;
+  text-align: center;
+}

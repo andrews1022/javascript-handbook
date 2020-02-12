@@ -1,0 +1,40 @@
+@import "variables";
+
+code {
+  font-size: 1.35rem;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 200;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: $color-quaternary;
+}
+
+.text {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 1rem 0 0 0;
+}
+
+.example {
+  color: $color-tertiary;
+  font-weight: 600;
+}
+
+.label {
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  &--main {
+    color: $color-quaternary;
+  }
+
+  &--input {
+    color: $color-secondary;
+    display: inline-block;
+    text-align: left;
+    width: 7rem;
+  }
+}
