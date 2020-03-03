@@ -130,3 +130,38 @@ itemsList.forEach((item) => {
 
 // CONDENSED ARROW FUNCTION
 itemsList.forEach((item) => item.style.backgroundColor = 'PaleTurquoise');
+
+
+// ---------- EXAMPLE #8 ----------
+// An array of birth years
+const years = [1990, 1965, 1982, 1937];
+
+// ES5
+var ages5 = years.map(function (el) {
+  return 2020 - el;
+});
+console.log('Ages array using ES5:', ages5);
+
+// ES6
+let ages6 = years.map((el) => {
+  return 2020 - el;
+});
+console.log('Ages array using ES6:', ages6);
+
+// But this can be shortened down to:
+ages6 = years.map(el => 2020 - el);
+// Since we are only using 1 parameter, and returning only a single line, we can write it like this
+// If you have more than 1 parameter, then you need to enclose them inside a pair of parentheses ( )
+console.log('Ages array using ES6 shorthand:', ages6);
+
+// Combining with template literals
+ages6 = years.map((el, i) => `Age element ${i + 1}: ${2020 - el}`);
+console.log('Ages array using template literals:', ages6);
+
+// More than line 1 line
+ages6 = years.map((el, i) => {
+  const now = new Date().getFullYear();
+  const age = now - el;
+  return `Age element ${i + 1}: ${age}`;
+});
+console.log('Ages array if more than 1 line:', ages6);

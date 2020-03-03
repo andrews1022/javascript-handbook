@@ -37,8 +37,7 @@ try {
   console.log(err instanceof TypeError); // Check for specific types of errors - returns true or false
 
   // There is also a finally block
-  // The finally block just runs no matter what.
-  // No matter what the result of the try/catch is, this will still run.
+  // The finally block runs no matter what the outcome of either the try or catch blocks are
 } finally {
   console.log('Finally runs regardless of results!');
 }

@@ -28,11 +28,13 @@ const array = [-1, 0, 3, 100, 99, 2, 99] // should return 100
 // The function
 function biggestNumberInArray(arr) {
 	let highest = 0;
+
 	for (item of arr) {
 		if (highest < item) {
 			highest = item;
 		}
 	}
+
 	return highest;
 }
 
@@ -54,3 +56,36 @@ for (let i = 0; i < toDoLoop.length; i++) { // loop through no more than the len
 for (let todo of toDoLoop) { // the todo could be anything, could just be t, or z, w/e. then place your array name after the 'of' keyword
 	console.log(todo.isCompleted);
 }
+
+
+
+// ---------- EXAMPLE #5 ----------
+// Select 3 elements with the class of 'box'
+const boxes = document.querySelectorAll('.box');
+// Suppose we want to change the text in these boxes
+// Specifically, we only change the text of the first and third box (leave the second alone)
+
+// ES5 way
+var boxesArrES5 = Array.prototype.slice.call(boxes);
+
+for (var i = 0; i < boxesArrES5.length; i++) {
+  if (boxesArrES5[i].className === 'box blue') { // Change the color to see different results
+    continue;
+    // Contine will simply skip this iteration of the loop
+  } else {
+    boxesArrES5[i].textContent = `I've been changed!`;
+  }
+}
+
+// ES6 Way - For Of Loop
+const boxesArrES6 = Array.from(boxes);
+
+for (const cur of boxesArrES6) {
+  if (cur.classList.contains('box blue')) { // Simply check for the class
+    continue;
+  } else {
+    cur.textContent = `I've been changed!`;
+  }
+}
+
+// NOTE: We CANNOT use the contine/break keywords inside a forEach or map, it only works in a for of loop

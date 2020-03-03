@@ -1,4 +1,64 @@
-// Classes were added in ES6
+// Classes are one of the biggest additions to ES6
+// Classes don't actually add anything new to the language, they're just syntactic sugar over the way to do prototypal inheritence
+// This simply means classes make it easier to implement inheritence and to create objects based on blueprints
+
+// ES5 - using function constructor and create prototype methods
+var PersonES5 = function(name, yearOfBirth, job) {
+  this.name = name;
+  this.yearOfBirth = yearOfBirth;
+  this.job = job;
+}
+
+// And again, to make all instances of this inherit a calculate age method, we simply add it to the prototype property
+PersonES5.prototype.calcAge = function() {
+  var age = new Date().getFullYear() - this.yearOfBirth;
+  console.log(age);
+}
+
+var johnES5 = new PersonES5('John Smith', 1990, 'Web Developer');
+console.log(johnES5);
+// johnES5.calcAge();
+
+
+// The same thing, but using ES6 Classes
+class PersonES6 {
+  // All classes must the have the constructor method
+  // This is where we define the initial properties that we want our object to have 
+  constructor(name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+  }
+
+  // Define the calculate age method, right here in the class
+  // And we also we don't need commas, or any other punctuation to separate
+  calculateAge() {
+    let age = new Date().getFullYear() - this.yearOfBirth;
+    console.log(age);
+  }
+
+  // Another thing that we can do with classes, is to add static methods
+  // Static methods are methods that are simply attached to the class, but not inherited by the class instances - objects that we create through that class
+  static greeting() {
+    console.log('Hey there!');
+  }
+}
+// What we wrote here is the EXACT same as writing above with the function constructor and .prototype
+
+// Create an instance of this class
+const johnES6 = new PersonES6('John Doe', 1990, 'Web Developer');
+console.log(johnES6);
+
+// Again since we can't use static methods on any instance we create, we simply call it like this
+PersonES6.greeting();
+
+// IMPORTANT:
+// Class definitions are NOT hoisted
+// Unlike function constructors, we need to first implement a class, and only later in our code can we start using it
+// Second, we can only add methods to classes, not properties
+// But that's not really an issue, because inheriting properties through the object instances is not a best practice anyway
+// And so, that's why this rule is now really enforced here in classes
+
 
 // ---------- EXAMPLE #1 ----------
 // Class creation:
@@ -150,16 +210,15 @@ class Person {
   }
 }
 
+// Instantiate
+const amanda = new Person('Amanda Daniels', 64, 1.68);
+const claude = new Person('Claude McCoy', 90, 1.57);
+
 console.log(amanda);
 console.log(claude);
 
 console.log(`Amanda's BMI is:`, amanda.calculateBMI());
 console.log(`Claude's BMI is:`, claude.calculateBMI());
-
-
-// Instantiate
-const amanda = new Person('Amanda Daniels', 64, 1.68);
-const claude = new Person('Claude McCoy', 90, 1.57);
 
 // Check
 if (amanda.calculateBMI() > claude.calculateBMI()) {

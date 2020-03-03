@@ -1,4 +1,47 @@
-// Destructuring was introduced in ES6 and it gives us an easy way to assign variables and extract variables from arrays and objects
+// Destructuring gives us a very convenient way to extract data from a data structure like an object or an array
+// As an example, we have an array filled with some data, and we now want to store each of the elements of that array in a single variable
+
+// ES5 Version
+var john = ['John', 26];
+var name = john[0];
+var age = john[1];
+
+
+// ES6 Version
+const [name, age] = ['John', 26];
+// What this is gonna do is it's gonna create a constant called 'name' and a constant called 'age', and then this data will be stored in each of the variables.
+console.log(name, age); // John 26
+
+
+// Destructuring with objects
+const obj = {
+  firstName: 'John',
+  lastName: 'Smith'
+}
+
+// The variable names must be the same as the key names
+const { firstName, lastName } = obj;
+console.log(firstName, lastName);
+
+// But if you do want to use variable names that are different from the key names, you can do so like this:
+const { firstName: a, lastName: b } = obj;
+// This means we assign the key firstName to the variable of a, and the key lastName to the variable of b
+console.log(a, b); // John Smith
+
+
+// More practical application - return multiple values from a function
+// Let's create a function that returns the age of a person as well as the remaining time until their retirement
+function calcAgeAndRetirement(year) {
+  const age = new Date().getFullYear() - year;
+  
+  return [age, 65 - age];
+}
+
+// Use destructuring to store the return into different variables
+const [age, retirement] = calcAgeAndRetirement(1992);
+console.log(age, retirement);
+console.log(`Age: ${age}, Years until retirement: ${retirement}`);
+
 
 // ---------- EXAMPLE #1 ----------
 // Let's use this object as reference:
