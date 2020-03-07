@@ -10,6 +10,7 @@ A handbook containing all notes I've taken on basic, intermediate, and advanced,
 - Andrei Neagoie's [The Complete Web Developer in 2019: Zero to Mastery](https://www.udemy.com/the-complete-web-developer-zero-to-mastery/)
 - Angela Yu's [The Complete 2019 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
 - Brad Traversy's [Modern JavaScript From The Beginning](https://www.udemy.com/course/modern-javascript-from-the-beginning/)
+- Jonas Schmedtmann's [The Complete JavaScript Course 2020: Build Real Projects](https://www.udemy.com/course/the-complete-javascript-course/)
 - Cassidy Williams' [JavaScript and React for Developers: Master the Essentials](https://www.udemy.com/course/js-and-react-for-devs/)
 
 ### YouTube

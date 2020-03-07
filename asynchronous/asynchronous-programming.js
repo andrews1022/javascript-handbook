@@ -1,3 +1,4 @@
+// ---------- EXAMPLE #1 ----------
 // AJAX and the Fetch API are used to make HTTP requests to files, APIs, and services whether your own or some external REST API or something like that.
 // AJAX and the XML HTTP request object are older technologies but are very reliable, and Fetch is a newer standard and we're going to be working with both.
 
@@ -37,3 +38,32 @@ doTheNextThing(); // Now this doesn't have to wait until the posts load
 - Promises
 - Async/Await
 */
+
+
+// ---------- EXAMPLE #2 ----------
+// Basic synchronous example - all the instructions are executed one after the other, line by line, just in the order they are written
+const second = () => {
+  console.log('Second');
+}
+
+const first = () => {
+  console.log('First');
+  second();
+  console.log('Third');
+}
+first();
+
+
+// Asynchronous code example - use setTimeout to simulate asynchronous code
+const asyncSecond = () => {
+  setTimeout(() => {
+    console.log('Second'); // Notice the delay where this appears
+  }, 2000);
+}
+
+const asyncFirst = () => {
+  console.log('First');
+  second();
+  console.log('Third');
+}
+asyncFirst();

@@ -4,33 +4,65 @@
   &__row {
     display: flex;
     justify-content: center;
-    margin-top: 1.25rem;
-  }
-
-  &__group {
-    &:first-child {
-      margin-right: 1.25rem;
-    }
+    margin: 1rem 0;
   }
 
   &__input {
-    margin: 1.25rem auto 0 auto;
-    text-align: center;
-    width: 65%;
+    margin: 1rem 0;
+
+    &__inner {
+      text-align: center;
+    }
 
     &__field {
-      border-top: none;
-      border-right: none;
-      border-bottom: 1px solid $color-primary;
-      border-left: none;
-      font-family: $font-montserrat;
-      margin: 0.75rem 0;
-      padding: 0.3rem;
-      width: 40%;
+      background-color: white;
+      border: none;
+      border-bottom: 2px solid $color-quaternary;
+      margin: 0 0.5rem;
+      padding: 0.25rem;
 
       &:focus {
+        border-bottom: 2px solid $color-tertiary;
         outline: none;
       }
     }
   }
+
+  &__group {
+    margin: 0 0.5rem;
+  }
+
+  &__label {
+    color: $color-quaternary;
+    font-weight: 600;
+  }
+
+  &__instructions {
+    text-align: center;
+    width: 65%;
+    margin: 0 auto 0.5rem auto;
+  }
+
+  &__example {
+    color: $color-tertiary;
+    font-weight: 600;
+  }
+
+  &__output {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    &__inner {
+      display: inline;
+    }
+  }
+
+  &__code {}
 }

@@ -1,29 +1,24 @@
 @import "variables";
 
 body {
-  background: radial-gradient(circle, rgba(101,88,127,1) 0%, rgba(57,42,88,1) 100%);
+  background: radial-gradient(circle, #e2ebf0 0%, #cfd9df 100%);
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 3.5rem auto;
 }
 
 .content {
   background-color: $white;
   padding: 2.5rem 2.5rem 1.25rem 2.5rem;
-  border-radius: 0.75rem;
   box-shadow: $subtle-box-shadow;
 }
 
-#classInput {
+.hide {
   display: none;
 }
 
-#elementInput {
-  display: none;
-}
-
-.list-item {
-  margin: 0.5rem 0;
+.show {
+  display: block;
 }

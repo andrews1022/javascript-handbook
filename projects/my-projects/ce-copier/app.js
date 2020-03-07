@@ -1,34 +1,36 @@
 // ---------- UI Variables ----------
-const initialChecks = document.querySelectorAll('.initial-check');
+const formChecks = document.querySelectorAll('.form__check');
+
 const classInput = document.querySelector('#classInput');
-const elementInput = document.querySelector('#elementInput');
+const bothInput = document.querySelector('#bothInput');
+
 const generateBtns = document.querySelectorAll('.btn--generate');
+
 const classEntry = document.querySelector('#classEntry');
 const bothClassEntry = document.querySelector('#bothClassEntry');
 const bothElementEntry = document.querySelector('#bothElementEntry');
+
 const classOutput = document.querySelector('#classOutput');
-const elementOutput = document.querySelector('#elementOutput');
+const bothOutput = document.querySelector('#bothOutput');
 
 // Function to display/hide inputs
 function displayInput(el) {
-  if (el.style.display === '') {
-    el.style.display = 'block';
-  } else if (el.style.display === 'none') {
-    el.style.display = 'block';
+  if (el.classList.contains('hide')) {
+    el.classList.remove('hide');
+    el.classList.add('show');
   } else {
-    el.style.display = 'none';
+    el.classList.remove('show');
+    el.classList.add('hide');
   }
 }
 
 // Handle which check box is clicked
-initialChecks.forEach((check) => {
+formChecks.forEach((check) => {
   check.addEventListener('click', () => {
-    if (check.id === 'classCheck') {
+    if (check.id === 'classOnlyCheck') {
       displayInput(classInput);
-    } else if (check.id === 'elementCheck') {
-      displayInput(elementInput);
-    } else {
-      console.log('Something went wrong here...');
+    } else if (check.id === 'bothCheck') {
+      displayInput(bothInput);
     }
   });
 });
@@ -38,8 +40,8 @@ generateBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if (btn.id === 'classGenerator') {
-      if (classEntry.value === '' || classEntry.value === null || classEntry.value === undefined) {
+    if (btn.id === 'classGenBtn') {
+      if (classEntry.value === '') {
         alert('Please check your input.');
       } else {
         // Otherwise, split each value into array separated by (', ') and save into an array
@@ -50,21 +52,22 @@ generateBtns.forEach((btn) => {
           const listItem = document.createElement('li');
 
           listItem.innerHTML = `
-            <li class="list-item">
-              <code>class="${cls}"</code>
-              <button class="btn btn--copy">Copy</button>
-              <button class="btn btn--del">Delete</button>
-            </li>
+            <li class="form__list-item">
+              <code class="form__code">class="${cls}"</code>
+              <div class="form__list-item__inner">
+                <button class="btn btn--copy">Copy</button>
+                <button class="btn btn--del">Delete</button>
+              </div>
+            </li> 
           `;
 
           // Then append the elements to the ul output
           classOutput.appendChild(listItem);
         });
       }
-    } else if (btn.id === 'elementGenerator') {
+    } else if (btn.id === 'bothGenBtn') {
       // If either field is empty
-      if (bothClassEntry.value === '' || bothClassEntry.value === null || bothClassEntry.value === undefined ||
-        bothElementEntry.value === '' || bothElementEntry.value === null || bothElementEntry.value === undefined) {
+      if (bothClassEntry.value === '' || bothElementEntry.value === '') {
         alert('Please check your input.');
       } else {
         // Split values from both inputs into arrays
@@ -94,15 +97,17 @@ generateBtns.forEach((btn) => {
 
             // Insert html with the pair array values
             listItem.innerHTML = `
-              <li class="list-item">
-                <code>&lt;${res[1]} class="${res[0]}"&gt;&lt;/${res[1]}&gt;</code>
-                <button class="btn btn--copy">Copy</button>
-                <button class="btn btn--del">Delete</button>
+              <li class="form__list-item">
+                <code class="form__code">&lt;${res[1]} class="${res[0]}"&gt;&lt;/${res[1]}&gt;</code>
+                <div class="form__list-item__inner">
+                  <button class="btn btn--copy">Copy</button>
+                  <button class="btn btn--del">Delete</button>
+                </div>
               </li>
             `;
 
             // Then append the elements to the ul output
-            elementOutput.appendChild(listItem);
+            bothOutput.appendChild(listItem);
           });
         });
       }
@@ -116,7 +121,9 @@ generateBtns.forEach((btn) => {
 async function copyAndDelete(e) {
   if (e.target.classList.contains('btn--copy')) {
     if (navigator.clipboard) {
-      const classText = e.target.previousElementSibling.textContent;
+      e.preventDefault();
+
+      const classText = e.target.parentElement.parentElement.children[0].textContent;
 
       try {
         await navigator.clipboard.writeText(classText);
@@ -131,7 +138,9 @@ async function copyAndDelete(e) {
       }
     }
   } else if (e.target.classList.contains('btn--del')) {
-    e.target.parentElement.remove();
+    e.preventDefault();
+
+    e.target.parentElement.parentElement.remove();
   } else {
     console.log('Something went wrong here...');
   }
@@ -139,4 +148,4 @@ async function copyAndDelete(e) {
 
 // Listen for click on edit
 classOutput.addEventListener('click', copyAndDelete);
-elementOutput.addEventListener('click', copyAndDelete);
+bothOutput.addEventListener('click', copyAndDelete);

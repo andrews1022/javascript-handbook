@@ -6,9 +6,9 @@
 // --------- Creating our own promise ---------
 const promise = new Promise((resolve, reject) => {
   if (true) {
-    resolve('Stuff worked!')
+    resolve('Stuff worked!');
   } else {
-    reject('Error, it broke!')
+    reject('Error, it broke!');
   }
 });
 // Since we made if = true, it's going to run the resolve
@@ -21,16 +21,16 @@ promise.then(result => console.log(result));
 
 // Example #2
 promise
-  .then(result => result + '!')
-  .then(result2 => {
+  .then((result) => result + '!')
+  .then((result2) => {
     console.log(result2);
   })
 
 // What if we have an error?
 // We can use .catch()
 promise
-  .then(result => result + '!')
-  .then(result2 => {
+  .then((result) => result + '!')
+  .then((result2) => {
     throw Error
     console.log(result2);
   })
@@ -38,11 +38,11 @@ promise
 
 // Even if we run it like this:
 promise
-  .then(result => {
+  .then((result) => {
     throw Error
     result + '!'
   })
-  .then(result2 => {
+  .then((result2) => {
     console.log(result2);
   })
   .catch(() => console.log('Errrooorrr!!'))

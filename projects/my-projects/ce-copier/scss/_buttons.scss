@@ -1,3 +1,4 @@
+@import "mixins";
 @import "variables";
 
 button {
@@ -8,46 +9,33 @@ button {
   border: none;
   color: $white;
   cursor: pointer;
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  transition: $simple-transition;
-
-  &:hover,
-  &:active,
-  &:focus {
-    outline: none;
-  }
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  transition: all 175ms ease-in-out;
 
   &--generate {
     background-color: $color-primary;
     display: block;
-    font-weight: 600;
-    margin: 0 auto;
+    margin: 0.5rem auto 0 auto;
 
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: lighten($color-primary, 10%);
+    &:hover, &:active, &:focus {
+      @include button-hover($color-primary);
     }
   }
 
   &--copy {
     background-color: $color-quaternary;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: lighten($color-quaternary, 10%);
+    
+    &:hover, &:active, &:focus {
+      @include button-hover($color-quaternary);
     }
   }
 
-  &--del {
+  &--del{
     background-color: $color-secondary;
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: lighten($color-secondary, 10%);
+    
+    &:hover, &:active, &:focus {
+      @include button-hover($color-secondary);
     }
   }
 }

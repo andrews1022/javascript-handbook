@@ -1,6 +1,6 @@
-// So we know that functions are a special kind of object, and such as the array objects for example, functions also get a couple of special methods which they inherit from the function constructor object
-// So in this lecture we will talk about the powerful call, apply and bind methods
-// In a nutshell, these methods allow us to call a function and set the this keyword manually
+// Functions are a special kind of object, and such as the array objects for example, functions also get a couple of special methods which they inherit from the function constructor object
+// Here, we will talk about the powerful call, apply and bind methods
+// In a nutshell, these methods allow us to call a function and set the 'this' keyword manually
 var john = {
   name: 'John',
   age: 26,
