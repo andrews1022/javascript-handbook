@@ -5,34 +5,31 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css' />
-	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' />
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.min.css">
 	<title>Temperature Converter</title>
 </head>
 
-<body class="bg-dark">
-	<div class="container col-lg-6 input-wrapper">
-		<h1 class="heading">Temperature Converter <i class="fas fa-temperature-high"></i></h1>
-
-		<div class="input-group mb-3">
-			<div class="input-group-prepend">
-				<span class="input-group-text" id="basic-addon1">&#176;C</span>
+<body>
+	<div class="wrapper">
+		<h1 class="heading">Temperature Converter</h1>
+	
+		<div class="input-row">
+			<div class="input-box">
+				<span>Celsius</span>
+				<input class="temp-input" type="number" id="celsius-input">
 			</div>
-			<input id="celsius" type="number" class="form-control" placeholder="Celsius" aria-label="Celsius"
-				aria-describedby="basic-addon1">
-		</div>
-
-		<div class="input-group mb-3">
-			<div class="input-group-prepend">
-				<span class="input-group-text" id="basic-addon1">&#176;F</span>
+			<div class="input-box">
+				<span>Fahrenheit </span>
+				<input class="temp-input" type="number" id="fahrenheit-input">
 			</div>
-			<input id="fahrenheit" type="number" class="form-control" placeholder="Fahrenheit" aria-label="Fahrenheit"
-				aria-describedby="basic-addon1">
+			<div class="input-box">
+				<span>Kelvin</span>
+				<input class="temp-input" type="number" id="kelvin-input">
+			</div>
 		</div>
 	</div>
 
-	<script src="app.js"></script>
+	<script src="app.min.js"></script>
 </body>
 
 </html>

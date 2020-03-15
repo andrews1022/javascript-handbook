@@ -177,6 +177,10 @@ ul {
   text-align: center;
 }
 
+input {
+  font-family: "Montserrat", sans-serif;
+}
+
 .heading {
   font-weight: 900;
   text-align: center;

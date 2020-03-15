@@ -20,11 +20,17 @@ const obj = {
 }
 
 // The variable names must be the same as the key names
-const { firstName, lastName } = obj;
+const {
+  firstName,
+  lastName
+} = obj;
 console.log(firstName, lastName);
 
 // But if you do want to use variable names that are different from the key names, you can do so like this:
-const { firstName: a, lastName: b } = obj;
+const {
+  firstName: a,
+  lastName: b
+} = obj;
 // This means we assign the key firstName to the variable of a, and the key lastName to the variable of b
 console.log(a, b); // John Smith
 
@@ -33,7 +39,7 @@ console.log(a, b); // John Smith
 // Let's create a function that returns the age of a person as well as the remaining time until their retirement
 function calcAgeAndRetirement(year) {
   const age = new Date().getFullYear() - year;
-  
+
   return [age, 65 - age];
 }
 
@@ -45,14 +51,21 @@ console.log(`Age: ${age}, Years until retirement: ${retirement}`);
 
 // ---------- EXAMPLE #1 ----------
 // Let's use this object as reference:
-const obj = { player: 'Timmy', 	xpPoints: 100, isWizardLevel: false }
+const obj = {
+  player: 'Timmy',
+  xpPoints: 100,
+  isWizardLevel: false
+}
 
 const player = obj.player;
 const experience = obj.xpPoints;
 const isWizardLevel = obj.isWizardLevel;
 
 // Destructured version
-const { player, experience } = obj;
+const {
+  player,
+  experience
+} = obj;
 // Reads as const, player and experience from the object
 // This does the same thing as const player = obj.player; & const experience = obj.xpPoints;
 // Steps:
@@ -61,31 +74,55 @@ const { player, experience } = obj;
 const player;
 const xpPoints;
 // Same goes for isWizardLevel
-let { isWizardLevel } = obj;
+let {
+  isWizardLevel
+} = obj;
 
 
 // ---------- EXAMPLE #2 ----------
-const person = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" };
-const { firstName, lastName, age, eyeColor } = person;
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+const {
+  firstName,
+  lastName,
+  age,
+  eyeColor
+} = person;
 
 
 // ---------- EXAMPLE #3 ----------
 // Assign variables from objects 
 // OLD WAY:
-var numbers = { x: 3.6, y: 7.4, z: 6.5 }
+var numbers = {
+  x: 3.6,
+  y: 7.4,
+  z: 6.5
+}
 var x = numbers.x; // x = 3.6
 var y = numbers.y; // y = 7.4
 var z = numbers.z; // z = 6.5
 
 // DESTRUCTURING WAY:
-var { x, y, z } = numbers;
+var {
+  x,
+  y,
+  z
+} = numbers;
 // This means we're going to create the 3 variables x, y, and z from numbers
 console.log(x); // x = 3.6
 console.log(y); // y = 7.4
 console.log(z); // z = 6.5
 
 // DESTRUCTURING WAY #2:
-var { x: a, y: b, z: c } = numbers;
+var {
+  x: a,
+  y: b,
+  z: c
+} = numbers;
 // This means we're going to get the field 'x' from numbers, and copy the value into 'a'
 // And 'y' into 'b', and 'z' into 'c'
 // So this:
@@ -95,11 +132,20 @@ console.log(b); // b = 7.4
 // ---------- EXAMPLE #4 ----------
 // Assign variables from nested objects 
 var nestObj = {
-	start: { x: 5, y: 6 },
-	end: { x: 6, y: -9 }
+  start: {
+    x: 5,
+    y: 6
+  },
+  end: {
+    x: 6,
+    y: -9
+  }
 }
 var {
-	start: { x: startX, y: startY }
+  start: {
+    x: startX,
+    y: startY
+  }
 } = nestObj;
 console.log(startX);
 
@@ -127,13 +173,23 @@ console.log(rest); // will log: [3, 4, 5]
 // ---------- EXAMPLE #6 ----------
 // Pass an Object as a Function's Parameters
 const profileUpdate = (profileData) => {
-	const { name, age, nationality, location } = profileData;
-	// Do something with these variables
+  const {
+    name,
+    age,
+    nationality,
+    location
+  } = profileData;
+  // Do something with these variables
 }
 
 // But that can be written like this:
-const profileUpdate = ({ name, age, nationality, location }) => {
-	// Do something with these parameters
+const profileUpdate = ({
+  name,
+  age,
+  nationality,
+  location
+}) => {
+  // Do something with these parameters
 }
 // Here, we are still passing in a profileData object, but right in the parameter we're destructuring that object into the different variables
 
@@ -152,11 +208,30 @@ console.log(c);
 console.log(rest);
 
 // Also with objects
-({ a,b, ...rest } = { a: 100, b: 200, c: 300, d:400, e: 500 });
-console.log(a,b);
+({
+  a,
+  b,
+  ...rest
+} = {
+  a: 100,
+  b: 200,
+  c: 300,
+  d: 400,
+  e: 500
+});
+console.log(a, b);
 
-({ a,b } = { a: 100, b: 200, c: 300, d:400, e: 500 });
-console.log(a,b);
+({
+  a,
+  b
+} = {
+  a: 100,
+  b: 200,
+  c: 300,
+  d: 400,
+  e: 500
+});
+console.log(a, b);
 console.log(rest);
 
 
@@ -183,18 +258,24 @@ const person = {
   age: 32,
   city: 'Toronto',
   gender: 'Male',
-  sayHello: function() {
+  sayHello: function () {
     console.log('Hello there from this object! :)')
   }
 }
 
 // Old ES5 Way
 const name = person.name,
-      age = person.age,
-      city = person.city,
-      gender = person.gender;
+  age = person.age,
+  city = person.city,
+  gender = person.gender;
 
 // New ES6 Way w/ Destructuring
-const { name, age, city, gender, sayHello } = person;
+const {
+  name,
+  age,
+  city,
+  gender,
+  sayHello
+} = person;
 console.log(name, age, city);
 sayHello();
