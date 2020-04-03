@@ -14,4 +14,8 @@ console.log(h2s);
 
 
 // If you need to support IE, use this instead:
+var h2s = document.querySelectorAll('h2');
 var h2Array = Array.prototype.slice.call(h2s);
+
+// Or in a single line (simpler, get the array right away)
+var h2s = Array.prototype.slice.call(document.querySelectorAll('h2'));

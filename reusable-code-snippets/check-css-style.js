@@ -14,3 +14,10 @@ if (navStyles.getPropertyValue('display') === 'none') {
 
 // Otherwise, we can simple use .style
 nav.style.display = 'block';
+
+
+// Shorthand for getPropertyValue
+console.log(getComputedStyle(nav, null).getPropertyValue('color'));
+// getComputedStyle takes in two arguments
+// 1) The element you want the styles for
+// 2) The matching pseudo element (optional, can have null if not looking for pseudo element)
