@@ -21,7 +21,6 @@ console.log(sum3);
 // What this operator here does is it expands the age array into its components, so in this case 18, 30, 12, and 21
 // This the same as written above: var sum1 = addFourAges(18, 30, 12, 21);
 
-
 // Spread operator to join arrays
 const familySmith = ['John', 'Jane', 'Mark'];
 const familyMiller = ['Mary', 'Bob', 'Ann'];
@@ -29,7 +28,6 @@ const familyMiller = ['Mary', 'Bob', 'Ann'];
 // To join them
 const bigFamily = [...familySmith, 'Dave', ...familyMiller]; // We can also include something inbetween the spread operators if we wish
 console.log(bigFamily);
-
 
 // On a NodeList
 const heading = document.querySelector('h1');
