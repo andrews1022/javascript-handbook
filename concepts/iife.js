@@ -1,4 +1,4 @@
-// IIFE stands for immediately invoked function expression
+// IIFE stands for Immediately Invoked Function Expression
 
 // Standard function
 function game() {
