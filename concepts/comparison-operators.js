@@ -28,7 +28,7 @@ if (id !== 105) {
   console.log('INCORRECT');
 }
 
-// Test if undefined 
+// Test if undefined
 if (typeof id !== 'undefined') {
   console.log(`The id is ${id}`);
 } else {
@@ -37,28 +37,28 @@ if (typeof id !== 'undefined') {
 
 // Greater than
 if (id > 200) {
-  console.log('CORRECT')
+  console.log('CORRECT');
 } else {
-  console.log('INCORRECT')
+  console.log('INCORRECT');
 }
 
 // Less than
 if (id < 200) {
-  console.log('CORRECT')
+  console.log('CORRECT');
 } else {
-  console.log('INCORRECT')
+  console.log('INCORRECT');
 }
 
 // Greater than or equal to
 if (id >= 200) {
-  console.log('CORRECT')
+  console.log('CORRECT');
 } else {
-  console.log('INCORRECT')
+  console.log('INCORRECT');
 }
 
 // Less than or equal to
 if (id <= 200) {
-  console.log('CORRECT')
+  console.log('CORRECT');
 } else {
-  console.log('INCORRECT')
+  console.log('INCORRECT');
 }

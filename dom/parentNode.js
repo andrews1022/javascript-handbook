@@ -1,10 +1,10 @@
 // HTML for reference:
-<ul id="items" class="list-group">
-  <li class="list-group-item">Item 1</li>
-  <li class="list-group-item">Item 2</li>
-  <li class="list-group-item">Item 3</li>
-  <li class="list-group-item">Item 4</li>
-</ul>
+<ul id='items' class='list-group'>
+  <li class='list-group-item'>Item 1</li>
+  <li class='list-group-item'>Item 2</li>
+  <li class='list-group-item'>Item 3</li>
+  <li class='list-group-item'>Item 4</li>
+</ul>;
 
 // ------------------ parentNode ------------------
 // Grab the ul with id 'items'
@@ -21,7 +21,6 @@ console.log(itemList.parentNode.parentNode); // div with class of 'container'
 console.log(itemList.parentNode.parentNode.parentNode); // we get the body tag
 
 // parentElement essentially does the same thing as parentNode
-
 
 // What is the difference between a NodeList and HTMLCollection?
 // See: https://bit.ly/2L097PU

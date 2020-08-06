@@ -7,12 +7,16 @@ var john = {
   job: 'teacher',
   presentation: function (style, timeOfDay) {
     if (style === 'formal') {
-      console.log(`Good ${timeOfDay} ladies and gentlemen! I'm ${this.name}, I'm a ${this.job}, and I'm ${this.age} years old.`);
+      console.log(
+        `Good ${timeOfDay} ladies and gentlemen! I'm ${this.name}, I'm a ${this.job}, and I'm ${this.age} years old.`
+      );
     } else if (style === 'friendly') {
-      console.log(`Hey! What's up? I'm ${this.name}, I'm a ${this.job}, and I'm ${this.age} years old. Have a nice ${timeOfDay}!`);
+      console.log(
+        `Hey! What's up? I'm ${this.name}, I'm a ${this.job}, and I'm ${this.age} years old. Have a nice ${timeOfDay}!`
+      );
     }
-  }
-}
+  },
+};
 
 var emily = {
   name: 'Emily',
@@ -22,7 +26,7 @@ var emily = {
   // We can do so by using the call method
   // The first argument in the call method is to set the this variable
   // Then pass in any other agruments to the parameters you set (SEE BELOW)
-}
+};
 
 john.presentation('formal', 'formalmorning');
 
@@ -37,7 +41,6 @@ john.presentation.call(emily, 'friendly', 'afternoon');
 // So that's only two arguments, first the this variable, and then an array where all the other arguments go.
 // So it would be something like this:
 john.presentation.apply(emily, ['friendly', 'afternoon']);
-
 
 // ---------- BIND METHOD ----------
 // The bind method is very similar to the call method; it also allows us to set the this variable explicitly.

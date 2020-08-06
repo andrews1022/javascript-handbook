@@ -1,13 +1,12 @@
 // ------------------------------ PART 3 ------------------------------
-
 // HTML for reference:
 <body>
-  <h1 id="header">The Dom is cool for many reasons</h1>
-  <ul class="list">
+  <h1 id='header'>The Dom is cool for many reasons</h1>
+  <ul class='list'>
     <li>You can see how pages are made</li>
     <li>You can manipulate it</li>
   </ul>
-</body>
+</body>;
 
 // You can use CSS selectors to grab your elements:
 document.querySelector('#header');
@@ -21,4 +20,4 @@ document.querySelector('.list').children;
 document.querySelector('.list').children[0].innerHTML;
 
 //And you can modify this, like so:
-document.querySelector('.list').children[0].innerHTML = "This HTML content has been modified!";
+document.querySelector('.list').children[0].innerHTML = 'This HTML content has been modified!';

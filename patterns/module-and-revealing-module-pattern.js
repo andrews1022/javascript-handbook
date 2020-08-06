@@ -24,7 +24,7 @@ const UICtrl = (function () {
   const changeText = function () {
     const element = document.querySelector('h1');
     element.textContent = greeting;
-  }
+  };
 
   return {
     // Anything we return here is public - it CAN be used outside the module
@@ -32,13 +32,12 @@ const UICtrl = (function () {
     callChangeText: function () {
       changeText();
       console.log(greeting);
-    }
-  }
+    },
+  };
 })();
 
 UICtrl.callChangeText(); // Changes the text to Hello World and logs it as well
 // What we cannot do is call changeText, as that is within the private scope of the module
-
 
 // Revealing Module Pattern - Example
 // The main difference is that instead of returning our own public functions, you basically map an object literal and you map to private functions that you want to reveal
@@ -53,15 +52,15 @@ const ItemController = (function () {
   }
 
   function get(itemId) {
-    return _data.find(item => {
+    return _data.find((item) => {
       return item.id === itemId;
     });
   }
 
   return {
     add: add, // The add function
-    get: get // The get function
-  }
+    get: get, // The get function
+  };
 })();
 
 ItemController.add({ id: 1, name: 'John' });

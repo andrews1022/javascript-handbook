@@ -4,4 +4,4 @@ const link = document.querySelector('#myLink');
 link.addEventListener('click', (e) => {
   e.stopImmediatePropagation();
   e.preventDefault(); // Usally preventDefault is enough, but sometimes you might need both
-})
+});

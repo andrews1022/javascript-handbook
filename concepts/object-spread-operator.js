@@ -3,14 +3,11 @@
 const animalAges = {
   tiger: 12,
   lion: 5,
-  monkey: 2
-}
+  monkey: 2,
+};
 
 // Destructure it:
-const {
-  tiger,
-  ...rest
-} = animalAges;
+const { tiger, ...rest } = animalAges;
 
 // Calling tiger in the console gets: 12
 // Calling rest in the console gets: {lion: 5, monkey: 2}

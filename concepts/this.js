@@ -28,7 +28,7 @@ var john = {
     }
 
     innerFunction();
-  }
+  },
 };
 john.calculateAge(); // logs the john object
 // Again this makes sense, because the this keyword refers to the object that called the method, which in this case was the john object
@@ -40,7 +40,7 @@ john.calculateAge(); // logs the john object
 // So, we said this was important, so let's now see an example
 var mike = {
   name: 'Mike Smith',
-  yearOfBirth: 1984
+  yearOfBirth: 1984,
 };
 
 // Now let's say we want to calculate Mike's age

@@ -5,7 +5,7 @@
 // It would prevent you from having two users from being created at once
 
 // Basic example
-const Singleton = (function(){
+const Singleton = (function () {
   let instance;
 
   function createInstance() {
@@ -14,13 +14,13 @@ const Singleton = (function(){
   }
 
   return {
-    getInstance: function(){
+    getInstance: function () {
       if (!instance) {
         instance = createInstance();
       }
       return instance;
-    }
-  }
+    },
+  };
 })();
 
 // Instantiate an object

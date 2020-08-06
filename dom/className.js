@@ -1,5 +1,5 @@
 // HTML for reference:
-<h1>Shopping List</h1>
+<h1>Shopping List</h1>;
 
 // ---------- PART 1 ----------
 // Use querySelector to select the heading

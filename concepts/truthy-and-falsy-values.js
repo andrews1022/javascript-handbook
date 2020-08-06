@@ -1,11 +1,11 @@
 // Truthy and falsy values.
 // In JavaScript, a falsy value is a value that is considered false when evaluated in an if/else statement condition.
 // And the values that are falsy in JavaScript are:
-undefined
-null
-0
-'' // empty string
-NaN
+undefined;
+null;
+0;
+(''); // empty string
+NaN;
 
 // So all of these five different values here will be converted to false when evaluated in a true/false condition.
 // So, that's why we call them falsy.
@@ -17,7 +17,8 @@ NaN
 // Example
 var height;
 
-if (height) { // This is converted to false
+if (height) {
+  // This is converted to false
   console.log('Variable is defined');
 } else {
   console.log('Variable has NOT been defined');
@@ -33,7 +34,8 @@ if (height) { // This is converted to false
 // But what about a height of 0? This falsy, so we will also get 'Variable has NOT been defined'
 // Write it like so, using the || OR operator:
 height = 23;
-if (height || height === 0) { // Again, only of these needs to be true
+if (height || height === 0) {
+  // Again, only of these needs to be true
   console.log('Variable is defined');
 } else {
   console.log('Variable has NOT been defined');

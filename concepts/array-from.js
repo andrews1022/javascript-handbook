@@ -6,7 +6,7 @@ const boxes = document.querySelectorAll('.box');
 var boxesArrES5 = Array.prototype.slice.call(boxes);
 
 // Change each box to blue
-boxesArrES5.forEach(function(el) {
+boxesArrES5.forEach(function (el) {
   el.style.backgroundColor = 'lightblue';
 });
 
@@ -17,7 +17,6 @@ boxesArrES6.forEach((box) => {
 });
 
 // We can even do this in one line:
-Array.from(boxes).forEach(box => box.style.backgroundColor = 'red');
-
+Array.from(boxes).forEach((box) => (box.style.backgroundColor = 'red'));
 
 // NOTE: NodeLists do have access to the forEach method, but you should still convert to an array

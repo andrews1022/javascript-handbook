@@ -1,5 +1,4 @@
 // ---------- SINGLE ELEMENT SELECTORS ----------
-
 // getElementById
 document.getElementById('my-form'); // we have a form with the ID 'my-form'
 console.log(document.getElementById('my-form'));

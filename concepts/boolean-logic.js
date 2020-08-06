@@ -1,6 +1,6 @@
 // ---------- BOOLEAN LOGIC ----------
 // Boolean logic is a branch of computer science that deals with true and false values. And it's actually something quite important in coding.
-// Now there are several logical operators that deal with true and false values. 
+// Now there are several logical operators that deal with true and false values.
 // But the most important ones are the NOT, AND, and OR operators.
 // Assume we have variables a & b
 // AND: && -> true if a AND b are true
@@ -23,9 +23,9 @@ if (age < 13) {
 
 // Example:
 var age = 16;
-age >= 20;    // false
-age < 30;     // true
-!(age < 30);  // false
+age >= 20; // false
+age < 30; // true
+!(age < 30); // false
 
 age >= 20 && age < 30; // false
 age >= 20 || age < 30; // true

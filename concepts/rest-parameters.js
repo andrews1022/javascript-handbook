@@ -46,17 +46,15 @@ function isFullAgeES5(limit) {
   var argsArr = Array.prototype.slice.call(arguments, 1); // Exclude the first argument (limit)
   // console.log(argsArr);
 
-  argsArr.forEach(function(el) {
-    console.log((2020 - el) >= limit);
+  argsArr.forEach(function (el) {
+    console.log(2020 - el >= limit);
   });
 }
 // isFullAgeES5(21, 1990, 2004, 1965, 2018, 1987);
 
-
 // ES6 Way
 // All we have to do the ES6 way is to include the limit, and then our ...years
 function isFullAgeES6(limit, ...years) {
-  // console.log(years);
-  years.forEach((current) => console.log((2020 - current) >= limit));
+  years.forEach((current) => console.log(2020 - current >= limit));
 }
 isFullAgeES6(19, 1990, 2004, 1965, 2018, 1987);

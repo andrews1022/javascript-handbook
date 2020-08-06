@@ -28,7 +28,7 @@ const loadContent = async function () {
   } catch (error) {
     console.log(`Oops! This is your error: ${error}`);
   }
-}
+};
 
 // Run function on window load
 window.onload = loadContent();

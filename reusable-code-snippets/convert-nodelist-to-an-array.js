@@ -12,7 +12,6 @@ console.log(h2s);
 
 // The benefit of using Array.from() is that it does not need to transpiled down to ES5, while the spread operator does
 
-
 // If you need to support IE, use this instead:
 var h2s = document.querySelectorAll('h2');
 var h2Array = Array.prototype.slice.call(h2s);

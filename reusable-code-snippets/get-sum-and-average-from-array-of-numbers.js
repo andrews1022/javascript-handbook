@@ -38,6 +38,6 @@ getSumOfScores(numArr3); // 549
 
 // Using a higher order array method to get the sum and average:
 const sum = numArr1.reduce((a, b) => a + b, 0);
-const avg = (sum / numArr1.length) || 0;
+const avg = sum / numArr1.length || 0;
 
 console.log(`The sum is: ${sum}. The average is: ${avg}.`);

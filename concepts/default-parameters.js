@@ -3,9 +3,9 @@
 // ES5 Way
 function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
   // Set lastName to Smith by default
-  lastName === undefined ? lastName = 'Smith' : lastName = lastName;
+  lastName === undefined ? (lastName = 'Smith') : (lastName = lastName);
   // Set nationality to Canadian by default
-  nationality === undefined ? nationality = 'Canadian' : nationality = nationality;
+  nationality === undefined ? (nationality = 'Canadian') : (nationality = nationality);
 
   this.firstName = firstName;
   this.lastName = lastName;
@@ -19,7 +19,6 @@ console.log('ES5 using default values:', john); // But since we set a conditiona
 // But of course these values can be overridden
 var emily = new SmithPerson('Emily', 1984, 'Diaz', 'Spanish');
 console.log('ES5 overriding default values', emily);
-
 
 // ES6 Way
 // All we need to do is specify the default parameters right inside the () where we declare the parameters

@@ -1,7 +1,8 @@
 // ------------------------------ PART 1 ------------------------------
-
 // HTML for reference:
-<h1 class="heading" id='header'>Shopping List</h1>
+<h1 class='heading' id='header'>
+  Shopping List
+</h1>;
 
 // querySelector by tag
 document.querySelector('h1');

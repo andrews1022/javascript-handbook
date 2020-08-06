@@ -9,7 +9,7 @@ const curriedMultiply = (a) => (b) => a * b;
 curriedMultiply(3);
 
 // In the console, we get
-(b) => a * b
+(b) => a * b;
 
 // Which means we essentially get:
 const curriedMultiply = (3) => (b) => 3 * b;
@@ -21,7 +21,6 @@ const curriedMultiply = (3) => (b) => 3 * b;
 curriedMultiply(3)(4);
 // Which gives us 12
 
-
 // ---------- BREAKDOWN ----------
 // We created a variable curriedMultiply that accepts a parameter, a function that accepts 'a'.
 // In this case it's '3' and once you call that function
@@ -29,9 +28,9 @@ curriedMultiply(3)(4);
 // So what we're doing here is saying 'curriedMultiplier' 'a' is 3 'b' is 4. And then multiply 'a' times 'b'.
 
 // Now why do we even need to do this?
-// Because now it's more extensible, we can do something like 
+// Because now it's more extensible, we can do something like
 const multiplyByFive = curriedMultiply(5);
 
 // So in the console, if we run
-multiplyByFive(5);    // we get 25
-multiplyByFive(10);   // we get 50, and so on
+multiplyByFive(5); // we get 25
+multiplyByFive(10); // we get 50, and so on

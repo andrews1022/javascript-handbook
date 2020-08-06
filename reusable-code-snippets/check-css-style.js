@@ -15,7 +15,6 @@ if (navStyles.getPropertyValue('display') === 'none') {
 // Otherwise, we can simple use .style
 nav.style.display = 'block';
 
-
 // Shorthand for getPropertyValue
 console.log(getComputedStyle(nav, null).getPropertyValue('color'));
 // getComputedStyle takes in two arguments

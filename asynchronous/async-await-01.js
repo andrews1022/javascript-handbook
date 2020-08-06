@@ -1,10 +1,9 @@
 // ------------------------------ PART 1 ------------------------------
-
 // We're going to try and mimic blog posts on a server, getting them, and creating a blog post
 
 const posts = [
   { title: 'Post One', body: 'This is post one' },
-  { title: 'Post Two', body: 'This is post two' }
+  { title: 'Post Two', body: 'This is post two' },
 ];
 
 function getPosts() {
@@ -16,9 +15,7 @@ function getPosts() {
     let output = '';
 
     // Loop through the posts
-    posts.forEach((post, index) => {
-      output += `<li>${post.title}</li>`;
-    });
+    posts.forEach((post) => (output += `<li>${post.title}</li>`));
     document.body.innerHTML = output;
   }, 500);
 }
@@ -45,8 +42,8 @@ function createPost(post) {
       } else {
         reject('Error: Something went wrong! :(');
       }
-    }, 750)
-  })
+    }, 750);
+  });
 }
 
 // Using the new .then syntax
@@ -58,10 +55,7 @@ createPost({ title: 'Post Three', body: 'This is post three' })
 // We need to use the keyword async if we want to use await
 // Await waits for an asynchronous action to be completed
 async function init() {
-  await createPost({
-    title: 'Post Three',
-    body: 'This is post three'
-  });
+  await createPost({ title: 'Post Three', body: 'This is post three' });
   getPosts();
   // So we're waiting for createPost() to be done before moving on to getPosts();
 }

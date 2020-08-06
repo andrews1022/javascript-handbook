@@ -31,7 +31,6 @@ console.log(val);
 val = window.innerWidth;
 console.log(val);
 
-
 // ---------- SCROLL POINTS ----------
 // This is used to figure out where you are in terms of scrolling - will need to add content to the page)
 // Great for adding in animations for content to appear on screen as you are sliding
@@ -39,7 +38,6 @@ val = window.scrollY;
 console.log(val);
 val = window.scrollX;
 console.log(val);
-
 
 // ---------- LOCATION OBJECT ----------
 val = window.location;
@@ -54,16 +52,13 @@ console.log(val);
 val = window.location.search; // Show the query string
 console.log(val);
 
-
-// ---------- REDIRECT ---------- 
+// ---------- REDIRECT ----------
 // Manually set href location
-window.location.href = 'http://google.ca'
-
+window.location.href = 'http://google.ca';
 
 // ---------- REFRESH ----------
 // Refresh the page (if needed, otherwise not very useful)
 window.location.reload();
-
 
 // ---------- HISTORY OBJECT ----------
 // Get browsing history
@@ -72,7 +67,6 @@ window.history.go(-1); // Place a number here
 // Check out history length
 val = window.history.length;
 console.log(val);
-
 
 // ---------- NAVIGATOR OBJECT ----------
 val = window.navigator; // Navigator object

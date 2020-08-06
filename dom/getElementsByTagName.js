@@ -5,7 +5,7 @@
   <li>Item #3</li>
   <li>Item #4</li>
   <li>Item #5</li>
-</ul>
+</ul>;
 
 let li = document.getElementsByTagName('li');
 console.log(li);

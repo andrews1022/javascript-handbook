@@ -1,32 +1,31 @@
 // NOTE: It is important to CACHE selectors in variables!
 
 // DOM Selectors
-getElementsByTagName
-getElementsByClassName
-getElementById
+getElementsByTagName;
+getElementsByClassName;
+getElementById;
 
 // Best to use these though:
-querySelector
-querySelectorAll
+querySelector;
+querySelectorAll;
 // NOTE: make sure to use . or # like selecting in CSS for classes or ids
 
 // HTML Attributes
-getAttribute
-setAttribute
+getAttribute;
+setAttribute;
 
 // Changing Styles
-style.property //ok
+style.property; //ok
 
-className //best
-classList //best
+className; //best
+classList; //best
 
-classList.add
-classList.remove
-classList.toggle
+classList.add;
+classList.remove;
+classList.toggle;
 
 // BONUS
-innerHTML //DANGEROUS
+innerHTML; //DANGEROUS
 
-parentElement
-children
-
+parentElement;
+children;

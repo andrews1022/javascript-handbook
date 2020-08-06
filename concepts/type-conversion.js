@@ -25,13 +25,11 @@ console.log(val);
 console.log(typeof val);
 console.log(val.length);
 
-
 // ---------- BOOLEAN TO STRING ----------
 val = String(true);
 console.log(val);
 console.log(typeof val);
 console.log(val.length);
-
 
 // ---------- DATE TO STRING ----------
 val = String(new Date());
@@ -40,17 +38,15 @@ console.log(typeof val);
 console.log(val.length);
 
 // ---------- ARRAY TO STRING ----------
-val = String([1, 2, 3, 4, 5])
+val = String([1, 2, 3, 4, 5]);
 console.log(val);
 console.log(typeof val);
 console.log(val.length);
-
 
 // ---------- toString() ----------
 // We also have the toString() method, which does the same thing as String()
 val = (5).toString();
 console.log(val);
-
 
 // ---------- STRING TO NUMBER ----------
 val = Number('5');

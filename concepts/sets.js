@@ -27,14 +27,15 @@ console.log(set1);
 
 // Iterate through sets
 // For...of loop
-for (let item of set1) { // Can also use set1.entries, set1.keys, & set1.values
+for (let item of set1) {
+  // Can also use set1.entries, set1.keys, & set1.values
   console.log(item);
 }
 
 // forEach loop
 set1.forEach((value) => {
   console.log(value);
-})
+});
 
 // Convert Sets to Arrays
 const setArray = Array.from(set1);

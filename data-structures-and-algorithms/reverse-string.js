@@ -2,7 +2,6 @@
 // Example: reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-
   // ---------- METHOD 1 ----------
   // Split the string into an array
   const strArray = str.split('');
@@ -45,12 +44,12 @@ function reverseString(str) {
   let revString = '';
   str.split('').forEach((character) => {
     revString = character + revString;
-  })
+  });
   return revString;
 
   // ---------- METHOD 5 (CLEANED UP - USING ES6) ----------
   let revString = '';
-  str.split('').forEach((character) => revString = character + revString);
+  str.split('').forEach((character) => (revString = character + revString));
   return revString;
 
   // ---------- METHOD 6 ----------

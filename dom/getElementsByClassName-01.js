@@ -1,5 +1,4 @@
 // HTML for reference:
-<h1 class="heading">Shopping List</h1>
+<h1 class='heading'>Shopping List</h1>;
 
-document.getElementsByClassName('heading');
-// NOTE: using the . like in css is not needed here
+document.getElementsByClassName('heading'); // NOTE: using the . like in CSS is not needed here

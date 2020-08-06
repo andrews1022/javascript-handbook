@@ -1,7 +1,7 @@
 // A very common use of JavaScript objects is to use them as hash maps, which simply means that we map string keys to arbitrary values, and we did that a lot earlier in the course
 // Especially in the basic section, for example, in our more simple John object.
 // Back then we had simple keys like name, age or job, and then mapped values to them, like John, 27 and teacher.
-// Now this is called a hash map, and up until ES6, we had to use objects for that 
+// Now this is called a hash map, and up until ES6, we had to use objects for that
 // But now in ES6, we have something better, and that's maps
 // So a map is a new key-value data structure in ES6, and one of the big differences is that in maps, we can use anything for the keys
 // In object we are limited to strings, but in maps we can use any kind of primitive value like numbers, strings or Booleans, and we can even use functions or objects as keys, which is really cool!
@@ -38,7 +38,7 @@ question.delete(4); // Use the key
 console.log(question);
 
 // Check if a certain is present
-if(question.has(4)) {
+if (question.has(4)) {
   console.log('Answer #4 is here');
 } else {
   console.log('Answer #4 is not here');
@@ -47,7 +47,6 @@ if(question.has(4)) {
 // Delete everything inside the map, use .clear();
 question.clear();
 console.log(question);
-
 
 // Maps are iterable, which means we can loop through them
 // And we can do so using the forEach() method
@@ -66,7 +65,7 @@ for (let [key, value] of question.entries()) {
   // console.log(`This is ${key} and it's set to ${value}`);
 
   // Only print the values of the key is a number
-  if (typeof(key) === 'number') {
+  if (typeof key === 'number') {
     console.log(`Answer ${key}: ${value}`);
   }
 }

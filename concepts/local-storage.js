@@ -13,11 +13,11 @@ JSON.stringify();
 localStorage.getItem('id'); // "809t34c8u"
 
 // In the console, you can simply type just...
-localStorage
+localStorage;
 // ...to display everything currently in your localStorage
 
 // Get the number of items in localStorage:
-localStorage.length
+localStorage.length;
 
 // If you want to delete an item from localStorage
 localStorage.removeItem('id');

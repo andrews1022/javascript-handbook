@@ -8,7 +8,7 @@ function game() {
 game();
 
 // IIFE
-(function() {
+(function () {
   var score = Math.random() * 10;
   console.log(score >= 5);
 })();
@@ -17,7 +17,7 @@ console.log(score); // again, cannot read this variable because of the scope cha
 
 // We can also pass arguments into the IIFE
 // So we can extend our function by adding a parameter called goodLuck to the game, and the more goodLuck, the higher chance of winning
-(function(goodLuck) {
+(function (goodLuck) {
   var score = Math.random() * 10;
   console.log(score >= 5 - goodLuck);
 })(5);

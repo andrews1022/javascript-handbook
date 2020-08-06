@@ -13,7 +13,7 @@ doTheNextThing(); // This has to wait until the posts load
 // This slows things down big time
 
 // Now let's look at the same code but written asynchronously
-loadPostsAsync(function() {
+loadPostsAsync(function () {
   // ...wait until the posts are fetched
   // ...do something with the posts
 });
@@ -39,31 +39,29 @@ doTheNextThing(); // Now this doesn't have to wait until the posts load
 - Async/Await
 */
 
-
 // ---------- EXAMPLE #2 ----------
 // Basic synchronous example - all the instructions are executed one after the other, line by line, just in the order they are written
 const second = () => {
   console.log('Second');
-}
+};
 
 const first = () => {
   console.log('First');
   second();
   console.log('Third');
-}
+};
 first();
-
 
 // Asynchronous code example - use setTimeout to simulate asynchronous code
 const asyncSecond = () => {
   setTimeout(() => {
     console.log('Second'); // Notice the delay where this appears
   }, 2000);
-}
+};
 
 const asyncFirst = () => {
   console.log('First');
   second();
   console.log('Third');
-}
+};
 asyncFirst();

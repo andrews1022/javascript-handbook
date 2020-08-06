@@ -1,10 +1,10 @@
 // HTML for reference:
-<button class="btn">
-  <span class="page-num">Page #</span>
-  <svg class="search-icon">
-      <use href="img/icons.svg#icon-triangle"></use>
+<button class='btn'>
+  <span class='page-num'>Page #</span>
+  <svg class='search-icon'>
+    <use href='img/icons.svg#icon-triangle'></use>
   </svg>
-</button>
+</button>;
 
 // If you were to add a click event handler to this button, and logged the result, you could get:
 // 1) The button itself
@@ -19,7 +19,6 @@ document.querySelector('.btn').addEventListener('click', (e) => {
   const btn = e.target.closest('.btn');
   console.log(btn);
 });
-
 
 // If this should not work, then use event delegation and select the parent element
 document.querySelector('.parent-element-class').addEventListener('click', (e) => {

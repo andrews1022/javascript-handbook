@@ -3,13 +3,13 @@ const searchBox = document.querySelector('#search');
 const matchList = document.querySelector('#match-list');
 
 // Search the countries.json file and filter it
-const searchCountries = async searchText => {
+const searchCountries = async (searchText) => {
   // Bring in the data
   const response = await fetch('../data/countries.json');
   const countries = await response.json();
 
   // Get matches to current text input
-  let matches = countries.filter(country => {
+  let matches = countries.filter((country) => {
     const regex = new RegExp(`^${searchText}`, 'gi');
 
     // Return array that matches above
@@ -26,11 +26,11 @@ const searchCountries = async searchText => {
 };
 
 // Show Results in HTML
-const outputHtml = matches => {
+const outputHtml = (matches) => {
   if (matches.length > 0) {
     const html = matches
       .map(
-        match => `
+        (match) => `
       <div class="card mb-3">
         <div class="card-body">
           <h3 class="card-title mr-2">${match.country} <span class="abbr">${match.abbreviation}</span></h3>

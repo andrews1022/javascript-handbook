@@ -13,7 +13,9 @@ async function getWeatherAW(woeid) {
     // Log the data
     // console.log(data);
     console.log(`City: ${data.title}`);
-    console.log(`Temperatures in ${data.title} were between ${data.consolidated_weather[0].min_temp}C and ${data.consolidated_weather[0].max_temp}C today.`);
+    console.log(
+      `Temperatures in ${data.title} were between ${data.consolidated_weather[0].min_temp}C and ${data.consolidated_weather[0].max_temp}C today.`
+    );
 
     // If you want to return the data...
     return data;

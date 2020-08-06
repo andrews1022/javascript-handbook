@@ -36,7 +36,6 @@ console.log(result[0]); // First value in the array
 console.log(result.index); // Get the index value where the match starts
 console.log(result.input); // Get the search string
 
-
 // ----- test() function -----
 // Returns true or false if there is a match
 result = re.test('Hello');
@@ -56,7 +55,6 @@ const myString = 'Hello There';
 result = myString.match(re);
 console.log(result); // Still matches as re is currently case insensitive
 
-
 // ----- search() function -----
 // Will returns the index of the first match, and if not found, it returns a -1
 const myFavString = 'Andrew Hello There';
@@ -70,7 +68,6 @@ console.log(result);
 const string = 'Hello There';
 const newString = string.replace(re, 'Hi');
 console.log(newString);
-
 
 // ---------- Literal characters ----------
 re = /hello/;
@@ -118,7 +115,7 @@ re = /\D/; // Match any NON digit
 re = /\s/; // Match whitespace character
 re = /\S/; // Match NON whitespace character
 re = /Hell/i; // Word boundary: without \b
-re = /Hell\b/i; // Word boundary: with \b - Look for just Hell, nothing else inside of it - see how index is higher here 
+re = /Hell\b/i; // Word boundary: with \b - Look for just Hell, nothing else inside of it - see how index is higher here
 
 // ---------- Assertions ----------
 // Assertions are kind of like conditionals

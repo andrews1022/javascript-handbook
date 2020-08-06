@@ -3,5 +3,5 @@
 // This DOES NOT round up or down, it merely shows how many decimal points you want
 
 // Example
-let a = 9.47043207234087423087
+let a = 9.47043207234087423087;
 console.log(a.toFixed(3)); // 9.470

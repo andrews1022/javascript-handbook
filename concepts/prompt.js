@@ -5,6 +5,6 @@ console.log(`Your name is ${firstName} ${lastName}`);
 
 // By default, prompt values are strings
 // So if you answer using numbers, you need to use Number()
-var firstNumber = prompt("Please provide the first number");
-var secondNumber = prompt("Please provide the second number");
+var firstNumber = prompt('Please provide the first number');
+var secondNumber = prompt('Please provide the second number');
 console.log(`The numbers you chose where ${firstNumber} and ${secondNumber}`);

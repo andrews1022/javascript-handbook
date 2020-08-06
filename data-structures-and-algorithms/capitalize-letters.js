@@ -2,7 +2,6 @@
 // Example: capitalizeLetters('i love javascript') === 'I Love Javascript'
 
 function capitalizeLetters(str) {
-
   // ---------- METHOD 1 ----------
   // Use a regular for loop
   // Turn the string into an array
@@ -26,7 +25,7 @@ function capitalizeLetters(str) {
     })
     .join(' ');
 
-  // ---------- METHOD 2 (CLEANED UP - USING ES6) ----------  
+  // ---------- METHOD 2 (CLEANED UP - USING ES6) ----------
   return str
     .toLowerCase()
     .split(' ')

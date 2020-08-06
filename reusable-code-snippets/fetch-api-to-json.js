@@ -1,1 +1,1 @@
-fetch(api).then(response => response.json());
+fetch(api).then((response) => response.json());

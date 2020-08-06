@@ -5,12 +5,11 @@ const array = [1, 2, 10, 16];
 // Below, we loop over each element, each number, multiply it by 2, and return a new array.
 // And again, since our arrow function has a single parameter, it can be written in shorthand like this:
 const mappedArray = array.map((num) => {
-	return num * 2;
-})
+  return num * 2;
+});
 // Even further shorthanded
-const mappedArrayShort = array.map(num => num * 2);
+const mappedArrayShort = array.map((num) => num * 2);
 console.log('map short', mappedArrayShort);
-
 
 // ----------------------------------- BREAKDOWN -----------------------------------
 // Every time the array loops, let's say the first one is number one.
@@ -19,9 +18,8 @@ console.log('map short', mappedArrayShort);
 // Now gets added to the array 10 x 2 gets added to the array and 16 x 2 gets added to the array.
 // So that's why we return it.
 
-
 // -----------------------------------NOTES -----------------------------------
-// Whenever you want to loop do a simple loop and take some action on something like an array, you want to use map over for each 
+// Whenever you want to loop do a simple loop and take some action on something like an array, you want to use map over for each
 // With for each the operation may do nothing.
 // Because all forEach cares about is to iterate over a collection of elements like 1, 2, 10, and 16 and apply whateveroperation we tell it to on each element.
 

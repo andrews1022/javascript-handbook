@@ -1,14 +1,14 @@
 // ---------- INTRO / NOTES ----------
 // The local storage api is actually a part of the browser, and can be seen if you enter...
-window.localStorage
+window.localStorage;
 // ...into your console
 // The localStorage API comes with a bunch of different methods, most commonly include getItem, setItem, and removeItem
 // You can set key value pairs, and what you set as a value has to be a STRING
 
 // You can still save arrays and objects, you just need to put that data into a string first using
-JSON.stringify()
+JSON.stringify();
 // Then if you need to take that string and convert it into something else, you use
-JSON.parse()
+JSON.parse();
 // And the difference between local storage and session storage is that local storage will stay until you manually clear it out in your browser settings, and session storage will leave once your browser is closed/once the session ends.
 
 // ---------- SET LOCAL STORAGE ITEM ----------
@@ -49,9 +49,9 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
   let tasks;
 
-  // First, we pull out of local storage whatever's in there or check to see if there's something in there 
+  // First, we pull out of local storage whatever's in there or check to see if there's something in there
   // if there is, pull it out and add to it. If not just, set tasks to an empty array and add to it.
-  if(localStorage.getItem('tasks') === null){
+  if (localStorage.getItem('tasks') === null) {
     tasks = [];
   } else {
     tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -61,11 +61,11 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
   console.log('Task Saved');
-})
+});
 
 // Outside of the event listener, we can as previously mentioned, use JSON.parse to loop through it as if it were an array
 const tasks = JSON.parse(localStorage.getItem('tasks'));
 
 tasks.forEach((task) => {
-  console.log(task)
+  console.log(task);
 });

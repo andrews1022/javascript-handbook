@@ -8,7 +8,7 @@
 movePlayer(100, 'Left')
   .then(() => movePlayer(400, 'Left'))
   .then(() => movePlayer(10, 'Right'))
-  .then(() => movePlayer(350, 'Left'))
+  .then(() => movePlayer(350, 'Left'));
 // This is asynchronous code
 // We know that movePlayer is going to happen, and subsequent movePlayers will happen
 
@@ -57,9 +57,9 @@ async function playerStart() {
 
 // Now the cool thing is that we can actully assign variables:
 async function playerStart() {
-  const firstMove = await movePlayer(100, 'Left');  // pause
+  const firstMove = await movePlayer(100, 'Left'); // pause
   const secondMove = await movePlayer(400, 'Left'); // pause
-  const thirdMove = await movePlayer(10, 'Right');  // pause
+  const thirdMove = await movePlayer(10, 'Right'); // pause
   const fourthMove = await movePlayer(350, 'Left'); // pause
 }
 // So here we just have simple synchronous programming

@@ -82,7 +82,6 @@ async function loadPageContent() {
     `;
   }
 
-
   // fetch(`pages/${page}.html`)
   //   .then(function (response) {
   //     return response.text();

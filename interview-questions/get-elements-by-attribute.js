@@ -3,13 +3,13 @@
 
 // HTML for reference:
 <body>
-  <h1 class="header">The Dom is cool for many reasons</h1>
+  <h1 class='header'>The Dom is cool for many reasons</h1>
   <ul>
-    <li category="feature">You can see how pages are made</li>
-    <li category="feature">You can manipulate it</li>
+    <li category='feature'>You can see how pages are made</li>
+    <li category='feature'>You can manipulate it</li>
     <li>You can listen for user interactions</li>
   </ul>
-</body>
+</body>;
 
 // The easy way, using querySelector:
 function getElementsByAttribute(attribute, value) {

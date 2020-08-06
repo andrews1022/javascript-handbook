@@ -4,9 +4,9 @@
 // If you enter ‘document’ into the console, it returns an object
 // This is not a normal JavaScript object, rather an HTML-like representation of the nodes on the page.
 
-// Instead, run console.dir(document), and you get a more familiar looking JavaScript Object: 
+// Instead, run console.dir(document), and you get a more familiar looking JavaScript Object:
 // And if you go to the body dropdown, and then click childNodes, you will be able to see all the child nodes for the page
-  
+
 // Don't be intimidated by the very long list!
 // This is just important to know so you can see that the DOM is just a glorified JavaScript object and it's made from the HTML on your page.
 
@@ -14,7 +14,7 @@
 let val;
 
 // Give us the entire document object
-val = document; 
+val = document;
 console.log(val);
 
 // Get HTML collection of all elements on the page
@@ -98,6 +98,6 @@ console.log(val);
 // Turn DOM Token List into array (to be able to use array methods like forEach)
 let scripts = document.scripts;
 let scriptsArray = Array.from(scripts);
-scriptsArray.forEach(function(iteratedScript){
+scriptsArray.forEach((iteratedScript) => {
   console.log(iteratedScript);
-})
+});

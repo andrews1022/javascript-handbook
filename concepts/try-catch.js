@@ -27,7 +27,7 @@ try {
     // throw 'User has no name';
 
     // Throw as a specific type of error
-    throw new SyntaxError('User has no name')
+    throw new SyntaxError('User has no name');
   }
 } catch (err) {
   console.log(err); // Get the full error message

@@ -15,7 +15,6 @@ console.log(`My name is ${theName} and I am ${theAge} years old.`);
 const greeting = `My name is ${theName} and I am ${theAge} years old.`;
 console.log(greeting);
 
-
 // ---------- EXAMPLE #2 ----------
 const newName = 'Sally';
 const age = 34;
@@ -26,11 +25,11 @@ const greeting = 'Hello ' + name + 'you seem to be doing' + greeting + '!';
 // New way with backticks (left of #1 key)
 // Easier way of writing, and no need to worry about ' or "
 // Can place variables inside of ${ }
-const betterGreeting = `Hello ${newName} you seem to be ${age-10}. Your ${pet} is awesome!`;
+const betterGreeting = `Hello ${newName} you seem to be ${age - 10}. Your ${pet} is awesome!`;
 
 // Using default arguments
 function greet(newerName = 'Megan Mullally', newAge = '60', newPet = 'corgi') {
-	return `Hello ${newerName} you seem to be ${newAge-10}. Your ${newPet} is awesome!`;
+  return `Hello ${newerName} you seem to be ${newAge - 10}. Your ${newPet} is awesome!`;
 }
 
 // When we call greet(); in the console, we get:
@@ -42,7 +41,6 @@ function greet(newerName = 'Megan Mullally', newAge = '60', newPet = 'corgi') {
 // So we can call the function like so:
 greet('John', 50, 'tiger');
 // We get: "Hello John you seem to be 40. Your tiger is awesome!"
-
 
 // ---------- EXAMPLE #3 ----------
 // Template literals also making inserting JavaScript into HTML elements very easy:
@@ -60,7 +58,7 @@ html = `
     <li>Job: ${job}</li>
     <li>City: ${city}</li>
 
-    <li>${2+2}</li>
+    <li>${2 + 2}</li>
     <li>${hello()}</li>
     <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
   </ul>
@@ -68,7 +66,6 @@ html = `
 
 // Append to the page
 document.body.innerHTML = html;
-
 
 // ---------- EXAMPLE #4 ----------
 // Get current milliseconds

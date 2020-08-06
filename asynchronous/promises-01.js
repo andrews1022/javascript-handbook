@@ -3,7 +3,7 @@
 
 const posts = [
   { title: 'Post One', body: 'This is post one' },
-  { title: 'Post Two', body: 'This is post two' }
+  { title: 'Post Two', body: 'This is post two' },
 ];
 
 // Get the posts
@@ -33,7 +33,7 @@ function createPost(post) {
       const error = false;
       // const error = true; // uncomment this to see the .catch below work
 
-      // Conditional statement below reads as 
+      // Conditional statement below reads as
       // If not an error, then resolve
       // Else, if it is an error, then display message
       if (!error) {
@@ -41,30 +41,28 @@ function createPost(post) {
       } else {
         reject('Error: Something went wrong.');
       }
-    }, 750)
-  })
+    }, 750);
+  });
 }
 
 // Using the new .then syntax
 // No need to use use callback function
 createPost({ title: 'Post Three', body: 'This is post three' })
   .then(getPosts)
-  .catch(error => console.log(error)); // set const error to true to see .catch work
-
+  .catch((error) => console.log(error)); // set const error to true to see .catch work
 
 // -------------- Promise.all --------------
 const promise1 = Promise.resolve('Hello World');
 const promise2 = 10;
 const promise3 = new Promise((resolve, reject) => {
-  setTimeout(resolve, 1000, 'Goodbye!')
+  setTimeout(resolve, 1000, 'Goodbye!');
 });
 
 // Fetch users from a fake/ready to use API
-const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json());
+const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then((res) => res.json());
 
 // Call promise.all takes in an array of promises
 // It will take how long however the longest promise is
-Promise.all([promise1, promise2, promise3, promise4])
-  .then((values) => {
-    console.log(values)
-  })
+Promise.all([promise1, promise2, promise3, promise4]).then((values) => {
+  console.log(values);
+});

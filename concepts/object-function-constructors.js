@@ -3,17 +3,17 @@
 var john = {
   name: 'John',
   yearOfBirth: 1990,
-  job: 'teacher'
-}
+  job: 'teacher',
+};
 
 // Now let's create our blueprint, our Person function constructor
 // Convention is to write with a capital letter for function constructor
 // Parameters will be the variables we want to set in our object
-var Person = function(name, yearOfBirth, job) {
+var Person = function (name, yearOfBirth, job) {
   this.name = name; // The 'name' after the = is what is passed in. this.name is the property itself
   this.yearOfBirth = yearOfBirth;
   this.job = job;
-}
+};
 
 // Now let's create a new Person object
 var john = new Person('John Smith', 1990, 'teacher');
@@ -31,11 +31,11 @@ var john = new Person('John Smith', 1990, 'teacher');
 // And then finally all of this is simply assigned to the john variable.
 
 // Now let's add inheritance to the Person object
-var Person = function(name, yearOfBirth, job) {
+var Person = function (name, yearOfBirth, job) {
   this.name = name; // The 'name' after the = is what is passed in. this.name is the property itself
   this.yearOfBirth = yearOfBirth;
   this.job = job;
-}
+};
 
 var john = new Person('John', 1990, 'teacher');
 
@@ -56,9 +56,9 @@ var mark = new Person('Mark', 1948, 'retired');
 // So let's do just that
 
 // All we have to do is Person.prototype
-Person.prototype.calculateAge = function(){
+Person.prototype.calculateAge = function () {
   console.log(2020 - this.yearOfBirth);
-}
+};
 // Effectively none of the objects have the calculateAge method really attached to them
 // But still, they are going to be able to use it
 // They will have access to it because it's in their prototype

@@ -15,7 +15,6 @@ pets.includes('dog');
 pets.includes('bird');
 // Comes back as false, because we of course don't have a bird in our pets array
 
-
 // ------------------------------- EXPONENTIAL OPERATOR -------------------------------
 // Let's create a function that squares something
 // This means x to the power of 2;

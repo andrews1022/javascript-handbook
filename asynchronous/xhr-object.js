@@ -20,12 +20,12 @@ function loadData() {
       console.log(this.responseText);
       document.getElementById('output').innerHTML = `<h1>${this.responseText}</h1>`;
     }
-  }
+  };
 
   // Optional - Used for spinners/loaders (display something while something is loading)
   xhr.onprogress = function () {
     console.log('READYSTATE', xhr.readyState);
-  }
+  };
 
   // OLD WAY - using onreadystatechange > we need to check for status AND readyState
   xhr.onreadystatechange = function () {
@@ -35,12 +35,12 @@ function loadData() {
       console.log(this.responseText);
       document.getElementById('output').innerHTML = `<h1>${this.responseText}</h1>`;
     }
-  }
+  };
 
   // Check for an error if something goes wrong
   xhr.onerror = function () {
     console.log('Request error...');
-  }
+  };
 
   // Make sure to add to finalize everything
   xhr.send();

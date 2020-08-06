@@ -270,12 +270,6 @@ const name = person.name,
   gender = person.gender;
 
 // New ES6 Way w/ Destructuring
-const {
-  name,
-  age,
-  city,
-  gender,
-  sayHello
-} = person;
+const { name, age, city, gender, sayHello } = person;
 console.log(name, age, city);
 sayHello();

@@ -7,11 +7,11 @@
 
 // Constructor function
 function Person(firstName, lastName, dateOfBirth) {
-	// When you pass the above parameters in, we want to set them to properties of THIS object. 
-	// We do that by using the 'this' keyword
-	this.firstName = firstName;
-	this.lastName = lastName;
-	this.dateOfBirth = dateOfBirth;
+  // When you pass the above parameters in, we want to set them to properties of THIS object.
+  // We do that by using the 'this' keyword
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dateOfBirth = dateOfBirth;
 }
 
 // From here, we can do what's called 'instantiate an object'
@@ -28,9 +28,9 @@ console.log(person2.lastName);
 
 // One issue though is that dateOfBirth is enterted as a string, not an actual date. So let's fix that
 function Human(firstName, lastName, dateOfBirth) {
-	this.firstName = firstName;
-	this.lastName = lastName;
-	this.dateOfBirth = new Date(dateOfBirth); // Here we use the Date Constructor
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dateOfBirth = new Date(dateOfBirth); // Here we use the Date Constructor
 }
 const human1 = new Human('Marlon', 'Brando', '04-03-1924');
 console.log(human1.dateOfBirth); // Now we see this printed as March 27, 1995
@@ -40,19 +40,19 @@ console.log(human1.dateOfBirth.getFullYear());
 
 // Adding methods to the Human Object
 function HumanV2(firstName, lastName, dateOfBirth) {
-	this.firstName = firstName;
-	this.lastName = lastName;
-	this.dateOfBirth = new Date(dateOfBirth);
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dateOfBirth = new Date(dateOfBirth);
 
-	// We can add methods, which are essentially functions to this person object
-	this.getBirthYear = function () {
-		return this.dateOfBirth.getFullYear(); // We can still access the objects properties using 'this'
-	}
+  // We can add methods, which are essentially functions to this person object
+  this.getBirthYear = function () {
+    return this.dateOfBirth.getFullYear(); // We can still access the objects properties using 'this'
+  };
 
-	// Another examaple:
-	this.getFullName = function () {
-		return `${this.firstName} ${this.lastName}`;
-	}
+  // Another examaple:
+  this.getFullName = function () {
+    return `${this.firstName} ${this.lastName}`;
+  };
 }
 const human2 = new HumanV2('Tom', 'Hanks', '07-09-1956');
 
@@ -62,15 +62,14 @@ console.log(human2.getBirthYear());
 // Calling the getFullName function
 console.log(human2.getFullName());
 
-
 // ---------- EXAMPLE #2 ----------
 // A basic object literal
 const brad = {
   name: 'Brad',
-  age: 30
-}
-console.log(brad)
-console.log(brad.age)
+  age: 30,
+};
+console.log(brad);
+console.log(brad.age);
 
 // Creating multiple instances of this same object like this would be tedious and repetitive
 
@@ -85,7 +84,7 @@ function Person(name, dateOfBirth) {
     const difference = Date.now() - this.birthday.getTime();
     const ageDate = new Date(difference);
     return Math.abs(ageDate.getUTCFullYear() - 1970);
-  }
+  };
 }
 
 let brad = new Person('Andrew', 'October 22, 1992');
@@ -102,7 +101,7 @@ console.log(`John's age: `, john.age);
 // ---------- THIS KEYWORD ----------
 // The 'this' keyword is very important
 // It refers to the current instance of the object
-// It pertains to that function's scope, but also outside of it 
+// It pertains to that function's scope, but also outside of it
 
 // For example, get the window object
 console.log(this);

@@ -14,7 +14,6 @@ console.log(name.next().value);
 console.log(name.next().value);
 console.log(name.next());
 
-
 // ---------- EXAMPLE #2 ----------
 // ID Creator
 function* createIDs() {

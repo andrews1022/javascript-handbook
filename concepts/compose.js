@@ -19,7 +19,7 @@ compose(sum, sum)(5);
 
 // ----------------------------------- BREAKDOWN -----------------------------------
 // If both 'f' and 'g' are 'sum', and 'a' is 5, we look at what the function returns: f(g(a));
-// And because again we have two brackets (sum, sum)(5) which returns us another function (a) => f(g(a));, 
+// And because again we have two brackets (sum, sum)(5) which returns us another function (a) => f(g(a));,
 // And within it we give the 'a', 5.
 const compose = (f, g) => (a) => f(g(5));
 // And then let's run the inner function 'g' g(5). In this case it's sum.

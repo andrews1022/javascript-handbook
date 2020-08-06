@@ -18,10 +18,10 @@ function arrayCalc(arr, fn) {
   var arrRes = [];
 
   for (var i = 0; i < arr.length; i++) {
-   // Inside the loop, we will then use the function that we passed in, and push the result into our arrRes array
-   arrRes.push(fn(arr[i]));
-   // We do we want to push?
-   // We want to push the result of our called fn function, and pass in the current element of our input array into this function
+    // Inside the loop, we will then use the function that we passed in, and push the result into our arrRes array
+    arrRes.push(fn(arr[i]));
+    // We do we want to push?
+    // We want to push the result of our called fn function, and pass in the current element of our input array into this function
   }
 
   // Return the result array
@@ -38,7 +38,6 @@ function calculateAge(el) {
 var ages = arrayCalc(years, calculateAge);
 console.log(ages);
 
-
 // Another example
 function isFullAge(el) {
   return el >= 18; // return a true or false value
@@ -54,14 +53,12 @@ function maxHeartRate(el) {
   // } else {
   //   return -1;
   // }
-  var hr = el >= 18 && el <= 81 ? Math.round(206.9 - (0.67 * el)) : -1;
+  var hr = el >= 18 && el <= 81 ? Math.round(206.9 - 0.67 * el) : -1;
   return hr;
 }
 
 var rates = arrayCalc(ages, maxHeartRate);
 console.log(rates);
-
-
 
 // ---------- FUNCTIONS RETURNING FUNCTIONS ----------
 // let's now talk about functions returning functions.
@@ -71,18 +68,18 @@ console.log(rates);
 // So basically, a function returning another function.
 function interviewQuestion(job) {
   // In here, according to each of the different jobs, we will return a different function which will then log a question to the console
-  if(job === 'designer') {
-    return function(name) {
+  if (job === 'designer') {
+    return function (name) {
       console.log(name + ', can you please explain is UX design is?');
-    }
+    };
   } else if (job === 'teacher') {
-    return function(name) {
+    return function (name) {
       console.log(name + ', what subject(s) do you teach?');
-    }
+    };
   } else {
-    return function(name) {
+    return function (name) {
       console.log('Hello ' + name + ', what do you do?');
-    }
+    };
   }
 }
 // This function here will not just return a simple value as we usually do with functions
@@ -99,17 +96,16 @@ designerQuestion('Jane');
 // We can actually call the returned function in the same line, like so:
 interviewQuestion('teacher')('Dave');
 
-
 // Practice
 function degrees(deg) {
-  if(deg === 'CS') {
-    return function(name) {
-      console.log(`With a degree in ${deg}, ${name} could be a software engineer!`)
-    }
+  if (deg === 'CS') {
+    return function (name) {
+      console.log(`With a degree in ${deg}, ${name} could be a software engineer!`);
+    };
   } else if (deg === 'MBA') {
-    return function(name) {
+    return function (name) {
       console.log(`With an ${deg}, ${name} could be a business analyst!`);
-    }
+    };
   }
 }
 

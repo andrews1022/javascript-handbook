@@ -3,10 +3,10 @@
 function retirement(retirementAge) {
   var msg = ' years left until retirement';
 
-  return function(yearOfBirth) {
+  return function (yearOfBirth) {
     var age = 2020 - yearOfBirth;
-    console.log((retirementAge - age) + msg);
-  }
+    console.log(retirementAge - age + msg);
+  };
 }
 
 // And now, let's try to use this function, and, as you know, this returns a function, so we can store the result of calling this function in a variable, and then this variable will be a function as well
@@ -46,31 +46,33 @@ retirementIceland(1990);
 
 // Challenge: re-write the below interview questions function using the power of closures!
 function interviewQuestion(job) {
-  if(job === 'designer') {
-    return function(name) {
+  if (job === 'designer') {
+    return function (name) {
       console.log(name + ', can you please explain is UX design is?');
-    }
+    };
   } else if (job === 'teacher') {
-    return function(name) {
+    return function (name) {
       console.log(name + ', what subject(s) do you teach?');
-    }
+    };
   } else {
-    return function(name) {
+    return function (name) {
       console.log('Hello ' + name + ', what do you do?');
-    }
+    };
   }
 }
 
 // Solution
 function interviewQuestion(job) {
   if (job === 'designer') {
-    return function(name) {
+    return function (name) {
       console.log(`${name}, since you are a ${job}, can you explain what UX design is?`);
-    }
+    };
   } else if (job === 'teacher') {
-    return function(name) {
-      console.log(`${name}, since you are a ${job}, can you please tell us what subject, or subjects, you teach?`);
-    }
+    return function (name) {
+      console.log(
+        `${name}, since you are a ${job}, can you please tell us what subject, or subjects, you teach?`
+      );
+    };
   }
 }
 

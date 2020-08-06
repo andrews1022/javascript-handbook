@@ -84,7 +84,6 @@
 // And in this case, undefined is returned.
 // This is the reason why, for example, the John object could call the hasOwnProperty method that is stored in the Object Prototype property.
 
-
 // ----- SUMMARY -----
 // Every JavaScript object has a prototype property, which makes inheritance possible in JavaScript.
 // The prototype property of an object is where we put methods and properties that we want other objects to inherit.

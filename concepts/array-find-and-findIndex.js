@@ -5,7 +5,7 @@ var ages = [12, 17, 8, 21, 14, 11];
 // The ES5 way, we would first have to create a boolean array to determine whether each element of the array is younger or older than 18.
 // And we could then use the index off to determine the element that we want.
 // Let's use the map method for this
-var fullAge = ages.map(function(current) {
+var fullAge = ages.map(function (current) {
   return current >= 18;
 });
 console.log(fullAge);

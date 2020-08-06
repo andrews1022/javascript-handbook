@@ -2,7 +2,7 @@
 // For us to allocate memory in the memory heap, it's as simple as doing:
 const a = 1;
 
-// Now, when we assign this, the JavaScript engine is going to remember that oh! yeah, 'a' has a value of 1. 
+// Now, when we assign this, the JavaScript engine is going to remember that oh! yeah, 'a' has a value of 1.
 // Let’s add on to this and write:
 const aa = 1;
 const bb = 10;

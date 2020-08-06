@@ -7,7 +7,5 @@ console.log(john.indexOf(1990)); // Get the index location, if it is in your arr
 
 // This method is very useful for testing if a certain element is in your array
 // Let's put this into practice, along with the ternary operator
-var isDesigner = john.indexOf('designer') === -1 ?
-  'John is NOT a designer' :
-  'John is a designer'
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John is a designer';
 console.log(isDesigner); // 'John is NOT a designer'

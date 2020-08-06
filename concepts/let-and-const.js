@@ -5,14 +5,14 @@ let experience = 100;
 let wizardLevel = false;
 
 if (experience > 90) {
-	let wizardLevel = true;
-	console.log(wizardLevel); // true
+  let wizardLevel = true;
+  console.log(wizardLevel); // true
 
-	// *NOTE* 
-	// Without this console.log line, it would be false
-	// it would be false because it is not inside of a function
-	// We've created a 'wizardLevel' variable inside of 'if' so the only way that we can access this is inside the 'if'.
-	// So, with 'let', any time it's wrapped around a curly bracket, it creates a new scope, versus with var, where both would be true
+  // *NOTE*
+  // Without this console.log line, it would be false
+  // it would be false because it is not inside of a function
+  // We've created a 'wizardLevel' variable inside of 'if' so the only way that we can access this is inside the 'if'.
+  // So, with 'let', any time it's wrapped around a curly bracket, it creates a new scope, versus with var, where both would be true
 }
 
 console.log(wizardLevel); // false
@@ -25,16 +25,14 @@ console.log(wizardLevel); // false
 
 // Const example
 const obj = {
-	player: 'Jack',
-	xpPoints: 100,
-	isWizardLevel: false
-}
+  player: 'Jack',
+  xpPoints: 100,
+  isWizardLevel: false,
+};
 // With this example, you cannot do something like const obj = 5;
 // But what you CAN DO, is reassign the values inside the object
 // Such as obj.isWizardLevel = true;
 // This rule also applies to arrays
-
-
 
 // Let can be reassigned, as seen below
 let myName = 'John Doe';
@@ -49,11 +47,11 @@ console.log(myName);
 // What you CANNOT do, is reassign person a completely different value
 const person = {
   name: 'Andy',
-  age: 27
-}
+  age: 27,
+};
 
-person.name = 'Charlie'
-person.age = '23'
+person.name = 'Charlie';
+person.age = '23';
 
 console.log(person); // Notice Charlie and 23 are logged and not Andy + 27
 

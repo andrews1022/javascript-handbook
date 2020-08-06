@@ -4,10 +4,10 @@
 // First, we define an object that will act as the prototype and then create a new object based on the prototype
 // Recreate our Person example, first writing the prototype as a simple object
 var personProto = {
-  calculateAge: function() {
+  calculateAge: function () {
     console.log(2020 - this.yearOfBirth);
-  }
-}
+  },
+};
 
 // Now let's create our john object
 // We simply say Object.create, and then we simply pass it the object that we define to be the prototype object, which will be personProto.
@@ -27,7 +27,7 @@ var jane = Object.create(personProto, {
   // The formatting/syntax is odd, but there is no way around it
   name: { value: 'Jane' },
   yearOfBirth: { value: 1969 },
-  job: { value: 'designer' }
+  job: { value: 'designer' },
 });
 
 console.log(john);
@@ -43,19 +43,18 @@ console.log(jane);
 
 // The most popular, though, is still the function constructor, and so that's the one that we're going to use mostly in the rest of this course.
 
-
 // ---------- EXAMPLE #2 ----------
 // Object Of Protos
 const bookProtos = {
   getSummary: function () {
     return `${this.title} was written ${this.author} in ${this.year}`;
   },
-  
+
   getAge: function () {
     const years = new Date().getFullYear() - this.year;
     return `${this.title} is ${years} years old`;
-  }
-}
+  },
+};
 
 // Create the object
 const book1 = Object.create(bookProtos);
@@ -69,7 +68,7 @@ book1.year = '1869';
 const book2 = Object.create(bookProtos, {
   title: { value: 'Hamlet' },
   author: { value: 'William Shakespeare' },
-  year: { value: '1600' }
+  year: { value: '1600' },
 });
 
 console.log(book1);

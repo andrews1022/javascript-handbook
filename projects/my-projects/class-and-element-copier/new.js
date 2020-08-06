@@ -33,8 +33,8 @@ class Copyier {
         } else if (check.id === 'bothCheck') {
           this.displayInput(this.bothInput);
         }
-      })
-    })
+      });
+    });
   }
 
   // Create the elements for each class value entered

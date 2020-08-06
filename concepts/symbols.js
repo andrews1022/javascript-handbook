@@ -10,7 +10,6 @@ let symbolThree = Symbol('Foo');
 // And the symbol value is used as an indentifier mostly for object properties
 // It's pretty much the only purpose of that because sometimes you don't want object properties if you have thousands of them to collide and be the same ones because then they'll get bugs
 
-
 // ---------- EXAMPLE #2 ----------
 // The nice thing about symbols is that every single one is completely unique
 
@@ -28,7 +27,6 @@ console.log(Symbol('123') === Symbol('123')); // Still fails
 // console.log(`Hello ${sym1}`); // Cannot wrap a Symbol in a string this way
 console.log(`Hello ${String(sym1)}`); // Must use String()
 console.log(`Hello ${sym1.toString()}`); // Can also use toString()
-
 
 // Main Reasons for Symbols = Unique Object Keys
 const KEY1 = Symbol();
@@ -58,5 +56,5 @@ for (let i in myObject) {
 // JSON.parse does the opposite
 
 // Symbols are ignored by JSON.stringify
-console.log(JSON.stringify({key: 'prop'})); // Regular object - works OK
-console.log(JSON.stringify({[Symbol('sym1')]: 'prop'})); // Gives empty object
+console.log(JSON.stringify({ key: 'prop' })); // Regular object - works OK
+console.log(JSON.stringify({ [Symbol('sym1')]: 'prop' })); // Gives empty object

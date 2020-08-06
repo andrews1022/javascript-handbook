@@ -10,4 +10,6 @@ const winingPair = averageScoreArray.reduce((max, arr) => {
   return max[0] >= arr[0] ? max : arr;
 });
 
-console.log(`The highest average score was ${winingPair[0]}, which was done by ${winingPair[1]}'s team.`);
+console.log(
+  `The highest average score was ${winingPair[0]}, which was done by ${winingPair[1]}'s team.`
+);

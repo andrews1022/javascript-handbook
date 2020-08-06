@@ -15,7 +15,7 @@ var ageJohn = currentYear - yearJohnIsBorn;
 var ageMark = 35;
 var average = ageJohn + ageMark / 2; // but this is not correct, as the division has a higher precedence
 console.log('incorrect answer:', average);
-// should be like this 
+// should be like this
 average = (ageJohn + ageMark) / 2; // now the ( ) has the highest precedence
 console.log('correct answer:', average);
 
@@ -32,14 +32,14 @@ console.log(x, y);
 // More operators
 x = x * 2;
 x *= 2; // Same as above
-console.log(x)
-x += 10 // Using addition
+console.log(x);
+x += 10; // Using addition
 console.log(x);
 
 // Increment
-x = x+1
-x++ // Same as above
+x = x + 1;
+x++; // Same as above
 console.log(x);
 // Decrement
-x--
+x--;
 console.log(x);

@@ -5,7 +5,6 @@
 // It usually consists of a structured request and structured response
 // We just worked with the Chuck Norris Jokes API that takes a request and responds with the jokes
 
-
 // ---------- REST API ----------
 // REST stands for Representational State Transfer
 // It's an architecture style for designing networked applications
@@ -14,8 +13,7 @@
 // An example of this would be a blog post, a user, something usually stored in a database
 // What makes REST so great is that since it operates using just HTTP requests, and usually some standard like JSON, it can be used with virtually any programming language. PHP, Ruby, Ruby on Rails, Java, Python, and of course JavaScript
 // A simple way of thinking about it is an API is the messenger, and then REST lets us use HTTP requests to format that message
-// All APIs have their own rules and structure 
-
+// All APIs have their own rules and structure
 
 // ---------- HTTP REQUESTS ----------
 // GET: Retrieve data from a specified resource
@@ -28,9 +26,8 @@
 // OPTIONS: Returns the supported HTTP Methods
 // PATCH: Update partial resources
 
-
 // ---------- API ENDPOINTS ----------
-// When you have some kind of API, whether it's your own or an external one, API you're going to have something called endpoints 
+// When you have some kind of API, whether it's your own or an external one, API you're going to have something called endpoints
 // Endpoints are URLS that you access to do certain things
 // It is ok for endpoints to be the same. For example:
 // https://someurl.com/api/users

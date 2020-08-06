@@ -8,8 +8,7 @@ function Book(title, author, year) {
 // getSummary Prototype Method - arrow function doesn't work
 Book.prototype.getSummary = function () {
   return `${this.title} was written ${this.author} in ${this.year}`;
-}
-
+};
 
 // Create a magazine constructor, but inherit the properties of 'Book'
 function Magazine(title, author, year, month) {

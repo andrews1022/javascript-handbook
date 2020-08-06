@@ -12,7 +12,6 @@ console.log(name);
 var name = 'Steve Smith';
 console.log(name);
 
-
 // ---------- INITIALIZATION ----------
 // Can create variables but not assign a value
 // This is known as 'initializing' a variable
@@ -23,7 +22,6 @@ console.log(greeting);
 
 // Reason for doing it this way is if for example we have a conditional
 // If something equals true or false, the value of 'greeting' can be assigned accordingly
-
 
 // ---------- RULES & NAMING CONVENTIONS ----------
 // Variable names can include letters & numbers, _ symbol, and $ symbol
@@ -42,7 +40,6 @@ var FirstName = 'Sally'; // Pascal case
 // Another example
 var firstname = 'Jenny'; // All lowercase
 
-
 // ---------- LET & CONST ----------
 // Let can be reassigned, as seen below
 let myName = 'John Doe';
@@ -57,11 +54,11 @@ console.log(myName);
 // What you CANNOT do, is reassign person a completely different value
 const person = {
   name: 'Andy',
-  age: 27
-}
+  age: 27,
+};
 
-person.name = 'Charlie'
-person.age = '23'
+person.name = 'Charlie';
+person.age = '23';
 
 console.log(person); // Notice Charlie and 23 are logged and not Andy + 27
 

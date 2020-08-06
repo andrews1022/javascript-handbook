@@ -1,7 +1,6 @@
 // Subclasses is essentially inheritance in ES6 classes
 // So we can create for example a person class, and then create a subclass called customer or whatever it is we want to call it, and we can extend the Person class
 
-
 // ---------- EXAMPLE #1 ----------
 class Person {
   constructor(firstName, lastName) {
@@ -10,7 +9,7 @@ class Person {
   }
 
   greeting() {
-    return `Hello there ${this.firstName} ${this.lastName}`
+    return `Hello there ${this.firstName} ${this.lastName}`;
   }
 }
 
@@ -26,7 +25,7 @@ class Customer extends Person {
     this.membershipType = membershipType;
   }
 
-  static getMembershipCost(){
+  static getMembershipCost() {
     return 500;
   }
 }
@@ -41,7 +40,6 @@ console.log(john.greeting());
 
 // Use a Customer specific method
 console.log(Customer.getMembershipCost());
-
 
 // ---------- EXAMPLE #2 ----------
 class Book {
@@ -73,40 +71,38 @@ console.log(mag1);
 // Use the getSummary() method on magazine
 console.log(mag1.getSummary());
 
-
-
 // ---------- EXAMPLE #3 ----------
 // ES5 - using function constructor and create prototype methods
-var PersonES5 = function(name, yearOfBirth, job) {
+var PersonES5 = function (name, yearOfBirth, job) {
   this.name = name;
   this.yearOfBirth = yearOfBirth;
   this.job = job;
-}
+};
 
 // And again, to make all instances of this inherit a calculate age method, we simply add it to the prototype property
-PersonES5.prototype.calcAge = function() {
+PersonES5.prototype.calcAge = function () {
   var age = new Date().getFullYear() - this.yearOfBirth;
   console.log(age);
-}
+};
 
 // Create subclass
-var AthleteES5 = function(name, yearOfBirth, job, olympicGamesAttended, olympicModalsWon) {
+var AthleteES5 = function (name, yearOfBirth, job, olympicGamesAttended, olympicModalsWon) {
   // Call our super class PersonES5
   PersonES5.call(this, name, yearOfBirth, job);
 
   // Set others as usual
   this.olympicGamesAttended = olympicGamesAttended;
   this.olympicModalsWon = olympicModalsWon;
-}
+};
 
 // Create prototype chain
 AthleteES5.prototype = Object.create(PersonES5.prototype);
 
 // Create a method just for the AthleteES5 object
-AthleteES5.prototype.wonMedal = function() {
+AthleteES5.prototype.wonMedal = function () {
   this.olympicModalsWon += 1;
   console.log(this.olympicModalsWon);
-}
+};
 
 var johnAthleteES5 = new AthleteES5('John', 1990, 'Swimmer', 3, 10);
 console.log(johnAthleteES5);
@@ -114,7 +110,6 @@ console.log(johnAthleteES5);
 
 johnAthleteES5.calcAge();
 johnAthleteES5.wonMedal();
-
 
 // ES6
 class PersonES6 {
@@ -136,7 +131,7 @@ class AthleteES6 extends PersonES6 {
   constructor(name, yearOfBirth, job, olympicGamesAttended, olympicModalsWon) {
     // We use the super function to call the super class
     // No need to set the this keyword
-    super (name, yearOfBirth, job);
+    super(name, yearOfBirth, job);
     this.olympicGamesAttended = olympicGamesAttended;
     this.olympicModalsWon = olympicModalsWon;
   }

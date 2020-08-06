@@ -6,11 +6,9 @@ function nameIterator(names) {
 
   return {
     next: function () {
-      return nextIndex < names.length ? 
-      { value: names[nextIndex++], done: false } : 
-      { done: true }
-    }
-  }
+      return nextIndex < names.length ? { value: names[nextIndex++], done: false } : { done: true };
+    },
+  };
 }
 
 // Create an array of names

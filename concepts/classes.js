@@ -3,27 +3,26 @@
 // This simply means classes make it easier to implement inheritence and to create objects based on blueprints
 
 // ES5 - using function constructor and create prototype methods
-var PersonES5 = function(name, yearOfBirth, job) {
+var PersonES5 = function (name, yearOfBirth, job) {
   this.name = name;
   this.yearOfBirth = yearOfBirth;
   this.job = job;
-}
+};
 
 // And again, to make all instances of this inherit a calculate age method, we simply add it to the prototype property
-PersonES5.prototype.calcAge = function() {
+PersonES5.prototype.calcAge = function () {
   var age = new Date().getFullYear() - this.yearOfBirth;
   console.log(age);
-}
+};
 
 var johnES5 = new PersonES5('John Smith', 1990, 'Web Developer');
 console.log(johnES5);
 // johnES5.calcAge();
 
-
 // The same thing, but using ES6 Classes
 class PersonES6 {
   // All classes must the have the constructor method
-  // This is where we define the initial properties that we want our object to have 
+  // This is where we define the initial properties that we want our object to have
   constructor(name, yearOfBirth, job) {
     this.name = name;
     this.yearOfBirth = yearOfBirth;
@@ -59,7 +58,6 @@ PersonES6.greeting();
 // But that's not really an issue, because inheriting properties through the object instances is not a best practice anyway
 // And so, that's why this rule is now really enforced here in classes
 
-
 // ---------- EXAMPLE #1 ----------
 // Class creation:
 // Use the 'class' keyword, and then give it a name using uppercase (best practice)
@@ -90,10 +88,9 @@ const humanBeing2 = new HumanBeing('Ben', 'Stiller', '11-30-1965');
 console.log(humanBeing2.getFullName());
 console.log(humanBeing1);
 
-
 // ---------- EXAMPLE #2 ----------
-// Create two classes: an Animal class and a Mammal class. 
-// Create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. 
+// Create two classes: an Animal class and a Mammal class.
+// Create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color.
 class Animal {
   constructor(name, type, color) {
     this.name = name;
@@ -112,7 +109,6 @@ class Mammal extends Animal {
 }
 
 const cow = new Mammal('Shelly', 'cow', 'brown');
-
 
 // ---------- EXAMPLE #3 ----------
 class Book {
@@ -154,7 +150,6 @@ console.log(book1.getSummary());
 // static needs to be run on the class itself
 console.log(Book.topBookStore());
 
-
 // ---------- EXAMPLE #4 ----------
 class Person {
   constructor(firstName, lastName, dateOfBirth) {
@@ -194,7 +189,6 @@ console.log(mary.greeting());
 
 console.log(Person.addNumbers(1, 2));
 
-
 // ---------- EXAMPLE #5 ----------
 // Create Person class
 class Person {
@@ -222,15 +216,20 @@ console.log(`Claude's BMI is:`, claude.calculateBMI());
 
 // Check
 if (amanda.calculateBMI() > claude.calculateBMI()) {
-  console.log(`${amanda.fullName}'s BMI of ${amanda.bmi} is higher than claude's BMI of ${claude.bmi}`);
+  console.log(
+    `${amanda.fullName}'s BMI of ${amanda.bmi} is higher than claude's BMI of ${claude.bmi}`
+  );
 } else if (claude.bmi > amanda.bmi) {
-  console.log(`${claude.fullName}'s BMI of ${claude.bmi} is higher than amanda's BMI of ${amanda.bmi}`);
+  console.log(
+    `${claude.fullName}'s BMI of ${claude.bmi} is higher than amanda's BMI of ${amanda.bmi}`
+  );
 } else if (claude.bmi === amanda.bmi) {
-  console.log(`Both ${amanda.fullName} and ${claude.fullName} have the same BMI, which is ${amanda.bmi}`);
+  console.log(
+    `Both ${amanda.fullName} and ${claude.fullName} have the same BMI, which is ${amanda.bmi}`
+  );
 } else {
   console.log('Something is not right here...');
 }
-
 
 // ---------- EXAMPLE #6 ----------
 // Create a person object - should have a name and array of bills paid at a restaurant

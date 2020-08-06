@@ -10,20 +10,20 @@ function EventObserver() {
 // EventObserver prototype - set to an object
 EventObserver.prototype = {
   // Subscribe method
-  subscribe: function(func) {
+  subscribe: function (func) {
     // Push on to observers array
     this.observers.push(func);
     // Notify user
     console.log(`You are now subscribed to ${func.name}!`);
   },
   // Unsubscribe function
-  unsubscribe: function(func) {
+  unsubscribe: function (func) {
     // ----- From Brad -----
     // Filter out from the list whatever matches the callback function
     // If there is no match, the callback gets to stay on the list
     // The filter returns a new list and reassigns the list of observers
     // If you're unsubscribing from a certain function, that one will be removed but it'll generate a new list that has the rest of the functions that are subscribed to
-    this.observers = this.observers.filter(item => {
+    this.observers = this.observers.filter((item) => {
       // Item represents the function being passed in
       // If the item is NOT equal to the function be passed into func, then we return the item
       if (item !== func) {
@@ -32,13 +32,13 @@ EventObserver.prototype = {
     });
     console.log(`You are now unsubscribed from ${func.name}!`);
   },
-  fire: function() {
+  fire: function () {
     // Loop through the observers
-    this.observers.forEach(item => {
+    this.observers.forEach((item) => {
       // Call whatever the function is using .call()
       item.call();
     });
-  }
+  },
 };
 
 // Click Handlers
@@ -81,7 +81,6 @@ document.querySelector('.fire').addEventListener('click', () => {
   click.fire();
 });
 
-
 // This is the same code as above, just done with ES6 classes
 class EventObserver {
   // Constructor function
@@ -98,7 +97,7 @@ class EventObserver {
 
   // Unsubscribe method
   unsubscribe(func) {
-    this.observers = this.observers.filter(item => {
+    this.observers = this.observers.filter((item) => {
       if (item !== func) {
         return item;
       }
@@ -108,7 +107,7 @@ class EventObserver {
 
   // Fire method
   fire() {
-    this.observers.forEach(item => {
+    this.observers.forEach((item) => {
       item.call();
     });
   }
