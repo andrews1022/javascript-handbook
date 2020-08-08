@@ -21,7 +21,7 @@ console.log(johnES5);
 
 // The same thing, but using ES6 Classes
 class PersonES6 {
-  // All classes must the have the constructor method
+  // All classes MUST the have the constructor method
   // This is where we define the initial properties that we want our object to have
   constructor(name, yearOfBirth, job) {
     this.name = name;

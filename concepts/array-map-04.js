@@ -11,4 +11,5 @@ let mapArray = array.map((user) => {
   let { username } = user;
   return username + '?';
 });
-console.log('map array names with question mark using arrow function', mapArray);
+
+console.log(mapArray);

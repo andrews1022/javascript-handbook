@@ -7,6 +7,7 @@ const array = [1, 2, 10, 16];
 const mappedArray = array.map((num) => {
   return num * 2;
 });
+
 // Even further shorthanded
 const mappedArrayShort = array.map((num) => num * 2);
 console.log('map short', mappedArrayShort);

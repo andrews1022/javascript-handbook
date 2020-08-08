@@ -1,16 +1,19 @@
 // Suppose that we have a group of children and we know that only one of them is a full age.
 // So let's now find out who and how old that person is.
 // ES5 way
-var ages = [12, 17, 8, 21, 14, 11];
+let ages = [12, 17, 8, 21, 14, 11];
 // The ES5 way, we would first have to create a boolean array to determine whether each element of the array is younger or older than 18.
 // And we could then use the index off to determine the element that we want.
 // Let's use the map method for this
-var fullAge = ages.map(function (current) {
+let fullAge = ages.map(function (current) {
   return current >= 18;
 });
+
 console.log(fullAge);
+
 // Find the position of the true
 console.log(fullAge.indexOf(true)); // index location 3
+
 // See how old that person is
 console.log(ages[fullAge.indexOf(true)]); // age of 21
 

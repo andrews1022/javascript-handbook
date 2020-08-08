@@ -4,6 +4,7 @@ var a = 1;
 function b() {
   a = 2;
 }
+
 // We have a variable one, 'a' equals one and then I have a function that changes 'a',
 // Well that's a side effect.
 // That's something that the function's doing to affect the outside world.

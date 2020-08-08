@@ -1,16 +1,17 @@
-// A regular expression is basically used to describe a pattern of characters
+// A regular expression is used to describe a pattern of characters
 // They're commonly used for validation as well as pulling things out of a body of text, or a body of characters
-// For example, e-mail addresses, phone numbers, social security numbers - things that have certain patterns in their formatting
+// For example: e-mail addresses, phone numbers, social security numbers - things that have certain patterns in their formatting
 
-// In Part 1 here, we'll take a look at the different functions in JavaScript that are used to evaluate these regular expressions
+// Our starting regular expression variable
+let re;
 
-let re; // Regular Expression Variable
-re = /hello/; // Set a regular expression literal. Place your expression inbetween //
+// To set a regular expression literal, place your expression inbetween a pair of //
+re = /hello/;
 // This itself is actually a regular expression
-// Each one of these characters is a literl character - it's going to be taken at face value - an actualy H, E, etc.
+// Each one of these characters is a literal character, meaning it's going to be taken at face value (an actual H, E, etc.)
 
 console.log(re); // Logs /hello/
-console.log(re.source); // Log the actual expression inside the //
+console.log(re.source); // Log the actual expression inside the // using .source
 
 // ----- exec() function -----
 // Will return the result in an array if there is a match, or null if there is not

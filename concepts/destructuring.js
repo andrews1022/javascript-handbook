@@ -6,34 +6,22 @@ var john = ['John', 26];
 var name = john[0];
 var age = john[1];
 
-
 // ES6 Version
 const [name, age] = ['John', 26];
 // What this is gonna do is it's gonna create a constant called 'name' and a constant called 'age', and then this data will be stored in each of the variables.
 console.log(name, age); // John 26
 
-
 // Destructuring with objects
-const obj = {
-  firstName: 'John',
-  lastName: 'Smith'
-}
+const obj = { firstName: 'John', lastName: 'Smith' };
 
-// The variable names must be the same as the key names
-const {
-  firstName,
-  lastName
-} = obj;
+// The variable names MUST be the same as the key names
+const { firstName, lastName } = obj;
 console.log(firstName, lastName);
 
 // But if you do want to use variable names that are different from the key names, you can do so like this:
-const {
-  firstName: a,
-  lastName: b
-} = obj;
+const { firstName: a, lastName: b } = obj;
 // This means we assign the key firstName to the variable of a, and the key lastName to the variable of b
 console.log(a, b); // John Smith
-
 
 // More practical application - return multiple values from a function
 // Let's create a function that returns the age of a person as well as the remaining time until their retirement
@@ -48,7 +36,6 @@ const [age, retirement] = calcAgeAndRetirement(1992);
 console.log(age, retirement);
 console.log(`Age: ${age}, Years until retirement: ${retirement}`);
 
-
 // ---------- EXAMPLE #1 ----------
 // Let's use this object as reference:
 const obj = {
@@ -57,27 +44,26 @@ const obj = {
   isWizardLevel: false
 }
 
+// ES5
 const player = obj.player;
 const experience = obj.xpPoints;
 const isWizardLevel = obj.isWizardLevel;
 
 // Destructured version
-const {
-  player,
-  experience
-} = obj;
-// Reads as const, player and experience from the object
-// This does the same thing as const player = obj.player; & const experience = obj.xpPoints;
+const { player, experience } = obj;
+// This line reads as: const, player and experience from the 'obj' object
+// This does the same thing as 
+const player = obj.player;
+const experience = obj.xpPoints;
+// Just in a nicer, cleaner syntax
+
 // Steps:
 // You just select the properties you want from an object.
 // Now we have access to:
 const player;
 const xpPoints;
 // Same goes for isWizardLevel
-let {
-  isWizardLevel
-} = obj;
-
+let { isWizardLevel } = obj;
 
 // ---------- EXAMPLE #2 ----------
 const person = {
@@ -86,13 +72,8 @@ const person = {
   age: 50,
   eyeColor: "blue"
 };
-const {
-  firstName,
-  lastName,
-  age,
-  eyeColor
-} = person;
 
+const { firstName, lastName, age, eyeColor } = person;
 
 // ---------- EXAMPLE #3 ----------
 // Assign variables from objects 
@@ -102,32 +83,25 @@ var numbers = {
   y: 7.4,
   z: 6.5
 }
+
 var x = numbers.x; // x = 3.6
 var y = numbers.y; // y = 7.4
 var z = numbers.z; // z = 6.5
 
-// DESTRUCTURING WAY:
-var {
-  x,
-  y,
-  z
-} = numbers;
+// NEW WAY W/ DESTRUCTURING:
+var { x, y, z } = numbers;
+
 // This means we're going to create the 3 variables x, y, and z from numbers
 console.log(x); // x = 3.6
 console.log(y); // y = 7.4
 console.log(z); // z = 6.5
 
 // DESTRUCTURING WAY #2:
-var {
-  x: a,
-  y: b,
-  z: c
-} = numbers;
+var { x: a, y: b, z: c } = numbers;
 // This means we're going to get the field 'x' from numbers, and copy the value into 'a'
 // And 'y' into 'b', and 'z' into 'c'
 // So this:
 console.log(b); // b = 7.4
-
 
 // ---------- EXAMPLE #4 ----------
 // Assign variables from nested objects 
