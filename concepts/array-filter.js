@@ -1,3 +1,5 @@
+// MDN page: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
 // The filter() method creates a new array with all elements that pass the test implemented by the provided function
 // With .filter(), we have access to the current element, current index, and the entire array itself inside of the callback function
 
