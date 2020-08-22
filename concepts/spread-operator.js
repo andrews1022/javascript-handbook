@@ -35,8 +35,9 @@ const boxes = document.querySelectorAll('.box');
 
 // Use spread operator to put them into the same structure
 const all = [heading, ...boxes];
-// const allArray = Array.from(all).forEach((el) => {
-//   el.style.color = 'rebeccapurple';
-// });
+const allArray = Array.from(all).forEach((el) => {
+  el.style.color = 'rebeccapurple';
+});
+
 // In one line:
 const allArray = Array.from(all).forEach((el) => (el.style.color = 'rebeccapurple'));
