@@ -1,5 +1,5 @@
-var parent = document.querySelector('.parent');
-var child = document.querySelector('.child');
+const parent = document.querySelector('.parent');
+const child = document.querySelector('.child');
 
 // Check like this:
 if (child.parentNode == parent) {

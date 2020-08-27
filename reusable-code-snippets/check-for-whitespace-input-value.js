@@ -1,4 +1,4 @@
-var input = document.querySelector('#myInput');
+const input = document.querySelector('#myInput');
 
 // Use this regex - will check for any amount of whitespace in the input value
 if (input.value.match(/^\s*$/)) {
