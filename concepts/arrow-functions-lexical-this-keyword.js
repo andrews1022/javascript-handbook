@@ -5,7 +5,7 @@
 // Let's see how to use that to our advantage, interacting with the 3 colored boxes
 
 // ES5 version
-var box5 = {
+var boxES5 = {
   color: 'green',
   position: 1,
   clickMe: function () {
@@ -31,7 +31,7 @@ box5.clickMe(); // This is box number undefined and is undefined
 // And therefore, what we have here is undefined for both of these.
 
 // ES6 version
-const box6 = {
+const boxES6_1 = {
   color: 'blue',
   position: 1,
   clickMe: function () {
@@ -42,13 +42,13 @@ const box6 = {
   },
 };
 
-box6.clickMe();
+boxES6_1.clickMe();
 
 // Now by using an arrow function, we have a funciton that shares the this keyword with its surrounding
 // Best practice is to actually always use arrow functions when you need to preserve the value of the this keyword, such as we did here.
 
 // ES6 version v2
-const box66 = {
+const boxES6_2 = {
   color: 'orange',
   position: 1,
   clickMe: () => {
@@ -59,7 +59,7 @@ const box66 = {
   },
 };
 
-box66.clickMe();
+boxES6_2.clickMe();
 
 // In this version, the clickMe method shares the lexical this keyword from it's surroundings, which the global context
 // This means that the clickMe method here also no longer has its own this keyword.

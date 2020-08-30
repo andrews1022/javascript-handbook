@@ -17,7 +17,7 @@ PersonES5.prototype.calcAge = function () {
 
 var johnES5 = new PersonES5('John Smith', 1990, 'Web Developer');
 console.log(johnES5);
-// johnES5.calcAge();
+console.log(johnES5.calcAge());
 
 // The same thing, but using ES6 Classes
 class PersonES6 {
