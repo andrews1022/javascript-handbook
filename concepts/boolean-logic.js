@@ -1,7 +1,7 @@
-// ---------- BOOLEAN LOGIC ----------
-// Boolean logic is a branch of computer science that deals with true and false values. And it's actually something quite important in coding.
-// Now there are several logical operators that deal with true and false values.
-// But the most important ones are the NOT, AND, and OR operators.
+// Boolean logic is a branch of computer science that deals with true and false values, and it's actually something quite important in coding in general
+
+// There are several logical operators that deal with true and false values
+// The most important ones are the NOT, AND, and OR operators
 // Assume we have variables a & b
 // AND: && -> true if a AND b are true
 // OR: || -> true if a OR b is true

@@ -7,8 +7,8 @@
 
 const ul = document.querySelector('.list');
 
-// Remove the ul from the document
+// Remove the ul from the DOM
 ul.remove();
 
-// Remove Just Item 3
+// Remove just 'Item 3'
 ul.lastElementChild.remove();

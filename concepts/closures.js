@@ -1,5 +1,4 @@
-// Closures are probably one of the most difficult-to-understand topics for beginners, but you already know everything that you need in order to understand and use closures!
-// Our example for this lecture, we want to write a small function that returns a function which calculates how many years we have until retirement.
+// To demonstrate the power of closures, we will write a small function that returns another function which calculates how many years we have until retirement
 function retirement(retirementAge) {
   var msg = ' years left until retirement';
 
@@ -9,7 +8,8 @@ function retirement(retirementAge) {
   };
 }
 
-// And now, let's try to use this function, and, as you know, this returns a function, so we can store the result of calling this function in a variable, and then this variable will be a function as well
+// And now, let's try to use this function, and, as mentioned above, this returns a function
+// We can therefore store the result of calling this function in a variable, and then this variable will be a function itself
 var retirementUS = retirement(66);
 retirementUS(1990);
 
@@ -25,7 +25,7 @@ retirement(66)(1990);
 // Still, when we run this, this works
 // So somehow, we are able to still use these variables even after the retirement function, which declares these variables, already stopped its execution.
 
-// So think about that again.
+// Think about that again...
 // Our inner function here is able to use the retirement variable and msg variable of this function here that is already gone.
 // It has already returned, but somehow the variables are still there, and THIS is the closure
 // So now that we know what a closure is, let's see how and why this actually works behind the scenes
@@ -34,7 +34,7 @@ retirement(66)(1990);
 // An inner function always has access to the variables and parameters of its outer function, even after the outer function has returned
 
 // Let's now see how this function that we created can be useful for us
-// We can create three different functions for countries with different retirement ages, and use these functions over and over again
+// We can create two different functions for countries with different retirement ages, and use these functions over and over again
 
 // Let's create a retirement function for Germany and Iceland
 var retirementGermany = retirement(65);
@@ -44,40 +44,34 @@ var retirementIceland = retirement(67);
 retirementGermany(1990);
 retirementIceland(1990);
 
-// Challenge: re-write the below interview questions function using the power of closures!
+// Challenge: Re-write this function below, but using the power of closures
 function interviewQuestion(job) {
   if (job === 'designer') {
     return function (name) {
-      console.log(name + ', can you please explain is UX design is?');
+      console.log(`${name}, can you please explain is UX design is?`);
     };
   } else if (job === 'teacher') {
     return function (name) {
-      console.log(name + ', what subject(s) do you teach?');
+      console.log(`${name}, what subject(s) do you teach?`);
     };
   } else {
     return function (name) {
-      console.log('Hello ' + name + ', what do you do?');
+      console.log(`Hello ${name}, what do you do?`);
     };
   }
 }
 
 // Solution
 function interviewQuestion(job) {
-  if (job === 'designer') {
-    return function (name) {
-      console.log(`${name}, since you are a ${job}, can you explain what UX design is?`);
-    };
-  } else if (job === 'teacher') {
-    return function (name) {
-      console.log(
-        `${name}, since you are a ${job}, can you please tell us what subject, or subjects, you teach?`
-      );
-    };
-  }
+  return function (name) {
+    if (job === 'designer') {
+      console.log(`${name}, can you please explain is UX design is?`);
+    } else if (job === 'teacher') {
+      console.log(`${name}, what subject(s) do you teach?`);
+    } else {
+      console.log(`Hello ${name}, what do you do?`);
+    }
+  };
 }
 
-var janeJob = interviewQuestion('teacher');
-janeJob('Jane');
-
-// Short hand solution
-var jane = interviewQuestion('teacher')('Jane');
+interviewQuestion('teacher')('John');
