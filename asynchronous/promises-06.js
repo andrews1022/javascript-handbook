@@ -19,41 +19,41 @@
 // That's because this executor function here is used to inform the promise whether the event it is handling was successful or not
 // And if it was successful we're gonna call the resolve function and if not we call the reject function
 const getIDs = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    // Calling the resolve function - to mark it as fullfilled
-    // The resolve function takes in a parameter, which is the result of the promise
-    // This is how we return our result from the promise if it was successful
-    // So we return our array of recipe IDS
-    resolve([523, 883, 432, 974]);
-    // We won't run the reject function here, as this simply a setTime function, so there is no way it can fail
-    // But if you're calling data from a server where all kinds of erros can occur, use it then
-  }, 1500);
+	setTimeout(() => {
+		// Calling the resolve function - to mark it as fullfilled
+		// The resolve function takes in a parameter, which is the result of the promise
+		// This is how we return our result from the promise if it was successful
+		// So we return our array of recipe IDS
+		resolve([523, 883, 432, 974]);
+		// We won't run the reject function here, as this simply a setTime function, so there is no way it can fail
+		// But if you're calling data from a server where all kinds of erros can occur, use it then
+	}, 1500);
 });
 
 const getRecipe = (recipeID) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(
-      (id) => {
-        const recipe = { title: 'Fresh tomato pasta', publisher: 'Andrew' };
-        resolve(`Recipe ID: ${id}. Reciple title: ${recipe.title}`);
-      },
-      1500,
-      recipeID
-    );
-  });
+	return new Promise((resolve, reject) => {
+		setTimeout(
+			(id) => {
+				const recipe = { title: 'Fresh tomato pasta', publisher: 'Andrew' };
+				resolve(`Recipe ID: ${id}. Reciple title: ${recipe.title}`);
+			},
+			1500,
+			recipeID
+		);
+	});
 };
 
 const getRelated = (publisher) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(
-      (publisher) => {
-        const recipe = { title: 'Italian pizza', publisher: 'Andrew' };
-        resolve(`${publisher}: ${recipe.title}`);
-      },
-      1500,
-      publisher
-    );
-  });
+	return new Promise((resolve, reject) => {
+		setTimeout(
+			(publisher) => {
+				const recipe = { title: 'Italian pizza', publisher: 'Andrew' };
+				resolve(`${publisher}: ${recipe.title}`);
+			},
+			1500,
+			publisher
+		);
+	});
 };
 
 // Now it is actually time that we consume this promise, and in order to do that we can use two methods
@@ -66,17 +66,17 @@ const getRelated = (publisher) => {
 // In this case, it will be the entire array above
 // We can also chain on additional 'thens'
 getIDs
-  .then((ids) => {
-    console.log(ids);
-    return getRecipe(ids[2]);
-  })
-  .then((recipe) => {
-    console.log(recipe);
-    return getRelated('Jonas');
-  })
-  .then((recipe) => {
-    console.log(recipe);
-  })
-  .catch((error) => {
-    console.log(`Error: ${error}`);
-  });
+	.then((ids) => {
+		console.log(ids);
+		return getRecipe(ids[2]);
+	})
+	.then((recipe) => {
+		console.log(recipe);
+		return getRelated('Jonas');
+	})
+	.then((recipe) => {
+		console.log(recipe);
+	})
+	.catch((error) => {
+		console.log(`Error: ${error}`);
+	});

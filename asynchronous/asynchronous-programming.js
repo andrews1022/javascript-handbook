@@ -14,8 +14,8 @@ doTheNextThing(); // This has to wait until the posts load
 
 // Now let's look at the same code but written asynchronously
 loadPostsAsync(function () {
-  // ...wait until the posts are fetched
-  // ...do something with the posts
+	// ...wait until the posts are fetched
+	// ...do something with the posts
 });
 doTheNextThing(); // Now this doesn't have to wait until the posts load
 // In this case instead of just pulling the post out of a synchronous function we're passing in a callback function which is just one method for handling a synchronous code.
@@ -42,26 +42,26 @@ doTheNextThing(); // Now this doesn't have to wait until the posts load
 // ---------- EXAMPLE #2 ----------
 // Basic synchronous example - all the instructions are executed one after the other, line by line, just in the order they are written
 const second = () => {
-  console.log('Second');
+	console.log('Second');
 };
 
 const first = () => {
-  console.log('First');
-  second();
-  console.log('Third');
+	console.log('First');
+	second();
+	console.log('Third');
 };
 first();
 
 // Asynchronous code example - use setTimeout to simulate asynchronous code
 const asyncSecond = () => {
-  setTimeout(() => {
-    console.log('Second'); // Notice the delay where this appears
-  }, 2000);
+	setTimeout(() => {
+		console.log('Second'); // Notice the delay where this appears
+	}, 2000);
 };
 
 const asyncFirst = () => {
-  console.log('First');
-  second();
-  console.log('Third');
+	console.log('First');
+	second();
+	console.log('Third');
 };
 asyncFirst();

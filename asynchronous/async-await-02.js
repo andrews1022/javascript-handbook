@@ -6,18 +6,18 @@
 
 // A promise
 movePlayer(100, 'Left')
-  .then(() => movePlayer(400, 'Left'))
-  .then(() => movePlayer(10, 'Right'))
-  .then(() => movePlayer(350, 'Left'));
+	.then(() => movePlayer(400, 'Left'))
+	.then(() => movePlayer(10, 'Right'))
+	.then(() => movePlayer(350, 'Left'));
 // This is asynchronous code
 // We know that movePlayer is going to happen, and subsequent movePlayers will happen
 
 // With async/await, it would look something like this
 async function playerStart() {
-  await movePlayer(100, 'Left'); // pause
-  await movePlayer(400, 'Left'); // pause
-  await movePlayer(10, 'Right'); // pause
-  await movePlayer(350, 'Left'); // pause
+	await movePlayer(100, 'Left'); // pause
+	await movePlayer(400, 'Left'); // pause
+	await movePlayer(10, 'Right'); // pause
+	await movePlayer(350, 'Left'); // pause
 }
 // So what's going on here?
 // The big benefit of async await is that it makes code easier to read
@@ -40,10 +40,10 @@ async function playerStart() {
 
 // So let's take a look at this same code block from above in futher detail:
 async function playerStart() {
-  await movePlayer(100, 'Left'); // pause
-  await movePlayer(400, 'Left'); // pause
-  await movePlayer(10, 'Right'); // pause
-  await movePlayer(350, 'Left'); // pause
+	await movePlayer(100, 'Left'); // pause
+	await movePlayer(400, 'Left'); // pause
+	await movePlayer(10, 'Right'); // pause
+	await movePlayer(350, 'Left'); // pause
 }
 // We first declare a function as 'async'
 // We let JavaScript know - "Hey! This is an async function!", And we declare it with the keyword function and then a function name.
@@ -57,10 +57,10 @@ async function playerStart() {
 
 // Now the cool thing is that we can actully assign variables:
 async function playerStart() {
-  const firstMove = await movePlayer(100, 'Left'); // pause
-  const secondMove = await movePlayer(400, 'Left'); // pause
-  const thirdMove = await movePlayer(10, 'Right'); // pause
-  const fourthMove = await movePlayer(350, 'Left'); // pause
+	const firstMove = await movePlayer(100, 'Left'); // pause
+	const secondMove = await movePlayer(400, 'Left'); // pause
+	const thirdMove = await movePlayer(10, 'Right'); // pause
+	const fourthMove = await movePlayer(350, 'Left'); // pause
 }
 // So here we just have simple synchronous programming
 // You're just waiting for each line to happen
