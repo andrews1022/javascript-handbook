@@ -12,15 +12,15 @@
 // Next we see that we want the accumulator to start off with an empty array
 // From here we can open up the function:
 var flattened = [
-  [0, 1],
-  [2, 3],
-  [4, 5],
+	[0, 1],
+	[2, 3],
+	[4, 5]
 ].reduce((accumulator, array) => {
-  // You can start debugging by using console.log
-  console.log('array', array);
-  console.log('accumulator', accumulator);
+	// You can start debugging by using console.log
+	console.log('array', array);
+	console.log('accumulator', accumulator);
 
-  return accumulator.concat(array);
+	return accumulator.concat(array);
 }, []);
 
 console.log(flattened);

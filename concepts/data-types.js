@@ -56,9 +56,9 @@ const hobbies = ['movies', 'music']; // Arrays
 console.log(typeof hobbies); // Returns object
 
 const address = {
-  // Object literal
-  city: 'Vancouver',
-  province: 'BC',
+	// Object literal
+	city: 'Vancouver',
+	province: 'BC'
 };
 console.log(typeof address);
 

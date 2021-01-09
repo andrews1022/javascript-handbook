@@ -1,11 +1,11 @@
 // To demonstrate the power of closures, we will write a small function that returns another function which calculates how many years we have until retirement
 function retirement(retirementAge) {
-  var msg = ' years left until retirement';
+	var msg = ' years left until retirement';
 
-  return function (yearOfBirth) {
-    var age = 2020 - yearOfBirth;
-    console.log(retirementAge - age + msg);
-  };
+	return function (yearOfBirth) {
+		var age = 2020 - yearOfBirth;
+		console.log(retirementAge - age + msg);
+	};
 }
 
 // And now, let's try to use this function, and, as mentioned above, this returns a function
@@ -46,32 +46,32 @@ retirementIceland(1990);
 
 // Challenge: Re-write this function below, but using the power of closures
 function interviewQuestion(job) {
-  if (job === 'designer') {
-    return function (name) {
-      console.log(`${name}, can you please explain is UX design is?`);
-    };
-  } else if (job === 'teacher') {
-    return function (name) {
-      console.log(`${name}, what subject(s) do you teach?`);
-    };
-  } else {
-    return function (name) {
-      console.log(`Hello ${name}, what do you do?`);
-    };
-  }
+	if (job === 'designer') {
+		return function (name) {
+			console.log(`${name}, can you please explain is UX design is?`);
+		};
+	} else if (job === 'teacher') {
+		return function (name) {
+			console.log(`${name}, what subject(s) do you teach?`);
+		};
+	} else {
+		return function (name) {
+			console.log(`Hello ${name}, what do you do?`);
+		};
+	}
 }
 
 // Solution
 function interviewQuestion(job) {
-  return function (name) {
-    if (job === 'designer') {
-      console.log(`${name}, can you please explain is UX design is?`);
-    } else if (job === 'teacher') {
-      console.log(`${name}, what subject(s) do you teach?`);
-    } else {
-      console.log(`Hello ${name}, what do you do?`);
-    }
-  };
+	return function (name) {
+		if (job === 'designer') {
+			console.log(`${name}, can you please explain is UX design is?`);
+		} else if (job === 'teacher') {
+			console.log(`${name}, what subject(s) do you teach?`);
+		} else {
+			console.log(`Hello ${name}, what do you do?`);
+		}
+	};
 }
 
 interviewQuestion('teacher')('John');

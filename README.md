@@ -21,5 +21,6 @@ A handbook containing all notes I've taken on basic, intermediate, and advanced,
 ### YouTube
 
 - [Dev Ed](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)
+- [The Net Ninja ](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
 - [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA)
 - [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)

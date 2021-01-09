@@ -13,22 +13,22 @@
 const bills = [124, 48, 268];
 
 const tipArray = bills.map((bill) => {
-  // *NOTE* (bill) represents each index value inside the bills array
-  let tip = 0;
+	// *NOTE* (bill) represents each index value inside the bills array
+	let tip = 0;
 
-  if (bill <= 49) {
-    tip = bill * 0.2;
-  } else if (bill >= 50 && bill <= 200) {
-    tip = bill * 0.15;
-  } else {
-    tip = bill * 0.1;
-  }
+	if (bill <= 49) {
+		tip = bill * 0.2;
+	} else if (bill >= 50 && bill <= 200) {
+		tip = bill * 0.15;
+	} else {
+		tip = bill * 0.1;
+	}
 
-  return tip;
+	return tip;
 });
 
 const finalArray = tipArray.map((tip, index) => {
-  return tip + bills[index];
+	return tip + bills[index];
 });
 // *NOTE* (tip) represents each index value in the tipArray, and (index) represents each index value in the bills array - this adds them together
 

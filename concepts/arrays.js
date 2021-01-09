@@ -29,15 +29,15 @@ const booleans = [true, false, true];
 
 // You can even have an array of functions
 const functionsList = [
-  function apple() {
-    console.log('apple');
-  },
+	function apple() {
+		console.log('apple');
+	}
 ];
 
 // You can have arrays inside of an array, also known as 'nested arrays'
 const animalList = [
-  ['tiger', 'cat', 'bear', 'bird'],
-  ['dog', 'mouse', 'elephant', 'zebra'],
+	['tiger', 'cat', 'bear', 'bird'],
+	['dog', 'mouse', 'elephant', 'zebra']
 ];
 
 // ---------- PART 3: ACCESSING DATA IN THE ARRAY ----------
@@ -83,7 +83,7 @@ let lastFruit = fruits[fruits.length - 1];
 
 // Loop over an Array
 fruits.forEach((item, index) => {
-  console.log(item, index);
+	console.log(item, index);
 });
 
 // ---------- PART 5: HIGHER ORDER ARRAY METHODS ----------
@@ -95,14 +95,14 @@ const myNumbersArray = [1, 2, 10, 16];
 // First, let's remember how the forEach loop works again
 // Let's say we want to multiply every single number in myNumbersArray
 const newArray = myNumbersArray.forEach((num) => {
-  num * 2;
+	num * 2;
 });
 
 // We're just randomly multiplying the numbers by two but we're not really storing it anywhere.
 // So let's create an empty array and push on to it, using the .push() method
 const double = [];
 const newArray2 = myNumbersArray.forEach((num) => {
-  double.push(num * 2);
+	double.push(num * 2);
 });
 console.log('forEach/double.push', double);
 
@@ -110,7 +110,7 @@ console.log('forEach/double.push', double);
 // With .map(), you always need to return something
 // Below, we loop over each element/each number, and return a NEW array.
 const mappedArray = myNumbersArray.map((num) => {
-  return num * 2;
+	return num * 2;
 });
 console.log('map', mappedArray);
 // BREAKDOWN:
@@ -135,8 +135,8 @@ console.log('map', mappedArray);
 // And as the name suggests, we can FILTER an array based on a condition
 // For our demo, let's return all the elements in the array 'array' (near the top of this section) that are greater than 5
 const filteredArray = myNumbersArray.filter((num) => {
-  // And as with .map, we must return something
-  return num > 5;
+	// And as with .map, we must return something
+	return num > 5;
 });
 console.log('filter', filteredArray);
 
@@ -155,13 +155,13 @@ console.log('filter short', filteredArrayShort);
 // What is an accumulator?
 // An accumulator is something where we can store the information that happens in the body of the function.
 const reducedArray = myNumbersArray.reduce((acc, num) => {
-  return acc + num;
+	return acc + num;
 
-  // This line below:
-  // '}, 0)'
-  // It's a second parameter
-  // We can specify what we want our accumulator to start with the default value.
-  // In our case let's say zero.
+	// This line below:
+	// '}, 0)'
+	// It's a second parameter
+	// We can specify what we want our accumulator to start with the default value.
+	// In our case let's say zero.
 }, 0);
 console.log('reduce', reducedArray);
 // We get 29 because 10 + 16 = 26, then plus 1 & 2 = 29

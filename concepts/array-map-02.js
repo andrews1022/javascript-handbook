@@ -3,14 +3,8 @@ const array = [1, 2, 10, 16];
 
 // With map, you always need to return something
 // Below, we loop over each element, each number, multiply it by 2, and return a new array.
-// And again, since our arrow function has a single parameter, it can be written in shorthand like this:
-const mappedArray = array.map((num) => {
-  return num * 2;
-});
-
-// Even further shorthanded
-const mappedArrayShort = array.map((num) => num * 2);
-console.log('map short', mappedArrayShort);
+const mappedArray = array.map((num) => num * 2);
+console.log('map short', mappedArray);
 
 // ----------------------------------- BREAKDOWN -----------------------------------
 // Every time the array loops, let's say the first one is number one.

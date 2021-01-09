@@ -2,30 +2,30 @@
 // Here, we will talk about the powerful call, apply and bind methods
 // In a nutshell, these methods allow us to call a function and set the 'this' keyword manually
 var john = {
-  name: 'John',
-  age: 26,
-  job: 'teacher',
-  presentation: function (style, timeOfDay) {
-    if (style === 'formal') {
-      console.log(
-        `Good ${timeOfDay} ladies and gentlemen! I'm ${this.name}, I'm a ${this.job}, and I'm ${this.age} years old.`
-      );
-    } else if (style === 'friendly') {
-      console.log(
-        `Hey! What's up? I'm ${this.name}, I'm a ${this.job}, and I'm ${this.age} years old. Have a nice ${timeOfDay}!`
-      );
-    }
-  },
+	name: 'John',
+	age: 26,
+	job: 'teacher',
+	presentation: function (style, timeOfDay) {
+		if (style === 'formal') {
+			console.log(
+				`Good ${timeOfDay} ladies and gentlemen! I'm ${this.name}, I'm a ${this.job}, and I'm ${this.age} years old.`
+			);
+		} else if (style === 'friendly') {
+			console.log(
+				`Hey! What's up? I'm ${this.name}, I'm a ${this.job}, and I'm ${this.age} years old. Have a nice ${timeOfDay}!`
+			);
+		}
+	}
 };
 
 var emily = {
-  name: 'Emily',
-  age: 35,
-  job: 'designer',
-  // Now say we want to use the presentation method from the john object
-  // We can do so by using the call method
-  // The first argument in the call method is to set the this variable
-  // Then pass in any other agruments to the parameters you set (SEE BELOW)
+	name: 'Emily',
+	age: 35,
+	job: 'designer'
+	// Now say we want to use the presentation method from the john object
+	// We can do so by using the call method
+	// The first argument in the call method is to set the this variable
+	// Then pass in any other agruments to the parameters you set (SEE BELOW)
 };
 
 john.presentation('formal', 'formalmorning');
@@ -65,21 +65,21 @@ emilyFormal('afternoon');
 var years = [1990, 1965, 1937, 2008, 1999];
 
 function arrayCalc(arr, fn) {
-  var arrRes = [];
+	var arrRes = [];
 
-  for (var i = 0; i < arr.length; i++) {
-    arrRes.push(fn(arr[i]));
-  }
+	for (var i = 0; i < arr.length; i++) {
+		arrRes.push(fn(arr[i]));
+	}
 
-  return arrRes;
+	return arrRes;
 }
 
 function calculateAge(el) {
-  return 2020 - el;
+	return 2020 - el;
 }
 
 function isFullAge(limit, el) {
-  return el >= limit;
+	return el >= limit;
 }
 
 // Determine the ages

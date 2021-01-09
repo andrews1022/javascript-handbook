@@ -1,31 +1,41 @@
 // Complete the below questions using this array:
 const array = [
-  { username: 'John', team: 'red', score: 5, items: ['ball', 'book', 'pen'] },
-  {
-    username: 'Becky',
-    team: 'blue',
-    score: 10,
-    items: ['tape', 'backpack', 'pen'],
-  },
-  {
-    username: 'Susy',
-    team: 'red',
-    score: 55,
-    items: ['ball', 'eraser', 'pen'],
-  },
-  { username: 'Tyson', team: 'green', score: 1, items: ['book', 'pen'] },
+	{
+		username: 'John',
+		team: 'red',
+		score: 5,
+		items: ['ball', 'book', 'pen']
+	},
+	{
+		username: 'Becky',
+		team: 'blue',
+		score: 10,
+		items: ['tape', 'backpack', 'pen']
+	},
+	{
+		username: 'Susy',
+		team: 'red',
+		score: 55,
+		items: ['ball', 'eraser', 'pen']
+	},
+	{
+		username: 'Tyson',
+		team: 'green',
+		score: 1,
+		items: ['book', 'pen']
+	}
 ];
 
 // Find out the total score of all users using
 // array / score
 const totalUserScore = array.reduce(function (total, user) {
-  return total + user.score;
+	return total + user.score;
 }, 0);
 console.log('sum of all users scores', totalUserScore);
 
 // Arrow function of above
 const totalUserScoreArrow = array.reduce((total, user) => {
-  return total + user.score;
+	return total + user.score;
 }, 0);
 console.log('sum of all users scores using arrow function', totalUserScoreArrow);
 

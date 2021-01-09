@@ -14,10 +14,10 @@ console.log('3');
 
 // Now let's look at a more complex example to showcase the call stack:
 var first = () => {
-  var second = () => {
-    console.log('4');
-  };
-  second();
+	var second = () => {
+		console.log('4');
+	};
+	second();
 };
 
 // When we run

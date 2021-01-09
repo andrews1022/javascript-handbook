@@ -4,14 +4,14 @@
 // ---------- EXAMPLE #1 ----------
 // So lets turn this function below into an arrow function
 function addNums(num5 = 1, num6 = 1) {
-  return num5 + num6;
+	return num5 + num6;
 }
 
 // The irst step is to define it as a variable instead of using the function keyword
 // Next, place an = operator inbetween the variable name and (
 // Then, place a 'fat arrow' between the ) and {
 const addNumsArrow = (num7 = 1, num8 = 1) => {
-  return num7 + num8;
+	return num7 + num8;
 };
 console.log(addNumsArrow(5, 5));
 
@@ -32,7 +32,7 @@ console.log(addNumsArrow(5));
 // An arrow function with default values
 // Convert this function to arrow function with default age to 10;
 function isValidAge(age) {
-  return age;
+	return age;
 }
 
 // Answer:
@@ -41,26 +41,26 @@ const isValidAge = (age = 10) => age;
 // ---------- EXAMPLE #3 ----------
 // Convert this function with an if/else statement to arrow function:
 function whereAmI(username, location) {
-  if (username && location) {
-    return 'I am not lost';
-  } else {
-    return 'I am totally lost!';
-  }
+	if (username && location) {
+		return 'I am not lost';
+	} else {
+		return 'I am totally lost!';
+	}
 }
 
 // Answer:
 const whereAmI = (username, location) => {
-  if (username && location) {
-    return 'I am not lost';
-  } else {
-    return 'I am totally lost!';
-  }
+	if (username && location) {
+		return 'I am not lost';
+	} else {
+		return 'I am totally lost!';
+	}
 };
 
 // ---------- EXAMPLE #4 ----------
 // A named function with one parameter
 function isPositive(number) {
-  return number >= 0;
+	return number >= 0;
 }
 
 // Convert to an Arrow Function:
@@ -73,12 +73,12 @@ let isPositiveArrow = (number) => number >= 0;
 // ---------- EXAMPLE #5 ----------
 // A named function with no parameters, generating a random number
 function randomNumber() {
-  return Math.random;
+	return Math.random;
 }
 
 // Convert to an Arrow Function:
 let randomNumberArrow = () => {
-  return Math.random;
+	return Math.random;
 };
 
 // But this can be condensed down to this:
@@ -90,12 +90,12 @@ let randomNumberArrow = () => Math.random;
 
 // An anonymous function is a function with no name
 document.addEventListener('click', function () {
-  console.log('Clicked!');
+	console.log('Clicked!');
 });
 
 // Converted to an Arrow Function:
 document.addEventListener('click', () => {
-  console.log('Clicked!');
+	console.log('Clicked!');
 });
 
 // But the above can be condensed down to this as we only have 1 line in the block:
@@ -104,10 +104,10 @@ document.addEventListener('click', () => console.log('Clicked!'));
 // ---------- EXAMPLE #7 ----------
 // Consider this HTML:
 <ul id='items' class='list-group'>
-  <li class='list-group-item'>Item 1</li>
-  <li class='list-group-item'>Item 2</li>
-  <li class='list-group-item'>Item 3</li>
-  <li class='list-group-item'>Item 4</li>
+	<li class='list-group-item'>Item 1</li>
+	<li class='list-group-item'>Item 2</li>
+	<li class='list-group-item'>Item 3</li>
+	<li class='list-group-item'>Item 4</li>
 </ul>;
 
 // Select all li elements using querySelectorAll
@@ -115,12 +115,12 @@ const itemsList = document.querySelectorAll('.list-group-item');
 
 // REGULAR FUNCTION SYNTAX
 itemsList.forEach(function (item) {
-  item.style.backgroundColor = 'SpringGreen';
+	item.style.backgroundColor = 'SpringGreen';
 });
 
 // ARROW FUNCTION SYNTAX
 itemsList.forEach((item) => {
-  item.style.backgroundColor = 'SpringGreen';
+	item.style.backgroundColor = 'SpringGreen';
 });
 
 // CONDENSED ARROW FUNCTION
@@ -132,13 +132,13 @@ const years = [1990, 1965, 1982, 1937];
 
 // ES5
 var ages5 = years.map(function (el) {
-  return 2020 - el;
+	return 2020 - el;
 });
 console.log('Ages array using ES5:', ages5);
 
 // ES6
 let ages6 = years.map((el) => {
-  return 2020 - el;
+	return 2020 - el;
 });
 console.log('Ages array using ES6:', ages6);
 
@@ -154,8 +154,8 @@ console.log('Ages array using template literals:', ages6);
 
 // More than line 1 line
 ages6 = years.map((el, i) => {
-  const now = new Date().getFullYear();
-  const age = now - el;
-  return `Age element ${i + 1}: ${age}`;
+	const now = new Date().getFullYear();
+	const age = now - el;
+	return `Age element ${i + 1}: ${age}`;
 });
 console.log('Ages array if more than 1 line:', ages6);

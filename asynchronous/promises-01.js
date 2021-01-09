@@ -1,6 +1,6 @@
 // ---------------------- PROMISES ----------------------
-// We're going to try and mimic blog posts on a server, getting them, and creating a blog post
 
+// We're going to try and mimic blog posts on a server, getting them, and creating a blog post
 const posts = [
 	{ title: 'Post One', body: 'This is post one' },
 	{ title: 'Post Two', body: 'This is post two' }
