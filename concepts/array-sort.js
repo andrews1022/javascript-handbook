@@ -11,9 +11,6 @@ const companies = [
 	{ name: 'Walmart', category: 'Retail', start: 1981, end: 1989 }
 ];
 
-// Array of Ages
-const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
-
 // ---------- SORT ----------
 // Sort companies based on their start year (earliest - latest)
 // Inside the () after function keyword, it will take in two values
@@ -38,6 +35,9 @@ console.log(
 // NOTE:
 // Using comp1 and comp2 is fine, but typically, we'd just a & b like this:
 const sortedCompaniesStandard = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
+
+// Array of Ages
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // Sort ages from lowest to highest
 // This does not work, it will only look at the first number so 5 is out of place
