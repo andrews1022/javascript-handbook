@@ -1,8 +1,8 @@
 // HTML for reference:
 <ul class='items'>
-  <li class='item'>Item 1</li>
-  <li class='item'>Item 2</li>
-  <li class='item'>Item 3</li>
+	<li class='item'>Item 1</li>
+	<li class='item'>Item 2</li>
+	<li class='item'>Item 3</li>
 </ul>;
 
 // Select all the li elements above by tag

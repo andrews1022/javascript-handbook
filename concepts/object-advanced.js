@@ -12,11 +12,11 @@ false;
 
 // Another example:
 var object1 = {
-  value: 10,
+	value: 10
 };
 var object2 = object1;
 var object3 = {
-  value: 10,
+	value: 10
 };
 
 // In the console:
@@ -47,7 +47,7 @@ object3.value; // = 10
 // Context vs Scope (lots of confusion between the two)
 // Reminder of scope
 function b() {
-  let a = 4;
+	let a = 4;
 }
 // Doing console.log(a); will not work, because the variable only lives inside the universe of the function b()
 
@@ -63,15 +63,15 @@ console.log(this);
 
 // Another example
 function a() {
-  console.log(this);
+	console.log(this);
 }
 // We still get window, we're still in the window environment
 
 // Let's use it like this:
 const object4 = {
-  a: function () {
-    console.log(this);
-  },
+	a: function () {
+		console.log(this);
+	}
 };
 // So in the console we run:
 object4.a();
@@ -86,13 +86,13 @@ object4.a();
 // You must capitalize your class name
 // Let's say we want to make players for a big multiplayer game
 class Player {
-  constructor(name, type) {
-    this.name = name;
-    this.type = type;
-  }
-  introduce() {
-    console.log(`Hi! I am ${this.name}, and I am a ${this.type}.`);
-  }
+	constructor(name, type) {
+		this.name = name;
+		this.type = type;
+	}
+	introduce() {
+		console.log(`Hi! I am ${this.name}, and I am a ${this.type}.`);
+	}
 }
 // When you create a a 'Player', 'class' it says every time we're making a copy of a 'Player' the first thing that gets run is the 'constructor' function
 // The 'constructor' function is gonna create these properties on the 'Player' object.
@@ -102,16 +102,16 @@ class Player {
 // So now, let's create a player that is a wizard
 // This line below reads as we want 'wizard' to extend whatever 'Player' has.
 class Wizard extends Player {
-  constructor(name, type) {
-    // Any time we extend something we need to also call the 'constructor' function of the 'Player' class.
-    // We have to do something called 'super' with the properties that we want to pass to the 'constructor'.
-    // In this case, 'name' and 'type',
-    super(name, type);
-    // Again, whenever you 'extend' a class, you want to use super so that you essentially have access to these (what's inside of the constructor function from the extended class)
-  }
-  play() {
-    console.log(`WEEEEEE! I'm a ${this.type}!`);
-  }
+	constructor(name, type) {
+		// Any time we extend something we need to also call the 'constructor' function of the 'Player' class.
+		// We have to do something called 'super' with the properties that we want to pass to the 'constructor'.
+		// In this case, 'name' and 'type',
+		super(name, type);
+		// Again, whenever you 'extend' a class, you want to use super so that you essentially have access to these (what's inside of the constructor function from the extended class)
+	}
+	play() {
+		console.log(`WEEEEEE! I'm a ${this.type}!`);
+	}
 }
 
 // Now let's see this in action

@@ -22,5 +22,6 @@ var _myCat = 'Whiskers'; // Used to declare private variables
 
 // Variables CANNOT include spaces
 var my friend = 'Brian'
+
 // Instead, use camel case
 var myFriend = 'Brian'

@@ -7,40 +7,40 @@
 // We're going to create a member factory that takes a member type in creates a new object based on that type
 
 function MemberFactory() {
-  this.createMember = function (name, membershipType) {
-    let member;
+	this.createMember = function (name, membershipType) {
+		let member;
 
-    if (membershipType === 'simple') {
-      member = new SimpleMembership(name);
-    } else if (membershipType === 'standard') {
-      member = new StandardMembership(name);
-    } else if (membershipType === 'super') {
-      member = new SuperMembership(name);
-    }
+		if (membershipType === 'simple') {
+			member = new SimpleMembership(name);
+		} else if (membershipType === 'standard') {
+			member = new StandardMembership(name);
+		} else if (membershipType === 'super') {
+			member = new SuperMembership(name);
+		}
 
-    member.type = membershipType;
+		member.type = membershipType;
 
-    member.define = function () {
-      console.log(`${this.name} (${this.type}): ${this.cost}`);
-    };
+		member.define = function () {
+			console.log(`${this.name} (${this.type}): ${this.cost}`);
+		};
 
-    return member;
-  };
+		return member;
+	};
 }
 
 const SimpleMembership = function (name) {
-  this.name = name;
-  this.cost = '$5';
+	this.name = name;
+	this.cost = '$5';
 };
 
 const StandardMembership = function (name) {
-  this.name = name;
-  this.cost = '$15';
+	this.name = name;
+	this.cost = '$15';
 };
 
 const SuperMembership = function (name) {
-  this.name = name;
-  this.cost = '$25';
+	this.name = name;
+	this.cost = '$25';
 };
 
 const members = [];
@@ -56,5 +56,5 @@ members.push(factory.createMember('Tom Smith', 'standard'));
 
 // Loop through the members
 members.forEach((member) => {
-  member.define();
+	member.define();
 });

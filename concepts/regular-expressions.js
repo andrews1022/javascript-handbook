@@ -132,11 +132,11 @@ console.log('Exec result:', result);
 
 // Testing function
 function reTest(re, str) {
-  if (re.test(str)) {
-    console.log(`${str} matches ${re.source}`);
-  } else {
-    console.log(`${str} does NOT match ${re.source}`);
-  }
+	if (re.test(str)) {
+		console.log(`${str} matches ${re.source}`);
+	} else {
+		console.log(`${str} does NOT match ${re.source}`);
+	}
 }
 
 reTest(re, str);

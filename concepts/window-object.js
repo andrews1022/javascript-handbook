@@ -11,9 +11,9 @@ alert(`Hello ${input}! Have a great day!`);
 
 // ---------- CONFIRM ----------
 if (confirm('Are you sure you want to delete this?')) {
-  console.log('YES');
+	console.log('YES');
 } else {
-  console.log('NO');
+	console.log('NO');
 }
 
 // This val variable will be mutated over the course of the file

@@ -1,10 +1,10 @@
 // HTML for reference
 <ul class='collection'>
-  <li class='collection-item'>List Item</li>
-  <li class='collection-item'>List Item</li>
-  <li class='collection-item'>List Item</li>
-  <li class='collection-item'>List Item</li>
-  <li class='collection-item'>List Item</li>
+	<li class='collection-item'>List Item</li>
+	<li class='collection-item'>List Item</li>
+	<li class='collection-item'>List Item</li>
+	<li class='collection-item'>List Item</li>
+	<li class='collection-item'>List Item</li>
 </ul>;
 
 let val;

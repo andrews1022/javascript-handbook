@@ -1,7 +1,7 @@
 // The new spread operator is a very convenient way to expand elements of an array in places like arguments and function calls
 
 function addFourAges(a, b, c, d) {
-  return a + b + c + d;
+	return a + b + c + d;
 }
 var sum1 = addFourAges(18, 30, 12, 21);
 console.log(sum1);
@@ -36,7 +36,7 @@ const boxes = document.querySelectorAll('.box');
 // Use spread operator to put them into the same structure
 const all = [heading, ...boxes];
 const allArray = Array.from(all).forEach((el) => {
-  el.style.color = 'rebeccapurple';
+	el.style.color = 'rebeccapurple';
 });
 
 // In one line:

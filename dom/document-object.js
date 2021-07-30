@@ -99,5 +99,5 @@ console.log(val);
 let scripts = document.scripts;
 let scriptsArray = Array.from(scripts);
 scriptsArray.forEach((iteratedScript) => {
-  console.log(iteratedScript);
+	console.log(iteratedScript);
 });

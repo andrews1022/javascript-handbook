@@ -3,25 +3,25 @@
 
 // ---------- EXAMPLE #1 ----------
 const person = {
-  firstName: 'John',
-  lastName: 'Doe',
-  age: 33,
+	firstName: 'John',
+	lastName: 'Doe',
+	age: 33,
 
-  // You can have arrays inside your object
-  hobbies: ['acting', 'movies', 'web development'],
+	// You can have arrays inside your object
+	hobbies: ['acting', 'movies', 'web development'],
 
-  // You can have an object within an object, which is known as an embedded or nested object
-  address: {
-    street: '124 Main Street',
-    city: 'Miami',
-    province: 'FL',
-  },
+	// You can have an object within an object, which is known as an embedded or nested object
+	address: {
+		street: '124 Main Street',
+		city: 'Miami',
+		province: 'FL'
+	},
 
-  // You can even have functions inside your object
-  getBirthYear: function () {
-    // And to access another property within the object, use the 'this' keyword
-    return 2019 - this.age;
-  },
+	// You can even have functions inside your object
+	getBirthYear: function () {
+		// And to access another property within the object, use the 'this' keyword
+		return 2019 - this.age;
+	}
 };
 
 // See it in the console
@@ -45,7 +45,7 @@ console.log(firstName);
 
 // Create a destructured variable from the nested object:
 const {
-  address: { city },
+	address: { city }
 } = person;
 console.log(city);
 
@@ -56,17 +56,17 @@ console.log(person);
 // ---------- EXAMPLE #2 ----------
 // Let's create a book
 const book1 = {
-  // Properties, which are just key value pairs
-  title: 'Adventures of Huckleberry Finn',
-  author: 'Mark Twain',
-  year: '1884',
+	// Properties, which are just key value pairs
+	title: 'Adventures of Huckleberry Finn',
+	author: 'Mark Twain',
+	year: '1884',
 
-  // You can also have functions (known as methods) inside of an object:
-  getSummary: function () {
-    return `${this.title} was written ${this.author} in ${this.year}`;
-    // 'this' refers to this specific object (book1)
-    // and 'this' refers to it's current environment
-  },
+	// You can also have functions (known as methods) inside of an object:
+	getSummary: function () {
+		return `${this.title} was written ${this.author} in ${this.year}`;
+		// 'this' refers to this specific object (book1)
+		// and 'this' refers to it's current environment
+	}
 };
 // Access each property:
 console.log('Book object: ', book1);
@@ -79,21 +79,21 @@ console.log('See all the propeties of an object: ', Object.keys(book1)); // retu
 
 // ---------- EXAMPLE #3 ----------
 const person = {
-  // In here, we put key value pairs
-  // firstName is the key, 'Steve' is the value
-  firstName: 'Steve',
-  lastName: 'Smith',
-  age: 30,
-  email: 'steve@aol.com',
-  hobbies: ['music', 'sports', 'movies'],
-  address: {
-    city: 'Miami',
-    state: 'FL',
-  },
-  getBirthYear: function () {
-    // To access another property within the object, use the 'this' keyword
-    return 2019 - this.age;
-  },
+	// In here, we put key value pairs
+	// firstName is the key, 'Steve' is the value
+	firstName: 'Steve',
+	lastName: 'Smith',
+	age: 30,
+	email: 'steve@aol.com',
+	hobbies: ['music', 'sports', 'movies'],
+	address: {
+		city: 'Miami',
+		state: 'FL'
+	},
+	getBirthYear: function () {
+		// To access another property within the object, use the 'this' keyword
+		return 2019 - this.age;
+	}
 };
 
 // Variable named val to be changed as you work your way down
@@ -137,12 +137,12 @@ console.log(val);
 // ---------- EXAMPLE #4 ----------
 // You can also create an array of objects, like so
 const people = [
-  { name: 'John', age: 30 },
-  { name: 'Mike', age: 23 },
-  { name: 'Tom', age: 25 },
+	{ name: 'John', age: 30 },
+	{ name: 'Mike', age: 23 },
+	{ name: 'Tom', age: 25 }
 ];
 
 // Loop through the array of objects and get the current name
 for (let i = 0; i < people.length; i++) {
-  console.log(people[i].name);
+	console.log(people[i].name);
 }

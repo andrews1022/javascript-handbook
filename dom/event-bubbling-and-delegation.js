@@ -1,66 +1,66 @@
 // HTML for reference
 <div class='container'>
-  <div class='row'>
-    <div class='col s12'>
-      <div id='main' class='card'>
-        <div class='card-content'>
-          <span class='card-title'>Task List</span>
-          <div class='row'>
-            <form id='task-form'>
-              <div class='input-field col s12'>
-                <input type='text' name='task' id='task' />
-                <label for='task'>New Task</label>
-              </div>
-              <select>
-                <option value='1'>1</option>
-                <option value='2'>2</option>
-                <option value='3'>3</option>
-              </select>
-              <input type='submit' value='Add Task' class='btn' />
-            </form>
-          </div>
-        </div>
-        <div class='card-action'>
-          <h5 id='task-title'>Tasks</h5>
-          <ul class='collection'>
-            <li class='collection-item'>
-              List Item
-              <a href='#' class='delete-item secondary-content'>
-                <i class='fa fa-remove'></i>
-              </a>
-            </li>
-            <li class='collection-item'>
-              List Item
-              <a href='#' class='delete-item secondary-content'>
-                <i class='fa fa-remove'></i>
-              </a>
-            </li>
-            <li class='collection-item'>
-              List Item
-              <a href='#' class='delete-item secondary-content'>
-                <i class='fa fa-remove'></i>
-              </a>
-            </li>
-            <li class='collection-item'>
-              List Item
-              <a href='#' class='delete-item secondary-content'>
-                <i class='fa fa-remove'></i>
-              </a>
-            </li>
-            <li class='collection-item'>
-              List Item
-              <a href='#' class='delete-item secondary-content'>
-                <i class='fa fa-remove'></i>
-              </a>
-            </li>
-          </ul>
-          <a class='clear-tasks btn black' href='#'>
-            Clear Tasks
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class='row'>
+		<div class='col s12'>
+			<div id='main' class='card'>
+				<div class='card-content'>
+					<span class='card-title'>Task List</span>
+					<div class='row'>
+						<form id='task-form'>
+							<div class='input-field col s12'>
+								<input type='text' name='task' id='task' />
+								<label for='task'>New Task</label>
+							</div>
+							<select>
+								<option value='1'>1</option>
+								<option value='2'>2</option>
+								<option value='3'>3</option>
+							</select>
+							<input type='submit' value='Add Task' class='btn' />
+						</form>
+					</div>
+				</div>
+				<div class='card-action'>
+					<h5 id='task-title'>Tasks</h5>
+					<ul class='collection'>
+						<li class='collection-item'>
+							List Item
+							<a href='#' class='delete-item secondary-content'>
+								<i class='fa fa-remove'></i>
+							</a>
+						</li>
+						<li class='collection-item'>
+							List Item
+							<a href='#' class='delete-item secondary-content'>
+								<i class='fa fa-remove'></i>
+							</a>
+						</li>
+						<li class='collection-item'>
+							List Item
+							<a href='#' class='delete-item secondary-content'>
+								<i class='fa fa-remove'></i>
+							</a>
+						</li>
+						<li class='collection-item'>
+							List Item
+							<a href='#' class='delete-item secondary-content'>
+								<i class='fa fa-remove'></i>
+							</a>
+						</li>
+						<li class='collection-item'>
+							List Item
+							<a href='#' class='delete-item secondary-content'>
+								<i class='fa fa-remove'></i>
+							</a>
+						</li>
+					</ul>
+					<a class='clear-tasks btn black' href='#'>
+						Clear Tasks
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>;
 
 // Event bubbling is the bubbling up of events through the DOM.
@@ -71,19 +71,19 @@
 
 // EVENT BUBBLING EXAMPLE
 document.querySelector('.card-title').addEventListener('click', () => {
-  console.log('card-title');
+	console.log('card-title');
 });
 
 document.querySelector('.card-content').addEventListener('click', () => {
-  console.log('card-content');
+	console.log('card-content');
 });
 
 document.querySelector('.card').addEventListener('click', () => {
-  console.log('card');
+	console.log('card');
 });
 
 document.querySelector('.col').addEventListener('click', () => {
-  console.log('col');
+	console.log('col');
 });
 
 // All 4 of these event listeners fire off even if we click just the card title
@@ -93,7 +93,7 @@ document.querySelector('.col').addEventListener('click', () => {
 const delItem = document.querySelector('.delete-item');
 
 function deleteItem() {
-  console.log('delete item');
+	console.log('delete item');
 }
 
 delItem.addEventListener('click', deleteItem);
@@ -106,21 +106,21 @@ delItem.addEventListener('click', deleteItem);
 document.body.addEventListener('click', deleteItem);
 
 function deleteItem(e) {
-  // At this point, this works when we click the X button
-  // But, it's grabbing the <i> tag, and not the <a> tag
-  // And with className, we need to match ALL class names
-  // So if we added a class to this element later on, this would not work
-  if (e.target.parentElement.className === 'delete-item secondary-content') {
-    console.log('delete item');
-  }
+	// At this point, this works when we click the X button
+	// But, it's grabbing the <i> tag, and not the <a> tag
+	// And with className, we need to match ALL class names
+	// So if we added a class to this element later on, this would not work
+	if (e.target.parentElement.className === 'delete-item secondary-content') {
+		console.log('delete item');
+	}
 
-  // Better way using classList - check to see if the element contains at least this one class name
-  if (e.target.parentElement.classList.contains('delete-item')) {
-    console.log('DELETED'); // Remember this targets the <a> tag, as it is the parent of the <i> tag
+	// Better way using classList - check to see if the element contains at least this one class name
+	if (e.target.parentElement.classList.contains('delete-item')) {
+		console.log('DELETED'); // Remember this targets the <a> tag, as it is the parent of the <i> tag
 
-    // Actually remove the whole <li> elememt
-    // Since we are targeting the <i> element, we need to go 2 up to get the <li>
-    // So we use .parentElement twice
-    e.target.parentElement.parentElement.remove();
-  }
+		// Actually remove the whole <li> elememt
+		// Since we are targeting the <i> element, we need to go 2 up to get the <li>
+		// So we use .parentElement twice
+		e.target.parentElement.parentElement.remove();
+	}
 }

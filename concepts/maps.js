@@ -39,9 +39,9 @@ console.log(question);
 
 // Check if a certain is present
 if (question.has(4)) {
-  console.log('Answer #4 is here');
+	console.log('Answer #4 is here');
 } else {
-  console.log('Answer #4 is not here');
+	console.log('Answer #4 is not here');
 }
 
 // Delete everything inside the map, use .clear();
@@ -52,7 +52,7 @@ console.log(question);
 // And we can do so using the forEach() method
 // With forEach on maps, we have access to the current element, current key, and the entire map
 question.forEach((value, key) => {
-  console.log(`This is ${key} and it's set to ${value}`);
+	console.log(`This is ${key} and it's set to ${value}`);
 });
 
 // We can also use the for of loop
@@ -62,12 +62,12 @@ question.forEach((value, key) => {
 // What this does here is to return all entries of our questions map, and we can then use destructuring to store the key and values in two separate values, such as we did before.
 // This is also possible for arrays
 for (let [key, value] of question.entries()) {
-  // console.log(`This is ${key} and it's set to ${value}`);
+	// console.log(`This is ${key} and it's set to ${value}`);
 
-  // Only print the values of the key is a number
-  if (typeof key === 'number') {
-    console.log(`Answer ${key}: ${value}`);
-  }
+	// Only print the values of the key is a number
+	if (typeof key === 'number') {
+		console.log(`Answer ${key}: ${value}`);
+	}
 }
 
 // Get user input

@@ -7,18 +7,18 @@
 
 // ES5 Way
 function isFullAgeES5() {
-  // In ES5, if we want to receive an undefined number of arguments, then we simply don't define any parameters for our function, and then just use the 'arguments' keyword
-  // And remember the 'arguments' keyword is very similar to the 'this' keyword
-  // It's a variable that each execution context gets access to
-  console.log(arguments);
+	// In ES5, if we want to receive an undefined number of arguments, then we simply don't define any parameters for our function, and then just use the 'arguments' keyword
+	// And remember the 'arguments' keyword is very similar to the 'this' keyword
+	// It's a variable that each execution context gets access to
+	console.log(arguments);
 
-  // Arguments is not an array, but an array like structure
-  // So, we would need to convert it to an array first if we wanted to loop over it
-  var argsArr = Array.prototype.slice.call(arguments);
+	// Arguments is not an array, but an array like structure
+	// So, we would need to convert it to an array first if we wanted to loop over it
+	var argsArr = Array.prototype.slice.call(arguments);
 
-  argsArr.forEach(function (el) {
-    console.log(2020 - el >= 18);
-  });
+	argsArr.forEach(function (el) {
+		console.log(2020 - el >= 18);
+	});
 }
 isFullAgeES5(1990, 2004, 1965, 2018, 1987);
 
@@ -28,7 +28,7 @@ isFullAgeES5(1990, 2004, 1965, 2018, 1987);
 // What this will do is as soon as we call the function, it will transform the arguments, for example the years we enter, it will transform them into an array and then pass it into the function
 // And we can then access that years array automatically in the function as we did before
 function isFullAgeES6(...years) {
-  years.forEach((current) => console.log(2020 - current >= 18));
+	years.forEach((current) => console.log(2020 - current >= 18));
 }
 isFullAgeES6(1990, 2004, 1965, 2018, 1987);
 // The big difference between the spread operator and the rest parameters is actually the place in which we use them
@@ -39,17 +39,17 @@ isFullAgeES6(1990, 2004, 1965, 2018, 1987);
 
 // ES5 Way
 function isFullAgeES5(limit) {
-  var argsArr = Array.prototype.slice.call(arguments, 1); // Exclude the first argument (limit)
+	var argsArr = Array.prototype.slice.call(arguments, 1); // Exclude the first argument (limit)
 
-  argsArr.forEach(function (el) {
-    console.log(2020 - el >= limit);
-  });
+	argsArr.forEach(function (el) {
+		console.log(2020 - el >= limit);
+	});
 }
 // isFullAgeES5(21, 1990, 2004, 1965, 2018, 1987);
 
 // ES6 Way
 // All we have to do the ES6 way is to include the limit, and then our ...years
 function isFullAgeES6(limit, ...years) {
-  years.forEach((current) => console.log(2020 - current >= limit));
+	years.forEach((current) => console.log(2020 - current >= limit));
 }
 isFullAgeES6(19, 1990, 2004, 1965, 2018, 1987);

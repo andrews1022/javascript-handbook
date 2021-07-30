@@ -1,6 +1,6 @@
 // Hoisting in practice
 function calcAge(year) {
-  console.log(2016 - year);
+	console.log(2016 - year);
 }
 
 calcAge(1990);
@@ -10,7 +10,7 @@ calcAge(1990);
 calcAge(1965);
 
 function calcAge(year) {
-  console.log(2016 - year);
+	console.log(2016 - year);
 }
 
 // This is hoisting, in practice
@@ -23,7 +23,7 @@ function calcAge(year) {
 // So let's see how this works out with function expressions
 
 var retirement = function (year) {
-  console.log(65 - (2020 - year));
+	console.log(65 - (2020 - year));
 };
 
 retirement(1992);
@@ -32,7 +32,7 @@ retirement(1992);
 retirement(1992);
 
 var retirement = function (year) {
-  console.log(65 - (2020 - year));
+	console.log(65 - (2020 - year));
 };
 
 retirement(1992);
@@ -49,9 +49,9 @@ console.log(age); // 23
 // Because remember, in the creation phase of the variable object, what happens is that the code is scanned for variable declarations and the variables are then set to undefined
 
 function foo() {
-  console.log(age); // logs undefined
-  var age = 65;
-  console.log(age); // logs 65 from function scope
+	console.log(age); // logs undefined
+	var age = 65;
+	console.log(age); // logs 65 from function scope
 }
 foo();
 console.log(age); // Logs from global scope

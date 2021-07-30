@@ -1,6 +1,6 @@
 // Example 2
 function addNums(num1, num2) {
-  console.log(num1 + num2);
+	console.log(num1 + num2);
 }
 // Let's call it here:
 addNums(5, 4); // We are passing in 5 as num1, and 4 as num2
@@ -10,28 +10,28 @@ addNums(); // We get NaN - Not a Number, simply meaning it SHOULD be a number bu
 
 // FUNCTION WITH DEFAULT VALUES
 function addNumsV2(num3 = 1, num4 = 1) {
-  console.log(num3 + num4);
+	console.log(num3 + num4);
 }
 addNumsV2();
 
 // Typically we don't use functions to console.log something
 // We usually want to 'return' something from it
 function addNumsV3(num5 = 1, num6 = 1) {
-  return num5 + num6;
+	return num5 + num6;
 }
 addNumsV3(5, 5); // At this point, nothing happens yet. But you chould just wrap this in a console.log as well
 
 // USING RETURN (copy and paste into console)
 function multiply(a, b) {
-  if (a > 10 || b > 10) {
-    return "That's too hard! :(";
-  } else {
-    return a * b;
-  }
+	if (a > 10 || b > 10) {
+		return "That's too hard! :(";
+	} else {
+		return a * b;
+	}
 
-  // While we don't HAVE TO return something from a function, ideally, we should
-  // 'return' notes the END of the function. Nothing after it is executed
-  // But as you can see above, we can multiple returns inside an if/else statement
+	// While we don't HAVE TO return something from a function, ideally, we should
+	// 'return' notes the END of the function. Nothing after it is executed
+	// But as you can see above, we can multiple returns inside an if/else statement
 }
 
 multiply(5, 10);

@@ -24,7 +24,7 @@ console.log(div.classList);
 
 // You can also use ternary operator (or if/else) to check if the element has a certain class name
 const classCheck = div.classList.contains('first')
-  ? div.classList.remove('first')
-  : div.classList.add('first');
+	? div.classList.remove('first')
+	: div.classList.add('first');
 
 return classCheck;

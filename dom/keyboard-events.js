@@ -1,11 +1,11 @@
 // HTML for reference:
 <form class='form-inline mb-3' id='form'>
-  <input type='text' class='form-control mr-2 text-input' id='text-input' />
-  <select class='form-control mr-2' id='select'>
-    <option value='1'>1</option>
-    <option value='2'>2</option>
-    <option value='3'>3</option>
-  </select>
+	<input type='text' class='form-control mr-2 text-input' id='text-input' />
+	<select class='form-control mr-2' id='select'>
+		<option value='1'>1</option>
+		<option value='2'>2</option>
+		<option value='3'>3</option>
+	</select>
 </form>;
 
 // Select the elements:
@@ -15,10 +15,10 @@ var select = document.querySelector('#select');
 
 // Show the event type
 function runEvent(event) {
-  console.log('EVENT TYPE: ' + event.type);
+	console.log('EVENT TYPE: ' + event.type);
 
-  // Prevent default form behavior
-  event.preventDefault();
+	// Prevent default form behavior
+	event.preventDefault();
 }
 
 // List of events

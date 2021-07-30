@@ -48,7 +48,7 @@ console.log(myObject[KEY2]);
 // If we were to loop through myObject using a forIn loop, it wouldn't actually show up in the iteration because they're not enumerable in forIn iteration.
 // Symbols are enumerable in for...in
 for (let i in myObject) {
-  console.log(`${i}: ${myObject[i]}`); // We get justkey3 & key4
+	console.log(`${i}: ${myObject[i]}`); // We get justkey3 & key4
 }
 
 // Another thing with Symbols is that they are ignored with JSON.stringify

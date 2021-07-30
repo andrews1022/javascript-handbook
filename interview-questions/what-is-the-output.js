@@ -6,12 +6,12 @@ console.log(`Your have ${notifications} notification ${notifications !== 1 && 's
 
 // ---------- What is the output? ----------
 const fetcher = (url) =>
-  new Promise((response) => {
-    setTimeout(() => response(`${url}!`), 200);
-  });
+	new Promise((response) => {
+		setTimeout(() => response(`${url}!`), 200);
+	});
 const fetchAll = async () => {
-  const all = await Promise.all([fetcher('1'), fetcher('2')]);
-  console.log(all);
+	const all = await Promise.all([fetcher('1'), fetcher('2')]);
+	console.log(all);
 };
 fetchAll();
 
@@ -19,9 +19,9 @@ fetchAll();
 let pr = (x) => new Promise((res) => setTimeout(() => res(x), Math.random() * 200));
 let arr = [pr(1), pr(2), pr(3)];
 const getData = async () => {
-  for await (let el of arr) {
-    console.log(el);
-  }
+	for await (let el of arr) {
+		console.log(el);
+	}
 };
 getData();
 
@@ -32,44 +32,44 @@ console.log(arr1.sort() === arr1, arr2.sort() == arr2, arr1.sort() === arr2.sort
 
 // ---------- What is the output? ----------
 const message = Object.values({
-  2: '\\',
-  15: '/',
-  5: '(',
-  13: '/',
-  1: '(',
-  7: ':',
-  8: '.',
-  14: '/',
-  16: ')',
-  9: '.',
-  11: '.',
-  4: '\\',
-  12: ')',
-  3: '\\',
-  10: ':',
-  6: '.',
+	2: '\\',
+	15: '/',
+	5: '(',
+	13: '/',
+	1: '(',
+	7: ':',
+	8: '.',
+	14: '/',
+	16: ')',
+	9: '.',
+	11: '.',
+	4: '\\',
+	12: ')',
+	3: '\\',
+	10: ':',
+	6: '.'
 }).reduce((acc, val) => acc + val, '');
 console.log(message);
 
 // ---------- What is the output? ----------
 const myFunc = (a) => {
-  return (b) => {
-    return a + b;
-  };
+	return (b) => {
+		return a + b;
+	};
 };
 // For context, above can also be written as:
 var myFunc = function myFunc(a) {
-  return function (b) {
-    return a + b;
-  };
+	return function (b) {
+		return a + b;
+	};
 };
 console.log(myFunc(2)(3));
 
 // ---------- What is the output? ----------
 const arr1 = [
-  {
-    firstName: 'James',
-  },
+	{
+		firstName: 'James'
+	}
 ];
 const arr2 = [...arr1]; // Can also be written as 'const arr2 = [].concat(arr1);'
 arr2[0].firstName = 'Jonah';
@@ -88,14 +88,14 @@ console.log((1, 2, 3));
 
 // ---------- What is the output? ----------
 const person = {
-  firstname: 'Joe',
-  introduce: 'Hi, I’m ' + this.firstname,
+	firstname: 'Joe',
+	introduce: 'Hi, I’m ' + this.firstname
 };
 console.log(person.introduce);
 
 // ---------- What is the output? ----------
 for (let i = 0; i < 5; i++) {
-  setTimeout(() => console.log(i), 10);
+	setTimeout(() => console.log(i), 10);
 }
 
 // ---------- What is the output? ----------
@@ -104,33 +104,33 @@ console.log(classes);
 
 // ---------- What is the output? ----------
 const myFunc = (a) => {
-  return a instanceof Function ? a() : a;
+	return a instanceof Function ? a() : a;
 };
 console.log(myFunc(() => 'Batman'));
 console.log(myFunc('Superman'));
 
 // ---------- What is the output? ----------
 const myObject = {
-  greeting: 'Hi',
-  person: 'Sam',
+	greeting: 'Hi',
+	person: 'Sam'
 };
 const greet = ({ greeting, person }) => {
-  return `${greeting} ${person}!`;
+	return `${greeting} ${person}!`;
 };
 console.log(greet(myObject));
 
 // ---------- What is the output? ----------
 const myArray = Object.entries({
-  foo: 'bar',
-  hello: 'world',
+	foo: 'bar',
+	hello: 'world'
 });
 console.log(myArray);
 
 // ---------- What is the output? ----------
 const myObject = {
-  1: 1,
-  2: 2,
-  3: 3,
+	1: 1,
+	2: 2,
+	3: 3
 };
 console.log(Object.keys(myObject) == Object.values(myObject));
 
@@ -149,10 +149,10 @@ console.log(evenOrOdd);
 
 // ---------- What is the output? ----------
 const myFunc = (myString) => {
-  if (myString.length > 1) {
-    return myFunc(myString.slice(1));
-  }
-  return console.log(myString);
+	if (myString.length > 1) {
+		return myFunc(myString.slice(1));
+	}
+	return console.log(myString);
 };
 myFunc('Hello world');
 
@@ -164,10 +164,10 @@ console.log(greeting);
 
 // ---------- What is the output? ----------
 const a = {
-  firstname: 'Bill',
+	firstname: 'Bill'
 };
 const b = {
-  firstname: 'Bill',
+	firstname: 'Bill'
 };
 console.log(a.firstname === b.firstname);
 
@@ -182,22 +182,22 @@ console.log(x, y, z);
 
 // ---------- What is the output? ----------
 function xyz() {
-  var abc = 'hello Js';
+	var abc = 'hello Js';
 
-  function abc() {
-    return 54;
-  }
-  return abc;
+	function abc() {
+		return 54;
+	}
+	return abc;
 }
 console.log(xyz());
 
 // ---------- What is the output? ----------
 var lorem = {
-  ipsum: 1,
+	ipsum: 1
 };
 var output = (function () {
-  delete lorem.ipsum;
-  return lorem.ipsum;
+	delete lorem.ipsum;
+	return lorem.ipsum;
 })();
 console.log(output);
 
@@ -206,65 +206,65 @@ console.log(5 + 4 + '3');
 
 // ---------- What is the output? ----------
 (function () {
-  var a = 1;
-  var b = 2;
-  console.log(a + ' ' + b);
+	var a = 1;
+	var b = 2;
+	console.log(a + ' ' + b);
 })();
 
 (function () {
-  var a = 1;
-  console.log(a + ' ' + b);
-  var b = 2;
+	var a = 1;
+	console.log(a + ' ' + b);
+	var b = 2;
 })();
 
 (function () {
-  let a = 1;
-  console.log(a + ' ' + b);
-  let b = 2;
+	let a = 1;
+	console.log(a + ' ' + b);
+	let b = 2;
 })();
 
 // ---------- What is the output? ----------
 (function () {
-  var x = 10;
-  {
-    let x = 20;
-    console.log(x);
-  }
-  console.log(x);
+	var x = 10;
+	{
+		let x = 20;
+		console.log(x);
+	}
+	console.log(x);
 })();
 
 (function () {
-  var x = 10;
-  {
-    var x = 20;
-    console.log(x);
-  }
-  console.log(x);
+	var x = 10;
+	{
+		var x = 20;
+		console.log(x);
+	}
+	console.log(x);
 })();
 
 (function () {
-  let x = 10;
-  {
-    let x = 20;
-    console.log(x);
-  }
-  console.log(x);
+	let x = 10;
+	{
+		let x = 20;
+		console.log(x);
+	}
+	console.log(x);
 })();
 
 (function () {
-  let x = 10;
-  {
-    var x = 20;
-    console.log(x);
-  }
-  console.log(x);
+	let x = 10;
+	{
+		var x = 20;
+		console.log(x);
+	}
+	console.log(x);
 })();
 
 // ---------- What is the output? ----------
 const whoa = 5;
 if (whoa === 5) {
-  const whoa = 500;
-  console.log(whoa);
+	const whoa = 500;
+	console.log(whoa);
 }
 console.log(whoa);
 

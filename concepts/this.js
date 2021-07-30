@@ -6,8 +6,8 @@
 console.log(this); // logs the window object
 
 function calculateAge(year) {
-  console.log(2020 - year);
-  console.log(this);
+	console.log(2020 - year);
+	console.log(this);
 }
 
 calculateAge(1992); // 28, as the this variable is still the window object
@@ -16,19 +16,19 @@ calculateAge(1992); // 28, as the this variable is still the window object
 
 // Now let's look at using this with an object
 var john = {
-  name: 'John Doe',
-  yearOfBirth: 1990,
-  calculateAge() {
-    console.log(this);
-    console.log(2020 - this.yearOfBirth);
+	name: 'John Doe',
+	yearOfBirth: 1990,
+	calculateAge() {
+		console.log(this);
+		console.log(2020 - this.yearOfBirth);
 
-    // Now let's add a function inside this funciton
-    function innerFunction() {
-      console.log(this); // points to the window obect
-    }
+		// Now let's add a function inside this funciton
+		function innerFunction() {
+			console.log(this); // points to the window obect
+		}
 
-    innerFunction();
-  },
+		innerFunction();
+	}
 };
 john.calculateAge(); // logs the john object
 // Again this makes sense, because the this keyword refers to the object that called the method, which in this case was the john object
@@ -39,8 +39,8 @@ john.calculateAge(); // logs the john object
 // Remember that the this variable is only assigned a value as soon as an object calls a method.
 // So, we said this was important, so let's now see an example
 var mike = {
-  name: 'Mike Smith',
-  yearOfBirth: 1984,
+	name: 'Mike Smith',
+	yearOfBirth: 1984
 };
 
 // Now let's say we want to calculate Mike's age

@@ -2,17 +2,17 @@ const boxes = document.querySelectorAll('.boxes'); // Grab all checkboxes of a c
 
 // Limit the number of checked checkboxes
 function limitChecks() {
-  const max = 5; // Set the limit of checked boxes to be 5
+	const max = 5; // Set the limit of checked boxes to be 5
 
-  checkedBoxes = document.querySelectorAll('.boxes:checked');
+	checkedBoxes = document.querySelectorAll('.boxes:checked');
 
-  if (checkedBoxes.length > max) {
-    return false;
-  }
+	if (checkedBoxes.length > max) {
+		return false;
+	}
 
-  return checkedBoxes;
+	return checkedBoxes;
 }
 
 for (let i = 0; i < boxes.length; i++) {
-  boxes[i].onclick = limitChecks;
+	boxes[i].onclick = limitChecks;
 }
