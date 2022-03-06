@@ -2,9 +2,9 @@
 
 // ---------- EXAMPLE #1 ----------
 if (true) {
-	// Do something here...
+  // Do something here...
 } else {
-	// Do something else here...
+  // Do something else here...
 }
 
 // ---------- EXAMPLE #2 ----------
@@ -12,11 +12,11 @@ if (true) {
 const a = 5;
 
 if (a === 10) {
-	console.log('a is 10');
+  console.log('a is 10');
 } else if (a > 10) {
-	console.log('a is greater than 10');
+  console.log('a is greater than 10');
 } else {
-	console.log('a is less than 10');
+  console.log('a is less than 10');
 }
 // Using == will not match the data types, just the value. Even if we change a = '10', this will still be true
 // Using ===, try with 10 as '10', and it will not print. Because === also matches the data types
@@ -26,9 +26,9 @@ if (a === 10) {
 const myFavColor = 'yellow';
 
 if (myFavColor === 'red') {
-	console.log('The color is red');
+  console.log('The color is red');
 } else if (myFavColor === 'blue') {
-	console.log('The color is blue');
+  console.log('The color is blue');
 } else {
-	console.log('The color is NOT red or blue');
+  console.log('The color is NOT red or blue');
 }

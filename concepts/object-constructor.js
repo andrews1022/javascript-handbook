@@ -1,10 +1,10 @@
 // Constructor (ES5), needs an uppercase
 function Book(title, author, year) {
-	this.title = title;
-	this.author = author;
-	this.year = year;
+  this.title = title;
+  this.author = author;
+  this.year = year;
 
-	this.getSummary = () => `${this.title} was written ${this.author} in ${this.year}`;
+  this.getSummary = () => `${this.title} was written ${this.author} in ${this.year}`;
 }
 
 // Instantiate an object
@@ -18,9 +18,9 @@ console.log(book1.getSummary());
 // ---------- EXAMPLE #2 ----------
 // Housekeeper object
 function HouseKeeper(passedInYearsOfExperience, passedInName, passedInCleaningRepertoire) {
-	this.yearsOfExperience = passedInYearsOfExperience;
-	this.name = passedInName;
-	this.cleaningRepertoire = passedInCleaningRepertoire;
+  this.yearsOfExperience = passedInYearsOfExperience;
+  this.name = passedInName;
+  this.cleaningRepertoire = passedInCleaningRepertoire;
 }
 
 // Creating a new housekeeper

@@ -12,13 +12,13 @@ var age = 30;
 
 // Using a if / else if / else statement
 if (age < 13) {
-	console.log(`${firstName} is a boy`);
+  console.log(`${firstName} is a boy`);
 } else if (age >= 13 && age <= 20) {
-	console.log(`${firstName} is a teenager`);
+  console.log(`${firstName} is a teenager`);
 } else if (age >= 21 && age <= 30) {
-	console.log(`${firstName} is a young man`);
+  console.log(`${firstName} is a young man`);
 } else {
-	console.log(`${firstName} is a man`);
+  console.log(`${firstName} is a man`);
 }
 
 // Example:

@@ -3,17 +3,17 @@
 // Each number is the sum of the two previous ones
 
 function fibonacciGenerator(num) {
-	let fibArray = [];
+  let fibArray = [];
 
-	for (let i = 0; i < num; i++) {
-		if (i <= 1) {
-			fibArray.push(i);
-		} else {
-			fibArray.push(fibArray[i - 1] + fibArray[i - 2]);
-		}
-	}
+  for (let i = 0; i < num; i++) {
+    if (i <= 1) {
+      fibArray.push(i);
+    } else {
+      fibArray.push(fibArray[i - 1] + fibArray[i - 2]);
+    }
+  }
 
-	return fibArray;
+  return fibArray;
 }
 
 fibonacciGenerator(5);

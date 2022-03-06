@@ -35,11 +35,11 @@ const dec = numSplit[1];
 
 // Adding the commas
 if (int.length > 3) {
-	// We can use a method call substring, shortened to substr
-	// Subtring allows us to take part of a string
-	// The first argument is the index number of where we want to start
-	// The second argument is how many characters we want
-	int = `${int.substr(0, int.length - 3)},${int.substr(int.length - 3, 3)}`;
+  // We can use a method call substring, shortened to substr
+  // Subtring allows us to take part of a string
+  // The first argument is the index number of where we want to start
+  // The second argument is how many characters we want
+  int = `${int.substr(0, int.length - 3)},${int.substr(int.length - 3, 3)}`;
 }
 
 // Execute a ternary expression

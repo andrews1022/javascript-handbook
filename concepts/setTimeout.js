@@ -10,7 +10,7 @@ console.log('3');
 // We can do something like this (copy and paste into console):
 console.log('1');
 setTimeout(function () {
-	console.log('2');
+  console.log('2');
 }, 2000);
 console.log('3');
 

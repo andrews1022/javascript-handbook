@@ -6,14 +6,14 @@
 
 // ES5 version
 var boxES5 = {
-	color: 'green',
-	position: 1,
-	clickMe: function () {
-		document.querySelector('.green').addEventListener('click', function () {
-			var str = 'This is box number ' + this.position + ' and is ' + this.color;
-			alert(str);
-		});
-	}
+  color: 'green',
+  position: 1,
+  clickMe: function () {
+    document.querySelector('.green').addEventListener('click', function () {
+      var str = 'This is box number ' + this.position + ' and is ' + this.color;
+      alert(str);
+    });
+  }
 };
 
 box5.clickMe(); // This is box number undefined and is undefined
@@ -32,14 +32,14 @@ box5.clickMe(); // This is box number undefined and is undefined
 
 // ES6 version
 const boxES6_1 = {
-	color: 'blue',
-	position: 1,
-	clickMe: function () {
-		document.querySelector('.blue').addEventListener('click', () => {
-			const str = `This is box number ${this.position} and is ${this.color}`;
-			alert(str);
-		});
-	}
+  color: 'blue',
+  position: 1,
+  clickMe: function () {
+    document.querySelector('.blue').addEventListener('click', () => {
+      const str = `This is box number ${this.position} and is ${this.color}`;
+      alert(str);
+    });
+  }
 };
 
 boxES6_1.clickMe();
@@ -49,14 +49,14 @@ boxES6_1.clickMe();
 
 // ES6 version v2
 const boxES6_2 = {
-	color: 'orange',
-	position: 1,
-	clickMe: () => {
-		document.querySelector('.orange').addEventListener('click', () => {
-			const str = `This is box number ${this.position} and is ${this.color}`;
-			alert(str);
-		});
-	}
+  color: 'orange',
+  position: 1,
+  clickMe: () => {
+    document.querySelector('.orange').addEventListener('click', () => {
+      const str = `This is box number ${this.position} and is ${this.color}`;
+      alert(str);
+    });
+  }
 };
 
 boxES6_2.clickMe();
@@ -68,18 +68,18 @@ boxES6_2.clickMe();
 // ---------- WITH PROTOTYPES ----------
 // Function constructor to create Person objects
 function Person(name) {
-	this.name = name;
+  this.name = name;
 }
 
 // ES5 version
 Person.prototype.myFriendsES5 = function (friendsArray) {
-	// Simply return an array which says that the name of the person is friends with easy of these elements
-	var arr = friendsArray.map(function (el) {
-		return this.name + ' is friends with ' + el; // This keyword points to the global object
-		// So we get no name in the olg
-	});
+  // Simply return an array which says that the name of the person is friends with easy of these elements
+  var arr = friendsArray.map(function (el) {
+    return this.name + ' is friends with ' + el; // This keyword points to the global object
+    // So we get no name in the olg
+  });
 
-	console.log(arr);
+  console.log(arr);
 };
 
 var friends = ['Bob', 'Jane', 'Mark'];
@@ -87,8 +87,8 @@ new Person('John').myFriendsES5(friends);
 
 // ES6 Version
 Person.prototype.myFriendsES6 = function (passedInFriendsArray) {
-	const arr = passedInFriendsArray.map((el) => `${this.name} is friends with ${el}`);
-	console.log(arr); // Now this points to the instance we create
+  const arr = passedInFriendsArray.map((el) => `${this.name} is friends with ${el}`);
+  console.log(arr); // Now this points to the instance we create
 };
 
 new Person('Mike').myFriendsES6(friends);

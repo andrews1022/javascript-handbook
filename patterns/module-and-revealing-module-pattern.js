@@ -18,22 +18,22 @@
 
 // Standard Module Pattern
 const UICtrl = (function () {
-	// Anything we declare here is private - cannot be used outside the module
-	let greeting = 'Hello World';
+  // Anything we declare here is private - cannot be used outside the module
+  let greeting = 'Hello World';
 
-	const changeText = function () {
-		const element = document.querySelector('h1');
-		element.textContent = greeting;
-	};
+  const changeText = function () {
+    const element = document.querySelector('h1');
+    element.textContent = greeting;
+  };
 
-	return {
-		// Anything we return here is public - it CAN be used outside the module
-		// We can access the anything in the private scope here as well, so that is why we can call the changeText function
-		callChangeText: function () {
-			changeText();
-			console.log(greeting);
-		}
-	};
+  return {
+    // Anything we return here is public - it CAN be used outside the module
+    // We can access the anything in the private scope here as well, so that is why we can call the changeText function
+    callChangeText: function () {
+      changeText();
+      console.log(greeting);
+    }
+  };
 })();
 
 UICtrl.callChangeText(); // Changes the text to Hello World and logs it as well
@@ -44,23 +44,23 @@ UICtrl.callChangeText(); // Changes the text to Hello World and logs it as well
 // That's that's why it's called the revealing pattern because you can reveal certain methods from your your module
 // Example:
 const ItemController = (function () {
-	let _data = []; // You can use the underscore to denote private variables as well
+  let _data = []; // You can use the underscore to denote private variables as well
 
-	function add(item) {
-		_data.push(item);
-		console.log('Item Added');
-	}
+  function add(item) {
+    _data.push(item);
+    console.log('Item Added');
+  }
 
-	function get(itemId) {
-		return _data.find((item) => {
-			return item.id === itemId;
-		});
-	}
+  function get(itemId) {
+    return _data.find((item) => {
+      return item.id === itemId;
+    });
+  }
 
-	return {
-		add: add, // The add function
-		get: get // The get function
-	};
+  return {
+    add: add, // The add function
+    get: get // The get function
+  };
 })();
 
 ItemController.add({ id: 1, name: 'John' });

@@ -3,9 +3,9 @@
 // ---------- EXAMPLE #1 ----------
 // The use of the * symbol tells JavaScript this is a generator
 function* sayNames() {
-	yield 'Jack';
-	yield 'Jill';
-	yield 'John';
+  yield 'Jack';
+  yield 'Jill';
+  yield 'John';
 }
 
 const name = sayNames();
@@ -17,11 +17,11 @@ console.log(name.next());
 // ---------- EXAMPLE #2 ----------
 // ID Creator
 function* createIDs() {
-	let index = 1;
+  let index = 1;
 
-	while (true) {
-		yield index++;
-	}
+  while (true) {
+    yield index++;
+  }
 }
 
 const gen = createIDs();

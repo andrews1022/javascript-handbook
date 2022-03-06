@@ -1,23 +1,23 @@
 // Promises using jsonplaceholder.typicode.com
 const urls = [
-	'https://jsonplaceholder.typicode.com/users',
-	'https://jsonplaceholder.typicode.com/posts',
-	'https://jsonplaceholder.typicode.com/albums'
+  'https://jsonplaceholder.typicode.com/users',
+  'https://jsonplaceholder.typicode.com/posts',
+  'https://jsonplaceholder.typicode.com/albums'
 ];
 
 // How can we grab all the data from each link in the above array?
 // Let's use promises!
 Promise.all(
-	urls.map((url) => {
-		return fetch(url).then((response) => response.json());
-	})
+  urls.map((url) => {
+    return fetch(url).then((response) => response.json());
+  })
 )
-	.then((results) => {
-		console.log(results[0]);
-		console.log(results[1]);
-		console.log(results[2]);
-	})
-	.catch(() => console.log('error occurred'));
+  .then((results) => {
+    console.log(results[0]);
+    console.log(results[1]);
+    console.log(results[2]);
+  })
+  .catch(() => console.log('error occurred'));
 
 // So at their most basic, promises are a bit like event listeners
 // Except a promise can only succeed or fail once - it cannot succeed or fail twice.

@@ -32,40 +32,40 @@ localStorage.clear();
 console.log(name, age);
 
 document.querySelector('form').addEventListener('submit', (e) => {
-	e.preventDefault();
+  e.preventDefault();
 
-	// Get input value
-	const task = document.querySelector('#task').value;
-	console.log(task);
+  // Get input value
+  const task = document.querySelector('#task').value;
+  console.log(task);
 
-	// Set item to local storage
-	localStorage.setItem('task', task);
-	console.log('Task saved');
-	// But this replaces the existing localStorage item
-	// So we need to create an array of tasks, and convert that array to a string
-	// This way we can keep adding to the array/localStorage
+  // Set item to local storage
+  localStorage.setItem('task', task);
+  console.log('Task saved');
+  // But this replaces the existing localStorage item
+  // So we need to create an array of tasks, and convert that array to a string
+  // This way we can keep adding to the array/localStorage
 
-	const task = document.querySelector('#task').value;
+  const task = document.querySelector('#task').value;
 
-	let tasks;
+  let tasks;
 
-	// First, we pull out of local storage whatever's in there or check to see if there's something in there
-	// if there is, pull it out and add to it. If not just, set tasks to an empty array and add to it.
-	if (localStorage.getItem('tasks') === null) {
-		tasks = [];
-	} else {
-		tasks = JSON.parse(localStorage.getItem('tasks'));
-	}
+  // First, we pull out of local storage whatever's in there or check to see if there's something in there
+  // if there is, pull it out and add to it. If not just, set tasks to an empty array and add to it.
+  if (localStorage.getItem('tasks') === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }
 
-	tasks.push(task);
+  tasks.push(task);
 
-	localStorage.setItem('tasks', JSON.stringify(tasks));
-	console.log('Task Saved');
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+  console.log('Task Saved');
 });
 
 // Outside of the event listener, we can as previously mentioned, use JSON.parse to loop through it as if it were an array
 const tasks = JSON.parse(localStorage.getItem('tasks'));
 
 tasks.forEach((task) => {
-	console.log(task);
+  console.log(task);
 });

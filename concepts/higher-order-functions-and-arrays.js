@@ -1,14 +1,14 @@
 // Our Array of Objects
 const companies = [
-	{ name: 'RBC', category: 'Finance', start: 1981, end: 2004 },
-	{ name: 'Winners', category: 'Retail', start: 1992, end: 2008 },
-	{ name: 'Ford', category: 'Auto', start: 1999, end: 2007 },
-	{ name: 'Urban Barn', category: 'Retail', start: 1989, end: 2010 },
-	{ name: 'Microsoft', category: 'Technology', start: 2009, end: 2014 },
-	{ name: 'H&R Block', category: 'Finance', start: 1987, end: 2010 },
-	{ name: 'BMW', category: 'Auto', start: 1986, end: 1996 },
-	{ name: 'Apple', category: 'Technology', start: 2011, end: 2016 },
-	{ name: 'Walmart', category: 'Retail', start: 1981, end: 1989 }
+  { name: 'RBC', category: 'Finance', start: 1981, end: 2004 },
+  { name: 'Winners', category: 'Retail', start: 1992, end: 2008 },
+  { name: 'Ford', category: 'Auto', start: 1999, end: 2007 },
+  { name: 'Urban Barn', category: 'Retail', start: 1989, end: 2010 },
+  { name: 'Microsoft', category: 'Technology', start: 2009, end: 2014 },
+  { name: 'H&R Block', category: 'Finance', start: 1987, end: 2010 },
+  { name: 'BMW', category: 'Auto', start: 1986, end: 1996 },
+  { name: 'Apple', category: 'Technology', start: 2011, end: 2016 },
+  { name: 'Walmart', category: 'Retail', start: 1981, end: 1989 }
 ];
 
 // Array of Ages
@@ -16,7 +16,7 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
 // ----------------------------------- FOR LOOP -----------------------------------
 for (let i = 0; i < companies.length; i++) {
-	console.log('for loop', companies[i]);
+  console.log('for loop', companies[i]);
 }
 
 // ----------------------------------- FOR EACH LOOP -----------------------------------
@@ -25,7 +25,7 @@ for (let i = 0; i < companies.length; i++) {
 // An iterator, in this case each company
 // Can also take in an index, and the entire array itself, but we will just use an iterator
 companies.forEach((company) => {
-	console.log('forEach', company);
+  console.log('forEach', company);
 });
 
 // ----------------------------------- FILTER -----------------------------------
@@ -38,11 +38,11 @@ let canDrink = [];
 
 // Next, our for loop
 for (let i = 0; i < ages.length; i++) {
-	// If ages, current iteration, is greater than or equal to 21
-	if (ages[i] >= 21) {
-		// Push on to it/add onto canDrink array
-		canDrink.push(ages[i]);
-	}
+  // If ages, current iteration, is greater than or equal to 21
+  if (ages[i] >= 21) {
+    // Push on to it/add onto canDrink array
+    canDrink.push(ages[i]);
+  }
 }
 // Console log the canDrink array
 console.log('for loop canDrink', canDrink);
@@ -51,11 +51,11 @@ console.log('for loop canDrink', canDrink);
 // First define a variable
 // Then it takes in a function
 const canDrinkTwo = ages.filter((age) => {
-	// Test the age parameter
-	if (age >= 21) {
-		// All you have to do is return true
-		return true;
-	}
+  // Test the age parameter
+  if (age >= 21) {
+    // All you have to do is return true
+    return true;
+  }
 });
 console.log('filter canDrink', canDrinkTwo);
 
@@ -68,9 +68,9 @@ console.log('filter canDrink arrow ES6', canDrinkArrow);
 // EXAMPLE 1 - FILTERING COMPANIES THAT ARE RETAIL
 // First, the ES5 way with standard function
 const retailCompanies = companies.filter((company) => {
-	if (company.category === 'Retail') {
-		return true;
-	}
+  if (company.category === 'Retail') {
+    return true;
+  }
 });
 console.log('retailCompanies ES5', retailCompanies);
 
@@ -84,7 +84,7 @@ console.log('retailCompanies Arrow Function ES6', retailCompaniesArrow);
 // EXAMPLE 2 - FILTERING COMPANIES THAT STARTED IN THE 1980s
 // My attempt---WORKS!!
 const retailCompaniesEighty = companies.filter(
-	(company) => company.start >= 1980 && company.start <= 1989
+  (company) => company.start >= 1980 && company.start <= 1989
 );
 console.log('filter companies starting in the 80s', retailCompaniesEighty);
 
@@ -123,11 +123,11 @@ console.log('array with 2 maps', doubleMap);
 // At each iteration, it will take two companies and compare them
 // We then return 1 or -1 to move them up and down inside the array
 const sortedCompanies = companies.sort(function (comp1, comp2) {
-	if (comp1.start > comp2.start) {
-		return 1;
-	} else {
-		return -1;
-	}
+  if (comp1.start > comp2.start) {
+    return 1;
+  } else {
+    return -1;
+  }
 });
 console.log('sort companies by start date: old way', sortedCompanies);
 // Shorthand form of above using ES6, ternary operator
@@ -135,8 +135,8 @@ const sortedCompaniesES6 = companies.sort((comp1, comp2) => (comp1.start > comp2
 // This reads as is comp1 starting date greater than comp2 starting date?
 // Return 1, else return -1
 console.log(
-	'sort companies by start date: new way with ternary operator and arrow function',
-	sortedCompaniesES6
+  'sort companies by start date: new way with ternary operator and arrow function',
+  sortedCompaniesES6
 );
 // NOTE:
 // Using comp1 and comp2 is fine, but typically, we'd just a & b like this:
@@ -160,13 +160,13 @@ const sortedCompaniesStandard = companies.sort((a, b) => (a.start > b.start ? 1 
 // First using a for loop
 let ageSum = 0;
 for (let i = 0; i < ages.length; i++) {
-	ageSum += ages[i];
+  ageSum += ages[i];
 }
 console.log('ages array sum', ageSum);
 
 // Now lets use reduce to do the same thing
 const ageSumReduce = ages.reduce(function (total, age) {
-	return total + age;
+  return total + age;
 }, 0);
 console.log('ages array sum using reduce', ageSumReduce);
 // To shorten this up
@@ -175,13 +175,13 @@ console.log('ages array sum using reduce shorthand', ageSumReduceShort);
 
 // Get total years for all companies
 const totalYears = companies.reduce(function (total, company) {
-	return total + (company.end - company.start);
+  return total + (company.end - company.start);
 }, 0);
 console.log('companies array total number of years', totalYears);
 
 const totalYearsShort = companies.reduce(
-	(total, company) => total + (company.end - company.start),
-	0
+  (total, company) => total + (company.end - company.start),
+  0
 );
 console.log('companies array total number of years shorthand', totalYearsShort);
 
@@ -192,9 +192,9 @@ console.log('companies array total number of years shorthand', totalYearsShort);
 // Next, sort lowest to highest
 // Finally, use reduce to add them all together
 const combined = ages
-	.map((age) => age * 2)
-	.filter((age) => age >= 40)
-	.sort((a, b) => a - b)
-	.reduce((a, b) => a + b, 0);
+  .map((age) => age * 2)
+  .filter((age) => age >= 40)
+  .sort((a, b) => a - b)
+  .reduce((a, b) => a + b, 0);
 
 console.log('combined array methods', combined);

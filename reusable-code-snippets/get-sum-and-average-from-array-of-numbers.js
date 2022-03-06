@@ -5,14 +5,14 @@ const numArr3 = [97, 134, 106, 3, 205, 4];
 
 // Function to get the average score, and able to pass in an array
 function getAverageScore(array) {
-	let total = 0;
+  let total = 0;
 
-	for (let i = 0; i < array.length; i++) {
-		total += array[i];
-	}
+  for (let i = 0; i < array.length; i++) {
+    total += array[i];
+  }
 
-	const average = total / array.length;
-	return average;
+  const average = total / array.length;
+  return average;
 }
 
 getAverageScore(numArr1); // 72
@@ -23,13 +23,13 @@ getAverageScore(numArr3); // 91.5
 
 // Getting the total is pretty much the same:
 function getSumOfScores(array) {
-	let total = 0;
+  let total = 0;
 
-	for (let i = 0; i < array.length; i++) {
-		total += array[i];
-	}
+  for (let i = 0; i < array.length; i++) {
+    total += array[i];
+  }
 
-	return total;
+  return total;
 }
 
 getSumOfScores(numArr1); // 432

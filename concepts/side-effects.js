@@ -2,7 +2,7 @@
 var a = 1;
 
 function b() {
-	a = 2;
+  a = 2;
 }
 
 // We have a variable one, 'a' equals one and then I have a function that changes 'a',

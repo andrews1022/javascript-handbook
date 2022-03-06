@@ -2,7 +2,7 @@
 
 // HTML for reference:
 <h1 id='title'>
-	<strong>Hello World!</strong>
+  <strong>Hello World!</strong>
 </h1>;
 
 // What's the difference?

@@ -1,9 +1,9 @@
 // --------------- OBJECT SPREAD OPERATOR ---------------
 // Our basic object of animals and their ages:
 const animalAges = {
-	tiger: 12,
-	lion: 5,
-	monkey: 2
+  tiger: 12,
+  lion: 5,
+  monkey: 2
 };
 
 // Destructure it:
@@ -16,7 +16,7 @@ const { tiger, ...rest } = animalAges;
 const numbersArray = [1, 2, 3, 4, 5];
 
 function sum(a, b, c, d, e) {
-	return a + b + c + d + e;
+  return a + b + c + d + e;
 }
 sum(...numbersArray); // gives the answer, which is 15
 // Here we are able to spread the array over the parameters

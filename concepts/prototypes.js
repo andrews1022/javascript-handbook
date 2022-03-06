@@ -5,32 +5,32 @@
 
 // Person constructor
 function Person(firstName, lastName, dateOfBirth) {
-	this.firstName = firstName;
-	this.lastName = lastName;
-	this.birthday = new Date(dateOfBirth);
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.birthday = new Date(dateOfBirth);
 
-	this.calculateAge = () => {
-		const difference = Date.now() - this.birthday.getTime();
-		const ageDate = new Date(difference);
-		return Math.abs(ageDate.getUTCFullYear() - 1970);
-	};
+  this.calculateAge = () => {
+    const difference = Date.now() - this.birthday.getTime();
+    const ageDate = new Date(difference);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  };
 }
 
 // Calculate age - moved into a prototype
 Person.prototype.calculateAge = function () {
-	const difference = Date.now() - this.birthday.getTime();
-	const ageDate = new Date(difference);
-	return Math.abs(ageDate.getUTCFullYear() - 1970);
+  const difference = Date.now() - this.birthday.getTime();
+  const ageDate = new Date(difference);
+  return Math.abs(ageDate.getUTCFullYear() - 1970);
 };
 
 // Get full name
 Person.prototype.getFullName = function () {
-	return `${this.firstName} ${this.lastName}`;
+  return `${this.firstName} ${this.lastName}`;
 };
 
 // Gets married
 Person.prototype.getsMarried = function (newLastName) {
-	this.lastName = newLastName;
+  this.lastName = newLastName;
 };
 
 // Instantiate a new person

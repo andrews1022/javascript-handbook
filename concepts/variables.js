@@ -53,8 +53,8 @@ console.log(myName);
 // What you CAN do, is mutate data inside of an object or an array
 // What you CANNOT do, is reassign person a completely different value
 const person = {
-	name: 'Andy',
-	age: 27
+  name: 'Andy',
+  age: 27
 };
 
 person.name = 'Charlie';

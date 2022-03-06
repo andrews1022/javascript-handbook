@@ -4,15 +4,15 @@
 
 // ES5 - using function constructor and create prototype methods
 var PersonES5 = function (name, yearOfBirth, job) {
-	this.name = name;
-	this.yearOfBirth = yearOfBirth;
-	this.job = job;
+  this.name = name;
+  this.yearOfBirth = yearOfBirth;
+  this.job = job;
 };
 
 // And again, to make all instances of this inherit a calculate age method, we simply add it to the prototype property
 PersonES5.prototype.calcAge = function () {
-	var age = new Date().getFullYear() - this.yearOfBirth;
-	console.log(age);
+  var age = new Date().getFullYear() - this.yearOfBirth;
+  console.log(age);
 };
 
 var johnES5 = new PersonES5('John Smith', 1990, 'Web Developer');
@@ -21,26 +21,26 @@ console.log(johnES5.calcAge());
 
 // The same thing, but using ES6 Classes
 class PersonES6 {
-	// All classes MUST the have the constructor method
-	// This is where we define the initial properties that we want our object to have
-	constructor(name, yearOfBirth, job) {
-		this.name = name;
-		this.yearOfBirth = yearOfBirth;
-		this.job = job;
-	}
+  // All classes MUST the have the constructor method
+  // This is where we define the initial properties that we want our object to have
+  constructor(name, yearOfBirth, job) {
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+  }
 
-	// Define the calculate age method, right here in the class
-	// And we also we don't need commas, or any other punctuation to separate
-	calculateAge() {
-		let age = new Date().getFullYear() - this.yearOfBirth;
-		console.log(age);
-	}
+  // Define the calculate age method, right here in the class
+  // And we also we don't need commas, or any other punctuation to separate
+  calculateAge() {
+    let age = new Date().getFullYear() - this.yearOfBirth;
+    console.log(age);
+  }
 
-	// Another thing that we can do with classes, is to add static methods
-	// Static methods are methods that are simply attached to the class, but not inherited by the class instances - objects that we create through that class
-	static greeting() {
-		console.log('Hey there!');
-	}
+  // Another thing that we can do with classes, is to add static methods
+  // Static methods are methods that are simply attached to the class, but not inherited by the class instances - objects that we create through that class
+  static greeting() {
+    console.log('Hey there!');
+  }
 }
 // What we wrote here is the EXACT same as writing above with the function constructor and .prototype
 
@@ -62,22 +62,22 @@ PersonES6.greeting();
 // Class creation:
 // Use the 'class' keyword, and then give it a name using uppercase (best practice)
 class HumanBeing {
-	// Create a method called a 'constructor', and assign properties just like before
-	constructor(firstName, lastName, dateOfBirth) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.dateOfBirth = new Date(dateOfBirth);
-	}
+  // Create a method called a 'constructor', and assign properties just like before
+  constructor(firstName, lastName, dateOfBirth) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dateOfBirth = new Date(dateOfBirth);
+  }
 
-	// Any method we want to add, we can simply add it here:
-	getBirthYear() {
-		return this.dateOfBirth.getFullYear();
-	}
+  // Any method we want to add, we can simply add it here:
+  getBirthYear() {
+    return this.dateOfBirth.getFullYear();
+  }
 
-	// And here:
-	getFullName() {
-		return `${this.firstName} ${this.lastName}`;
-	}
+  // And here:
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
 }
 
 // Instantiate the object
@@ -92,54 +92,54 @@ console.log(humanBeing1);
 // Create two classes: an Animal class and a Mammal class.
 // Create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color.
 class Animal {
-	constructor(name, type, color) {
-		this.name = name;
-		this.color = color;
-		this.type = type;
-	}
+  constructor(name, type, color) {
+    this.name = name;
+    this.color = color;
+    this.type = type;
+  }
 }
 
 class Mammal extends Animal {
-	constructor(name, type, color) {
-		super(name, type, color);
-	}
-	sound() {
-		console.log(`Moooo I'm ${this.name}, and I'm a ${this.color} ${this.type}!`);
-	}
+  constructor(name, type, color) {
+    super(name, type, color);
+  }
+  sound() {
+    console.log(`Moooo I'm ${this.name}, and I'm a ${this.color} ${this.type}!`);
+  }
 }
 
 const cow = new Mammal('Shelly', 'cow', 'brown');
 
 // ---------- EXAMPLE #3 ----------
 class Book {
-	constructor(title, author, year) {
-		this.title = title;
-		this.author = author;
-		this.year = year;
-	}
+  constructor(title, author, year) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+  }
 
-	// getSummary Prototype Method - arrow function doesn't work
-	getSummary() {
-		return `${this.title} was written ${this.author} in ${this.year}`;
-	}
+  // getSummary Prototype Method - arrow function doesn't work
+  getSummary() {
+    return `${this.title} was written ${this.author} in ${this.year}`;
+  }
 
-	getAge() {
-		const years = new Date().getFullYear() - this.year;
-		return `${this.title} is ${years} years old`;
-	}
+  getAge() {
+    const years = new Date().getFullYear() - this.year;
+    return `${this.title} is ${years} years old`;
+  }
 
-	revise(newYear) {
-		this.year = newYear;
-		this.revise = true;
-	}
+  revise(newYear) {
+    this.year = newYear;
+    this.revise = true;
+  }
 
-	// You can see that we have all the above methods in the __proto__ for this class
+  // You can see that we have all the above methods in the __proto__ for this class
 
-	// ALSO NOTE: You can have static methods which don't require instantiating the object
-	// Example
-	static topBookStore() {
-		return 'Chapters';
-	}
+  // ALSO NOTE: You can have static methods which don't require instantiating the object
+  // Example
+  static topBookStore() {
+    return 'Chapters';
+  }
 }
 
 // Instantiate Object
@@ -152,32 +152,32 @@ console.log(Book.topBookStore());
 
 // ---------- EXAMPLE #4 ----------
 class Person {
-	constructor(firstName, lastName, dateOfBirth) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.birthday = new Date(dateOfBirth);
-	}
+  constructor(firstName, lastName, dateOfBirth) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.birthday = new Date(dateOfBirth);
+  }
 
-	// Any method you add inside the class gets added to the prototype as well
-	greeting() {
-		return `Hello there ${this.firstName} ${this.lastName}`;
-	}
+  // Any method you add inside the class gets added to the prototype as well
+  greeting() {
+    return `Hello there ${this.firstName} ${this.lastName}`;
+  }
 
-	calculateAge() {
-		const difference = Date.now() - this.birthday.getTime();
-		const ageDate = new Date(difference);
-		return Math.abs(ageDate.getUTCFullYear() - 1970);
-	}
+  calculateAge() {
+    const difference = Date.now() - this.birthday.getTime();
+    const ageDate = new Date(difference);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
 
-	getsMarried(newLastName) {
-		this.lastName = newLastName;
-	}
+  getsMarried(newLastName) {
+    this.lastName = newLastName;
+  }
 
-	// Static methods
-	// Good for if it's a stand alone function or method that you want in your class - and isn't really related to anything else within the class
-	static addNumbers(x, y) {
-		return x + y;
-	}
+  // Static methods
+  // Good for if it's a stand alone function or method that you want in your class - and isn't really related to anything else within the class
+  static addNumbers(x, y) {
+    return x + y;
+  }
 }
 
 const mary = new Person('Mary', 'Williams', 11 - 13 - 1984);
@@ -192,16 +192,16 @@ console.log(Person.addNumbers(1, 2));
 // ---------- EXAMPLE #5 ----------
 // Create Person class
 class Person {
-	constructor(passedInFullName, passedInMass, passedInHeight) {
-		this.fullName = passedInFullName;
-		this.mass = passedInMass;
-		this.height = passedInHeight;
-	}
+  constructor(passedInFullName, passedInMass, passedInHeight) {
+    this.fullName = passedInFullName;
+    this.mass = passedInMass;
+    this.height = passedInHeight;
+  }
 
-	calculateBMI() {
-		this.bmi = this.mass / this.height ** 2;
-		return this.bmi;
-	}
+  calculateBMI() {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
 }
 
 // Instantiate
@@ -216,19 +216,19 @@ console.log(`Claude's BMI is:`, claude.calculateBMI());
 
 // Check
 if (amanda.calculateBMI() > claude.calculateBMI()) {
-	console.log(
-		`${amanda.fullName}'s BMI of ${amanda.bmi} is higher than claude's BMI of ${claude.bmi}`
-	);
+  console.log(
+    `${amanda.fullName}'s BMI of ${amanda.bmi} is higher than claude's BMI of ${claude.bmi}`
+  );
 } else if (claude.bmi > amanda.bmi) {
-	console.log(
-		`${claude.fullName}'s BMI of ${claude.bmi} is higher than amanda's BMI of ${amanda.bmi}`
-	);
+  console.log(
+    `${claude.fullName}'s BMI of ${claude.bmi} is higher than amanda's BMI of ${amanda.bmi}`
+  );
 } else if (claude.bmi === amanda.bmi) {
-	console.log(
-		`Both ${amanda.fullName} and ${claude.fullName} have the same BMI, which is ${amanda.bmi}`
-	);
+  console.log(
+    `Both ${amanda.fullName} and ${claude.fullName} have the same BMI, which is ${amanda.bmi}`
+  );
 } else {
-	console.log('Something is not right here...');
+  console.log('Something is not right here...');
 }
 
 // ---------- EXAMPLE #6 ----------
@@ -239,55 +239,55 @@ if (amanda.calculateBMI() > claude.calculateBMI()) {
 // If the bill is more than $200, tip 10%
 
 class Person {
-	// Constructor - passing in a name and array of bill amounts (numbers)
-	constructor(passedInFullName, passedInBills) {
-		this.fullName = passedInFullName;
-		this.bills = passedInBills;
-	}
+  // Constructor - passing in a name and array of bill amounts (numbers)
+  constructor(passedInFullName, passedInBills) {
+    this.fullName = passedInFullName;
+    this.bills = passedInBills;
+  }
 
-	// Calculate tips
-	calculateTips() {
-		// Create a new/mapped array based of passed in bills array
-		this.tips = this.bills.map((bill) => {
-			let tip; // Initialize tip variable
+  // Calculate tips
+  calculateTips() {
+    // Create a new/mapped array based of passed in bills array
+    this.tips = this.bills.map((bill) => {
+      let tip; // Initialize tip variable
 
-			// Conditions checking current iteration (bill), and setting tip variable accordingly
-			if (bill <= 49) {
-				tip = 0.2;
-			} else if (bill >= 50 && bill <= 200) {
-				tip = 0.15;
-			} else if (bill >= 201) {
-				tip = 0.1;
-			}
+      // Conditions checking current iteration (bill), and setting tip variable accordingly
+      if (bill <= 49) {
+        tip = 0.2;
+      } else if (bill >= 50 && bill <= 200) {
+        tip = 0.15;
+      } else if (bill >= 201) {
+        tip = 0.1;
+      }
 
-			// Finally, return each bill iteration amount multipled by the tip amount, then parsed and decimals rounded off
-			return parseFloat((bill * tip).toFixed(2), 10);
-		});
-	}
+      // Finally, return each bill iteration amount multipled by the tip amount, then parsed and decimals rounded off
+      return parseFloat((bill * tip).toFixed(2), 10);
+    });
+  }
 
-	// Calculate average tips
-	calculateAverageTip() {
-		// Initialize some variables
-		this.averageTip = 0;
-		this.total = 0;
+  // Calculate average tips
+  calculateAverageTip() {
+    // Initialize some variables
+    this.averageTip = 0;
+    this.total = 0;
 
-		// Loop through the array, and for each iteration/value, add it on to total
-		for (let i = 0; i < this.tips.length; i++) {
-			this.total += this.tips[i];
-		}
+    // Loop through the array, and for each iteration/value, add it on to total
+    for (let i = 0; i < this.tips.length; i++) {
+      this.total += this.tips[i];
+    }
 
-		// After looping, take the total and divide it by the array length, while parsing and rounding of decimals
-		this.averageTip = parseFloat((this.total / this.tips.length).toFixed(2), 10);
-		return this.averageTip;
-	}
+    // After looping, take the total and divide it by the array length, while parsing and rounding of decimals
+    this.averageTip = parseFloat((this.total / this.tips.length).toFixed(2), 10);
+    return this.averageTip;
+  }
 
-	// Calculate total
-	calculateTotal() {
-		// To calculate the total, map a new array based off the tips array, and then add each tip and each corresponding bill amount together
-		this.total = this.tips.map((tip, index) => {
-			return tip + this.bills[index];
-		});
-	}
+  // Calculate total
+  calculateTotal() {
+    // To calculate the total, map a new array based off the tips array, and then add each tip and each corresponding bill amount together
+    this.total = this.tips.map((tip, index) => {
+      return tip + this.bills[index];
+    });
+  }
 }
 
 // Instantiate John

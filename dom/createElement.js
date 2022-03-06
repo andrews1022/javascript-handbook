@@ -1,11 +1,11 @@
 // ---------- EXAMPLE #1 ----------
 // HTML for reference:
 <body>
-	<h1 id='header'>The Dom is cool for many reasons</h1>
-	<ul class='list'>
-		<li>You can see how pages are made</li>
-		<li>You can manipulate it</li>
-	</ul>
+  <h1 id='header'>The Dom is cool for many reasons</h1>
+  <ul class='list'>
+    <li>You can see how pages are made</li>
+    <li>You can manipulate it</li>
+  </ul>
 </body>;
 
 // First, we create a <p> tag and store it in a variable called 'para':

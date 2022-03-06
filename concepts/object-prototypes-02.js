@@ -1,25 +1,25 @@
 // Constructor (ES5), needs an uppercase
 function Book(title, author, year) {
-	this.title = title;
-	this.author = author;
-	this.year = year;
+  this.title = title;
+  this.author = author;
+  this.year = year;
 }
 
 // getSummary Prototype Method - arrow function doesn't work
 Book.prototype.getSummary = function () {
-	return `${this.title} was written ${this.author} in ${this.year}`;
+  return `${this.title} was written ${this.author} in ${this.year}`;
 };
 
 // getAge - see how long the book has been out
 Book.prototype.getAge = function () {
-	const years = new Date().getFullYear() - this.year;
-	return `${this.title} is ${years} years old`;
+  const years = new Date().getFullYear() - this.year;
+  return `${this.title} is ${years} years old`;
 };
 
 // Revise - change the year
 Book.prototype.revise = function (newYear) {
-	this.year = newYear;
-	this.revise = true;
+  this.year = newYear;
+  this.revise = true;
 };
 
 // Instantiate an object

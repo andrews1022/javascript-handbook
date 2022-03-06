@@ -1,8 +1,8 @@
 const name = 'Jon Snow';
 
 const obj3 = {
-	[name]: 'Hello!',
-	['Ray' + 'Smith']: 'Hihi'
+  [name]: 'Hello!',
+  ['Ray' + 'Smith']: 'Hihi'
 };
 
 // Now, in ES6 you can have instead of the old way of having just 'player' or 'experience' or 'wizardLevel', we can have something dynamic that we can assign like 'john snow' to [name]

@@ -5,11 +5,11 @@ const navStyles = window.getComputedStyle(nav);
 
 // And then check if it's display is none or block, to show or hide the nav, using .getPropertyValue()
 if (navStyles.getPropertyValue('display') === 'none') {
-	// If it is, set it to 'block' (open the menu)
-	nav.style.display = 'block';
+  // If it is, set it to 'block' (open the menu)
+  nav.style.display = 'block';
 } else {
-	// Else, set it to 'none' (close the menu)
-	nav.style.display = 'none';
+  // Else, set it to 'none' (close the menu)
+  nav.style.display = 'none';
 }
 
 // Otherwise, we can simple use .style

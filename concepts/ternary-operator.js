@@ -9,8 +9,8 @@ const age = 16;
 
 // Check John's age sif he is of legal drinking age
 age >= 18
-	? console.log(`${firstName} can drink beer`)
-	: console.log(`${firstName} can drink juice`);
+  ? console.log(`${firstName} can drink beer`)
+  : console.log(`${firstName} can drink juice`);
 // It's called ternary, because it has three operands, basically three parts that interact with the operator.
 
 // Another way - assign values to variables using the ternary operator itself
@@ -31,7 +31,7 @@ console.log(color);
 
 /// ---------- EXAMPLE #2 ----------
 function isUserValid(bool) {
-	return bool;
+  return bool;
 }
 let answer = isUserValid(true) ? 'You may enter!' : 'Access denied!';
 // If we run ‘answer’, we get 'You may enter!' because isUserValid is true.
@@ -47,11 +47,11 @@ let automatedAnswer = 'Your account # is ' + (isUserValid(false) ? 12345 : 'not 
 // ---------- EXAMPLE #4 ----------
 // Turning this function into a ternary operator expression
 function experiencePoints() {
-	if (winBattle()) {
-		return 10;
-	} else {
-		return 1;
-	}
+  if (winBattle()) {
+    return 10;
+  } else {
+    return 1;
+  }
 }
 // Using ternary operator:
 let experiencePoints = winBattle() ? 10 : 1;
@@ -70,5 +70,5 @@ const heading = document.querySelector('h2');
 
 // Use ternary operator to check (can show/hide something on the page)
 const classCheck = heading.classList.contains('open')
-	? heading.classList.remove('open')
-	: heading.classList.add('open');
+  ? heading.classList.remove('open')
+  : heading.classList.add('open');

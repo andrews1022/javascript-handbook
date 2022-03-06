@@ -18,10 +18,10 @@ NaN;
 var height;
 
 if (height) {
-	// This is converted to false
-	console.log('Variable is defined');
+  // This is converted to false
+  console.log('Variable is defined');
 } else {
-	console.log('Variable has NOT been defined');
+  console.log('Variable has NOT been defined');
 }
 
 // Why are we getting 'Variable has NOT been defined'?
@@ -35,8 +35,8 @@ if (height) {
 // Write it like so, using the || OR operator:
 height = 23;
 if (height || height === 0) {
-	// Again, only of these needs to be true
-	console.log('Variable is defined');
+  // Again, only of these needs to be true
+  console.log('Variable is defined');
 } else {
-	console.log('Variable has NOT been defined');
+  console.log('Variable has NOT been defined');
 }

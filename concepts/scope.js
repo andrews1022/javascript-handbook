@@ -1,6 +1,6 @@
 // Root/Parent Scope:
 function aa() {
-	console.log('Testing');
+  console.log('Testing');
 }
 aa();
 // Can be run with the window object
@@ -8,12 +8,12 @@ window.aa();
 
 // Limited Scope
 function bb() {
-	let a = 'Hello!';
+  let a = 'Hello!';
 }
 console.log(a); // this will not work, as a's scope is only inside the function. You must the console.log to the inside of the function:
 function bb() {
-	let a = 'Hello!';
-	console.log(a);
+  let a = 'Hello!';
+  console.log(a);
 }
 
 // Now if we create this variable
@@ -22,16 +22,16 @@ let b = 'Can I access this variable?';
 // The answer is yes, as it was created in the root scope
 // Any variables defined in the root scope can be accessed from anywhere
 function bb() {
-	let a = 'Hello!';
-	console.log(a);
-	console.log(b);
+  let a = 'Hello!';
+  console.log(a);
+  console.log(b);
 }
 
 // EXAMPLE 3
 let c = 'Can I access this?';
 
 function cc() {
-	c = 'Hello!';
+  c = 'Hello!';
 }
 // This example works because c is the same variable, and was defined in the root scope
 
@@ -43,23 +43,23 @@ let sweet = 5; // Root scope
 // But what sweet means in each one of them is different based on their scope.
 // Function 1
 function sweetFunc() {
-	// child scope
-	let sweet = 'Hello!';
-	console.log(sweet);
+  // child scope
+  let sweet = 'Hello!';
+  console.log(sweet);
 }
 
 // Function 2
 function sweeterFunc() {
-	// child scope
-	let sweet = 'Bye';
-	console.log(sweet);
+  // child scope
+  let sweet = 'Bye';
+  console.log(sweet);
 }
 
 // Function 3
 function sweetestFunc() {
-	// child scope
-	sweet = 'AHHHH!!!!';
-	console.log(sweet);
+  // child scope
+  sweet = 'AHHHH!!!!';
+  console.log(sweet);
 }
 
 console.log(sweet); // this will log 5
@@ -80,8 +80,8 @@ sweetestFunc(); // will log AHHHH!!!!
 let dope = 5;
 
 function dopestFunc() {
-	// child scope
-	console.log(dope);
+  // child scope
+  console.log(dope);
 }
 
 // When somebody runs this function:

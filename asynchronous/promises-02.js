@@ -5,11 +5,11 @@
 
 // --------- Creating our own promise ---------
 const promise = new Promise((resolve, reject) => {
-	if (true) {
-		resolve('Stuff worked!');
-	} else {
-		reject('Error, it broke!');
-	}
+  if (true) {
+    resolve('Stuff worked!');
+  } else {
+    reject('Error, it broke!');
+  }
 });
 // Since we made if = true, it's going to run the resolve
 // If we made if = false, it's going to run the reject
@@ -21,49 +21,49 @@ promise.then((result) => console.log(result));
 
 // Example #2
 promise
-	.then((result) => result + '!')
-	.then((result2) => {
-		console.log(result2);
-	});
+  .then((result) => result + '!')
+  .then((result2) => {
+    console.log(result2);
+  });
 
 // What if we have an error?
 // We can use .catch()
 promise
-	.then((result) => result + '!')
-	.then((result2) => {
-		throw Error;
-		console.log(result2);
-	})
-	.catch(() => console.log('Errrooorrr!!'));
+  .then((result) => result + '!')
+  .then((result2) => {
+    throw Error;
+    console.log(result2);
+  })
+  .catch(() => console.log('Errrooorrr!!'));
 
 // Even if we run it like this:
 promise
-	.then((result) => {
-		throw Error;
-		result + '!';
-	})
-	.then((result2) => {
-		console.log(result2);
-	})
-	.catch(() => console.log('Errrooorrr!!'));
+  .then((result) => {
+    throw Error;
+    result + '!';
+  })
+  .then((result2) => {
+    console.log(result2);
+  })
+  .catch(() => console.log('Errrooorrr!!'));
 // We still get log 'Errrooorrr!!'
 // .catch() catches any errors that may happen between the chains of .thens
 
 const promise2 = new Promise((resolve, reject) => {
-	setTimeout(resolve, 100, 'Hiii');
+  setTimeout(resolve, 100, 'Hiii');
 });
 
 const promise3 = new Promise((resolve, reject) => {
-	setTimeout(resolve, 1000, 'Pookie');
+  setTimeout(resolve, 1000, 'Pookie');
 });
 
 const promise4 = new Promise((resolve, reject) => {
-	setTimeout(resolve, 1000, 'Is it me you are looking for?');
+  setTimeout(resolve, 1000, 'Is it me you are looking for?');
 });
 
 // Can use Promise.all which takes in an array of promises
 Promise.all([promise, promise2, promise3, promise4])
-	// The values will be returned as an array in the order that they were just written down.
-	.then((values) => {
-		console.log(values);
-	});
+  // The values will be returned as an array in the order that they were just written down.
+  .then((values) => {
+    console.log(values);
+  });

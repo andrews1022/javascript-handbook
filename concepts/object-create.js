@@ -4,9 +4,9 @@
 // First, we define an object that will act as the prototype and then create a new object based on the prototype
 // Recreate our Person example, first writing the prototype as a simple object
 var personProto = {
-	calculateAge: function () {
-		console.log(2020 - this.yearOfBirth);
-	}
+  calculateAge: function () {
+    console.log(2020 - this.yearOfBirth);
+  }
 };
 
 // Now let's create our john object
@@ -24,10 +24,10 @@ john.job = 'teacher';
 // But this way isn't ideal, as we had to manually add all the properties
 // Let's try it a different for another object, because Object.create accepts a second parameter, which is an object specifying the data that we want to have in the object
 var jane = Object.create(personProto, {
-	// The formatting/syntax is odd, but there is no way around it
-	name: { value: 'Jane' },
-	yearOfBirth: { value: 1969 },
-	job: { value: 'designer' }
+  // The formatting/syntax is odd, but there is no way around it
+  name: { value: 'Jane' },
+  yearOfBirth: { value: 1969 },
+  job: { value: 'designer' }
 });
 
 console.log(john);
@@ -46,14 +46,14 @@ console.log(jane);
 // ---------- EXAMPLE #2 ----------
 // Object Of Protos
 const bookProtos = {
-	getSummary: function () {
-		return `${this.title} was written ${this.author} in ${this.year}`;
-	},
+  getSummary: function () {
+    return `${this.title} was written ${this.author} in ${this.year}`;
+  },
 
-	getAge: function () {
-		const years = new Date().getFullYear() - this.year;
-		return `${this.title} is ${years} years old`;
-	}
+  getAge: function () {
+    const years = new Date().getFullYear() - this.year;
+    return `${this.title} is ${years} years old`;
+  }
 };
 
 // Create the object
@@ -66,9 +66,9 @@ book1.year = '1869';
 
 // Another one...
 const book2 = Object.create(bookProtos, {
-	title: { value: 'Hamlet' },
-	author: { value: 'William Shakespeare' },
-	year: { value: '1600' }
+  title: { value: 'Hamlet' },
+  author: { value: 'William Shakespeare' },
+  year: { value: '1600' }
 });
 
 console.log(book1);

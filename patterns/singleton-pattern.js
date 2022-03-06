@@ -6,21 +6,21 @@
 
 // Basic example
 const Singleton = (function () {
-	let instance;
+  let instance;
 
-	function createInstance() {
-		const object = new Object({ name: 'Brad' });
-		return object;
-	}
+  function createInstance() {
+    const object = new Object({ name: 'Brad' });
+    return object;
+  }
 
-	return {
-		getInstance: function () {
-			if (!instance) {
-				instance = createInstance();
-			}
-			return instance;
-		}
-	};
+  return {
+    getInstance: function () {
+      if (!instance) {
+        instance = createInstance();
+      }
+      return instance;
+    }
+  };
 })();
 
 // Instantiate an object

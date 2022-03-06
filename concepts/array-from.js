@@ -7,14 +7,14 @@ var boxesArrES5 = Array.prototype.slice.call(boxes);
 
 // Change each box to blue
 boxesArrES5.forEach(function (el) {
-	el.style.backgroundColor = 'lightblue';
+  el.style.backgroundColor = 'lightblue';
 });
 
 // ES6 Way
 const boxesArrES6 = Array.from(boxes);
 
 boxesArrES6.forEach((box) => {
-	box.style.backgroundColor = 'lightblue';
+  box.style.backgroundColor = 'lightblue';
 });
 
 // We can even do this in one line using arrow functions:

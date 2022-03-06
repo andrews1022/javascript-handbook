@@ -1,14 +1,14 @@
 // Our Array of Objects
 const companies = [
-	{ name: 'RBC', category: 'Finance', start: 1981, end: 2004 },
-	{ name: 'Winners', category: 'Retail', start: 1992, end: 2008 },
-	{ name: 'Ford', category: 'Auto', start: 1999, end: 2007 },
-	{ name: 'Urban Barn', category: 'Retail', start: 1989, end: 2010 },
-	{ name: 'Microsoft', category: 'Technology', start: 2009, end: 2014 },
-	{ name: 'H&R Block', category: 'Finance', start: 1987, end: 2010 },
-	{ name: 'BMW', category: 'Auto', start: 1986, end: 1996 },
-	{ name: 'Apple', category: 'Technology', start: 2011, end: 2016 },
-	{ name: 'Walmart', category: 'Retail', start: 1981, end: 1989 }
+  { name: 'RBC', category: 'Finance', start: 1981, end: 2004 },
+  { name: 'Winners', category: 'Retail', start: 1992, end: 2008 },
+  { name: 'Ford', category: 'Auto', start: 1999, end: 2007 },
+  { name: 'Urban Barn', category: 'Retail', start: 1989, end: 2010 },
+  { name: 'Microsoft', category: 'Technology', start: 2009, end: 2014 },
+  { name: 'H&R Block', category: 'Finance', start: 1987, end: 2010 },
+  { name: 'BMW', category: 'Auto', start: 1986, end: 1996 },
+  { name: 'Apple', category: 'Technology', start: 2011, end: 2016 },
+  { name: 'Walmart', category: 'Retail', start: 1981, end: 1989 }
 ];
 
 // ---------- SORT ----------
@@ -17,11 +17,11 @@ const companies = [
 // At each iteration, it will take two companies and compare them
 // We then return 1 or -1 to move them up and down inside the array
 const sortedCompanies = companies.sort((comp1, comp2) => {
-	if (comp1.start > comp2.start) {
-		return 1;
-	} else {
-		return -1;
-	}
+  if (comp1.start > comp2.start) {
+    return 1;
+  } else {
+    return -1;
+  }
 });
 console.log('sort companies by start date: old way', sortedCompanies);
 // Shorthand form of above using ES6, ternary operator
@@ -29,8 +29,8 @@ const sortedCompaniesES6 = companies.sort((comp1, comp2) => (comp1.start > comp2
 // This reads as is comp1 starting date greater than comp2 starting date?
 // Return 1, else return -1
 console.log(
-	'sort companies by start date: new way with ternary operator and arrow function',
-	sortedCompaniesES6
+  'sort companies by start date: new way with ternary operator and arrow function',
+  sortedCompaniesES6
 );
 // NOTE:
 // Using comp1 and comp2 is fine, but typically, we'd just a & b like this:

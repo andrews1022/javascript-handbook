@@ -18,9 +18,9 @@ console.log(document.getElementsByTagName('li')); //simply put the tag type insi
 // Looping through a group of li elements with the class .item and logging them to the console
 // HTML for reference:
 <ul class='items'>
-	<li class='item'>Item 1</li>
-	<li class='item'>Item 2</li>
-	<li class='item'>Item 3</li>
+  <li class='item'>Item 1</li>
+  <li class='item'>Item 2</li>
+  <li class='item'>Item 3</li>
 </ul>;
 
 const items = document.querySelectorAll('.item');
